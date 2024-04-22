@@ -1,0 +1,24 @@
+<aquestion id="Q-20-04-01" points="1">
+  <instruction>
+    <text language="german">
+      Wie viele Definitionen des Begriffes "Softwarearchitektur" gibt
+      es?
+    </text>
+  </instruction>
+  <option id="a" truth="true">
+    <text language="german">
+      Genau eine für alle Arten von Systemen.
+    </text>
+  </option>
+  <option id="b" truth="false">
+    <text language="german">
+      Eine für jede Art von Softwaresystem (z. B. "eingebettet",
+      "Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", ...)
+    </text>
+  </option>
+  <option id="c" truth="false">
+    <text language="german">
+      Ein Dutzend oder mehr unterschiedliche Definitionen.
+    </text>
+  </option>
+</aquestion>

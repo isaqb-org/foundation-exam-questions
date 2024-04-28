@@ -1,24 +1,66 @@
-<aquestion id="Q-20-04-01" points="1">
-  <instruction>
-    <text language="german">
-      Wie viele Definitionen des Begriffes "Softwarearchitektur" gibt
-      es?
+<assesmentItem id="Q-20-04-01" type="pick" points="1">
+
+  <!-- history is optional, but those who forget their history are condemned
+      to repeat it. -->
+  <history>
+    <item date="2024-04-29">This is just a first draft.</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should be possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="01-01" />
+    <lg curriculumVersion="2023.1" lg="1-1" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+  <!-- TODO: instead of <text>, one could also use XHTML elements,
+       e.g. <xhtml:p xml:lang=“en”> ... but not too many different
+       top-level elements should be allowed -->
+  <stem>
+    <text xml:lang="de">
+        Wie viele Definitionen des Begriffes "Softwarearchitektur" gibt es?
     </text>
-  </instruction>
-  <option id="a" truth="true">
-    <text language="german">
-      Genau eine für alle Arten von Systemen.
+    <text xml:lang="en">
+        How many definitions of the term “software architecture” do exist?
     </text>
-  </option>
-  <option id="b" truth="false">
-    <text language="german">
-      Eine für jede Art von Softwaresystem (z. B. "eingebettet",
-      "Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", ...)
+  </stem>
+
+  <pickoptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Genau eine für alle Arten von Systemen.
+      </text>
+      <text xml:lang="en">
+        Exactly one for all types of systems.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">
+        Eine für jede Art von Softwaresystem (z. B. "eingebettet","Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", ...).
+      </text>
+      <text xml:lang="en">
+        One for each type of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, ...).
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        Mehr als ein Dutzend unterschiedliche Definitionen.
+      </text>
+      <text xml:lang="en">
+        More than a dozen different definitions.
+      </text>
+    </option>
+  </pickoptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.
     </text>
-  </option>
-  <option id="c" truth="false">
-    <text language="german">
-      Ein Dutzend oder mehr unterschiedliche Definitionen.
+    <text xml:lang="en">
+        The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.
     </text>
-  </option>
-</aquestion>
+  </explanation>
+
+</assesmentItem>

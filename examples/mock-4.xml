@@ -1,34 +1,63 @@
-<kquestion id="Q-17-13-02" points="2">
-  <instruction>
-    <text language="de">
+<assesmentItem id="Q-17-13-02" points="1" type="category">
+  
+  <history>
+    <item date="2024-04-29">This is just a first draft.</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should be possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2023.1" lg="3-2" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+  <!-- TODO: instead of <text>, one could also use XHTML elements,
+       e.g. <xhtml:p xml:lang=“en”> ... but not too many different
+       top-level elements should be allowed -->
+  <stem>
+    <text xml:lang="de">
       Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben
       Entwickler:innen an der Dokumentation der
       Softwarearchitektur. Welche Methoden eignen sich zur
       Gewährleistung einer konsistenten und zweckmäßigen Dokumentation
       und welche nicht?
     </text>
-  </instruction>
-  <category id="a">
-    <text language="de">Geeignet</text>
-  </category>
-  <category id="b">
-    <text language="de">Nicht geeignet</text>
-  </category>
-  <statement answer="a">
-    <text language="de">
-      Die/der leitende Architekt:in koordiniert die Erstellung der
-      Dokumentation.
+  </stem>
+
+  <categories>
+    <category label="a">
+      <text xml:lang="de">Geeignet</text>
+    </category>
+    <category label="b">
+      <text xml:lang="de">Nicht geeignet</text>
+    </category>
+  </categories>
+
+  <statements>
+    <statement correctCategory="a" identifier="A">
+      <text xml:lang="de">
+        Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.
+      </text>
+    </statement>
+    <statement correctCategory="a" identifier="B">
+      <text xml:lang="de">
+        Für die Dokumentation werden identische Vorlagen verwendet.
+      </text>
+    </statement>
+    <statement correctCategory="b" identifier="C">
+      <text xml:lang="de">
+        Alle Teile der Dokumentation werden automatisch aus dem
+        Quellcode extrahiert.
+      </text>
+    </statement>
+  </statements>
+
+  <explanation>
+    <text xml:lang="de">
+      Um eine konsistente und zweckmäßige Dokumentation sicherzustellen, eignet sich die Koordination durch die leitende Architekt:in sowie die Verwendung identischer Vorlagen. Die automatische Extraktion aller Teile der Dokumentation aus dem Quellcode ist weniger empfehlenswert, da dies möglicherweise nicht alle relevanten Informationen oder Kontexte berücksichtigt und die Qualität der Dokumentation beeinträchtigen kann. 
     </text>
-  </statement>
-  <statement answer="a">
-    <text language="de">
-      Für die Dokumentation werden identische Vorlagen verwendet.
-    </text>
-  </statement>
-  <statement answer="b">
-    <text language="de">
-      Alle Teile der Dokumentation werden automatisch aus dem
-      Quellcode extrahiert.
-    </text>
-  </statement>
-</kstatement>
+  </explanation>
+
+</assesmentItem>
+

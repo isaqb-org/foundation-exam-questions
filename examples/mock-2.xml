@@ -1,22 +1,62 @@
-<pquestion id="Q-20-04-02" points="1">
-  <instruction>
-    <text language="german">
-     Welche DREI der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt? 
+<!-- sidenote: @alorz essential sees no diference between a pick one
+     and pick multiple question -->
+<assesmentItem id="Q-20-04-02" points="1" type="pick">
+  <history>
+    <item date="2024-04-29">This is just a first draft.</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should be possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="01-01" />
+    <lg curriculumVersion="2023.1" lg="1-1" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+  <!-- TODO: instead of <text>, one could also use XHTML elements,
+       e.g. <xhtml:p xml:lang=“en”> ... but not too many different
+       top-level elements should be allowed -->
+  <stem>
+    <text xml:lang="de">
+        Welche DREI der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt? 
     </text>
-  </instruction>
-  <option id="a" truth="true">
-    <text language="german">Komponenten</text>
-  </option>
-  <option id="b" truth="true">
-    <text language="german">Querschnittskonzepte</text>
-  </option>
-  <option id="c" truth="true">
-    <text language="german">(interne und externe) Schnittstellen</text>
-  </option>
-  <option id="d" truth="false">
-    <text language="german">Programmierkonventionen ("coding conventions")</text>
-  </option>
-  <option id="e" truth="false">
-    <text language="german">Hardware-Sizing</text>
-  </option>
-</pquestion>
+  </stem>
+
+  <pickoptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">
+        Komponenten
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Querschnittskonzepte
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        (interne und externe) Schnittstellen
+      </text>
+    </option>
+
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">
+        Programmierkonventionen ("coding conventions")
+      </text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">
+        Hardware-Sizing
+      </text>
+    </option>
+  </pickoptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Programmierkonventionen und Hardware-Sizing sind in der Regel keine Hauptbestandteile der Softwarearchitektur, da die Architektur sich auf die logische Struktur des Systems konzentriert, während diese Aspekte eher auf der Implementierungsebene und den Ressourcenanforderungen liegen. 
+    </text>
+  </explanation>
+
+</assesmentItem>
+

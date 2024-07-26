@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+
+    <choice>
+      <ref name="pickQuestion"/>
+      <ref name="categoryQuestion"/>
+    </choice>
+  </start>
+
+  <define name="pickQuestion">
+    <element name="pickQuestion">
+      <attribute name="id">
+	<text/>
+      </attribute>
+      <attribute name="points">
+	<data type="positiveInteger"/>
+      </attribute>
+
+      <ref name="prelude"/>
+      <ref name="pickOptions"/>
+      <ref name="postlude"/>
+    </element>
+  </define>
+
+  <define name="categoryQuestion">
+    <element name="categoryQuestion">
+      <attribute name="id">
+	<text/>
+      </attribute>
+      <attribute name="points">
+	<data type="positiveInteger"/>
+      </attribute>
+
+      <ref name="prelude"/>
+      <ref name="categoryStatements"/>
+      <ref name="postlude"/>
+    </element>
+  </define>
+
+  <define name="prelude">
+      <optional>
+	<ref name="history"/>
+      </optional>
+
+      <ref name="refersToLgs"/>
+      
+      <ref name="stem"/>
+  </define>
+
+  <define name="postlude">
+    <optional>
+      <ref name="explanation"/>
+    </optional>
+  </define>
+  
+  <define name="refersToLgs">
+    <element name="refersToLgs">
+      <oneOrMore>
+	<element name="lg">
+	  <attribute name="curriculumVersion">
+	    <data type="string">
+	      <param name="pattern">20[0-9][0-9]\.[0-9]</param>
+	    </data>
+	  </attribute>
+	  <attribute name="lg">
+	    <data type="string">
+	      <param name="pattern">[0-9]+-[0-9]+</param>
+	    </data>
+	  </attribute>
+	</element>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="stem">
+    <element name="stem">
+      <ref name="langtexts"/>
+    </element>
+  </define>
+    
+  <define name="history">
+    <element name="history">
+      <zeroOrMore>
+	<element name="item">
+	  <attribute name="date">
+	    <data type="date"/>
+	  </attribute>
+	  <text/>
+	</element>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="pickOptions">
+    <element name="pickOptions">
+      <oneOrMore>
+	<element name="option">
+	  <choice>
+	    <attribute name="distractor">
+	      <value>distractor</value>
+	    </attribute>
+	    <attribute name="false">
+	      <value>false</value>
+	    </attribute>
+	    <attribute name="correct">
+	      <value>correct</value>
+	    </attribute>
+	  </choice>
+	  
+	  <attribute name="identifier">
+	    <text/>
+	  </attribute>
+	  
+	  <ref name="langtexts"/>
+	  
+	</element>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="categoryStatements">
+    <element name="categoryStatements">
+      <element name="categories">
+	<oneOrMore>
+	  <element name="category">
+	    <attribute name="label">
+	      <text/>
+	    </attribute>
+	    <ref name="langtexts"/>
+	  </element>
+	</oneOrMore>
+      </element>
+
+      <element name="statements">
+	<oneOrMore>
+	  <element name="statement">
+	    <attribute name="correctCategory">
+	      <text/>
+	    </attribute>
+	    <attribute name="identifier">
+	      <text/>
+	    </attribute>
+	    <ref name="langtexts"/>
+	  </element>
+	</oneOrMore>
+      </element>
+    </element>
+  </define>
+  
+  <define name="explanation">
+    <element name="explanation">
+      <ref name="langtexts"/>
+    </element>
+  </define>
+
+  <define name="langtexts">
+    <oneOrMore>
+      <element name="text">
+	<attribute name="xml:lang">
+	  <data type="language"/>
+	</attribute>
+	<text/>
+      </element>
+    </oneOrMore>
+  </define>
+</grammar>

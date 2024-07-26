@@ -1,4 +1,4 @@
-<assesmentItem id="Q-17-13-02" points="1" type="category">
+<categoryQuestion id="Q-17-13-02" points="1">
   
   <history>
     <item date="2024-04-29">This is just a first draft.</item>
@@ -25,7 +25,7 @@
     </text>
   </stem>
 
-  <categoryQuestion>
+  <categoryStatements>
   
     <categories>
       <category label="a">
@@ -55,7 +55,7 @@
       </statement>
     </statements>
 
-  </categoryQuestion>
+  </categoryStatements>
   
   <explanation>
     <text xml:lang="de">
@@ -63,5 +63,5 @@
     </text>
   </explanation>
 
-</assesmentItem>
+</categoryQuestion>
 

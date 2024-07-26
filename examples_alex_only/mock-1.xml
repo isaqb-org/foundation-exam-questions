@@ -1,4 +1,4 @@
-<assesmentItem id="Q-20-04-01" type="pick" points="1">
+<pickQuestion id="Q-20-04-01" points="1">
 
   <!-- history is optional, but those who forget their history are condemned
       to repeat it. -->
@@ -27,7 +27,7 @@
     </text>
   </stem>
 
-  <pickQuestion>
+  <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">
         Genau eine für alle Arten von Systemen.
@@ -52,7 +52,7 @@
         More than a dozen different definitions.
       </text>
     </option>
-  </pickQuestion>
+  </pickOptions>
   
   <explanation>
     <text xml:lang="de">
@@ -63,4 +63,4 @@
     </text>
   </explanation>
 
-</assesmentItem>
+</pickQuestion>

@@ -25,34 +25,38 @@
     </text>
   </stem>
 
-  <categories>
-    <category label="a">
-      <text xml:lang="de">Geeignet</text>
-    </category>
-    <category label="b">
-      <text xml:lang="de">Nicht geeignet</text>
-    </category>
-  </categories>
+  <categoryQuestion>
+  
+    <categories>
+      <category label="a">
+	<text xml:lang="de">Geeignet</text>
+      </category>
+      <category label="b">
+	<text xml:lang="de">Nicht geeignet</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="a" identifier="A">
+	<text xml:lang="de">
+          Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.
+	</text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+	<text xml:lang="de">
+          Für die Dokumentation werden identische Vorlagen verwendet.
+	</text>
+      </statement>
+      <statement correctCategory="b" identifier="C">
+	<text xml:lang="de">
+          Alle Teile der Dokumentation werden automatisch aus dem
+          Quellcode extrahiert.
+	</text>
+      </statement>
+    </statements>
 
-  <statements>
-    <statement correctCategory="a" identifier="A">
-      <text xml:lang="de">
-        Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.
-      </text>
-    </statement>
-    <statement correctCategory="a" identifier="B">
-      <text xml:lang="de">
-        Für die Dokumentation werden identische Vorlagen verwendet.
-      </text>
-    </statement>
-    <statement correctCategory="b" identifier="C">
-      <text xml:lang="de">
-        Alle Teile der Dokumentation werden automatisch aus dem
-        Quellcode extrahiert.
-      </text>
-    </statement>
-  </statements>
-
+  </categoryQuestion>
+  
   <explanation>
     <text xml:lang="de">
       Um eine konsistente und zweckmäßige Dokumentation sicherzustellen, eignet sich die Koordination durch die leitende Architekt:in sowie die Verwendung identischer Vorlagen. Die automatische Extraktion aller Teile der Dokumentation aus dem Quellcode ist weniger empfehlenswert, da dies möglicherweise nicht alle relevanten Informationen oder Kontexte berücksichtigt und die Qualität der Dokumentation beeinträchtigen kann. 

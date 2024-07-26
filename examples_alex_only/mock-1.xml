@@ -27,7 +27,7 @@
     </text>
   </stem>
 
-  <pickoptions>
+  <pickQuestion>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">
         Genau eine für alle Arten von Systemen.
@@ -36,7 +36,7 @@
         Exactly one for all types of systems.
       </text>
     </option>
-    <option distractor="distractor" identifier="B">
+    <option false="false" identifier="B">
       <text xml:lang="de">
         Eine für jede Art von Softwaresystem (z. B. "eingebettet","Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", ...).
       </text>
@@ -52,8 +52,8 @@
         More than a dozen different definitions.
       </text>
     </option>
-  </pickoptions>
-
+  </pickQuestion>
+  
   <explanation>
     <text xml:lang="de">
       Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.

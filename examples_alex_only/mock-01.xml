@@ -3,7 +3,7 @@
   <!-- history is optional, but those who forget their history are condemned
       to repeat it. -->
   <history>
-    <item date="2024-04-29">This is just a first draft.</item>
+    <item date="2024-08-08">content identical to mock exam 2024.1-rev0-DE-20240202</item>
   </history>
 
   <refersToLgs>
@@ -23,7 +23,7 @@
         Wie viele Definitionen des Begriffes "Softwarearchitektur" gibt es?
     </text>
     <text xml:lang="en">
-        How many definitions of the term “software architecture” do exist?
+        How many definitions of “software architecture” exist?
     </text>
   </stem>
 
@@ -33,23 +33,23 @@
         Genau eine für alle Arten von Systemen.
       </text>
       <text xml:lang="en">
-        Exactly one for all types of systems.
+        Exactly one for all kinds of systems.
       </text>
     </option>
     <option false="false" identifier="B">
       <text xml:lang="de">
-        Eine für jede Art von Softwaresystem (z. B. "eingebettet","Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", ...).
+        Eine für jede Art von Softwaresystem (z. B. "eingebettet","Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", …).
       </text>
       <text xml:lang="en">
-        One for each type of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, ...).
+        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).
       </text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">
-        Mehr als ein Dutzend unterschiedliche Definitionen.
+        Ein Dutzend oder mehr unterschiedliche Definitionen.
       </text>
       <text xml:lang="en">
-        More than a dozen different definitions.
+        A dozen ore more different definitions.
       </text>
     </option>
   </pickOptions>
@@ -59,7 +59,7 @@
       Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.
     </text>
     <text xml:lang="en">
-        The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.
+      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.
     </text>
   </explanation>
 

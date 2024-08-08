@@ -1,8 +1,6 @@
-<!-- sidenote: @alorz essential sees no diference between a pick one
-     and pick multiple question -->
 <pickQuestion id="Q-20-04-02" points="1">
   <history>
-    <item date="2024-04-29">This is just a first draft.</item>
+    <item date="2024-08-08">content identical to mock exam 2024.1-rev0-DE-20240202</item>
   </history>
 
   <refersToLgs>
@@ -21,6 +19,10 @@
     <text xml:lang="de">
         Welche DREI der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt? 
     </text>
+    <text xml:lang="en">
+        Which THREE of the following aspects are covered by the term “software architecture”? 
+    </text>
+
   </stem>
 
   <pickOptions>
@@ -28,33 +30,52 @@
       <text xml:lang="de">
         Komponenten
       </text>
+      <text xml:lang="en">
+        Components
+      </text>
+
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">
         Querschnittskonzepte
+      </text>
+      <text xml:lang="en">
+        Cross-cutting concepts
       </text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">
         (interne und externe) Schnittstellen
       </text>
+      <text xml:lang="en">
+        (internal and external) Interfaces
+      </text>
     </option>
-
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">
         Programmierkonventionen ("coding conventions")
+      </text>
+      <text xml:lang="en">
+        Coding conventions
       </text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">
         Hardware-Sizing
       </text>
+      <text xml:lang="en">
+        Hardware sizing
+      </text>
+
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">
       Programmierkonventionen und Hardware-Sizing sind in der Regel keine Hauptbestandteile der Softwarearchitektur, da die Architektur sich auf die logische Struktur des Systems konzentriert, während diese Aspekte eher auf der Implementierungsebene und den Ressourcenanforderungen liegen. 
+    </text>
+    <text xml:lang="en">
+      Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.
     </text>
   </explanation>
 

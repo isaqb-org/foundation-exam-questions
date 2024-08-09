@@ -1,0 +1,74 @@
+<pickQuestion id="Q-17-13-03" points="1">
+  <history>
+    <item date="2024-08-09">content identical to mock exam 2024.1-rev0-DE-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should be possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="04-03" />
+    <lg curriculumVersion="2025.1" lg="04-05" />
+    <lg curriculumVersion="2023.1" lg="3-3" />
+    <lg curriculumVersion="2023.1" lg="3-4" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+  <!-- TODO: instead of <text>, one could also use XHTML elements,
+       e.g. <xhtml:p xml:lang=“en”> ... but not too many different
+       top-level elements should be allowed -->
+  <stem>
+    <text xml:lang="de">
+        Welche VIER der folgenden Techniken sind am besten zur Darstellung von Abläufen oder Laufzeitverhalten geeignet?
+    </text>
+    <text xml:lang="en">
+        Which FOUR of the following techniques are best suited to illustrate the workflow or behavior of the system at runtime?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">Flussdiagramme</text>
+      <text xml:lang="en">Flowcharts</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Aktivitätsdiagramme</text>
+      <text xml:lang="en">Activity Diagrams</text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">Darstellung von Screenflows (Abfolge von Benutzerinteraktionen)</text>
+      <text xml:lang="en">Depiction of screen flows (sequence of user interactions)</text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">Sequenzdiagramm</text>
+      <text xml:lang="en">Sequence diagram</text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">Lineares Venn-Diagramm</text>
+      <text xml:lang="en">Linear Venn diagram</text>
+    </option>
+    <option correct="correct" identifier="F">
+      <text xml:lang="de">Nummerierte Liste aufeinanderfolgender Schritte</text>
+      <text xml:lang="en">Numbered list of sequential steps</text>
+    </option>
+    <option distractor="distractor" identifier="G">
+      <text xml:lang="de">Tabellarische Schnittstellenbeschreibung</text>
+      <text xml:lang="en">Tabular description of interfaces</text>
+    </option>    
+    <option distractor="distractor" identifier="H">
+      <text xml:lang="de">Klassendiagramme</text>
+      <text xml:lang="en">Class diagrams</text>
+    </option>    
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Flussdiagramme, Aktivitätsdiagramme, Sequenzdiagramme und nummerierte Listen von aufeinanderfolgenden Schritten eignen sich am besten zur Veranschaulichung von Prozessabläufen oder des Systemverhaltens zur Laufzeit, da sie den Kontrollfluss, die Abläufe und die Interaktionen zwischen den Komponenten im Zeitverlauf klar darstellen. Im Gegensatz dazu sind Optionen wie Screenflows, Venn-Diagramme, tabellarische Beschreibungen von Schnittstellen und Klassendiagramme für diesen Zweck weniger oder nicht geeignet, da sie auf Benutzerinteraktionen, logische Beziehungen, statische Strukturen oder Schnittstellendetails fokussieren und nicht auf dynamisches Verhalten.
+    </text>
+    <text xml:lang="en">
+      Flowcharts, activity diagrams, sequence diagrams, and numbered lists of sequential steps are best suited to illustrate system workflow or behavior at runtime because they clearly depict the flow of control, operations, and interactions between components over time. In contrast, options like screen flows, Venn diagrams, tabular descriptions of interfaces, and class diagrams are not appropriate for this purpose as they focus on user interactions, logical relationships, static structure, or interface details rather than dynamic behavior.
+    </text>
+  </explanation>
+
+</pickQuestion>
+

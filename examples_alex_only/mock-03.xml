@@ -1,0 +1,111 @@
+<pickQuestion id="Q-17-13-01" points="2">
+  <history>
+    <item date="2024-08-08">content identical to mock exam 2024.1-rev0-DE-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should be possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="03-10" />
+    <lg curriculumVersion="2023.1" lg="2-4" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+  <!-- TODO: instead of <text>, one could also use XHTML elements,
+       e.g. <xhtml:p xml:lang=“en”> ... but not too many different
+       top-level elements should be allowed -->
+  <stem>
+    <text xml:lang="de">
+        Welche VIER der folgenden Aussagen zu (Querschnitts-) Konzepten sind am zutreffendsten?
+    </text>
+    <text xml:lang="en">
+        Which FOUR of the following statements about (crosscutting) concepts are most appropriate?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Durch die einheitliche Verwendung von Konzepten wird die Kopplung zwischen Bausteinen verringert.
+      </text>
+      <text xml:lang="en">
+        Uniform usage of concepts reduces coupling between building blocks.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">
+        Durch die Definition von geeigneten Konzepten wird die Mustertreue der Architektur sichergestellt.
+      </text>
+      <text xml:lang="en">
+        The definition of appropriate concepts ensures the pattern compliance of the architecture.
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        (Eine einheitliche Ausnahmebehandlung (Exception Handling) kann man gut erreichen,
+        indem die Architekt:innen mit den Entwickler:innen vor der Implementierung ein
+        geeignetes Konzept vereinbaren.
+      </text>
+      <text xml:lang="en">
+        Uniform exception handling can be achieved when architects agree with developers
+        upon a suitable concept prior to implementation.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">
+        Für jedes Qualitätsziel sollte es ein explizit dokumentiertes Konzept geben.
+      </text>
+      <text xml:lang="en">
+        For each quality goal there should be an explicitly documented concept.
+      </text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        Konzepte sind ein Mittel zur Erhöhung der Konsistenz.
+      </text>
+      <text xml:lang="en">
+        Concepts are a means to increase consistency.
+      </text>
+    </option>
+    <option correct="correct" identifier="F">
+      <text xml:lang="de">
+        Ein Konzept kann Einschränkungen für die Umsetzung vieler Bausteine definieren.
+      </text>
+      <text xml:lang="en">
+        A concept can define constraints for the implementation of many building blocks.
+      </text>
+    </option>
+    <option correct="correct" identifier="G">
+      <text xml:lang="de">
+        Ein Konzept kann durch einen einzigen Baustein umgesetzt werden.
+      </text>
+      <text xml:lang="en">
+        A concept might be implemented by a single building block.
+      </text>
+    </option>    
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      A) Die einheitliche Verwendung von Konzepten verringert nicht unbedingt die Kopplung. Sie kann die Kopplung sogar erhöhen, wenn mehrere Bausteine das gleiche Konzept verwenden.
+      (B) Konzepte fördern in der Regel die Konsistenz, können aber nicht die Einhaltung von Architekturmustern garantieren. "Mustertreue" ist ein frei erfundener Begriff, der wie etwas Wünschenswertes klingt, aber im iSAQB-Lehrplan nicht einmal erwähnt wird.
+      (C) Die Abstimmung zu wichtigen Konzepten wie z. B. für die Fehlerbehandlung vor der Implementierung sorgt für Einheitlichkeit und Wartbarkeit und sollte generell als gute Praxis angesehen werden.
+      (D) Auch wenn es Konzepte für ausgewählte Qualitätsziele geben kann, ist nicht für jedes Qualitätsziel ein eigenes Konzept erforderlich. Diese können auf verschiedene Weise berücksichtigt werden.
+      (E) Der Hauptzweck der Verwendung von Querschnittskonzepten in der Softwarearchitektur besteht darin, die Konsistenz zwischen den verschiedenen Teilen des Systems sicherzustellen. Wenn Konzepte wie Logging, Fehlerbehandlung oder Datenzugriffsmuster einheitlich angewandt werden, tragen sie dazu bei, dass im gesamten System ein einheitlicher Lösungsansatz verwendet wird.
+      (F) Ein übergreifendes Konzept legt oft bestimmte Beschränkungen fest, die mehrere Bausteine betreffen. Ein Sicherheitskonzept kann zum Beispiel festlegen, dass alle Datenzugriffsmethoden Authentifizierungsprüfungen beinhalten müssen, und damit die Art und Weise, wie diese Methoden im gesamten System implementiert werden, einschränken.
+      (G) Während viele übergreifende Konzepte mehrere Bausteine betreffen, können einige Konzepte vollständig in einem einzigen Baustein gekapselt sein. So könnte z. B. eine bestimmte Utility-Klasse, die für die Verschlüsselung zuständig ist, die Umsetzung eines Sicherheitskonzepts innerhalb eines einzigen Bausteins darstellen.
+    </text>
+    <text xml:lang="en">
+      (A) Uniform usage of concepts does not necessarily reduce coupling. It might even increase coupling if multiple building blocks rely on the same concept.
+      (B) Concepts usually promote consistency but can not guarantee compliance with architectural patterns. Also note, that "pattern compliance" is a totally made up thing that sounds like something desireable. It is not even mentioned in the iSAQB curriculum.
+      (C) Agreeing on concepts like exception handling before implementation ensures uniformity and maintainability and should generally be considered a good practice.
+      (D) While there might be concepts to address selected quality goals, not every quality goal requires a dedicated concept. They can be addressed in various ways.
+      (E) The primary purposes of using crosscutting concepts in software architecture is to ensure consistency across different parts of the system. For example, concepts like logging, error handling, or data access patterns, when uniformly applied, help maintain a consistent approach throughout the system.
+      (F) A crosscutting concept often imposes certain constraints that affect multiple building blocks. For instance, a security concept might define that all data access methods must include authentication checks, thus constraining the way those methods are implemented across the system.
+      (G) While many crosscutting concepts affect multiple building blocks, some concepts might be fully encapsulated within a single building block. For example, a specific utility class that handles encryption could represent the implementation of a security concept within a single building block.
+    </text>
+  </explanation>
+
+</pickQuestion>
+

@@ -1,0 +1,112 @@
+<pickQuestion id="Q-XXXXXXX" points="1">
+  <history>
+    <item date="2024-08-09">content identical to mock exam 2024.1-rev0-DE-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should is possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="04-03" />
+    <lg curriculumVersion="2025.1" lg="04-05" />
+    <lg curriculumVersion="2023.1" lg="3-3" />
+    <lg curriculumVersion="2023.1" lg="3-4" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+
+  <stem>
+    <text xml:lang="de">
+        STEM-DE
+    </text>
+    <text xml:lang="en">
+        STEM-EN
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="E">
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="F">
+    <option distractor="distractor" identifier="F">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="G">
+    <option distractor="distractor" identifier="G">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>
+    <option correct="correct" identifier="H">    
+    <option distractor="distractor" identifier="H">
+      <text xml:lang="de">
+        DE
+      </text>
+      <text xml:lang="en">
+        EN
+      </text>
+    </option>    
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      DE
+    </text>
+    <text xml:lang="en">
+      EN
+    </text>
+  </explanation>
+
+</pickQuestion>
+

@@ -1,0 +1,86 @@
+<pickQuestion id="Q-17-13-04-XXXXXXX" points="1">
+  <history>
+    <item date="2024-08-10">content identical to mock exam 2024.1-rev0-DE-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should is possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="prerequisite" />
+    <lg curriculumVersion="2025.1" lg="05-02" />
+    <lg curriculumVersion="2023.1" lg="prerequisite" />
+    <lg curriculumVersion="2023.1" lg="4-4" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+
+  <stem>
+    <text xml:lang="de">
+      Welche DREI der folgenden Grundsätze gelten für das Testen?
+    </text>
+    <text xml:lang="en">
+      Which THREE of the following principles apply to testing?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">
+        Im Allgemeinen ist es nicht möglich, sämtliche Fehler eines Systems zu finden.
+      </text>
+      <text xml:lang="en">
+        In general, it is not possible to discover all errors in the system.
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Bei Komponenten mit vielen bekannten vorherigen Fehlern sind die Chancen für
+zusätzliche Fehler hoch.
+      </text>
+      <text xml:lang="en">
+        In components with many known previous errors, the chances for additional errors are
+high.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Durch ausreichendes Testen kann aufgezeigt werden, dass ein Programm fehlerfrei
+ist.
+      </text>
+      <text xml:lang="en">
+        Sufficient testing can show that a program is free of errors.
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Durch Testen kann nur die Existenz von Fehlern aufgezeigt werden, nicht jedoch ihre
+Abwesenheit.
+      </text>
+      <text xml:lang="en">
+        Testing shows the existence of errors rather than the absence of errors.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">
+        Die funktionale Programmierung erlaubt keine automatisierten Tests.
+      </text>
+      <text xml:lang="en">
+        Functional programming does not allow automated testing.
+      </text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Grundsätzlich wird es als unmöglich angesehen, alle Fehler in einem nicht-trivialen System zu finden. Komponenten, die in der Vergangenheit viele Fehler beinhaltet haben, weisen wahrscheinlich zusätzliche Fehler auf. Das liegt oft daran, dass diese besonders komplex oder schlecht verständlich sind oder dass Architekturprobleme existieren, die zu häufigen Änderungen durch verschiedene Personen führen (z. B. unzureichende SoC oder ungeeignete Abstraktionen).
+      Beim Testen geht es in erster Linie darum, das Vorhandensein von Fehlern aufzudecken und nicht darum, deren Abwesenheit zu beweisen. Entgegen mancher Fehlannahmen kann ausreichendes Testen nicht garantieren, dass ein Programm fehlerfrei ist. Funktionale Programmierung unterstützt tatsächlich automatisierte Tests.
+    </text>
+    <text xml:lang="en">
+      Testing principles acknowledge that it’s generally impossible to find all errors in a system. Components with a history of many errors are likely to have additional faults. This is often because these areas may be particularly complex or poorly understood or can be caused by architectural issues leading to frequent changes by different people (e.g. insufficient SoC or inappropriate abstractions).
+      Testing primarily reveals the presence of errors rather than proving their absence. Contrary to some misconceptions, sufficient testing cannot guarantee a program is error-free, and functional programming indeed supports automated testing. 
+    </text>
+  </explanation>
+
+</pickQuestion>
+

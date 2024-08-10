@@ -1,0 +1,88 @@
+<categoryQuestion id="Q-17-13-05" points="1">
+  
+  <history>
+    <item date="2024-08-10">content identical to mock exam 2024.1-rev0-DE-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <!-- referencing multiple LGs should be possible -->
+    <!-- declaring the curriculum version might be helpfull when migrating
+         from one curriuculum version to another -->
+    <lg curriculumVersion="2023.1" lg="3-2" />
+  </refersToLgs>
+
+  <!-- The stem asks the actual problem to solve. -->
+  <!-- TODO: instead of <text>, one could also use XHTML elements,
+       e.g. <xhtml:p xml:lang=“en”> ... but not too many different
+       top-level elements should be allowed -->
+  <stem>
+    <text xml:lang="de">
+      Welche der folgenden Aussagen zum Entwurfsprinzip "Information Hiding" sind richtig und welche falsch?
+    </text>
+    <text xml:lang="en">
+      Which of the following statements regarding the information hiding principle are true and which are false?
+    </text>
+  </stem>
+
+  <categoryStatements>
+  
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Durch die Befolgung des Prinzips "Information Hiding" wird die Flexibilität für Änderungen erhöht.
+        </text>
+        <text xml:lang="en">
+          Adhering to the information hiding principle increases flexibility for modifications.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Beim Information Hiding werden absichtlich Informationen vor Aufrufern oder Konsumenten des Bausteins verborgen.
+        </text>
+        <text xml:lang="en">
+          Information hiding involves deliberately hiding information from callers or consumers of the building block.
+        </text>
+      </statement>
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">
+          Information Hiding erschwert das Bottom-Up Vorgehen.
+        </text>
+        <text xml:lang="en">
+          Information hiding makes it harder to work bottom-up.
+        </text>
+      </statement>
+      <statement correctCategory="b" identifier="D">
+        <text xml:lang="de">
+          Information Hiding ist abgeleitet vom Ansatz der inkrementellen Verfeinerung entlang des Kontrollflusses.
+        </text>
+        <text xml:lang="en">
+          Information hiding is a derivative of the approach of incremental refinement along the control flow.
+        </text>
+      </statement>
+
+    </statements>
+
+  </categoryStatements>
+  
+  <explanation>
+    <text xml:lang="de">
+      Information Hiding erhöht die Flexibilität bei Änderungen, indem es interne Details kapselt und so Änderungen innerhalb einer Komponente ermöglicht, ohne den Rest des Systems zu beeinträchtigen. Dabei wird der Zugriff auf interne Details für Aufrufer bewusst eingeschränkt, was die Modularität fördert und Abhängigkeiten reduziert. Entgegen der Behauptung, dass Information Hiding die Bottom-up-Entwicklung erschwert, kann es solche Ansätze ggfs. sogar unterstützen, indem es Entwicklern ermöglicht, isoliert an einzelnen Komponenten zu arbeiten. Die letzte Option ist falsch und irreführend. Sie hat nichts mit inkrementeller Verfeinerung zu tun und scheint eine erfundene oder irrelevante Idee zu sein.
+    </text>
+    <text xml:lang="en">
+      Information hiding increases flexibility for modifications by encapsulating internal details, allowing changes within a component without affecting the rest of the system. It involves deliberately restricting access to internal details from callers, promoting modularity and reducing dependencies. Contrary to the claim that information hiding makes bottom-up development harder, it actually might supports such approaches by enabling developers to work on individual components in isolation. The last option is incorrect and misleading, as it is not related to incremental refinement and appears to be a fabricated or irrelevant idea.
+    </text>
+  </explanation>
+
+</categoryQuestion>
+

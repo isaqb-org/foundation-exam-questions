@@ -9,19 +9,20 @@ format for the new examination questions.
 
 == XML Schema
 
-The XML Schema (file:exam.rng) is good enough for creating examples and automatic
-processing.  We expect to add a few more elements and attributes for
-cross-referencing, exam generation and semantic information.
+The XML Schema (`+exam.rng+`) is good enough for creating examples and
+automatic processing.  We expect to add a few more elements and
+attributes for cross-referencing, exam generation and semantic
+information.
 
 == Examples
 
 We're currently transcribing the mock exam
 (https://public.isaqb.org/examination-foundation/mock_exam/mock-exam-answers-en.pdf)
-into the new format, results are in file:examples/.
+into the new format, results are in the `+examples+` directory.
 
 == Contributing
 
-Create a subdirectory in file:examples/ whose name makes clear the
+Create a subdirectory in `+examples+` whose name makes clear the
 source, and file away!
 
 

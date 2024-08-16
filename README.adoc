@@ -9,7 +9,7 @@ format for the new examination questions.
 
 == XML Schema
 
-The XML Schema (`+exam.rng+`) is good enough for creating examples and
+The RELAX NG XML Schema (`+exam.rng+`) is good enough for creating examples and
 automatic processing.  We expect to add a few more elements and
 attributes for cross-referencing, exam generation and semantic
 information.

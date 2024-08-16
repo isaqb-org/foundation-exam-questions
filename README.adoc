@@ -1,28 +1,27 @@
-= New Examination Questions
-
+= New Foundation Examination Questions
 
 == Status
 
 Work in progress.
 
-We are currently working on creating or selecting a suitable markup format for the new examination questions.
+We are currently working on creating or selecting a suitable markup
+format for the new examination questions.
+
+== XML Schema
+
+The XML Schema (file:exam.rng) is good enough for creating examples and automatic
+processing.  We expect to add a few more elements and attributes for
+cross-referencing, exam generation and semantic information.
+
+== Examples
+
+We're currently transcribing the mock exam
+(https://public.isaqb.org/examination-foundation/mock_exam/mock-exam-answers-en.pdf)
+into the new format, results are in file:examples/.
+
+== Contributing
+
+Create a subdirectory in file:examples/ whose name makes clear the
+source, and file away!
 
 
-== Related Work
-
-Existing standards, 'standards', and solutions. Collection of relevant links.
-
-IMS QTI - IMS Question & Test Interoperability::
-Standard format for representing assessment content.
-Quite widespread in use but @alorz is not sure if it meets our requirements.
-It might be somehow cumbersome, it's not clear how it handles i18n, and @alorz is not sure of license implications. 
-* quite comprehensive https://digitaliser.getmarked.ai/blog/complete-guide-to-qti/[Guide to QTI]
-* some harsh but dated criticism: https://www.igi-global.com/chapter/qti-failed-learning-standard/46352[QTI—A Failed E-Learning Standard?] (paywalled)
-* some examples: https://github.com/1EdTech/qti-examples/blob/master/qtiv3-examples/items/shared-vocabulary/Items/Item_QTI3_CompWater_01/composition_of_water_qti3.xml
-* tooling: https://pypi.org/project/text2qti/[text2qti – Create quizzes in QTI format from Markdown-based plain text]
-
-Sunbird QuML::
-Derived from IMS QTI but aimed at https://quml.sunbird.org/#quml-specification[addressing some of its shortcomings].
-
-XML Internationalization::
-* https://www.w3.org/TR/xml-i18n-bp/[W3C - Best Practices for XML Internationalization]

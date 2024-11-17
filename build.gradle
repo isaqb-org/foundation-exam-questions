@@ -15,14 +15,16 @@ wrapper {
     distributionUrl = 'https://services.gradle.org/distributions/gradle-8.11-bin.zip'
 }
 
+// **********************************************
+// * Project constants and shared configuration *
+// **********************************************
 
-// Project constants and shared configuration
 ext {
 
-    // this might change in the future
+    // Location of RelaxNG schema for questions - this might change in the future
     schemaFile = file('exam.rng')
 
-    // configuration for arc42 documentation
+    // Configuration for arc42 documentation
     docSrcDir = 'arc42-doc'
     docOutputPath = 'build/arc42-doc'
     mainDocFile = '00-arc42-main.adoc'
@@ -30,9 +32,9 @@ ext {
 
     // Explicitly define files affected by ADR automation
     adrConfig = [
-        sourceDir: file("${docSrcDir}/decisions"),
-        readmeFile: file("${docSrcDir}/decisions/README.md"),
-        arc42File: file("${docSrcDir}/09-decisions.adoc")
+        sourceDir: file("${docSrcDir}/decisions"),             // Source for all ADRs
+        readmeFile: file("${docSrcDir}/decisions/README.md"),  // Will be automatically updated
+        arc42File: file("${docSrcDir}/09-decisions.adoc")      // Will be automatically updated
     ]
 }
 
@@ -54,15 +56,22 @@ dependencies {
     asciidoctorExtensions 'net.sourceforge.plantuml:plantuml:1.2024.7'
 }
 
-// Tasks and code for schema validation
+
+// ****************************************
+// * Tasks and code for schema validation *
+// ****************************************
+
+// This task runs XML validation using the Jing validator to ensure XML files 
+// match their schema before processing
+
 abstract class ValidationTask extends DefaultTask {
     @Inject
-    abstract ExecOperations getExecOperations()
+    abstract ExecOperations getExecOperations()  // Needed to run Jing as external process
     
     def runJingValidation(File xmlFile) {
         def stdout = new ByteArrayOutputStream()
-        def stderr = new ByteArrayOutputStream()
-        
+        def stderr = new ByteArrayOutputStream() // Separate streams because validation errors go to stderr
+                
         def execResult = execOperations.exec { spec ->
             spec.workingDir = project.projectDir
             spec.executable = 'java'
@@ -75,12 +84,12 @@ abstract class ValidationTask extends DefaultTask {
             ]
             spec.standardOutput = stdout
             spec.errorOutput = stderr
-            spec.ignoreExitValue = true
+            spec.ignoreExitValue = true  // Don't throw on validation failure - we handle it ourselves
         }
         
         def error = stderr.toString().trim()
         def output = stdout.toString().trim()
-        def allOutput = error.isEmpty() ? output : error
+        def allOutput = error.isEmpty() ? output : error // Prefer error message if present
         
         return [
             success: execResult.exitValue == 0,
@@ -89,11 +98,14 @@ abstract class ValidationTask extends DefaultTask {
     }
 }
 
+// Validates a single XML file
+
 tasks.register('validateFile', ValidationTask) {
     description = 'Validates a single XML file against the RelaxNG schema'
     group = 'Validation'
     
     doLast {
+        // Requires -Pfile parameter to specify which file to validate
         if (!project.hasProperty('file')) {
             throw new GradleException("Please provide a file path using -Pfile=path/to/file.xml")
         }
@@ -103,6 +115,7 @@ tasks.register('validateFile', ValidationTask) {
             throw new GradleException("File ${xmlFile.absolutePath} does not exist")
         }
         
+        // Run validation and provide visual feedback
         println "Validating ${xmlFile.name} against schema ${project.schemaFile.name}"
         def result = runJingValidation(xmlFile)
         
@@ -118,16 +131,21 @@ tasks.register('validateFile', ValidationTask) {
     }
 }
 
+// Bulk validation of all XML files in specified directories
+
 tasks.register('validate', ValidationTask) {
     description = 'Validates all XML files in predefined directories against the RelaxNG schema'
     group = 'Validation'
     
     doLast {
         def directories = ['mock']  // Add more directories as needed
+        
+        // Track stats for summary report
         def failures = []
         def validCount = 0
         def totalCount = 0
         
+        // Progress indicators: . for success, F for failure
         directories.each { dirName ->
             def directory = project.file(dirName)
             if (!directory.exists() || !directory.isDirectory()) {
@@ -151,6 +169,8 @@ tasks.register('validate', ValidationTask) {
             }
         }
         
+        // Print summary and fail build if any validation failed
+
         println "\n\nValidation Summary:"
         println "✓ ${validCount}/${totalCount} files are valid"
         
@@ -165,6 +185,11 @@ tasks.register('validate', ValidationTask) {
         }
     }
 }
+
+
+// *****************************************************
+// * Tasks and code for arc42 documentation generation *
+// *****************************************************
 
 // Task provided by org.asciidoctor.jvm.convert plugin
 // Converts AsciiDoc to HTML output
@@ -264,7 +289,6 @@ tasks.named('asciidoctorPdf') {
 }
 
 // ADR management task to update the ADR index in README.md
-
 tasks.register('updateAdrIndex') {
     group = 'documentation'
     description = 'Updates ADR indices in README.md and architecture documentation'

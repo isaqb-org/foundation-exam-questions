@@ -1,0 +1,130 @@
+plugins {
+    id 'base'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    jing
+}
+
+dependencies {
+    jing 'org.relaxng:jing:20220510'
+}
+
+ext {
+    schemaFile = file('exam.rng')
+}
+
+abstract class ValidationTask extends DefaultTask {
+    @Inject
+    abstract ExecOperations getExecOperations()
+    
+    def runJingValidation(File xmlFile) {
+        def stdout = new ByteArrayOutputStream()
+        def stderr = new ByteArrayOutputStream()
+        
+        def execResult = execOperations.exec { spec ->
+            spec.workingDir = project.projectDir
+            spec.executable = 'java'
+            spec.args = [
+                '-cp',
+                project.configurations.jing.asPath,
+                'com.thaiopensource.relaxng.util.Driver',
+                project.schemaFile.absolutePath,
+                xmlFile.absolutePath
+            ]
+            spec.standardOutput = stdout
+            spec.errorOutput = stderr
+            spec.ignoreExitValue = true
+        }
+        
+        def error = stderr.toString().trim()
+        def output = stdout.toString().trim()
+        def allOutput = error.isEmpty() ? output : error
+        
+        return [
+            success: execResult.exitValue == 0,
+            output: allOutput
+        ]
+    }
+}
+
+tasks.register('validateFile', ValidationTask) {
+    description = 'Validates a single XML file against the RelaxNG schema'
+    group = 'Validation'
+    
+    doLast {
+        if (!project.hasProperty('file')) {
+            throw new GradleException("Please provide a file path using -Pfile=path/to/file.xml")
+        }
+        
+        def xmlFile = project.file(project.property('file'))
+        if (!xmlFile.exists()) {
+            throw new GradleException("File ${xmlFile.absolutePath} does not exist")
+        }
+        
+        println "Validating ${xmlFile.name} against schema ${project.schemaFile.name}"
+        def result = runJingValidation(xmlFile)
+        
+        if (result.success) {
+            println "✓ ${xmlFile.name} is valid"
+        } else {
+            println "✗ ${xmlFile.name} validation failed:"
+            if (result.output) {
+                println result.output
+            }
+            throw new GradleException("XML validation failed")
+        }
+    }
+}
+
+tasks.register('validate', ValidationTask) {
+    description = 'Validates all XML files in predefined directories against the RelaxNG schema'
+    group = 'Validation'
+    
+    doLast {
+        def directories = ['mock']  // Add more directories as needed
+        def failures = []
+        def validCount = 0
+        def totalCount = 0
+        
+        directories.each { dirName ->
+            def directory = project.file(dirName)
+            if (!directory.exists() || !directory.isDirectory()) {
+                println "Warning: Directory ${directory.absolutePath} does not exist"
+                return
+            }
+            
+            def xmlFiles = project.fileTree(directory).include('**/*.xml')
+            
+            xmlFiles.each { xmlFile ->
+                totalCount++
+                def result = runJingValidation(xmlFile)
+                
+                if (result.success) {
+                    validCount++
+                    print "."
+                } else {
+                    failures << [file: xmlFile.name, output: result.output]
+                    print "F"
+                }
+            }
+        }
+        
+        println "\n\nValidation Summary:"
+        println "✓ ${validCount}/${totalCount} files are valid"
+        
+        if (failures) {
+            println "\nFailed validations:"
+            failures.each { failure ->
+                println "\n✗ ${failure.file} failed validation:"
+                println failure.output
+                println "-" * 80  // Separator line
+            }
+            throw new GradleException("${failures.size()} file(s) failed validation")
+        }
+    }
+}

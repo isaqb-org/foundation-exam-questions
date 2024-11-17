@@ -1,0 +1,26 @@
+# Gradle specific files
+.gradle/
+build/
+
+# Gradle wrapper jar should be versioned, so no rule for it
+
+# IDE specific files (common IDEs used with Gradle)
+.idea/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.swp
+*.bak

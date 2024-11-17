@@ -202,8 +202,13 @@ tasks.named('asciidoctor') {
     sources {
         include mainDocFile
     }
-    
     outputDir file("${docOutputPath}/html")
+    forkOptions {
+        jvmArgs += [
+            '--add-opens', 'java.base/sun.nio.ch=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.io=ALL-UNNAMED'
+        ]
+    }
     
     attributes = [
         'source-highlighter': 'rouge',
@@ -236,8 +241,17 @@ tasks.named('asciidoctorPdf') {
     sources {
         include mainDocFile
     }
-    
     outputDir file("${docOutputPath}/pdf")
+    // For unknown reasons asciidoctorPdf sometimes guzzles up heap like there's no tomorrow
+    forkOptions {
+        maxHeapSize = "2g"
+        jvmArgs += [
+            '--add-opens', 'java.base/sun.nio.ch=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.io=ALL-UNNAMED',
+            '-XX:+UseG1GC',              // Use G1 garbage collector
+            '-XX:+HeapDumpOnOutOfMemoryError'  // Help diagnose issues
+        ]
+    }
     
     attributes = [
         'pdf-stylesdir': 'themes',

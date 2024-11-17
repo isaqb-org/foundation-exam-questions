@@ -25,6 +25,38 @@ into the new format, results are in the `+examples+` directory.
 Racket code for parsing XML exam questions and producing output from
 them is in the `+code+` directory.
 
+== Build System
+
+The project uses Gradle for building and validation. The Gradle wrapper is included, so you don't need to install Gradle separately.
+
+=== Prerequisites
+
+* Java Development Kit (JDK) 8 or higher
+** Note: Gradle works with any JVM version between 8 and 23
+
+=== Getting Started
+
+[source,bash]
+----
+./gradlew tasks # Lists all available tasks
+----
+
+=== XML Validation
+
+Validate a single XML file:
+[source,bash]
+----
+./gradlew validateFile -Pfile=mock/mock-01.xml
+----
+
+Validate all XML files in the mock directory:
+[source,bash]
+----
+./gradlew validate
+----
+
+Both tasks will validate the XML files against the RELAX NG schema (`exam.rng`).
+
 == Contributing
 
 Create a subdirectory in `+examples+` whose name makes clear the

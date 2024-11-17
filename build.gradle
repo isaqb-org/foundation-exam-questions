@@ -1,4 +1,5 @@
 import java.util.regex.Pattern
+import javax.inject.Inject
 
 plugins {
     id 'base'
@@ -339,8 +340,15 @@ def updateFileSection(file, sectionStart, sectionEnd, newContent) {
 }
 
 // Make documentation tasks depend on ADR index update
-tasks.matching { it.name in ['asciidoctor', 'asciidoctorPdf'] }.all {
+tasks.named('asciidoctor') {
     dependsOn 'updateAdrIndex'
 }
 
+tasks.named('asciidoctorPdf') {
+    dependsOn 'updateAdrIndex'
+}
+
+tasks.named('buildDocs') {
+    dependsOn 'updateAdrIndex'
+}
 

@@ -1,0 +1,27 @@
+////
+File: /arc42-doc/12-glossary.adoc
+Purpose: Documents domain and technical terms used in the architecture documentation.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-glossary]]
+== Glossary
+
+categoryQuestion:: Question type where statements must be assigned to predefined categories. Defined in the RelaxNG schema.
+
+equivalence class:: A group of questions that are considered similar or variants of each other. These questions should not be used together in the same exam to maintain test validity.
+
+learning goal:: Educational objective referenced by questions. Identified by curriculum version and number (e.g., "2025.1 lg-01-01").
+
+pickQuestion:: Question type for multiple choice questions where one or more options are correct. Defined in the RelaxNG schema.
+
+question variant:: A question that is derived from or similar to another existing question, sharing significant content or testing the same concept in a similar way.
+
+RelaxNG:: XML schema language used to define the structure of exam questions. More flexible than traditional XSD schemas and focuses on patterns in data.
+
+stem:: The actual question text in a question document. Contains the problem or task that needs to be solved by the exam participant.
+
+XSL-FO:: Formatting Objects - An XML vocabulary for specifying formatting semantics. Used as an intermediate format for generating PDFs from XML data.
+
+XSLT:: eXtensible Stylesheet Language Transformations - A declarative language for transforming XML documents into other XML documents, HTML, or text formats.

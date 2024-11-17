@@ -1,0 +1,86 @@
+// Main arc42 documentation file
+// Combines all sections into a complete architecture documentation
+// ==========================================================
+
+// Include configuration settings
+include::config.adoc[]
+
+= Exam NG Architecture Documentation
+:revnumber: 0.1
+:revdate: November 2024
+:revremark: (proposal)
+// toc-title definition MUST follow document title without blank line!
+:toc-title: Table of Contents
+
+//additional style for arc42 help callouts
+ifdef::backend-html5[]
+++++
+<style>
+.arc42help {font-size:small; width: 14px; height: 16px; overflow: hidden; position: absolute; right: 0; padding: 2px 0 3px 2px;}
+.arc42help::before {content: "?";}
+.arc42help:hover {width:auto; height: auto; z-index: 100; padding: 10px;}
+.arc42help:hover::before {content: "";}
+@media print {
+	.arc42help {display:none;}
+}
+</style>
+++++
+endif::backend-html5[]
+
+// Include about arc42
+include::about-arc42.adoc[]
+
+// horizontal line
+***
+
+
+// numbering from here on
+:numbered:
+
+<<<<
+// 1. Introduction and Goals
+include::01-introduction.adoc[]
+
+<<<<
+// 2. Architecture Constraints
+include::02-constraints.adoc[]
+
+<<<<
+// 3. Context and Scope
+include::03-context.adoc[]
+
+<<<<
+// 4. Solution Strategy
+include::04-solution.adoc[]
+
+<<<<
+// 5. Building Block View
+include::05-building-blocks.adoc[]
+
+<<<<
+// 6. Runtime View
+include::06-runtime.adoc[]
+
+<<<<
+// 7. Deployment View
+include::07-deployment.adoc[]
+
+<<<<
+// 8. Concepts
+include::08-concepts.adoc[]
+
+<<<<
+// 9. Architecture Decisions
+include::09-decisions.adoc[]
+
+<<<<
+// 10. Quality Requirements
+include::10-quality.adoc[]
+
+<<<<
+// 11. Technical Risks
+include::11-risks.adoc[]
+
+<<<<
+// 12. Glossary
+include::12-glossary.adoc[]

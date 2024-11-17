@@ -1,0 +1,97 @@
+////
+File: /arc42-doc/03-context.adoc
+Purpose: Defines system boundaries and documents the system's relationships with its environment.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-context-and-scope]]
+== Context and Scope
+
+=== Business Context
+
+[plantuml]
+....
+@startuml
+skinparam charset UTF-8
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+AddElementTag("future", $fontColor="#ecc075")
+
+Person(author, "Question Author", "Creates and edits exam questions")
+Person(reviewer, "Reviewer (future)", "Reviews questions", $tags="future")
+Person(provider, "Exam Provider (future)", "Uses question sets in exams", $tags="future")
+Person(student, "FL Student (future)", "Uses questions to prepare for exams", $tags="future")
+
+System(questionSystem, "Exam NG System", "Manages XML-based exam questions and generates various output formats")
+
+System_Ext(gitlab, "GitLab", "Stores question files")
+System_Ext(examTraining, "Exam Training System (future)", "Provides Online Questionnaires", $tags="future")
+
+Rel(author, questionSystem, "Uses", "create, edit, validate questions")
+Rel(reviewer, questionSystem, "Uses", "review questions")
+Rel(questionSystem, provider, "Distributes", "question sets)")
+Rel(student, examTraining, "Uses", "online question sets")
+
+Rel(questionSystem, examTraining, "Updates", "question sets")
+Rel(questionSystem, gitlab, "Uses", "version control")
+
+@enduml
+....
+
+==== External Systems and Interfaces
+
+[options="header",cols="1,2,2"]
+|===
+|System |Interface Type |Data/Format
+
+|GitLab
+|Git protocol
+a|
+* XML question files
+* Version history
+
+|===
+
+==== Users and External Stakeholders
+
+[options="header",cols="1,2,2"]
+|===
+|User/Role |Input |Output
+
+|Question Author
+a|* Question content (XML)
+* Command-line requests
+a|* Validation results
+* PDF previews
+* HTML previews
+* Error messages
+
+|Reviewer
+(future)
+a|* Review comments
+* Change requests
+a|* Question views
+* Comparison views
+
+|Exam Provider
+(future)
+a|* Format requirements
+a|* XML question sets
+* PDF documents
+
+|FL Student
+(future)
+a|* Possibly feedback on question quality
+a|* Rendered question sets 
+* PDF documents
+
+|===
+
+=== Technical Context
+
+TODO: needs to be specified
+
+==== Technical Interfaces
+
+TODO: needs to be specified

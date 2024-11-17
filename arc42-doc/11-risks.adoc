@@ -1,0 +1,119 @@
+////
+File: /arc42-doc/11-risks.adoc
+Purpose: Documents known risks and technical debts that affect the architecture.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-technical-risks]]
+== Risks and Technical Debts
+
+=== Technical Risks
+
+[options="header",cols="1,2,2"]
+|===
+|Risk |Description |Mitigation
+
+|Cross-Platform Compatibility
+|While Gradle provides cross-platform support, the integration with XSL-FO processors and other tools might cause platform-specific issues.
+a|
+* Early testing on different platforms
+* Clear documentation of platform requirements
+* Container-based development environment if needed
+
+|XML Schema Evolution
+a|
+The RelaxNG schema is still under development. Changes might affect:
+
+* Existing questions
+* Validation logic
+* Transformation pipelines
+a|
+* Version schema files
+* Plan migration strategy
+* Track schema dependencies
+
+|Question Organization
+a|
+Current file-based organization might not scale well with:
+
+* Large number of questions
+* Multiple authors
+* Complex search requirements
+a|
+* Postponed to Priority 3
+* Document organization needs
+* Consider search requirements early
+
+|Tool Dependencies
+a|
+
+System relies on external tools:
+* XSL-FO processor
+* RelaxNG validators
+* XSLT processors
+a|
+* Document exact version requirements
+* Consider bundling required tools
+* Test upgrade procedures
+|===
+
+=== Technical Debts
+
+[options="header",cols="1,2,2"]
+|===
+|Debt |Impact |Notes
+
+|Basic HTML Styling
+|Initial HTML output will have minimal styling.
+a|
+* Accepted for Priority 1
+* Document styling requirements
+* Plan enhancement in later phase
+
+|Command-Line Focus
+|No GUI for non-technical users initially.
+a|
+* Identified as future need
+* Document UI requirements
+* Consider API design for future UI
+
+|Limited Error Reporting
+|Initial error messages might be too technical.
+a|
+* May affect user acceptance
+* Collect user feedback
+* Plan improvements
+
+|Missing Search Functionality
+|File system browsing only for finding questions.
+a|
+* Acceptable for initial version
+* Document search requirements
+* Consider metadata structure
+|===
+
+=== Risk Assessment Matrix
+
+[plantuml, format=svg]
+----
+@startmindmap
+* Project Risks
+** High Impact/High Probability
+*** Schema Evolution
+** High Impact/Low Probability
+*** Tool Compatibility
+** Low Impact/High Probability
+*** Basic UI
+** Low Impact/Low Probability
+*** Search Limitations
+----
+
+
+=== Monitoring and Review
+
+* Regular review of schema changes and their impact
+* Platform compatibility testing with each release
+* Collection of user feedback on error messages
+* Documentation of workarounds for known limitations
+* Review of this risk assessment when moving beyond Priority 1 features

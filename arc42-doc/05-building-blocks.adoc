@@ -1,0 +1,100 @@
+////
+File: /arc42-doc/05-building-blocks.adoc
+Purpose: Documents the static decomposition of the system into building blocks and their dependencies.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-building-block-view]]
+== Building Block View
+
+=== Whitebox Overall System
+
+image::05_building_blocks-EN.png["Level 0: Overall System",align="center"]
+
+==== System Scope and Context
+
+The exam question authoring and management system is composed of several core building blocks that handle validation, transformation, and output generation.
+
+==== Contained Building Blocks
+
+[options="header",cols="1,2"]
+|===
+|Name |Responsibility
+
+|Question Validator
+a|
+* XML validation against RelaxNG schema
+* Error reporting and formatting
+* Schema compliance checking
+
+|Transformation Pipeline
+a|
+* Orchestrates transformation processes
+* Manages different output formats
+* Handles transformation errors
+
+|PDF Generator
+a|
+* XSLT/XSL-FO processing
+* PDF output generation
+* Layout and styling application
+
+|HTML Generator
+a|
+* HTML rendering of questions
+* Basic styling application
+* Multi-language view generation
+
+|Gradle Task Manager
+a|
+* Command-line interface
+* Task orchestration
+* Build process management
+
+|Translation Manager
+a|
+* Tracks translation status and deadlines
+* Identifies cross-language update needs
+* Generates translation status reports
+* Provides side-by-side comparison views
+|===
+
+==== Important Interfaces
+
+[options="header",cols="1,2"]
+|===
+|Interface |Description
+
+|Question File Interface
+a|
+* XML file reading/writing
+* GitLab integration points
+* File system operations
+
+|Validation Interface
+a|
+* Error reporting structure
+* Validation result format
+* Warning aggregation
+
+|Transform Interface
+a|
+* Common transformation protocol
+* Output configuration
+* Error handling
+|===
+
+=== Level 2: Core Components
+
+==== Question Validator
+
+[TBD: Detailed structure of validation components]
+
+==== Transformation Pipeline
+
+[TBD: Details of transformation architecture]
+
+==== Output Generators
+
+[TBD: PDF and HTML generation specifics]

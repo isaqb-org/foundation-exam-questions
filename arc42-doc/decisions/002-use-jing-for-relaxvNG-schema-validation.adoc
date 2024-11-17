@@ -1,0 +1,95 @@
+= ADR002 - Use Jing for RelaxNG Schema Validation
+
+[.lead]
+A decision record for implementing XML schema validation against RelaxNG schemas.
+
+== Status
+
+Proposed
+
+== Context
+
+For validating exam questions against the RelaxNG schema, we need a solution that:
+
+* Handles both single-file and batch validation
+* Works consistently across different platforms
+* Integrates with Gradle build system
+* Provides clear error messages
+* Can be reused as a component in other parts of the system
+
+Current approach using xmllint requires system-level installation that may not be available on all platforms.
+
+Performance requirements:
+
+* Single file validation must complete within 3 seconds
+* Complete build including all validations must complete within 2 minutes
+
+== Decision
+
+Use Jing as the RelaxNG schema validation implementation.
+
+== Rationale
+
+.Considered approaches:
+[cols="1,4"]
+|===
+|Option |Analysis
+
+|1. Jing (Chosen)
+a|
+* Platform independent (JVM-based)
+* Reference implementation for RELAX NG
+* Excellent performance characteristics
+* Strong community support
+* Clean Gradle integration
+* Moderate learning curve
+
+|2. Scala/nu.validator
+a|
+* Good functional programming support
+* Platform independent
+* More demanding learning curve
+* Smaller community
+* More complex integration
+
+|3. Embedded xmllint
+a|
+* Familiar from current usage
+* Excellent performance
+* Platform dependency issues
+* Complex distribution
+
+|4. Other Options
+a|
+* Node.js: Additional runtime dependency
+* Haskell: Limited community, steep learning curve
+* Web Service: Performance/complexity concerns
+|===
+
+Jing scored highest in our weighted evaluation, particularly excelling in critical requirements (platform independence, performance) while offering good community support and a moderate learning curve.
+
+== Consequences
+
+.Re-evaluation Triggers
+* Performance falls below requirements
+* Schema complexity increases significantly
+* New validation requirements emerge
+
+.Required Actions
+[arabic]
+. Add Jing dependency to build
+. Create validation task implementation
+. Document error message patterns
+. Define validation component API
+. Create examples for common use cases
+. Schedule review after first major release
+
+== Related Decisions
+
+* ADR001: Uses Gradle for CLI - Jing will integrate with this infrastructure
+
+== References
+
+* XML Validation Requirements (Section 10)
+* Quality Goals (Section 1.2)
+* Technical Constraints (Section 2)

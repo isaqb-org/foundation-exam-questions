@@ -1,0 +1,185 @@
+////
+File: /arc42-doc/10-quality.adoc
+Purpose: Documents quality scenarios and requirements that shape the architecture.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-quality-scenarios]]
+== Quality Requirements
+
+=== Quality Tree
+
+[plantuml]
+....
+@startmindmap
+* Quality
+** Reliability
+*** XML Correctness
+*** Data Integrity
+*** Build Stability
+** Usability
+*** Developer Experience
+*** Tool Simplicity
+*** Error Messages
+** Maintainability
+*** Code Structure
+*** Extensibility
+*** Documentation
+** Performance
+*** Response Times
+*** Resource Usage
+....
+
+=== Quality Scenarios
+
+==== Reliability Scenarios
+
+[options="header",cols="1,2,3"]
+|===
+|Quality Goal |Scenario |Evaluation
+
+|XML Correctness
+|A question author creates a new question with invalid XML structure. The system immediately reports specific validation errors, pointing to the exact location and nature of the problem.
+|All validation errors must be detected and reported clearly.
+
+|Data Integrity
+|A question's translations in different languages are modified. The system ensures all language versions remain consistent and complete.
+|Basic structural consistency must be maintained.
+
+|Build Stability
+|Different developers on different platforms execute the build process. The build produces identical results regardless of the platform.
+|Build must work consistently across platforms.
+|===
+
+==== Usability Scenarios
+
+[options="header",cols="1,2,3"]
+|===
+|Quality Goal |Scenario |Evaluation
+
+|Developer Experience
+|A person with a junior developer skill level clones the repository and follows the setup instructions. They can set up and run the system within 30 minutes.
+|Basic setup must be straightforward with minimal steps.
+
+|Tool Simplicity
+|An author needs to validate questions and generate PDF output. They can find and execute the correct commands without consulting documentation.
+|Commands must follow intuitive patterns (e.g., `gradle validate`).
+
+|Error Messages
+|A question file contains multiple issues. Error messages clearly indicate all problems, their locations, and suggest potential fixes.
+|Messages must be understandable by non-technical users.
+
+|Question Creation Time
+|A new user follows the question template to create their first question. They should be able to complete this task within 60 minutes.
+|Time tracking during user testing must confirm this limit.
+
+|Expert Question Creation
+|An experienced user creates a new question using the system. They complete the task in under 15 minutes.
+|Regular measurement of creation times for experienced users.
+
+|Question Relationship Management
+|An author creates a variant of an existing question. The system automatically suggests the relationship, allows specifying the similarity degree, and marks them as mutually exclusive for exam composition.
+|Relationship management must be intuitive and support exam composition rules.
+
+|===
+
+==== Maintainability Scenarios
+
+[options="header",cols="1,2,3"]
+|===
+|Quality Goal |Scenario |Evaluation
+
+|Extensibility
+|A new output format needs to be added. The transformation pipeline can be extended without modifying existing transformations.
+|Changes should not affect existing functionality.
+
+|Documentation
+|A new developer needs to add a command. They can find relevant documentation and examples in the standard locations.
+|Documentation must be current and findable.
+
+|Code Structure
+|A bug is reported in PDF generation. Developers can locate the relevant code quickly due to clear component separation.
+|Clear separation of concerns in implementation.
+|===
+
+==== Performance Scenarios
+
+[options="header",cols="1,2,3"]
+|===
+|Quality Goal |Scenario |Evaluation
+
+|Response Time
+|An author validates a single question file. The system provides results within 3 seconds.
+|Validation must be fast enough for interactive use.
+
+|Build Performance
+|A complete build including all validations and transformations is executed. It completes within 2 minutes.
+|Full builds should not block development flow.
+|===
+
+=== Additional Performance Scenarios
+[options="header",cols="1,2,2"]
+|===
+|Quality Goal |Scenario |Evaluation Criteria
+|Interactive Response
+|Author edits question and requests validation
+|Results appear within 3 seconds to maintain workflow
+|Preview Generation
+|Author switches between different output formats (HTML/PDF)
+|Preview appears within 5 seconds for any format
+|Batch Processing
+|Author runs validation on entire question directory
+|Processing time stays under 30 seconds for 50 questions
+|Build Performance
+|Developer runs complete build with all validations
+|Full build completes within 2 minutes
+|Transform Response
+|System performs XSLT transformation for output
+|Individual transformations complete within 2 seconds
+|===
+
+==== Language Synchronization Scenarios
+
+[options="header",cols="1,2,3"]
+|===
+|Quality Goal |Scenario |Evaluation
+
+|Translation Completeness
+|A new question is added in German. The system tracks the missing English translation and reports it in the pending translations overview. The translation is completed within the 3-month timeframe.
+|Translation tracking must clearly show pending translations and their deadlines.
+
+|Cross-language Updates
+|A technical term is updated in the German version of a question. The change is identified as requiring synchronization and the English version is updated within one month.
+|Changes requiring cross-language updates must be clearly flagged and tracked.
+
+|Translation Visualization
+|A reviewer needs to check the consistency between language versions. They can easily view both versions side-by-side with highlighted differences.
+|Side-by-side comparison must be available and highlight relevant differences.
+|===
+
+
+==== Extensibility Scenarios
+
+[options="header",cols="1,2,3"]
+|===
+|Quality Goal |Scenario |Evaluation
+
+|Question Type Extension
+a|A new question type needs to be added to support image-based questions. This requires:
+
+- Schema extension for image metadata
+- Validation rule updates
+- Output generation for PDF/HTML
+- Example question creation
+
+The implementation team can complete this within 5 working days without requiring changes to existing question types or breaking the transformation pipeline.
+a|
+Success criteria:
+
+- Existing questions and outputs remain unchanged
+- New type works in all output formats
+- Validation provides clear feedback
+- Documentation updated
+- Example questions provided
+|===

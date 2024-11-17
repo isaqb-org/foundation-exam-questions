@@ -1,0 +1,164 @@
+////
+File: /arc42-doc/01-introduction.adoc
+Purpose: Documents requirements overview, quality goals, and stakeholders.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-introduction-and-goals]]
+== Introduction and Goals
+
+=== Requirements Overview
+
+The system supports the creation and maintenance of exam questions for the iSAQB Foundation Level examination using a structured XML format. The goal is to enable efficient question creation and management to build a high-quality question pool of over 300 questions within 1 year.
+
+
+==== Priority 1 (Initial Implementation)
+* XML-based question authoring with schema validation
+* Command-line interface for validation and transformation tasks
+* PDF output generation via transformation pipeline
+* HTML preview generation with basic styling
+* Version control integration via GitLab
+* Detailed schema validation error reporting
+
+
+==== Priority 2 (Essential Supporting Features)
+* Create and implement simple concept for defining exam sets
+* Provide interface for comparing questions across language versions
+* Support a systematic question organization and categorization system
+* Track and manage relationships between similar or variant questions
+* Block usage of similar questions in the same exam
+* Implement question templates to standardize creation process
+* Enable analysis of learning goal coverage across the question pool
+
+==== Priority 3 (Important Enhancements)
+* Support creation and validation of complete exam question sets
+* Visualize relationships and dependencies between questions
+* Generate statistics about question relationships and coverage
+
+==== Priority 4 (Backlog)
+* Track translation deadlines (3-month completion targets)
+* Monitor cross-language updates (1-month update time requirement)
+* Generate reports on pending translations
+* Provide file-based question export for exam providers
+* Validate multilingual content for plausibility
+* Export basic statistics about questions like count per type and learning goal
+* Export question usage history and frequency in exams
+* Generate and validate unique question identifiers
+* Enable search across all question content and metadata
+* Detect similar questions automatically
+* Report on translation completion status
+* Execute batch operations on question sets
+* Support additional question types beyond current schema
+* Track review status for each question
+* Display review status in standard tools
+* Support review workflow progression from draft to approved
+* Track separate review status per language version
+* Use question metadata for automated exam composition
+
+
+==== Priority 5 (Future Considerations)
+* Transform plain text input to markup format using AI assistance
+* Map and validate questions against curriculum versions
+* Analyze distribution of correct and incorrect answers
+* Implement formal review workflow
+* Support media attachments in questions
+
+==== Explicitly Excluded
+* Exam management system integration
+
+=== Quality Goals
+
+[options="header",cols="2,4,^1"]
+|===
+|Quality Goal |Scenarios |Priority
+
+|Reliability > Correctness
+a|
+
+- The system detects all XML schema violations immediately and provides error messages that point to the exact location.
+- Only questions that validate correctly can be added to the repository.
+|1
+
+|Usable > Interaction Efficiency
+a|
+Authors can work efficiently with the system:
+
+- New authors successfully create and validate their first question within 60 minutes 
+- Experienced authors complete questions in under 15 minutes
+- Preview updates appear within 5 seconds of changes
+- Validation results appear within 3 seconds
+- Authors find and execute the correct commands without consulting documentation
+- Complete build including all validations completes within 2 minutes
+|1
+
+|Operable > Installability
+a|
+A new team member with basic command-line experience can:
+
+- Set up the complete system within 30 minutes
+- Successfully validate their first question
+- Generate both PDF and HTML output
+
+All by following the provided documentation without additional support.
+|1
+
+|Flexible > Modifiability
+a|
+The transformation pipeline allows:
+
+- Adding new output formats without modifying existing ones
+- Extending the question schema without breaking existing transforms and questions
+
+
+|2
+
+|Operable > Portability
+a|
+The system works consistently across different platforms:
+
+- Identical validation results on Windows, Linux and macOS
+- Consistent PDF/HTML output regardless of operating system
+- Build process succeeds with same results on all platforms
+- No platform-specific configuration required beyond documented requirements
+|1
+|===
+
+=== Stakeholders
+
+[options="header",cols="1,4"]
+|===
+|Role/Name |Expectations
+
+|Question Authors
+a|
+* Create and edit questions via command line
+* Generate outputs for review
+* Validate question structure
+
+|Reviewers
+ +
+(future)
+a|
+* View questions in readable format
+* Compare different language versions
+* Track question history
+* View statistics about existing questions
+* Identify learning goals that are insuffciently covered by questions
+
+|Exam Providers
+ +
+(future)
+a|
+* Receive valid XML question sets
+* Access question metadata
+* Reliable and stable output formats
+
+|Students
+ +
+(future)
+a|
+* Access practice questions
+* View questions in multiple formats
+* Self-assessment options
+|===

@@ -57,6 +57,25 @@ Validate all XML files in the mock directory:
 
 Both tasks will validate the XML files against the RELAX NG schema (`exam.rng`).
 
+== Building Documentation
+
+The project uses Gradle to generate the documentation in both HTML and PDF formats:
+
+[source,bash]
+----
+# First time and regular builds
+./gradlew buildDocs
+
+# Clean and rebuild
+./gradlew clean buildDocs
+----
+
+The generated documentation will be available in:
+
+* `build/arc42-doc/html/` - HTML documentation
+* `build/arc42-doc/pdf/` - PDF documentation
+
+
 == Contributing
 
 Create a subdirectory in `+examples+` whose name makes clear the

@@ -1,0 +1,57 @@
+////
+File: /arc42-doc/decisions/template.md
+Purpose: Template for creating new Architecture Decision Records (ADRs), ensuring consistent documentation of architectural decisions.
+////
+
+= ADR[NNN]. [Title of Architecture Decision]
+
+<!--
+ADR template following Michael Nygard's format with additions for arc42 integration.
+-->
+
+== Status
+
+[Proposed | Accepted | Deprecated | Superseded]
+
+If superseded, link to new ADR: [NNN-new-decision.md]
+
+== Context
+
+[Describe the context and problem statement. What forces are at play, including technological, business, and organizational constraints?]
+
+== Decision
+
+[State the architecture decision and provide a clear rationale.]
+
+== Consequences
+
+[What are the resulting context and consequences after applying the decision? Include both positive and negative consequences. What becomes easier or more difficult to do because of this change? Also include resulting activities like "update documentation" or "add test for ...".]
+* [Positive consequence 1]
+* [Positive consequence 2]
+* [Negative consequence 1]
+* [Negative consequence 2]
+* [Risk 1]
+* [Risk 2]
+* [Action item 1]
+* [Action item 2]
+
+
+== Related Decisions
+
+* Links to related ADRs
+
+== References
+
+* References to arc42 sections
+* External references
+* Related patterns or documentation
+
+////
+Implementation Notes:
+- Use one ADR per architectural decision
+- Use three-digit numbers (e.g., ADR001, ADR002)
+- Keep language clear and precise
+- Include enough context for future understanding
+- Update status as decision evolves
+- Ensure cross-references are maintained
+////

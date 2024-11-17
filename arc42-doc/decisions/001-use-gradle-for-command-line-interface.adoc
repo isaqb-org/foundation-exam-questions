@@ -1,0 +1,72 @@
+////
+File: /arc42-doc/decisions/0000-use-gradle-for-command-line-interface.adoc
+////
+
+= ADR001 - Use Gradle for (initial) Command-Line Interface
+
+[.lead]
+A decision record for implementing the command-line interface using Gradle.
+
+== Status
+
+Accepted
+
+== Context
+
+For the initial prototype (Priority 1) stage, we need a command-line interface that must:
+
+* Handle XML validation against schema
+* Generate PDF/HTML output
+* Provide clear error messages
+* Work on different platforms
+* Allow adding new commands with low effort
+* Be usable by junior developers with basic setup instructions
+
+== Decision
+
+Use Gradle as the initial command-line interface implementation.
+
+== Rationale
+
+.Considered approaches:
+[cols="1,4"]
+|===
+|Option |Analysis
+
+|1. Gradle (Chosen)
+a|
+* Most developers already know it
+* Works well on all platforms
+* Handles dependencies
+* Well-documented with large community
+* Easy to add new tasks
+* Standard build tool practices
+
+|2. Custom CLI Tool (e.g., Picocli)
+a|
+* Would give full control
+* Requires higher development effort
+* New codebase developers must learn
+
+|3. Shell/Python Scripts
+a|
+* Simple to start with
+* Cross-platform issues
+* Hard to maintain as system grows
+|===
+
+Gradle best matches our requirements while using knowledge developers already have.
+
+== Consequences
+
+.Re-evaluation Triggers
+* Project grows beyond basic CLI tools
+* Integration needs become complex
+* User base expands significantly
+
+.Required Actions
+[arabic]
+. Set up Gradle project structure and wrapper
+. Create and document initial task set
+. Define patterns for adding new tasks
+. Schedule review when moving beyond Priority 1 features

@@ -1,0 +1,183 @@
+////
+File: /arc42-doc/08-concepts.adoc
+Purpose: Documents overarching concepts and rules that apply throughout the system.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-concepts]]
+== Cross-cutting Concepts
+
+
+ifdef::arc42help[]
+[role="arc42help"]
+****
+.Content
+This section describes overall, principal regulations and solution ideas that are relevant in multiple parts (= cross-cutting) of your system.
+Such concepts are often related to multiple building blocks.
+They can include many different topics, such as
+
+* models, especially domain models
+* architecture or design patterns
+* rules for using specific technology
+* principal, often technical decisions of an overarching (= cross-cutting) nature
+* implementation rules
+
+
+.Motivation
+Concepts form the basis for _conceptual integrity_ (consistency, homogeneity) of the architecture. 
+Thus, they are an important contribution to achieve inner qualities of your system.
+
+Some of these concepts cannot be assigned to individual building blocks, e.g. security or safety. 
+
+
+.Form
+The form can be varied:
+
+* concept papers with any kind of structure
+* cross-cutting model excerpts or scenarios using notations of the architecture views
+* sample implementations, especially for technical concepts
+* reference to typical usage of standard frameworks (e.g. using Hibernate for object/relational mapping)
+
+.Structure
+A potential (but not mandatory) structure for this section could be:
+
+* Domain concepts
+* User Experience concepts (UX)
+* Safety and security concepts
+* Architecture and design patterns
+* "Under-the-hood"
+* development concepts
+* operational concepts
+
+Note: it might be difficult to assign individual concepts to one specific topic
+on this list.
+
+image::08-concepts-EN.drawio.png["Possible topics for crosscutting concepts"]
+
+
+.Further Information
+
+See https://docs.arc42.org/section-8/[Concepts] in the arc42 documentation.
+****
+endif::arc42help[]
+
+=== Question Relationship Model
+
+==== Purpose
+The question relationship model enables tracking and managing similarities between questions to:
+
+- Prevent redundant questions in exams
+- Support question reuse and variation
+- Maintain overview of question coverage
+
+==== Structure
+[plantuml]
+....
+@startuml
+class Question {
+  +id: String
+  +type: QuestionType
+  +languages: Set<Language>
+}
+
+class RelationType {
+  +type: String
+  +description: String
+}
+
+class QuestionRelation {
+  +type: RelationType
+  +similarity: Float
+  +notes: String
+}
+
+Question "1" *-- "*" QuestionRelation
+QuestionRelation "*" -- "1" Question: related to >
+RelationType "1" -- "*" QuestionRelation
+@enduml
+....
+
+==== Relation Types
+
+- *Variant*: Questions with same core concept but different wording
+- *Similar*: Questions testing related concepts
+- *Dependent*: Questions that build on each other
+
+==== Usage Guidelines
+
+- Questions within the same equivalence class should not appear in the same exam
+- Similarity scores help in exam composition
+- Relationships should be documented when creating question variants
+
+=== Exam Question Metadata Handling
+
+[NOTE]
+====
+TODO: This concept needs further refinement during implementation phases 2-3. 
+Key questions to address:
+
+- What additional metadata fields might be needed?
+- How to ensure consistent metadata across language versions?
+- What validation rules apply to metadata?
+====
+
+==== Identified Metadata Fields
+From requirements:
+
+Essential:
+- Question ID (for referencing specific versions)
+- Languages (available translations)
+- Question type (pickQuestion, categoryQuestion)
+- Learning goals
+- Points/scoring
+- Change history (modifications across all language versions)
+- Review/release status
+- Question relationships/equivalence classes
+
+Additional:
+- Author information
+- Solution hints/explanations
+- Related curriculum version
+
+The system needs to support automated processing of this metadata for:
+- Exam composition and validation
+- Learning goal coverage analysis  
+- Question filtering and selection
+- Translation status tracking
+- Review process support
+
+This capability should be considered in:
+- Question format design
+- Tool implementation  
+- Export formats
+
+=== Change History Management
+
+[NOTE]
+====
+TODO: This concept needs refinement to address:
+
+- How to minimize redundant history storage
+- Best practices for handling cross-language changes
+- Integration with version control
+====
+
+==== Requirements
+
+- Changes must be traceable across all language versions of a question
+- History should show whether changes affect single or multiple language versions
+- Avoid redundant storage of change information
+- Support both technical (Git) and content-level history
+
+==== Change Categories
+
+- Single language updates (e.g., typo fixes)
+- Cross-language changes (e.g., technical content updates)
+- Structural changes (affecting all versions)
+
+...
+
+=== _<Concept n>_
+
+_<explanation>_

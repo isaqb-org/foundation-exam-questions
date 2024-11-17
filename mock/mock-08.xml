@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<pickQuestion id="Q-20-04-03" points="1">
+  <history>
+    <item date="2024-08-10">content identical to mock exam 2024.1-rev0-DE-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-01" />
+    <lg curriculumVersion="2023.1" lg="1-1" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was sind die ZWEI wichtigsten Ziele von Softwarearchitektur?
+    </text>
+    <text xml:lang="en">
+      What are the TWO most important goals of software architecture?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Verbesserung der Genauigkeit von Mustern in Struktur und Implementierung.
+      </text>
+      <text xml:lang="en">
+        Improve accuracy of patterns in structure and implementation.
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Erreichung der Qualitätsanforderungen auf nachvollziehbare Weise.
+      </text>
+      <text xml:lang="en">
+        Achieve quality requirements in a comprehensible way.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Ermöglichung von kosteneffizienten Integrations- und Abnahmetests des Systems.
+      </text>
+      <text xml:lang="en">
+        Enable cost-effective integration and acceptance tests of the system.
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Ermöglichung eines grundlegenden Verständnisses der Strukturen und Konzepte für das Entwicklungsteam und andere Beteiligte.
+      </text>
+      <text xml:lang="en">
+        Enable a basic understanding of structures and concepts for the development team and other stakeholders.
+      </text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die zwei Hauptziele der Softwarearchitektur sind die nachvollziehbare Erfüllung von Qualitätsanforderungen und die Schaffung eines gemeinsamen Verständnisses der Systemstruktur für alle Beteiligten. Die anderen Optionen sind zwar auch wichtig, stellen aber keine Hauptziele der Architektur dar. Die Verbesserung von Mustern ist ein Mittel zum Zweck, nicht ein Hauptziel, und effiziente Tests sind eher eine Folge guter Architektur als ein primäres Ziel.
+    </text>
+    <text xml:lang="en">
+      The two main goals of software architecture are achieving quality requirements in a traceable way and creating a shared understanding of system structure for all stakeholders. While the other options are important, they don't represent primary architectural goals. Improving patterns is a means to an end, not a main goal, and efficient testing is more a consequence of good architecture rather than a primary objective.
+    </text>
+  </explanation>
+</pickQuestion>

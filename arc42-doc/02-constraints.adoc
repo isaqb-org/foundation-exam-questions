@@ -1,0 +1,74 @@
+////
+File: /arc42-doc/02-constraints.adoc
+Purpose: Documents technical and organizational constraints that affect architectural freedom.
+////
+
+ifndef::imagesdir[:imagesdir: ./images]
+
+[[section-architecture-constraints]]
+== Architecture Constraints
+
+=== Technical Constraints
+|===
+|Constraint |Background/Motivation |Details
+
+|Version Control System: GitLab
+|Project was initialized using GitLab
+a|
+* Source code and question content stored in GitLab repository
+* Branch/merge workflow for collaborative development
+* Built-in CI/CD capabilities available
+
+|Question Format
+|Existing RelaxNG schema under development defines question structure
+a|
+* XML-based format
+* Support for multilingual content (DE/EN/<other> required)
+* Two defined question types (pickQuestion, categoryQuestion)
+* Specific metadata structure (learning goals, history)
+
+|PDF Generation
+|Existing transformation process should be supported/adapted
+a|
+* Possibly based on XSLT/XSL-FO
+* Current styling should be maintained
+* Should work with XML question format
+
+|Cross-Platform Support
+|Users work on different operating systems
+a|
+* Command-line tools must work on all major platforms
+* No platform-specific dependencies
+* Consistent behavior across systems
+
+|===
+
+=== Organizational Constraints
+|===
+|Constraint |Background/Motivation |Details
+
+|Development Process
+|Initial prototype stage with phased implementation
+a|
+* Focus on Priority 1 features first
+* Work done by unpaid contributors
+* Command-line based workflow for initial version
+* Changes must be reviewable in GitLab
+
+|User Skills (Authors, Reviewers)
+|Different technical backgrounds of users
+a|
+* Authors with junior developer skills must be able to set up system
+* Basic documentation must be sufficient
+* Command-line experience can be assumed
+
+|Volunteer Developers
+|Development team consists of volunteers with diverse programming backgrounds
+a|
+* Mix of object-oriented and functional programming backgrounds
+* Different levels of XML/XSLT experience
+* Variable time availability for contribution
+* Code must be accessible to different programming paradigms
+* Documentation needs to accommodate different approaches
+
+|===

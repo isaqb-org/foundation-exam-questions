@@ -15,6 +15,7 @@ build/
 .vscode/
 *.sublime-workspace
 *.sublime-project
+*.code-workspace
 
 # OS specific files
 .DS_Store

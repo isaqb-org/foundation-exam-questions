@@ -45,6 +45,21 @@ body {
     color: #1976d2;
 }
 
+.curriculum-links {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.curriculum-link {
+    color: #1976d2;
+    text-decoration: none;
+    margin: 0 0.2rem;
+}
+
+.curriculum-link:hover {
+    text-decoration: underline;
+}
+
 .question {
     margin-bottom: 2rem;
 }

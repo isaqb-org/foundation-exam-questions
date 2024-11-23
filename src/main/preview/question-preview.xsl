@@ -69,19 +69,6 @@
         </div>
     </xsl:template>
 
-    <!-- Learning Goals template -->
-    <xsl:template match="refersToLgs">
-        <div class="learning-goals">
-            <xsl:apply-templates select="lg"/>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="lg">
-        <span class="learning-goal">
-            <xsl:value-of select="@curriculumVersion"/>/<xsl:value-of select="@lg"/>
-        </span>
-    </xsl:template>
-
     <!-- Pick Option template -->
     <xsl:template match="option">
         <div class="option">
@@ -128,6 +115,41 @@
             </td>
         </tr>
     </xsl:template>
+
+<!-- Learning Goals templates -->
+<xsl:template match="refersToLgs">
+    <div class="learning-goals">
+        <xsl:apply-templates select="lg"/>
+    </div>
+</xsl:template>
+
+<xsl:template match="lg">
+    <span class="learning-goal">
+        <!-- Display the learning goal -->
+        <xsl:value-of select="@curriculumVersion"/>/<xsl:value-of select="@lg"/>
+        
+        <!-- Add curriculum links -->
+        <span class="curriculum-links">
+            <!-- Base URL for curriculum -->
+            <xsl:variable name="baseUrl">https://public.isaqb.org/curriculum-foundation/</xsl:variable>
+            
+            <!-- Version-specific path -->
+            <xsl:variable name="versionPath">
+                <xsl:if test="starts-with(@curriculumVersion, '2025')">release-candidate/</xsl:if>
+            </xsl:variable>
+            
+            <!-- German link -->
+            <a href="{$baseUrl}{$versionPath}curriculum-foundation-de.html#LZ-{@lg}" 
+               class="curriculum-link" 
+               target="_blank">de</a>
+            
+            <!-- English link -->
+            <a href="{$baseUrl}{$versionPath}curriculum-foundation-en.html#LG-{@lg}" 
+               class="curriculum-link" 
+               target="_blank">en</a>
+        </span>
+    </span>
+</xsl:template>
 
     <!-- Common content templates -->
     <xsl:template match="stem">

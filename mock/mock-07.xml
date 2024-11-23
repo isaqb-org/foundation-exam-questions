@@ -8,7 +8,8 @@
     <!-- referencing multiple LGs should be possible -->
     <!-- declaring the curriculum version might be helpfull when migrating
          from one curriuculum version to another -->
-    <lg curriculumVersion="2023.1" lg="3-2" />
+    <lg curriculumVersion="2025.1" lg="03-04" />     
+    <lg curriculumVersion="2023.1" lg="2-6" />
   </refersToLgs>
 
   <!-- The stem asks the actual problem to solve. -->

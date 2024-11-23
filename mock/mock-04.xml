@@ -8,6 +8,7 @@
     <!-- referencing multiple LGs should be possible -->
     <!-- declaring the curriculum version might be helpfull when migrating
          from one curriuculum version to another -->
+    <lg curriculumVersion="2025.1" lg="04-02" />     
     <lg curriculumVersion="2023.1" lg="3-2" />
   </refersToLgs>
 

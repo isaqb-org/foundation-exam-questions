@@ -23,6 +23,52 @@
         </html>
     </xsl:template>
 
+    <!-- Common question template -->
+    <xsl:template match="pickQuestion|categoryQuestion">
+        <div class="question">
+            <xsl:attribute name="class">
+                question <xsl:value-of select="local-name()"/>
+            </xsl:attribute>
+            
+            <!-- Common header section -->
+            <div class="question-header">
+                <span class="question-id">ID: <xsl:value-of select="@id"/></span>
+                <span class="question-points">Points: <xsl:value-of select="@points"/></span>
+            </div>
+            
+            <!-- Common metadata -->
+            <xsl:apply-templates select="refersToLgs"/>
+            
+            <!-- Common stem section -->
+            <xsl:apply-templates select="stem"/>
+            
+            <!-- Question-type specific content -->
+            <xsl:choose>
+                <xsl:when test="local-name()='pickQuestion'">
+                    <div class="options-container">
+                        <xsl:apply-templates select="pickOptions/option"/>
+                    </div>
+                </xsl:when>
+                <xsl:when test="local-name()='categoryQuestion'">
+                    <table class="category-table">
+                        <thead>
+                            <tr>
+                                <xsl:apply-templates select="categoryStatements/categories/category" mode="header"/>
+                                <th class="statement-column">Statement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <xsl:apply-templates select="categoryStatements/statements/statement"/>
+                        </tbody>
+                    </table>
+                </xsl:when>
+            </xsl:choose>
+            
+            <!-- Common footer -->
+            <xsl:apply-templates select="explanation"/>
+        </div>
+    </xsl:template>
+
     <!-- Learning Goals template -->
     <xsl:template match="refersToLgs">
         <div class="learning-goals">
@@ -34,52 +80,6 @@
         <span class="learning-goal">
             <xsl:value-of select="@curriculumVersion"/>/<xsl:value-of select="@lg"/>
         </span>
-    </xsl:template>
-
-    <!-- Pick Question template -->
-    <xsl:template match="pickQuestion">
-        <div class="question pick-question">
-            <div class="question-header">
-                <span class="question-id">ID: <xsl:value-of select="@id"/></span>
-                <span class="question-points">Points: <xsl:value-of select="@points"/></span>
-            </div>
-            
-            <xsl:apply-templates select="refersToLgs"/>
-            <xsl:apply-templates select="stem"/>
-            
-            <div class="options-container">
-                <xsl:apply-templates select="pickOptions/option"/>
-            </div>
-            
-            <xsl:apply-templates select="explanation"/>
-        </div>
-    </xsl:template>
-
-    <!-- Category Question template -->
-    <xsl:template match="categoryQuestion">
-        <div class="question category-question">
-            <div class="question-header">
-                <span class="question-id">ID: <xsl:value-of select="@id"/></span>
-                <span class="question-points">Points: <xsl:value-of select="@points"/></span>
-            </div>
-            
-            <xsl:apply-templates select="refersToLgs"/>
-            <xsl:apply-templates select="stem"/>
-            
-            <table class="category-table">
-                <thead>
-                    <tr>
-                        <xsl:apply-templates select="categoryStatements/categories/category" mode="header"/>
-                        <th class="statement-column">Statement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <xsl:apply-templates select="categoryStatements/statements/statement"/>
-                </tbody>
-            </table>
-            
-            <xsl:apply-templates select="explanation"/>
-        </div>
     </xsl:template>
 
     <!-- Pick Option template -->
@@ -129,14 +129,13 @@
         </tr>
     </xsl:template>
 
-    <!-- Stem template -->
+    <!-- Common content templates -->
     <xsl:template match="stem">
         <div class="stem">
             <xsl:apply-templates select="text"/>
         </div>
     </xsl:template>
 
-    <!-- Explanation template -->
     <xsl:template match="explanation">
         <div class="explanation">
             <h3>Explanation</h3>
@@ -144,7 +143,6 @@
         </div>
     </xsl:template>
 
-    <!-- Text template -->
     <xsl:template match="text">
         <div class="lang-text {@xml:lang}">
             <span class="lang-indicator"><xsl:value-of select="@xml:lang"/></span>

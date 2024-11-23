@@ -54,7 +54,7 @@ endif::arc42help[]
 
 |<<001-use-gradle-for-command-line-interface.adoc,001>> |Accepted |Use Gradle for (initial) Command-Line Interface
 |<<002-use-jing-for-relaxvNG-schema-validation.adoc,002>> |Proposed |Use Jing for RelaxNG Schema Validation
-|<<003-use-xslt-and-web-components-for-question-preview.adoc,003>> |Proposed |Use XSLT and Web Components for Question Preview
+|<<003-use-xslt-for-question-preview.adoc,003>> |Accepted |Use XSLT for Question Preview
 |===
 // END-ADR-INDEX
 

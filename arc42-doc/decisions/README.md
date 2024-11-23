@@ -16,6 +16,7 @@ This directory contains Architecture Decision Records (ADRs) for the system, doc
 |--|--|-------|
 | [001](001-use-gradle-for-command-line-interface.adoc) | Accepted | Use Gradle for (initial) Command-Line Interface |
 | [002](002-use-jing-for-relaxvNG-schema-validation.adoc) | Proposed | Use Jing for RelaxNG Schema Validation |
+| [003](003-use-xslt-for-question-preview.adoc) | Accepted | Use XSLT for Question Preview |
 <!-- END-ADR-INDEX -->
 
 ## Naming Convention

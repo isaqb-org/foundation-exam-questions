@@ -390,3 +390,172 @@ tasks.named('buildDocs') {
     dependsOn 'updateAdrIndex'
 }
 
+
+// **********************************************************
+// * Tasks and code for preparing LLM context for claude.ai *
+// **********************************************************
+
+// Task for collecting context for question authoring
+tasks.register('collectClaudeContextQuestions') {
+    description 'Collects files relevant for question authoring into a single directory for Claude context'
+    group 'Documentation'
+
+    doFirst {
+        def claudeContextDir = new File(buildDir, 'claude-context-questions')
+        claudeContextDir.deleteDir()
+        claudeContextDir.mkdirs()
+    }
+
+    doLast {
+        def claudeContextDir = new File(buildDir, 'claude-context-questions')
+        def fileMapping = [:] 
+
+        def relevantFiles = [
+            // Question examples and schema
+            'mock/**/*.xml',
+            'exam.rng',
+            
+            // Curricula
+            'llm-context/curricula/*.html',
+            
+            // Base configuration
+            'build.gradle',
+            'README.adoc'
+        ]
+
+        def excludedPatterns = [
+            '**/build/**',
+            '**/bin/**',
+            '**/arc42-doc/**',
+            '**/code/**'
+        ]
+
+        // Copy files
+        project.fileTree(projectDir) {
+            relevantFiles.each { include it }
+            excludedPatterns.each { exclude it }
+        }.each { sourceFile ->
+            def targetFile = new File(claudeContextDir, sourceFile.name)
+            if (sourceFile.isFile()) {
+                def relPath = project.relativePath(sourceFile)
+                fileMapping[sourceFile.name] = relPath
+                
+                // Copy content and add location comment
+                def extension = sourceFile.name.toLowerCase().tokenize('.').last()
+                def locationComment = getLocationComment(extension, relPath)
+                targetFile.text = locationComment + '\n' + sourceFile.text
+            }
+        }
+
+        createManifest(claudeContextDir, fileMapping)
+    }
+}
+
+// Task for collecting context for system development
+tasks.register('collectClaudeContextDev') {
+    description 'Collects files relevant for system development into a single directory for Claude context'
+    group 'Documentation'
+
+    doFirst {
+        def claudeContextDir = new File(buildDir, 'claude-context-dev')
+        claudeContextDir.deleteDir()
+        claudeContextDir.mkdirs()
+    }
+
+    doLast {
+        def claudeContextDir = new File(buildDir, 'claude-context-dev')
+        def fileMapping = [:]
+
+        def relevantFiles = [
+            // Architecture documentation
+            'arc42-doc/**/*.adoc',
+            'arc42-doc/decisions/**/*.adoc',
+            
+            // Core system files
+            'exam.rng',
+            'build.gradle',
+            'settings.gradle',
+            'gradle.properties',
+            
+            // Sample questions (limit to a few examples)
+            'mock/mock-01.xml',
+            'mock/mock-02.xml',
+            'mock/mock-03.xml',
+            'mock/mock-04.xml',
+            'mock/mock-05.xml',
+            
+            // Project documentation
+            'README.adoc',
+            'docs/**/*.pdf'
+        ]
+
+        def excludedPatterns = [
+            '**/build/**',
+            '**/bin/**',
+            '**/curricula/**',
+            'arc42-doc/images/**'
+        ]
+
+        // Copy files
+        project.fileTree(projectDir) {
+            relevantFiles.each { include it }
+            excludedPatterns.each { exclude it }
+        }.each { sourceFile ->
+            def targetFile = new File(claudeContextDir, sourceFile.name)
+            if (sourceFile.isFile()) {
+                def relPath = project.relativePath(sourceFile)
+                fileMapping[sourceFile.name] = relPath
+                
+                // Copy content and add location comment
+                def extension = sourceFile.name.toLowerCase().tokenize('.').last()
+                def locationComment = getLocationComment(extension, relPath)
+                targetFile.text = locationComment + '\n' + sourceFile.text
+            }
+        }
+
+        createManifest(claudeContextDir, fileMapping)
+    }
+}
+
+// Helper method to get appropriate comment syntax based on file extension
+def getLocationComment(extension, path) {
+    switch (extension) {
+        case ['java', 'gradle']:
+            return "// Source location: ${path}"
+        case ['xml', 'rng', 'adoc', 'md']:
+            return "<!-- Source location: ${path} -->"
+        case 'properties':
+            return "# Source location: ${path}"
+        default:
+            return "# Source location: ${path}"
+    }
+}
+
+// Helper method to create manifest file
+def createManifest(claudeContextDir, fileMapping) {
+    def manifestFile = new File(claudeContextDir, 'claude-context-manifest.md')
+    manifestFile.text = """# Claude Context Manifest
+Generated on: ${new Date()}
+
+## Project Files
+The following files have been collected for Claude context:
+
+"""
+    claudeContextDir.listFiles().each { file ->
+        if (file.isFile()) {
+            def size = file.length()
+            def sizeStr = size < 1024 ? "${size}B" :
+                         size < 1024*1024 ? "${(size/1024 as double).round(1)}KB" :
+                         "${(size/1024/1024 as double).round(1)}MB"
+            manifestFile << "- `${file.name}` (${sizeStr})\n"
+        }
+    }
+
+    manifestFile << "\n## File Location Mapping\n\n"
+    fileMapping.each { flatName, originalPath ->
+        manifestFile << "- `${flatName}` -> Original location: `${originalPath}`\n"
+    }
+
+    println "Claude context files collected in: ${claudeContextDir.absolutePath}"
+    println "A manifest file has been created at: ${manifestFile.absolutePath}"
+}

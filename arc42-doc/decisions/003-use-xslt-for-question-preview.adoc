@@ -1,0 +1,74 @@
+= ADR003 - Use XSLT for Question Preview
+
+== Status
+
+Accepted
+
+== Context
+
+For the question preview system, we need a technology stack that:
+
+* Transforms XML questions into visual previews
+* Supports fast single-question rendering
+* Enables multi-language comparison
+* Works with existing Jing validation
+* Must be maintainable by volunteer developers
+* Should support future PDF generation
+* Must work cross-platform
+
+Current technical constraints:
+* Gradle-based build system
+* RelaxNG schema for validation
+* Various developer skill levels
+* Focus on Priority 1 features
+
+== Decision
+
+Use XSLT for XML transformation
+
+=== XSLT
+* Primary transformation technology for XML to HTML/PDF
+* Single source for multiple output formats
+* Well-suited for future PDF generation via XSL-FO
+* Integrates with existing Java/Gradle tooling
+
+== Rationale
+
+.XSLT advantages:
+* Native XML processing capabilities
+* Excellent for structural transformations
+* Single transformation source for HTML and PDF
+* Part of Java ecosystem, integrates with Gradle/Jing
+* Standard technology with long-term support
+
+
+.Alternatives Considered:
+[cols="1,2"]
+|===
+|Alternative |Reason Not Chosen
+
+|Java-based XML Processing
+|More verbose, requires object models, less suitable for PDF generation
+
+|Custom DSL/Parser
+|High development effort, another language to learn, need to maintain parser
+|===
+
+== Consequences
+
+.Positive:
+* Minimal external dependencies
+* Standard technologies
+* Multiple output format support
+* Good separation of concerns
+* Works everywhere
+* No build complexity for UI
+
+.Negative:
+* XSLT learning curve for some developers
+
+== Related Decisions
+
+* ADR001: Uses Gradle for CLI - XSLT processing will integrate here
+* ADR002: Uses Jing for validation - XML processing pipeline
+

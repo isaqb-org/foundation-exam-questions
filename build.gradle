@@ -46,6 +46,7 @@ repositories {
 configurations {
     jing
     asciidoctorExtensions
+    saxon
 }
 
 dependencies {
@@ -54,6 +55,7 @@ dependencies {
     asciidoctorExtensions 'org.asciidoctor:asciidoctorj-pdf:2.3.19'  
     asciidoctorExtensions 'org.asciidoctor:asciidoctorj-diagram:2.3.1'
     asciidoctorExtensions 'net.sourceforge.plantuml:plantuml:1.2024.7'
+    saxon 'net.sf.saxon:Saxon-HE:12.5'
 }
 
 
@@ -486,7 +488,13 @@ tasks.register('collectClaudeContextDev') {
             
             // Project documentation
             'README.adoc',
-            'docs/**/*.pdf'
+            'docs/**/*.pdf',
+
+
+            // Previewgeneration
+            'src/preview/**/*.xsl',     // Preview templates
+            'src/preview/**/*.css'     // Preview styles
+
         ]
 
         def excludedPatterns = [
@@ -558,4 +566,44 @@ The following files have been collected for Claude context:
 
     println "Claude context files collected in: ${claudeContextDir.absolutePath}"
     println "A manifest file has been created at: ${manifestFile.absolutePath}"
+}
+
+
+
+
+
+
+
+
+
+
+
+tasks.register('preview') {
+    group = 'documentation'
+    description = 'Generates HTML previews for exam questions'
+    
+    doFirst {
+        mkdir("${buildDir}/preview")
+    }
+    
+    doLast {
+        fileTree('mock').include('**/*.xml').each { File xmlFile ->
+            def relPath = project.rootDir.toPath().relativize(xmlFile.parentFile.toPath())
+            def outDir = file("${buildDir}/preview/${relPath}")
+            outDir.mkdirs()
+            
+            def outFile = new File(outDir, xmlFile.name.replace('.xml', '.html'))
+            
+            javaexec {
+                classpath = configurations.saxon
+                mainClass = 'net.sf.saxon.Transform'
+                args = [
+                    '-s:' + xmlFile.absolutePath,
+                    '-xsl:src/main/preview/question-preview.xsl',
+                    '-o:' + outFile.absolutePath,
+                    "css-file=" + file('src/main/preview/styles/preview.css').absolutePath
+                ]
+            }
+        }
+    }
 }

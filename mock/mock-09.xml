@@ -1,0 +1,70 @@
+<categoryQuestion id="Q-20-04-12" points="1">
+  <history>
+    <item date="2024-11-23">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-01"/>
+    <lg curriculumVersion="2023.1" lg="2-8"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Stellen Sie sich vor, Sie sind Softwarearchitekt:in für eine große und verteilte Geschäftsanwendung im Banken- oder Versicherungsbereich. Welche der folgenden Aussagen sind für diese Situation richtig und welche falsch?
+    </text>
+    <text xml:lang="en">
+      Put yourself in the position of a software architect for a large, distributed business application in the banking or insurance domain. Which of the following statements is true and which is false?
+    </text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Die Architektur sollte so aufgebaut sein, dass häufig vorkommende Änderungen an den entsprechenden Geschäftsprozessen ohne umfangreiche Umstrukturierungen der Softwarearchitektur möglich sind.
+        </text>
+        <text xml:lang="en">
+          The architect collaborates with the stakeholders to determine where the requirements and constraints will change often (e.g., business processes, technologies), and designs the architecture such that changes can occur without requiring extensive restructuring of the software architecture.
+        </text>
+      </statement>
+      
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Erforderliche Produktqualitäten sollten Ihre architektonischen Entscheidungen leiten.
+        </text>
+        <text xml:lang="en">
+          Required product qualities should drive your architectural decisions.
+        </text>
+      </statement>
+      
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">
+          Die Softwarearchitektur kann völlig unabhängig von Hardware und Infrastruktur entworfen werden.
+        </text>
+        <text xml:lang="en">
+          The software architecture can be designed completely independent of the hardware and infrastructure.
+        </text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">
+      In großen verteilten Geschäftsanwendungen ist es essentiell, die Architektur so zu gestalten, dass sie flexibel auf häufige Änderungen reagieren kann. Die Qualitätsanforderungen des Produkts sind dabei wichtige Treiber für architektonische Entscheidungen. Die Architektur kann jedoch nicht völlig unabhängig von der Hardware und Infrastruktur entworfen werden, da diese wichtige Randbedingungen darstellen, die berücksichtigt werden müssen.
+    </text>
+    <text xml:lang="en">
+      In large distributed business applications, it is essential to design the architecture so that it can flexibly accommodate frequent changes. The product's quality requirements are important drivers for architectural decisions. However, the architecture cannot be designed completely independently of hardware and infrastructure, as these represent important constraints that must be taken into account.  
+    </text>
+  </explanation>
+</categoryQuestion>

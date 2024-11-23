@@ -1,0 +1,56 @@
+<categoryQuestion id="Q-21-05-01" points="1">
+  <history>
+    <item date="2024-11-23">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-08"/>
+    <lg curriculumVersion="2023.1" lg="3-8"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche der folgenden Aussagen zu Architekturentscheidungen sind wahr, welche falsch?</text>
+    <text xml:lang="en">Which of the following statements regarding architecture decisions are true, which are false?</text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Wahr</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="b" identifier="A">
+        <text xml:lang="de">Architekturentscheidungen müssen nie aufgeschrieben werden, da diese bereits dem Entwicklungsteam bekannt sind.</text>
+        <text xml:lang="en">Architecture decisions never need to be written down because they are already known to the development team.</text>
+      </statement>
+
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">Architecture Decision Records helfen dabei, Entscheidungen in ihrem Kontext nachzuvollziehen.</text>
+        <text xml:lang="en">An architecture decision record helps to make the decision's context understood.</text>
+      </statement>
+
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">Nachdem man sich für ein zentrales Framework (z.B. Persistenzframework) entschieden hat, darf diese Entscheidung nicht mehr geändert werden.</text>
+        <text xml:lang="en">Once a decision has been made on a central or fundamental framework (e.g. persistence framework), that decision must not be changed.</text>
+      </statement>
+
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">Qualitätsanforderungen helfen maßgeblich bei Architekturentscheidungen.</text>
+        <text xml:lang="en">Quality requirements help significantly with architecture decisions.</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">Architekturentscheidungen sollten dokumentiert werden, da das Team sich ändern kann und die Gründe für Entscheidungen über die Zeit vergessen werden können. ADRs (Architecture Decision Records) sind ein bewährtes Mittel, um den Kontext und die Begründung von Entscheidungen festzuhalten. Entscheidungen, auch zu grundlegenden Frameworks, können sich im Laufe der Zeit ändern, wenn sich die Anforderungen oder der Kontext ändern. Qualitätsanforderungen sind ein wichtiger Treiber für Architekturentscheidungen, da sie oft bestimmen, welche architektonischen Lösungen am besten geeignet sind.</text>
+    <text xml:lang="en">Architecture decisions should be documented as team members may change and the reasons for decisions can be forgotten over time. ADRs (Architecture Decision Records) are a proven way to capture the context and rationale of decisions. Decisions, even about fundamental frameworks, can change over time as requirements or context evolve. Quality requirements are a key driver for architecture decisions as they often determine which architectural solutions are most appropriate.</text>
+  </explanation>
+
+</categoryQuestion>

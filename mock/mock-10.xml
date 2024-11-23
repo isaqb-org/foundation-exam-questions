@@ -1,0 +1,75 @@
+<pickQuestion id="Q-20-04-03" points="2">
+  <history>
+    <item date="2024-11-23">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-02"/>
+    <lg curriculumVersion="2023.1" lg="2-3"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was sind Ihre DREI wichtigsten Verantwortlichkeiten als Softwarearchitekt:in in Bezug auf Anforderungen?
+    </text>
+    <text xml:lang="en">
+      What are your THREE most important responsibilities as a software architect with respect to requirements?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">
+        Unterstützung der Fachexpert:innen dabei, Qualitätsanforderungen konkret und explizit zu formulieren.
+      </text>
+      <text xml:lang="en">
+        Support the business people to specify explicit and concrete quality requirements.
+      </text>
+    </option>
+
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Hilfe bei der Identifizierung von neuen Geschäftsmöglichkeiten anhand Ihres technischen Know-hows.
+      </text>
+      <text xml:lang="en">
+        Help to identify new business opportunities based on your technology know-how.
+      </text>
+    </option>
+
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Ablehnung von Anforderungen, die technische Risiken enthalten.
+      </text>
+      <text xml:lang="en">
+        Reject business requirements that contain technical risks.
+      </text>
+    </option>
+
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">
+        Umformulierung aller Geschäftsanforderungen, so dass sie für Ihr Entwicklungsteam verständlich sind.
+      </text>
+      <text xml:lang="en">
+        Capture all business requirements in a terminology that can be understood by your development team.
+      </text>
+    </option>
+
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        Überprüfung der Anforderungen auf technische Machbarkeit.
+      </text>
+      <text xml:lang="en">
+        Check requirements for technological feasibility.
+      </text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die Hauptaufgaben von Softwarearchitekt:innen in Bezug auf Anforderungen sind: 1) Die Unterstützung bei der konkreten Formulierung von Qualitätsanforderungen, da diese oft zu vage definiert sind, 2) Die Nutzung des technischen Wissens, um neue Geschäftsmöglichkeiten zu identifizieren, und 3) Die Prüfung der technischen Machbarkeit. Es ist dabei nicht die Aufgabe, Anforderungen nur aufgrund technischer Risiken abzulehnen - diese Risiken sollten stattdessen kommuniziert und diskutiert werden. Auch die vollständige Umformulierung aller Geschäftsanforderungen ist nicht zielführend, da dies zu Informationsverlust oder Missverständnissen führen könnte.
+    </text>
+    <text xml:lang="en">
+      The main responsibilities of software architects regarding requirements are: 1) Supporting the concrete formulation of quality requirements, as these are often defined too vaguely, 2) Using technical knowledge to identify new business opportunities, and 3) Checking technical feasibility. It is not their task to reject requirements just because they contain technical risks - instead, these risks should be communicated and discussed. Also, completely reformulating all business requirements is not purposeful as this could lead to loss of information or misunderstandings.
+    </text>
+  </explanation>
+</pickQuestion>

@@ -1,0 +1,65 @@
+<pickQuestion id="Q-20-04-38" points="1">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+  
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-05"/>
+    <lg curriculumVersion="2023.1" lg="3-4"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Diverse Architekturentwicklungsmethoden schlagen einen sichtenbasierten Ansatz vor. Welche DREI der folgenden Sichten werden am häufigsten verwendet?
+    </text>
+    <text xml:lang="en">
+      Several architecture development methods suggest a view-based approach. Which three of the following views are most often used?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Physische Datenbanksicht</text>
+      <text xml:lang="en">Physical database view</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Kontextsicht</text>
+      <text xml:lang="en">Context view</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Bausteinsicht oder Komponentensicht</text>
+      <text xml:lang="en">Building Block/Component view</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Testbasierte Sicht</text>
+      <text xml:lang="en">Test-driven view</text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">Konfigurationssicht</text>
+      <text xml:lang="en">Configuration view</text>
+    </option>
+    <option correct="correct" identifier="F">
+      <text xml:lang="de">Laufzeitsicht</text>
+      <text xml:lang="en">Runtime view</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die drei wichtigsten und am häufigsten verwendeten Architektursichten sind:
+      1. Die Kontextsicht, die das System in seiner Umgebung zeigt
+      2. Die Baustein-/Komponentensicht, die die internen Strukturen des Systems zeigt
+      3. Die Laufzeitsicht, die das dynamische Verhalten des Systems zeigt
+
+      Die anderen genannten Sichten (Datenbank-, Test- und Konfigurationssicht) können zwar in bestimmten Projekten nützlich sein, gehören aber nicht zu den grundlegenden Architektursichten, die in den meisten Methoden verwendet werden.
+    </text>
+    <text xml:lang="en">
+      The three most important and commonly used architectural views are:
+      1. The context view, showing the system in its environment
+      2. The building block/component view, showing the internal structures of the system
+      3. The runtime view, showing the dynamic behavior of the system
+
+      While the other views mentioned (database, test, and configuration views) might be useful in certain projects, they are not among the fundamental architectural views used in most methods.
+    </text>
+  </explanation>
+</pickQuestion>

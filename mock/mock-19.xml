@@ -1,0 +1,44 @@
+<pickQuestion id="Q-20-04-22" points="1">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-02"/>
+    <lg curriculumVersion="2023.1" lg="2-2"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Sie dokumentieren einen Baustein einer Softwarearchitektur. Welche ZWEI Informationen sollten in seiner Black-Box-Beschreibung enthalten sein?</text>
+    <text xml:lang="en">When documenting a building block of your software architecture, which two information should the black-box description contain?</text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">Öffentliche Schnittstellen.</text>
+      <text xml:lang="en">Public interfaces.</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Verantwortlichkeiten des Bausteins.</text>
+      <text xml:lang="en">Responsibility of the building block.</text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">Interne Struktur des Bausteins.</text>
+      <text xml:lang="en">Internal structure of the building block.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Spezifikation von Implementierungsdetails.</text>
+      <text xml:lang="en">Specification of the implementation details.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Eine Black-Box-Beschreibung konzentriert sich ausschließlich auf die nach außen sichtbaren Aspekte eines Bausteins - also seine Schnittstellen und seine Verantwortlichkeiten. Die interne Struktur und Implementierungsdetails sind definitionsgemäß nicht Teil einer Black-Box-Beschreibung, da diese bewusst von den internen Details abstrahiert. Diese Details würden stattdessen in einer White-Box-Beschreibung behandelt werden.
+    </text>
+    <text xml:lang="en">
+      A black-box description focuses exclusively on the externally visible aspects of a building block - its interfaces and responsibilities. By definition, internal structure and implementation details are not part of a black-box description, as it deliberately abstracts from internal details. These details would instead be covered in a white-box description.
+    </text>
+  </explanation>
+
+</pickQuestion>

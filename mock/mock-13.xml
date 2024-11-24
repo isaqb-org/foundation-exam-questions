@@ -1,0 +1,79 @@
+<categoryQuestion id="Q-20-04-09" points="1">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-05"/>
+    <lg curriculumVersion="2023.1" lg="1-6"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Geben Sie für jede der folgenden Aussagen an, ob sie richtig oder falsch ist.
+    </text>
+    <text xml:lang="en">
+      Decide for each of the following statements whether it is true or false.
+    </text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Jede Iteration eines agilen Entwicklungsvorgehens kann Auswirkungen auf architektonische Grundsatzentscheidungen haben.
+        </text>
+        <text xml:lang="en">
+          Each iteration of an agile development approach could have an impact on the fundamental architecture decisions.
+        </text>
+      </statement>
+
+      <statement correctCategory="b" identifier="B">
+        <text xml:lang="de">
+          Der Gesamtaufwand für Architekturarbeit ist bei iterativen Projekten wesentlich höher als bei Wasserfall-Projekten.
+        </text>
+        <text xml:lang="en">
+          The total effort spent on architectural work is much higher in iterative projects compared to waterfall projects.
+        </text>
+      </statement>
+
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">
+          Agile Projekte benötigen keine Architekturdokumente, da das Entwicklungsteam in täglichen Standup-Meetings Entscheidungen kommuniziert.
+        </text>
+        <text xml:lang="en">
+          Agile projects do not need architecture documents since the development team uses daily standup-meetings to communicate decisions.
+        </text>
+      </statement>
+
+      <statement correctCategory="b" identifier="D">
+        <text xml:lang="de">
+          Wenn Ihr System aus einer Reihe von Microservices besteht, ist kein zentrales Architekturdokument erforderlich, da jeder Service seine Technologien auswählen kann.
+        </text>
+        <text xml:lang="en">
+          If your systems consist of a set of microservices there is no need for a central architecture document since each service is free to choose its technologies.
+        </text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">
+      Die erste Aussage ist richtig, da iterative Entwicklung explizit darauf ausgelegt ist, Entscheidungen basierend auf Feedback und neuen Erkenntnissen anzupassen. Die anderen Aussagen sind falsch: Der Architekturaufwand hängt nicht vom Vorgehensmodell ab, agile Projekte benötigen sehr wohl Architekturdokumentation (wenn auch möglicherweise in anderer Form), und auch Microservice-Architekturen brauchen eine übergreifende Dokumentation der Gesamtarchitektur.
+    </text>
+    <text xml:lang="en">
+      The first statement is true since iterative development is explicitly designed to adapt decisions based on feedback and new insights. The other statements are false: Architecture effort does not depend on the process model, agile projects do need architecture documentation (though possibly in a different form), and microservice architectures also need overarching documentation of the overall architecture.
+    </text>
+  </explanation>
+</categoryQuestion>

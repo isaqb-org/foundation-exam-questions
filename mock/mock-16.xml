@@ -1,0 +1,55 @@
+<pickQuestion id="Q-20-04-19" points="1">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-04"/>
+    <lg curriculumVersion="2023.1" lg="1-10"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Kreuzen Sie die DREI zutreffendsten Beispiele für typische Kategorien von Softwaresystemen an.
+    </text>
+    <text xml:lang="en">
+      Identify the THREE most appropriate examples for typical categories of software systems.
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">Batch-System</text>
+      <text xml:lang="en">Batch system</text>
+    </option>
+
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Interaktives Online-System</text>
+      <text xml:lang="en">Interactive online system</text>
+    </option>
+
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">Linnés-System</text>
+      <text xml:lang="en">Linnés system</text>
+    </option>
+
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">Eingebettetes Echtzeitsystem</text>
+      <text xml:lang="en">Embedded real-time system</text>
+    </option>
+
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">Integrationstestsystem</text>
+      <text xml:lang="en">Integration test system</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Batch-Systeme, interaktive Online-Systeme und eingebettete Echtzeitsysteme sind tatsächlich typische und wichtige Kategorien von Softwaresystemen, die sich in ihren Anforderungen und Eigenschaften grundlegend unterscheiden. Linnés-System ist ein biologisches Klassifikationssystem und kein Typ von Softwaresystem. Ein Integrationstestsystem ist ein Werkzeug für die Softwareentwicklung, aber keine eigenständige Kategorie von Softwaresystemen.
+    </text>
+    <text xml:lang="en">
+      Batch systems, interactive online systems, and embedded real-time systems are indeed typical and important categories of software systems that fundamentally differ in their requirements and characteristics. Linné's system is a biological classification system and not a type of software system. An integration test system is a tool for software development but not a standalone category of software systems.
+    </text>
+  </explanation>
+</pickQuestion>

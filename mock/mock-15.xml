@@ -1,0 +1,76 @@
+<pickQuestion id="Q-20-04-11" points="1">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-05"/>
+    <lg curriculumVersion="2023.1" lg="1-8"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was bedeutet die Regel „explizit, nicht implizit" für die Architekturarbeit? Wählen Sie die ZWEI passendsten Antworten aus.
+    </text>
+    <text xml:lang="en">
+      What does the rule "explicit, not implicit" mean for architecture work? Choose the TWO best-fitting answers.
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Architekt:innen sollten rekursive Strukturen vermeiden und durch explizite Schleifen ersetzen.
+      </text>
+      <text xml:lang="en">
+        Architects should avoid recursive structures and replace them by explicit loops.
+      </text>
+    </option>
+
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Architekt:innen sollten die Annahmen, die zu Entscheidungen führen, explizit machen.
+      </text>
+      <text xml:lang="en">
+        Architects should make the assumptions leading to decisions explicit.
+      </text>
+    </option>
+
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Architekt:innen sollten explizit auf Erläuterungen (d.h. Kommentare) in natürlicher Sprache für jeden Baustein bestehen.
+      </text>
+      <text xml:lang="en">
+        Architects should explicitly insist on natural language explanations (i.e. comments) for each building block.
+      </text>
+    </option>
+
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">
+        Architekt:innen sollten explizit auf schriftlichen oder zumindest mündlichen Begründungen für Aufwandschätzungen der Entwicklung von ihrem Team bestehen.
+      </text>
+      <text xml:lang="en">
+        Architects should explicitly insist on written or at least verbal justifications for development effort estimates from their team.
+      </text>
+    </option>
+
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        Architekt:innen sollten die Voraussetzungen für ihre Entscheidungen explizit darlegen.
+      </text>
+      <text xml:lang="en">
+        Architects should make prerequisites for their decisions explicit.
+      </text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die Regel "explizit, nicht implizit" bezieht sich darauf, dass wichtige architektonische Überlegungen und Entscheidungen klar ausformuliert werden sollten. Dies umfasst sowohl die Annahmen, die zu Entscheidungen führen (Option B), als auch die Voraussetzungen für diese Entscheidungen (Option E). Die anderen Optionen beschreiben entweder technische Implementierungsdetails (A) oder übermäßig spezifische Dokumentationsanforderungen (C, D), die nicht den Kern des Prinzips treffen.
+    </text>
+    <text xml:lang="en">
+      The rule "explicit, not implicit" refers to the need to clearly articulate important architectural considerations and decisions. This includes both the assumptions leading to decisions (option B) and the prerequisites for these decisions (option E). The other options either describe technical implementation details (A) or overly specific documentation requirements (C, D) that do not capture the essence of the principle.
+    </text>
+  </explanation>
+
+</pickQuestion>

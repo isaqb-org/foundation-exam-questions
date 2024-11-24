@@ -1,0 +1,79 @@
+<categoryQuestion id="Q-20-04-10" points="2">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-01"/>
+    <lg curriculumVersion="2023.1" lg="1-7"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Geben Sie an, welche der folgenden Aussagen zu Projektzielen und Architekturzielen richtig und welche falsch sind.
+    </text>
+    <text xml:lang="en">
+      Which of the following statements regarding project goals and architectural goals is true and which is false.
+    </text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Projektziele können funktionale Anforderungen sowie Qualitätsanforderungen umfassen.
+        </text>
+        <text xml:lang="en">
+          Project Goals can include functional requirements as well as quality requirements.
+        </text>
+      </statement>
+
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Architekturziele leiten sich von den Qualitätsanforderungen für das System oder Produkt ab.
+        </text>
+        <text xml:lang="en">
+          Architectural goals are derived from the quality requirements for the system or product.
+        </text>
+      </statement>
+
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">
+          Stakeholder aus dem Business sollten sich auf Geschäftsziele konzentrieren und sich nicht mit Architekturzielen auseinandersetzen.
+        </text>
+        <text xml:lang="en">
+          Business stakeholders should concentrate on business goals and not interfere with architectural goals.
+        </text>
+      </statement>
+
+      <statement correctCategory="b" identifier="D">
+        <text xml:lang="de">
+          Zur Vermeidung von Konflikten sollten Geschäfts- und Architekturziele einander nicht überlappen.
+        </text>
+        <text xml:lang="en">
+          To avoid conflicts, business goals and architectural goals should be non-overlapping sets.
+        </text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">
+      Die erste Aussage ist richtig, da Projektziele natürlich sowohl funktionale als auch qualitative Aspekte umfassen können. Die zweite Aussage ist korrekt, weil Architekturziele typischerweise aus den Qualitätsanforderungen des Systems abgeleitet werden. Die dritte Aussage ist falsch, da Business-Stakeholder durchaus Ziele wie Performance, Flexibilität oder Sicherheit haben können, die als "Architekturziele" betrachtet werden. Die letzte Aussage ist ebenfalls falsch, da sich Geschäfts- und Architekturziele häufig überlappen können und sollten - wichtig ist nicht die strikte Trennung, sondern das gemeinsame Verständnis und die Abstimmung der Ziele.
+    </text>
+    <text xml:lang="en">
+      The first statement is correct because project goals can naturally include both functional and quality aspects. The second statement is accurate as architectural goals are typically derived from the system's quality requirements. The third statement is false because business stakeholders might very well have goals like performance, flexibility or security, which are considered "architecture goals". The last statement is also false, as business and architecture goals can and should often overlap - what's important is not strict separation but mutual understanding and alignment of goals.
+    </text>
+  </explanation>
+</categoryQuestion>

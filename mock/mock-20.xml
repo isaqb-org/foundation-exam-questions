@@ -1,0 +1,52 @@
+<pickQuestion id="Q-20-04-17" points="1">
+  <history>
+    <item date="2024-11-24">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-02"/>
+    <lg curriculumVersion="2023.1" lg="2-3"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche Voraussetzungen müssen vor der Entwicklung einer Softwarearchitektur erfüllt sein? Wählen Sie die ZWEI passendsten Antworten aus.</text>
+    <text xml:lang="en">Which prerequisites have to be fulfilled before developing a software architecture? Pick the TWO most appropriate answers.</text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Die Anforderungsspezifikation für das System ist vollständig, detailliert und konsistent.</text>
+      <text xml:lang="en">The requirements specification for the system is complete, detailed and consistent.</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Die wichtigsten Qualitätsanforderungen an das System sind bekannt.</text>
+      <text xml:lang="en">The most important qualities for the system are known.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Die organisatorischen Randbedingungen sind bekannt.</text>
+      <text xml:lang="en">Organizational constraints are known.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Die Programmiersprache wurde ausgewählt.</text>
+      <text xml:lang="en">The programming language has been selected.</text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">Die Hardware für das Entwicklungsteam ist verfügbar.</text>
+      <text xml:lang="en">Hardware for the development team is available.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die wichtigsten Voraussetzungen für die Entwicklung einer Softwarearchitektur sind die Kenntnis der wesentlichen Qualitätsanforderungen und der organisatorischen Randbedingungen. Eine vollständige, detaillierte Anforderungsspezifikation ist in den meisten Fällen unrealistisch und auch nicht notwendig - oft reicht ein Überblick und die Kenntnis bestimmter Details (z.B. der Qualitätsanforderungen). 
+
+      Die Auswahl der Programmiersprache und die Verfügbarkeit der Hardware für das Entwicklungsteam sind eher technische Implementierungsdetails, die für die grundlegenden architektonischen Entscheidungen ggfs. noch nicht relevant sind. Diese Entscheidungen können und sollten oft erst nach den grundlegenden Architekturentscheidungen getroffen werden.
+    </text>
+    <text xml:lang="en">
+      The most important prerequisites for developing a software architecture are knowledge of the essential quality requirements and organizational constraints. A complete, detailed requirements specification is unrealistic in most cases and not necessary - often an overview and knowledge of certain details (e.g. quality requirements) is sufficient.
+
+      The choice of programming language and availability of hardware for the development team are rather technical implementation details that sometimes may be not yet relevant for fundamental architectural decisions. These decisions can and often should only be made after the fundamental architectural decisions.
+    </text>
+  </explanation>
+
+</pickQuestion>

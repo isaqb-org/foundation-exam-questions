@@ -183,10 +183,17 @@
    (pick-question
     "Q-20-04-01"
     1
-    (list (history-item (date* 0 0 0 8 8 2024 4 220 #f 7200 0 "") "content identical to mock exam 2024.1-rev0-DE-20240202"))
-    (list (learning-goal-reference (curriculum-version 2025 1) (lg-number 1 1)) (learning-goal-reference (curriculum-version 2023 1) (lg-number 1 1)))
+    (list
+     (history-item
+      (date* 0 0 0 8 8 2024 4 220 #f 3600 0 "")
+      "content identical to mock exam 2024.1-rev0-DE-20240202"))
+    (list
+     (learning-goal-reference (curriculum-version 2025 1) (lg-number 1 1))
+     (learning-goal-reference (curriculum-version 2023 1) (lg-number 1 1)))
     (localized-text
-     '(("de" . "\n        Wie viele Definitionen des Begriffes \"Softwarearchitektur\" gibt es?\n    ")
+     '(("de"
+        .
+        "\n        Wie viele Definitionen des Begriffes \"Softwarearchitektur\" gibt es?\n    ")
        ("en" . "\n        How many definitions of “software architecture” exist?\n    ")))
     (localized-text
      '(("de"
@@ -200,7 +207,8 @@
       'false
       "A"
       (localized-text
-       '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
+       '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ")
+         ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
      (pick-option
       'false
       "B"
@@ -208,7 +216,9 @@
        '(("de"
           .
           "\n        Eine für jede Art von Softwaresystem (z. B. \"eingebettet\",\"Echtzeit\", \"Entscheidungsunterstützung\", \"Web\", \"Batch\", …).\n      ")
-         ("en" . "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))))
+         ("en"
+          .
+          "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))))
      (pick-option
       'correct
       "C"
@@ -222,8 +232,13 @@
    (category-question
     "Q-17-13-02"
     2
-    (list (history-item (date* 0 0 0 8 8 2024 4 220 #f 7200 0 "") "content identical to mock exam 2024.1-rev0-DE-20240202"))
-    (list (learning-goal-reference (curriculum-version 2023 1) (lg-number 3 2)))
+    (list
+     (history-item
+      (date* 0 0 0 8 8 2024 4 220 #f 3600 0 "")
+      "content identical to mock exam 2024.1-rev0-DE-20240202"))
+    (list
+     (learning-goal-reference (curriculum-version 2025 1) (lg-number 4 2))
+     (learning-goal-reference (curriculum-version 2023 1) (lg-number 3 2)))
     (localized-text
      '(("de"
         .
@@ -246,20 +261,32 @@
       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
       "A"
       (localized-text
-       '(("de" . "\n          Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.\n        ")
-         ("en" . "\n          The lead architect coordinates the creation of the documentation.\n        "))))
+       '(("de"
+          .
+          "\n          Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.\n        ")
+         ("en"
+          .
+          "\n          The lead architect coordinates the creation of the documentation.\n        "))))
      (statement
       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
       "B"
       (localized-text
-       '(("de" . "\n          Für die Dokumentation werden identische Vorlagen verwendet.\n        ")
-         ("en" . "\n          Identical templates are used for the documentation.\n        "))))
+       '(("de"
+          .
+          "\n          Für die Dokumentation werden identische Vorlagen verwendet.\n        ")
+         ("en"
+          .
+          "\n          Identical templates are used for the documentation.\n        "))))
      (statement
       (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate"))))
       "C"
       (localized-text
-       '(("de" . "\n          Alle Teile der Dokumentation werden automatisch aus dem Quellcode extrahiert.\n        ")
-         ("en" . "\n          All parts of the documentation are automatically extracted from the source code.\n        ")))))))
+       '(("de"
+          .
+          "\n          Alle Teile der Dokumentation werden automatisch aus dem Quellcode extrahiert.\n        ")
+         ("en"
+          .
+          "\n          All parts of the documentation are automatically extracted from the source code.\n        ")))))))
   
    )
   

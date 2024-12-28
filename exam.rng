@@ -65,12 +65,12 @@
 	    </data>
 	  </attribute>
 	  <attribute name="lg">
-      <choice>
-  	    <data type="string">
-  	      <param name="pattern">[0-9]+-[0-9]+</param>
-  	    </data>
-        <value>prerequisite</value>
-    </choice>
+	    <choice>
+  	      <data type="string">
+  		<param name="pattern">[0-9]+-[0-9]+</param>
+  	      </data>
+              <value>prerequisite</value>
+	    </choice>
 	  </attribute>
 	</element>
       </oneOrMore>

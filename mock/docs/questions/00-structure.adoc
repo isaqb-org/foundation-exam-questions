@@ -1,0 +1,74 @@
+// (c) iSAQB e.V. (https://isaqb.org)
+// ====================================================
+
+
+// tag::DE[]
+== Fragen
+// end::DE[]
+
+// tag::EN[]
+== Questions
+// end::EN[]
+
+
+include::mock-01.adoc[{include_configuration}]
+
+// Dünne Haarlinie zwischen den Fragen
+// thin hairling between questions
+- - -
+
+include::mock-02.adoc[{include_configuration}]
+
+// manueller Seitenumbruch
+// manual pagebreak
+<<<
+
+include::mock-03.adoc[{include_configuration}]
+- - -
+include::mock-04.adoc[{include_configuration}]
+
+<<<
+include::mock-05.adoc[{include_configuration}]
+- - -
+include::mock-06.adoc[{include_configuration}]
+
+<<<
+include::mock-07.adoc[{include_configuration}]
+- - -
+include::mock-08.adoc[{include_configuration}]
+
+<<<
+include::mock-09.adoc[{include_configuration}]
+- - -
+include::mock-10.adoc[{include_configuration}]
+
+<<<
+include::mock-11.adoc[{include_configuration}]
+- - -
+include::mock-12.adoc[{include_configuration}]
+- - -
+
+<<<
+include::mock-13.adoc[{include_configuration}]
+- - -
+include::mock-14.adoc[{include_configuration}]
+
+<<<
+include::mock-15.adoc[{include_configuration}]
+- - -
+include::mock-16.adoc[{include_configuration}]
+
+
+<<<
+include::mock-17.adoc[{include_configuration}]
+- - -
+include::mock-18.adoc[{include_configuration}]
+
+<<<
+include::mock-19.adoc[{include_configuration}]
+- - -
+include::mock-20.adoc[{include_configuration}]
+
+// tag::EXPLANATION[]
+// nothing to be explained in structure-document...
+// end::EXPLANATION[]

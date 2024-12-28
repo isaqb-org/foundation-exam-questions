@@ -25,3 +25,5 @@ Thumbs.db
 *~
 *.swp
 *.bak
+
+mock/docs/questions/mock-*.adoc

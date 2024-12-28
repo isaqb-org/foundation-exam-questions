@@ -91,7 +91,7 @@
 
   (struct learning-goal-reference
     ((curriculum-version curriculum-version?)
-     (lg-number lg-number?)))
+     (lg-number (or/c lg-number? 'prerequisite))))
 
   (struct curriculum-version
     ((year integer?)

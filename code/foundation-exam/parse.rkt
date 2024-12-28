@@ -9,8 +9,16 @@
 (require "question.rkt"
          "match-xml.rkt")
 
+(struct exn:parse-error exn:fail
+  (base-exn filename))
+
 (define (parse-question-file filename)
-  (parse-question-document (call-with-input-file filename read-xml)))
+  (with-handlers
+      ((exn:fail? (lambda (exn)
+                    (raise (exn:parse-error (string-append "parse error in file " (path->string (build-path filename)) ": " (exn-message exn))
+                                            (exn-continuation-marks exn)
+                                            exn filename)))))
+    (parse-question-document (call-with-input-file filename read-xml))))
 
 (define structure-tags
   '(pickQuestion
@@ -99,14 +107,18 @@
                                            (list _
                                                  curriculum-year
                                                  curriculum-number)))
-                (lg (regexp #rx"([0-9]+)-([0-9]+)"
-                            (list _ section index))))
-                
+                (lg lg-string))
                ())
      (learning-goal-reference (curriculum-version (string->number curriculum-year)
                                                   (string->number curriculum-number))
-                              (lg-number (string->number section)
-                                         (string->number index))))))
+                                                     
+                              (cond
+                                ((regexp-match #rx"([0-9]+)-([0-9]+)" lg-string)
+                                 => (lambda (list)
+                                      (lg-number (string->number (cadr list))
+                                                 (string->number (caddr list)))))
+                                ((string=? lg-string "prerequisite")
+                                 'prerequisite))))))
 
 (define (parse-stem xml)
   (match xml
@@ -291,5 +303,5 @@
    )
   
 (provide (contract-out
-          (parse-question-file (string? . -> . question?))
+          (parse-question-file ((or/c path? string?) . -> . question?))
           (parse-question-document (document? . -> . question?))))

@@ -1,0 +1,53 @@
+<categoryQuestion id="Q-20-04-21" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-06"/>
+    <lg curriculumVersion="2023.1" lg="2-7"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Was sind die Eigenschaften von enger (hoher) bzw. loser (niedriger) Kopplung?</text>
+    <text xml:lang="en">What are characteristics of tight (high) or loose (low) coupling?</text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">enge Kopplung</text>
+        <text xml:lang="en">tight coupling</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">lose Kopplung</text>
+        <text xml:lang="en">loose coupling</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">Bausteine können abhängige Bausteine direkt, d.h. ohne Umwege über Schnittstellen oder Abstraktionen, aufrufen.</text>
+        <text xml:lang="en">Building blocks directly call dependent building blocks, i.e., without using indirect calls via interfaces or abstractions.</text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">Bausteine verwenden gemeinsame komplexe Datenstrukturen.</text>
+        <text xml:lang="en">Building blocks use shared complex data structures.</text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">Bausteine verwenden eine gemeinsame Tabelle (für Schreib- und Leseoperationen) innerhalb einer relationalen Datenbank.</text>
+        <text xml:lang="en">Building blocks use a shared table (for read- and write operations) within a relational database.</text>
+      </statement>
+      <statement correctCategory="b" identifier="D">
+        <text xml:lang="de">Beim Baustein-Design haben Sie das Dependency-Inversion-Prinzip konsequent umgesetzt.</text>
+        <text xml:lang="en">When designing building blocks, you have consistently applied the dependency inversion principle.</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">Enge Kopplung entsteht durch direkte Abhängigkeiten zwischen Bausteinen, gemeinsam genutzte komplexe Datenstrukturen und gemeinsam genutzte Ressourcen wie Datenbanktabellen. Diese Art der Kopplung macht das System schwerer zu ändern und zu warten. Lose Kopplung wird durch die Anwendung von Prinzipien wie dem Dependency-Inversion-Prinzip erreicht, bei dem Abhängigkeiten über Abstraktionen erfolgen. Dies ermöglicht eine bessere Wartbarkeit und Flexibilität des Systems.</text>
+    <text xml:lang="en">Tight coupling occurs through direct dependencies between building blocks, shared complex data structures, and shared resources like database tables. This type of coupling makes the system harder to change and maintain. Loose coupling is achieved through the application of principles like the Dependency Inversion Principle, where dependencies are managed through abstractions. This enables better maintainability and flexibility of the system.</text>
+  </explanation>
+
+</categoryQuestion>

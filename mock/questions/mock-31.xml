@@ -1,0 +1,34 @@
+<pickQuestion id="Q-20-04-24" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-07"/>
+    <lg curriculumVersion="2023.1" lg="3-6"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Die Dokumentation der Softwarearchitektur sollte Beschreibungen der Querschnittskonzepte enthalten. Wählen Sie die ZWEI besten Gründe, warum die Dokumentation von Querschnittskonzepten sinnvoll ist.</text>
+    <text xml:lang="en">Software architecture documentation could contain descriptions of cross-cutting concerns. Pick the TWO best reasons why documentation of cross-cutting concerns is useful.</text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Querschnittskonzepte sollten sich auf die Fachdomäne konzentrieren und frei von technischen Informationen sein.</text>
+      <text xml:lang="en">Cross-cutting concepts should focus on the domain and be free of technical information.</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Aspekte oder Konzepte, die in mehreren Teilen Ihrer Softwarearchitektur verwendet werden, sollten auf nicht redundante Weise beschrieben werden.</text>
+      <text xml:lang="en">Aspects or concepts that are used in multiple parts of your software architecture should be described in a non-redundant way.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Querschnittskonzepte können in weiteren Produkten innerhalb der gleichen Organisation erneut verwendet werden.</text>
+      <text xml:lang="en">Cross-cutting concepts can be reused in more products within the same organization.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Querschnittskonzepte sollten von Spezialist:innen implementiert werden. Daher ist eine separate Dokumentation hilfreich.</text>
+      <text xml:lang="en">Cross-cutting concepts should be implemented by specialists. Therefore, separate documentation is useful.</text>
+    </option>
+  </pickOptions>
+</pickQuestion>

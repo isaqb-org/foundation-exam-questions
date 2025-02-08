@@ -1,0 +1,36 @@
+<pickQuestion id="Q-20-04-20" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-04"/>
+    <lg curriculumVersion="2023.1" lg="2-6"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche Ziele versuchen Sie mit dem Dependency-Inversion-Prinzip zu erreichen?</text>
+    <text xml:lang="en">Which goals are you trying to achieve with the dependency inversion principle?</text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Große Bausteine sollen nicht von kleinen Bausteinen abhängen.</text>
+      <text xml:lang="en">Big building blocks shall not depend on small building blocks.</text>
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">Komponenten sollen in der Lage sein, abhängige Komponenten leichter zu erstellen.</text>
+      <text xml:lang="en">Components shall be able to create dependent components more easily.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Bausteine sollen nur über Abstraktionen voneinander abhängen.</text>
+      <text xml:lang="en">Building blocks shall only depend on each other via abstractions.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">Das Dependency-Inversion-Prinzip zielt darauf ab, dass Bausteine nur über Abstraktionen (wie Schnittstellen oder abstrakte Klassen) voneinander abhängen sollten, nicht über konkrete Implementierungen. Die Größe der Bausteine spielt dabei keine Rolle - es geht nicht um die Richtung der Abhängigkeiten von groß nach klein. Die einfachere Erstellung von Komponenten ist ebenfalls kein Hauptziel des Prinzips, auch wenn dies manchmal ein positiver Nebeneffekt sein kann.</text>
+    <text xml:lang="en">The Dependency Inversion Principle aims to ensure that building blocks only depend on each other through abstractions (such as interfaces or abstract classes), not through concrete implementations. The size of the building blocks is irrelevant - it's not about the direction of dependencies from large to small. Easier creation of components is also not a main goal of the principle, even though this might sometimes be a positive side effect.</text>
+  </explanation>
+
+</pickQuestion>

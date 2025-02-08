@@ -140,7 +140,7 @@ tasks.register('validate', ValidationTask) {
     group = 'Validation'
     
     doLast {
-        def directories = ['mock']  // Add more directories as needed
+        def directories = ['mock/questions']  // Add more directories as needed
         
         // Track stats for summary report
         def failures = []
@@ -587,7 +587,7 @@ tasks.register('preview') {
     }
     
     doLast {
-        fileTree('mock').include('**/*.xml').each { File xmlFile ->
+        fileTree('mock/questions').include('**/*.xml').each { File xmlFile ->
             def relPath = project.rootDir.toPath().relativize(xmlFile.parentFile.toPath())
             def outDir = file("${buildDir}/preview/${relPath}")
             outDir.mkdirs()

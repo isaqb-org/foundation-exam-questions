@@ -1,0 +1,45 @@
+<pickQuestion id="Q-20-04-36" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="05-02"/>
+    <lg curriculumVersion="2023.1" lg="4-4"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Sie versuchen, ihre Architektur quantitativ zu untersuchen. Welche der folgenden Größen können Sie für Ihre Softwarearchitektur zuverlässig messen? Wählen Sie die DREI am besten passenden Antworten aus.</text>
+    <text xml:lang="en">You try to quantitatively analyze your architecture. Which three of the following properties can you measure reliably in your software architecture? Pick the three best fitting answers.</text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">Größe der Bausteine (z. B. Lines-of-Code).</text>
+      <text xml:lang="en">Size of building blocks (e.g. LOC).</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Änderungsrate des Quellcodes der Komponenten.</text>
+      <text xml:lang="en">Change rate of the source code of components.</text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">Kohäsion der Architekturkomponenten.</text>
+      <text xml:lang="en">Cohesion of the architectural components.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Sicherheitsstufe einer Komponente.</text>
+      <text xml:lang="en">Security level of a component.</text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">Anzahl der Personen, die zu einer bestimmten Komponente beigetragen haben.</text>
+      <text xml:lang="en">Number of the developers that contributed to a specific component.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">• Die Größe kann einfach und zuverlässig durch statische Analyse des Quellcodes gemessen werden (Lines-of-Code ist eine zuverlässige Größenmetrik)
+• Änderungsrate und Anzahl-der-Entwickler-pro-Komponente können zuverlässig gemessen werden, wenn man die Versionskontrollhistorie berücksichtigt, was mit Systemen wie git, subversion oder ähnlichen in der Entwicklung weit verbreiteten Tools problemlos möglich ist.</text>
+    <text xml:lang="en">• Size can easily and reliably be measured when statically analyzing source code (lines-of-code metric is a reliable size metric)
+• change-rate and number-of-developers-per-component can reliably be measured when taking the version control history into account, which is perfectly feasibly with systems like git, subversion or similar tools that are widely used in development.</text>
+  </explanation>
+</pickQuestion>

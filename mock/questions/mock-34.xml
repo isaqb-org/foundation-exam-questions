@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<categoryQuestion id="Q-20-04-31" points="2">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-01"/>
+    <lg curriculumVersion="2025.1" lg="04-02"/>
+    <lg curriculumVersion="2023.1" lg="3-01"/>
+    <lg curriculumVersion="2023.1" lg="3-02"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche der folgenden Aussagen sind typische Gründe zur Einführung einer Architekturdokumentation und welche nicht?</text>
+    <text xml:lang="en">Which of the following statements are typical reasons for introducing an architecture documentation and which are not typical reasons?</text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">typisch</text>
+        <text xml:lang="en">typical</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">nicht typisch</text>
+        <text xml:lang="en">not typical</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">Unterstützung des Onboardings neuer Entwickler:innen.</text>
+        <text xml:lang="en">To support onboarding of new developers.</text>
+      </statement>
+      <statement correctCategory="b" identifier="B">
+        <text xml:lang="de">Unterstützung der Testautomatisierung des Systems.</text>
+        <text xml:lang="en">To support the automated testing approach of the system.</text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">Unterstützung der Arbeit von verteilten Teams.</text>
+        <text xml:lang="en">To support the work of distributed teams.</text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">Unterstützung von späteren Verbesserungen des Systems.</text>
+        <text xml:lang="en">To assist in future enhancements of the product.</text>
+      </statement>
+      <statement correctCategory="a" identifier="E">
+        <text xml:lang="de">Einhaltung regulatorischer Vorgaben.</text>
+        <text xml:lang="en">To conform to regulatory or legal constraints.</text>
+      </statement>
+      <statement correctCategory="b" identifier="F">
+        <text xml:lang="de">Sicherstellung der gleichmäßigen Auslastung des Teams.</text>
+        <text xml:lang="en">To ensure that developers have enough work to do.</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">Die typischen Gründe für eine Architekturdokumentation sind direkt mit den Hauptzielen der Softwarearchitektur verbunden: Die Unterstützung des Entwicklungsteams (durch Onboarding und Zusammenarbeit), die Ermöglichung der Weiterentwicklung des Systems und die Erfüllung regulatorischer Anforderungen. Dagegen sind Testautomatisierung und Teamauslastung keine primären Gründe für die Erstellung einer Architekturdokumentation.</text>
+    <text xml:lang="en">The typical reasons for architecture documentation are directly connected to the main goals of software architecture: Supporting the development team (through onboarding and collaboration), enabling system evolution, and fulfilling regulatory requirements. In contrast, test automation and team workload are not primary reasons for creating architecture documentation.</text>
+  </explanation>
+
+</categoryQuestion>

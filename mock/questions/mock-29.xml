@@ -1,0 +1,47 @@
+<pickQuestion id="Q-20-04-13" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-05"/>
+    <lg curriculumVersion="2023.1" lg="3-4"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Welche Architektursichten haben die beste praktische Anwendung für die Entwicklung von Softwarearchitekturen?
+    </text>
+    <text xml:lang="en">
+      Which architectural views have the most practical application for developing software architectures?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Pattern-Sicht.</text>
+      <text xml:lang="en">Pattern View.</text>
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">Beobachtersicht (Observer-View).</text>
+      <text xml:lang="en">Observer View.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Bausteinsicht (Komponentensicht).</text>
+      <text xml:lang="en">Building-Block View (Component View).</text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">Verteilungssicht.</text>
+      <text xml:lang="en">Deployment View.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Die Baustein- und Verteilungssicht sind fundamentale Sichten in der Softwarearchitektur. Die Bausteinsicht zeigt die strukturelle Dekomposition des Systems, während die Verteilungssicht die technische Infrastruktur und das Mapping der Software auf diese Infrastruktur darstellt. Pattern-Sicht und Beobachtersicht sind keine standardisierten oder weithin verwendeten Architektursichten.
+    </text>
+    <text xml:lang="en">
+      The building-block and deployment views are fundamental views in software architecture. The building-block view shows the structural decomposition of the system, while the deployment view represents the technical infrastructure and mapping of software onto this infrastructure. Pattern view and observer view are not standardized or widely used architectural views.
+    </text>
+  </explanation>
+</pickQuestion>

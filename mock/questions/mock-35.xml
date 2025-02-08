@@ -1,0 +1,53 @@
+<categoryQuestion id="Q-20-04-30" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-03"/>
+    <lg curriculumVersion="2023.1" lg="4-1"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche der folgenden Eigenschaftspaare stehen üblicherweise miteinander in Konflikt und welche nicht?</text>
+    <text xml:lang="en">Which of the following pairs of qualities are usually in conflict to each other, and which are not?</text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Konflikt</text>
+        <text xml:lang="en">conflict</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Kein Konflikt</text>
+        <text xml:lang="en">no conflict</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="b" identifier="A">
+        <text xml:lang="de">Verständlichkeit – Lesbarkeit</text>
+        <text xml:lang="en">Understandability – Readability</text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">Benutzerfreundlichkeit – Sicherheit</text>
+        <text xml:lang="en">Usability – Security</text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">Laufzeitkonfigurierbarkeit – Robustheit</text>
+        <text xml:lang="en">Runtime configurability – Robustness</text>
+      </statement>
+      <statement correctCategory="b" identifier="D">
+        <text xml:lang="de">Sicherheit – Funktionale Korrektheit</text>
+        <text xml:lang="en">Security – Functional correctness</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">Verständlichkeit und Lesbarkeit unterstützen sich gegenseitig. Benutzerfreundlichkeit und Sicherheit können in Konflikt stehen, da Sicherheitsmaßnahmen die Benutzerfreundlichkeit einschränken können. Laufzeitkonfigurierbarkeit und Robustheit stehen oft im Konflikt, da mehr Konfigurationsmöglichkeiten die Robustheit beeinträchtigen können. Sicherheit und funktionale Korrektheit stehen nicht grundsätzlich im Konflikt - ein System kann sowohl sicher als auch funktional korrekt sein.</text>
+    <text xml:lang="en">Understandability and readability support each other. Usability and security can conflict as security measures may limit usability. Runtime configurability and robustness often conflict as more configuration options can impact robustness. Security and functional correctness are not inherently in conflict - a system can be both secure and functionally correct.</text>
+  </explanation>
+
+</categoryQuestion>

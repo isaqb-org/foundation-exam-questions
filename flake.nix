@@ -1,5 +1,5 @@
 {
-  description = "Active Group Kontakte";
+  description = "iSAQB Foundation Exam Code";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-24.11";

@@ -29,6 +29,19 @@ them is in the `+code+` directory.
 
 The project uses Gradle for building and validation. The Gradle wrapper is included, so you don't need to install Gradle separately.
 
+=== Nix flake
+
+If you use Nix, there is a Nix flake that provides the prerequisite software.
+Enter a shell with these prerequisites via:
+
+[source,bash]
+----
+nix develop
+----
+
+Specifically, the flake provides a working Gradle installation.
+To use it, invoke via `+gradle+` from the Nix shell instead of `+gradlew+`.
+
 === Prerequisites
 
 * Java Development Kit (JDK) 8 or higher

@@ -2,6 +2,8 @@
 .gradle/
 build/
 
+.direnv/
+
 # Gradle wrapper jar should be versioned, so no rule for it
 
 # IDE specific files (common IDEs used with Gradle)

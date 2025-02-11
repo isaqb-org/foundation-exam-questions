@@ -1,0 +1,40 @@
+<pickQuestion id="Q-20-04-28" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-08"/>
+    <lg curriculumVersion="2023.1" lg="2-5"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche der folgenden Eigenschaften lässt sich am ehesten durch eine Schichtenarchitektur verbessern?</text>
+    <text xml:lang="en">Which of the following qualities can most likely be improved by using a layered architecture?</text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Laufzeiteffizienz (Performance).</text>
+      <text xml:lang="en">Runtime efficiency (performance).</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Flexibilität bei der Modifizierung oder Änderung des Systems.</text>
+      <text xml:lang="en">Flexibility in modifying or changing the system.</text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">Flexibilität bei der Laufzeit (Konfigurierbarkeit).</text>
+      <text xml:lang="en">Flexibility at runtime (configurability).</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Nichtabstreitbarkeit.</text>
+      <text xml:lang="en">Non-repudiability.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">Eine Schichtenarchitektur verbessert primär die Modifizierbarkeit und Wartbarkeit eines Systems, da Änderungen in einer Schicht die anderen Schichten nicht beeinflussen müssen, solange die Schnittstellen stabil bleiben. Die Schichtenarchitektur kann sich sogar negativ auf die Performance auswirken, da Aufrufe durch mehrere Schichten geleitet werden müssen. Konfigurierbarkeit zur Laufzeit und Nichtabstreitbarkeit sind keine primären Ziele der Schichtenarchitektur.</text>
+    <text xml:lang="en">A layered architecture primarily improves the modifiability and maintainability of a system, as changes in one layer don't need to affect other layers as long as interfaces remain stable. The layered architecture might actually have a negative impact on performance since calls need to be routed through multiple layers. Runtime configurability and non-repudiability are not primary goals of the layered architecture.</text>
+  </explanation>
+
+</pickQuestion>

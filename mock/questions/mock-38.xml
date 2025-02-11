@@ -1,0 +1,43 @@
+<pickQuestion id="Q-20-04-29" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="05-02"/>
+    <lg curriculumVersion="2023.1" lg="4-4"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Sie versuchen, Ihre Architektur qualitativ zu analysieren. Was sind die ZWEI zutreffendsten Anzeichen für architektonische Problembereiche?</text>
+    <text xml:lang="en">You try to analyze your architecture quantitatively. Which are the two most appropriate indicators for architectural problem areas?</text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">Hohe Kopplung der Komponenten.</text>
+      <text xml:lang="en">High coupling of components.</text>
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">Namen öffentlicher Methoden geben nicht deren Zweck wieder.</text>
+      <text xml:lang="en">Names of public methods do not reflect their purpose.</text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">Fehlende Kommentare.</text>
+      <text xml:lang="en">Missing comments.</text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">Häufung von Fehlern in bestimmten Bausteinen des Systems.</text>
+      <text xml:lang="en">Clusters of errors in certain building blocks of the system.</text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">Anzahl der Testfälle pro Komponente.</text>
+      <text xml:lang="en">Number of test cases per component.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">Hohe Kopplung zwischen Komponenten und die Häufung von Fehlern in bestimmten Systembausteinen sind klare Indikatoren für architektonische Probleme. Die anderen Optionen wie Methodennamen, fehlende Kommentare oder die Anzahl der Testfälle sind eher Implementierungs- oder Qualitätssicherungsaspekte und weniger architektonische Probleme.</text>
+    <text xml:lang="en">High coupling between components and clusters of errors in certain system building blocks are clear indicators of architectural problems. The other options like method names, missing comments, or number of test cases are more related to implementation or quality assurance aspects rather than architectural problems.</text>
+  </explanation>
+</pickQuestion>

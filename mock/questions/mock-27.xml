@@ -1,0 +1,52 @@
+<categoryQuestion id="Q-20-04-15" points="2">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-02"/>
+    <lg curriculumVersion="2023.1" lg="3-02"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Sie können Aspekte Ihrer Softwarearchitektur mündlich und/oder schriftlich kommunizieren. In welchem Zusammenhang stehen diese Möglichkeiten zueinander? Geben Sie für jede der folgenden Aussagen an, ob sie richtig oder falsch ist.</text>
+    <text xml:lang="en">You can communicate aspects of your software architecture verbally and/or in writing. How do these variants correlate? Decide for each of the following statements whether it is true or false.</text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">Mündliche Kommunikation sollte schriftliche Dokumentation ergänzen.</text>
+        <text xml:lang="en">Verbal communication should supplement written documentation.</text>
+      </statement>
+      <statement correctCategory="b" identifier="B">
+        <text xml:lang="de">Feedback zu Architekturentscheidungen sollte zur Sicherstellung der Nachverfolgbarkeit grundsätzlich schriftlich erfolgen.</text>
+        <text xml:lang="en">Feedback to architecture decisions should always be done in writing to ensure traceability.</text>
+      </statement>
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">Schriftliche Dokumentation sollte immer mündlicher Kommunikation vorausgehen.</text>
+        <text xml:lang="en">Written documentation should always precede verbal communication.</text>
+      </statement>
+      <statement correctCategory="b" identifier="D">
+        <text xml:lang="de">Architekt:innen sollten sich eine Variante (mündlich oder schriftlich) aussuchen und während der gesamten Entwicklung dabei bleiben.</text>
+        <text xml:lang="en">Architects should pick one variant (verbal or written) and stick to this choice during the whole development.</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">Mündliche und schriftliche Kommunikation sollten sich ergänzen, nicht gegenseitig ausschließen. Es gibt keine feste Regel, dass eine Form der anderen vorausgehen muss. Feedback kann und sollte sowohl mündlich als auch schriftlich erfolgen - eine Beschränkung auf ausschließlich schriftliches Feedback würde die Kommunikation unnötig einschränken. Die Form der Kommunikation sollte flexibel an die jeweilige Situation angepasst werden können.</text>
+    <text xml:lang="en">Verbal and written communication should complement each other, not exclude each other. There is no fixed rule that one form must precede the other. Feedback can and should be given both verbally and in writing - restricting feedback to written form only would unnecessarily constrain communication. The form of communication should be flexible and adaptable to each situation.</text>
+  </explanation>
+</categoryQuestion>

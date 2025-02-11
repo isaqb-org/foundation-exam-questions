@@ -1,0 +1,53 @@
+<pickQuestion id="Q-20-04-27" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-03"/>
+    <lg curriculumVersion="2025.1" lg="02-04"/>
+    <lg curriculumVersion="2023.1" lg="4-1"/>
+    <lg curriculumVersion="2023.1" lg="4-2"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      ISO 25010 enthält allgemeine Qualitätseigenschaften für Softwaresysteme. Wie können Qualitätsanforderungen zu diesen Eigenschaften konkretisiert werden? Wählen Sie die ZWEI besten Alternativen aus.
+    </text>
+    <text xml:lang="en">
+      ISO 25010 provides generic quality characteristics for software systems. How can quality requirements concerning these characteristics be made more concrete? Pick the two best alternatives.
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Durch Entwickeln von UI-Prototypen.</text>
+      <text xml:lang="en">By developing UI prototypes.</text>
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">Durch Definieren expliziter Schnittstellen.</text>
+      <text xml:lang="en">By defining explicit interfaces.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Durch Erstellen, verfassen oder diskutieren von Szenarien.</text>
+      <text xml:lang="en">By discussing or writing scenarios.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Durch Erstellen automatisierter Tests.</text>
+      <text xml:lang="en">By creating automated tests.</text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">Durch Erstellen eines Qualitätsbaums.</text>
+      <text xml:lang="en">By creating a quality tree.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">
+      Qualitätsszenarien und Qualitätsbäume sind etablierte Methoden zur Konkretisierung von Qualitätsanforderungen. Sie helfen dabei, abstrakte Qualitätseigenschaften in überprüfbare Anforderungen zu überführen. UI-Prototypen, Schnittstellen und automatisierte Tests sind dagegen eher Implementierungs- oder Validierungstechniken und weniger geeignet zur initialen Konkretisierung von Qualitätsanforderungen.
+    </text>
+    <text xml:lang="en">
+      Quality scenarios and quality trees are established methods for making quality requirements more concrete. They help transform abstract quality characteristics into verifiable requirements. UI prototypes, interfaces, and automated tests are implementation or validation techniques and are less suitable for initial concretization of quality requirements.
+    </text>
+  </explanation>
+</pickQuestion>

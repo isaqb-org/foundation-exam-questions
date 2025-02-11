@@ -1,0 +1,40 @@
+<pickQuestion id="Q-20-04-33" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-08"/>
+    <lg curriculumVersion="2023.1" lg="2-5"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Für welche Entwurfsprobleme bietet das Pipes &amp; Filter Pattern Lösungsansätze?</text>
+    <text xml:lang="en">Which type of problems provide a good fit for the Pipes &amp; Filter Pattern?</text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">Verwaltung von globalem Anwendungszustand</text>
+      <text xml:lang="en">Management of global application state</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Strukturierung von IT-Systemen die Datenströme verarbeiten</text>
+      <text xml:lang="en">IT systems which process data streams</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Entkopplung von Verarbeitungsschritten</text>
+      <text xml:lang="en">Decoupling multiple steps of an execution</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Entkopplung von zeitlichen Abhängigkeiten</text>
+      <text xml:lang="en">Temporal decoupling of an application</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">Das Pipes &amp; Filter Pattern eignet sich besonders für die Verarbeitung von Datenströmen und die Entkopplung von Verarbeitungsschritten. Die Filter arbeiten unabhängig voneinander und kommunizieren nur über die Pipes, was eine klare Trennung der Verarbeitungsschritte ermöglicht. Das Pattern ist jedoch nicht für die Verwaltung von globalem Zustand ausgelegt, da die Filter zustandslos sein sollten. Auch die zeitliche Entkopplung ist kein primäres Ziel des Patterns, da die Verarbeitung typischerweise sequentiell erfolgt.</text>
+    <text xml:lang="en">The Pipes &amp; Filter Pattern is particularly well-suited for processing data streams and decoupling processing steps. The filters work independently and communicate only through pipes, enabling a clear separation of processing steps. However, the pattern is not designed for managing global state, as filters should be stateless. Temporal decoupling is also not a primary goal of the pattern, as processing typically occurs sequentially.</text>
+  </explanation>
+
+</pickQuestion>

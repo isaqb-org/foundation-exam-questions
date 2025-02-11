@@ -16,6 +16,7 @@
           packages = [
             pkgs.gradle
             pkgs.racket
+            pkgs.libxml2
           ];
         };
       };

@@ -64,7 +64,7 @@
      (history (listof history-item?))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
-     (explanation localized-text?)))
+     (explanation (or/c localized-text? #f))))
 
   (struct pick-question
     ((id string?)
@@ -72,7 +72,7 @@
      (history (listof history-item?))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
-     (explanation localized-text?)
+     (explanation (or/c localized-text? #f))
      (pick-options (listof pick-option?))))
 
   (struct category-question
@@ -81,7 +81,7 @@
      (history (listof history-item?))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
-     (explanation localized-text?)
+     (explanation (or/c localized-text? #f))
      (categories (listof category?))
      (statements (listof statement?))))
 

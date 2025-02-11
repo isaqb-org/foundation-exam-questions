@@ -22,7 +22,11 @@
         #'(element _ _ 'name
                   (app (find-attribute-values '(attribute-name ...))
                        attribute-pattern ...)
-                  (list (pcdata _ _ text-name)))))))
+                  (app extract-pcdata-text
+                       text-name))))))
+
+(define (extract-pcdata-text pcdata-list)
+  (apply string-append (map pcdata-string pcdata-list)))
 
 (define ((find-attribute-value attributes) name)
   (cond

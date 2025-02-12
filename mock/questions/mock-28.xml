@@ -1,0 +1,56 @@
+<categoryQuestion id="Q-20-04-37" points="2">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-03"/>
+    <lg curriculumVersion="2025.1" lg="04-05"/>
+    <lg curriculumVersion="2023.1" lg="3-3"/>
+    <lg curriculumVersion="2023.1" lg="3-4"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche der folgenden Aussagen zu Notationen für Architektursichten sind richtig und welche falsch?</text>
+    <text xml:lang="en">Which of the following statements about notations for architectural views is true and which is false?</text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="b" identifier="A">
+        <text xml:lang="de">Business Process Model &amp; Notation (BPMN) sollte nur von Business-Analysten und nicht zur Architekturdokumentation verwendet werden.</text>
+        <text xml:lang="en">Business Process Model &amp; Notation (BPMN) should only be used by Business Analysts and not for architecture documentation.</text>
+      </statement>
+      <statement correctCategory="b" identifier="B">
+        <text xml:lang="de">UML-Verteilungsdiagramme sind die einzige Möglichkeit zur Dokumentation des Mappings der Softwarekomponenten in Bezug auf die Infrastruktur.</text>
+        <text xml:lang="en">UML deployment models are the only way to document the mapping of software components to infrastructure.</text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">UML-Paketdiagramme können zum Festhalten der Bausteinsicht der Softwarearchitektur verwendet werden.</text>
+        <text xml:lang="en">UML Package Diagrams can be used to capture the building-block view of software architectures.</text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">Solange die Notation (z. B. mithilfe einer Legende) erläutert wird, kann eine beliebige Notation ausreichen, um Bausteinstrukturen und Zusammenarbeit zu beschreiben.</text>
+        <text xml:lang="en">As long as the notation is explained (e.g. by a legend), any notation can be sufficient to describe building block structures and collaboration.</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">
+      BPMN kann durchaus für die Architekturdokumentation verwendet werden, insbesondere für Laufzeitsichten. UML-Verteilungsdiagramme sind eine von mehreren Möglichkeiten, das Mapping von Software auf Infrastruktur zu dokumentieren. UML-Paketdiagramme sind tatsächlich eine gängige Möglichkeit, Bausteinsichten darzustellen. Eine beliebige Notation kann ausreichend sein, solange sie angemessen dokumentiert und erklärt wird.</text>
+    <text xml:lang="en">
+      BPMN can indeed be used for architecture documentation, especially for runtime views. UML deployment diagrams are one of several ways to document the mapping of software to infrastructure. UML package diagrams are indeed a common way to represent building block views. Any notation can be sufficient as long as it is properly documented and explained.</text>
+  </explanation>
+</categoryQuestion>

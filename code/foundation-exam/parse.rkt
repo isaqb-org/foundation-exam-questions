@@ -139,11 +139,12 @@
                
 
 (define (parse-explanation xml)
-  (match xml
-    ((element* explanation
-               ()
-               (((text) texts)))
-     (parse-texts texts))))
+  (and xml
+       (match xml
+         ((element* explanation
+                    ()
+                    (((text) texts)))
+          (parse-texts texts)))))
 
 (define (parse-option xml)
   (match xml
@@ -191,7 +192,7 @@
   (require rackunit)
 
   (check-equal?
-   (parse-question-document (call-with-input-file "../../mock/mock-01.xml" read-xml))
+   (parse-question-document (call-with-input-file "../../mock/questions/mock-01.xml" read-xml))
    (pick-question
     "Q-20-04-01"
     1
@@ -240,7 +241,7 @@
 
 
   (check-equal?
-   (parse-question-document (call-with-input-file "../../mock/mock-04.xml" read-xml))
+   (parse-question-document (call-with-input-file "../../mock/questions/mock-04.xml" read-xml))
    (category-question
     "Q-17-13-02"
     2

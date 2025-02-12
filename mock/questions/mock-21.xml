@@ -1,0 +1,40 @@
+<pickQuestion id="Q-20-04-18" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-02"/>
+    <lg curriculumVersion="2023.1" lg="2-3"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche Faktoren können den Entwurf einer Softwarearchitektur beeinflussen? Wählen Sie die DREI passendsten Antworten aus.</text>
+    <text xml:lang="en">Which factors can influence the design of a software architecture? Pick the THREE most appropriate answers.</text>
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">Politische.</text>
+      <text xml:lang="en">Political.</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Organisatorische.</text>
+      <text xml:lang="en">Organizational.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Technische.</text>
+      <text xml:lang="en">Technical.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Virtuelle.</text>
+      <text xml:lang="en">Virtual.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">Politische, organisatorische und technische Faktoren haben direkten Einfluss auf den Entwurf einer Softwarearchitektur. Sie bilden wichtige Randbedingungen und können die Architekturentscheidungen maßgeblich beeinflussen. "Virtuelle" Faktoren hingegen sind ein erfundener Begriff ohne konkrete Bedeutung im Kontext von Softwarearchitektur.</text>
+    <text xml:lang="en">Political, organizational and technical factors have a direct influence on software architecture design. They form important constraints and can significantly influence architectural decisions. "Virtual" factors, on the other hand, are a made-up term without concrete meaning in the context of software architecture.</text>
+  </explanation>
+
+</pickQuestion>

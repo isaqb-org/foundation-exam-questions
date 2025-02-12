@@ -1,0 +1,61 @@
+<categoryQuestion id="Q-20-04-26" points="2">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-08" />
+    <lg curriculumVersion="2023.1" lg="3-8" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Eine Definition lautet: „Softwarearchitektur ist die Summe aller während der Entwicklung gefällten Entscheidungen". Kreuzen Sie an, welche der folgenden Aussagen zu Architektur- /Designentscheidungen richtig und welche falsch sind.
+    </text>
+    <text xml:lang="en">
+      One definition says: "Software architecture is the sum of all the decisions you have taken during development." Check which of the following statements about architectural/design decisions are true and which are false.
+    </text>
+  </stem>
+
+  <categoryStatements>
+    <categories>
+      <category label="a">
+        <text xml:lang="de">Richtig</text>
+        <text xml:lang="en">true</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">Falsch</text>
+        <text xml:lang="en">false</text>
+      </category>
+    </categories>
+    
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">Architektonische Entscheidungen können sich in der Struktur der Bausteine oder Komponenten niederschlagen.</text>
+        <text xml:lang="en">Architectural decisions can impact the structure of the building block or components.</text>
+      </statement>
+      <statement correctCategory="b" identifier="B">
+        <text xml:lang="de">Softwarearchitekt:innen sollten alle Entwurfsentscheidungen schriftlich begründen.</text>
+        <text xml:lang="en">Software architects shall justify all design decisions in writing.</text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">Architektonische Entscheidungen können untereinander Wechselwirkungen haben.</text>
+        <text xml:lang="en">Architectural decisions can have interdependencies between each other.</text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">Kompromisse zwischen zueinander in Konflikt stehenden Qualitätsanforderungen sollten explizite Entscheidungen sein.</text>
+        <text xml:lang="en">Tradeoffs between conflicting quality requirements should be explicit decisions.</text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+  <explanation>
+    <text xml:lang="de">
+      Nicht alle Entscheidungen müssen schriftlich begründet werden - die Anforderung an schriftliche Dokumentation hängt von der Situation, dem Team, dem System und anderen Faktoren ab.
+    </text>
+    <text xml:lang="en">
+      Not all decisions need to be justified in writing - as the requirement for written documentation depends on the situation, the team, the system and other factors.
+    </text>
+  </explanation>
+
+</categoryQuestion>

@@ -21,13 +21,16 @@
               (display (string-append "// end::" (string-upcase language) "[]"))
               (newline) (newline))
             languages)
-  (display "// tag::EXPLANATION[]") (newline)
-  (for-each (lambda (language)
-              (display (string-append "// tag::" (string-upcase language) "[]")) (newline)
-              (write-multi-line (get-localized-text (question-explanation question) language))
-              (display (string-append "// end::" (string-upcase language) "[]")) (newline))
-            languages)
-  (display "// end::EXPLANATION[]") (newline))
+  (cond
+    ((question-explanation question)
+     => (lambda (explanation)
+          (display "// tag::EXPLANATION[]") (newline)
+          (for-each (lambda (language)
+                      (display (string-append "// tag::" (string-upcase language) "[]")) (newline)
+                      (write-multi-line (get-localized-text explanation language))
+                      (display (string-append "// end::" (string-upcase language) "[]")) (newline))
+                    languages)
+          (display "// end::EXPLANATION[]") (newline)))))
 
 (define (question-word language)
   (match language

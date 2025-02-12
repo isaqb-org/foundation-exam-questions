@@ -1,0 +1,44 @@
+<pickQuestion id="Q-20-04-14" points="1">
+  <history>
+    <item date="2025-02-08">content from mock exam 2024.1-rev0-DE-20240202 and 2024.1-rev0-EN-20240202</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-04"/>
+    <lg curriculumVersion="2023.1" lg="2-6"/>
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">Welche ZWEI Aussagen zum „Don't repeat yourself"-Prinzip (DRY) treffen am ehesten zu? Anders gesagt: Was könnte passieren, wenn Teile des Quellcodes oder der Konfiguration im System mehrfach vorhanden sind?</text>
+    <text xml:lang="en">Which two statements about the principle "Don't repeat yourself" (DRY) fit best? In other words: What could happen, if parts of the source code or configuration do exist in multiple copies in the system?</text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">DRY verringert die Sicherheit.</text>
+      <text xml:lang="en">DRY reduces security.</text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">Die strenge Einhaltung von DRY könnte zu höherer Kopplung führen.</text>
+      <text xml:lang="en">Strict adherence to DRY could lead to higher coupling.</text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">Die Komponenten des Systems mit redundantem Code können unabhängig voneinander verbessert werden.</text>
+      <text xml:lang="en">The components of the system that contain redundant code can be improved independently of each other.</text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">Die Anwendung der Schichtenmuster ermöglicht eine konsistente Anwendung des DRY-Prinzips.</text>
+      <text xml:lang="en">Adherence to DRY leads to additional attack vectors in IT security.</text>
+    </option>
+    <option distractor="distractor" identifier="E">
+      <text xml:lang="de">Die Einhaltung von DRY führt zu einer Verringerung der Angriffsvektoren in der IT-Sicherheit.</text>
+      <text xml:lang="en">Applying the Layer patterns allows a consistent application of the DRY principle.</text>
+    </option>
+  </pickOptions>
+
+  <explanation>
+    <text xml:lang="de">Während das DRY-Prinzip generell eine gute Praxis ist, kann eine zu strenge Anwendung zu unerwünschten Abhängigkeiten zwischen Komponenten führen (erhöhte Kopplung). Redundanter Code ermöglicht zwar unabhängige Änderungen, erschwert aber die Wartung. Die anderen Optionen stellen keine korrekten Zusammenhänge zwischen DRY und Sicherheit bzw. Architekturmustern her.</text>
+    <text xml:lang="en">While the DRY principle is generally good practice, strict adherence can lead to unwanted dependencies between components (increased coupling). Redundant code allows for independent changes but makes maintenance more difficult. The other options do not establish correct relationships between DRY and security or architectural patterns.</text>
+  </explanation>
+
+</pickQuestion>

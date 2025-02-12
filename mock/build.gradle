@@ -36,6 +36,10 @@ application {
 tasks.register('buildDocs') {
     description = 'Grouping task for generating all languages in several formats'
     group = 'documentation'
+    exec {
+	workingDir '.'
+	commandLine 'racket', '--require', '../code/foundation-exam/print-asciidoc.rkt', '--main', 'questions', 'docs/questions', 'de', 'en'
+    }
     dependsOn "run"
 }
 

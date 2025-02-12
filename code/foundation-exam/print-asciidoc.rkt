@@ -248,6 +248,9 @@
                     #:exists 'replace)))
               paths (map path-extract-number paths))))
 
+(define (main in-directory out-directory . languages)
+  (convert-directory in-directory out-directory languages))
+
 ; extract question number from path
 (define (path-extract-number path)
   (cond
@@ -398,3 +401,8 @@
     (write-question q1 1 '("de" "en"))
     (write-question q2 2 '("de" "en"))
     (write-question q4 4 '("de" "en")))
+
+(provide (contract-out
+          (convert-directory ((or/c path? string?) (or/c path? string?) (listof string?) . -> . any))
+          (main ((or/c path? string?) (or/c path? string?) ... string? . -> . any))))
+          

@@ -34,6 +34,7 @@
             <div class="question-header">
                 <span class="question-id">ID: <xsl:value-of select="@id"/></span>
                 <span class="question-points">Points: <xsl:value-of select="@points"/></span>
+                <span class="question-points">Version: <xsl:value-of select="@version"/></span>
             </div>
             
             <!-- Common metadata -->

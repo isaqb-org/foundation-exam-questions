@@ -17,6 +17,11 @@
       <attribute name="points">
 	<data type="positiveInteger"/>
       </attribute>
+      <attribute name="version">
+        <data type="string">
+          <param name="pattern">[0-9]+\.[0-9]+\.[0-9]+</param>
+        </data>
+      </attribute>
 
       <ref name="prelude"/>
       <ref name="pickOptions"/>
@@ -164,6 +169,16 @@
 	<attribute name="xml:lang">
 	  <data type="language"/>
 	</attribute>
+      <optional>
+        <attribute name="format">
+          <choice>
+            <value>plaintext</value>
+            <value>markdown</value>
+            <value>html</value>
+          </choice>
+        </attribute>
+      </optional>
+
 	<text/>
       </element>
     </oneOrMore>

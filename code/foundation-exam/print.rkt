@@ -27,25 +27,29 @@
      (element* 'pickQuestion
                (list (attribute* 'id id)
                      (attribute* 'points (number->string points)))
-               (list
-                (history->element history)
-                (learning-goals->element learning-goals)
-                (stem->element stem)
-                (explanation->element explanation)
-                (pick-options->element pick-options))))
+               (filter values
+                       (list
+                        (history->element history)
+                        (learning-goals->element learning-goals)
+                        (stem->element stem)
+                        (and explanation
+                             (explanation->element explanation))
+                        (pick-options->element pick-options)))))
     ((category-question id points history learning-goals stem explanation categories statements)
      (element* 'categoryQuestion
                (list (attribute* 'id id)
                      (attribute* 'points (number->string points)))
-               (list
-                (history->element history)
-                (learning-goals->element learning-goals)
-                (stem->element stem)
-                (explanation->element explanation)
-                (element* 'categoryStatements
-                          '()
-                          (list (categories->element categories)
-                                (statements->element statements))))))))
+               (filter values
+                       (list
+                        (history->element history)
+                        (learning-goals->element learning-goals)
+                        (stem->element stem)
+                        (and explanation
+                             (explanation->element explanation))
+                        (element* 'categoryStatements
+                                  '()
+                                  (list (categories->element categories)
+                                        (statements->element statements)))))))))
 
 
 (define (history->element history)
@@ -78,9 +82,11 @@
                  (number->string (curriculum-version-number curriculum-version))))
 
 (define (lg-number->string lg-number)
-  (string-append (number->string (lg-number-section lg-number))
-                 "-"
-                 (number->string (lg-number-index lg-number))))
+  (if (eq? lg-number 'prerequisite)
+      "prerequisite"
+      (string-append (number->string (lg-number-section lg-number))
+                     "-"
+                     (number->string (lg-number-index lg-number)))))
                      
 
 (define (stem->element stem)

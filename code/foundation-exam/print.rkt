@@ -6,6 +6,8 @@
          xml)
 (require "question.rkt")
 
+(define *ns* "https://www.isaqb.org/ns/exam/foundation/v1")
+
 (define (element* name attributes content)
   (element #f #f name attributes content))
 
@@ -25,7 +27,8 @@
   (match question
     ((pick-question id points history learning-goals stem explanation pick-options)
      (element* 'pickQuestion
-               (list (attribute* 'id id)
+               (list (attribute* 'xmlns *ns*)
+                     (attribute* 'id id)
                      (attribute* 'points (number->string points)))
                (filter values
                        (list

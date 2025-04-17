@@ -1,4 +1,4 @@
-<pickQuestion id="Q-20-04-01" points="1">
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="Q-20-04-01" points="1">
 
   <!-- history is optional, but those who forget their history are condemned
       to repeat it. -->
@@ -64,3 +64,4 @@
   </explanation>
 
 </pickQuestion>
+

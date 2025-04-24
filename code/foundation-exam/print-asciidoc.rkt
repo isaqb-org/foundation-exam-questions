@@ -1,4 +1,4 @@
-#lang at-exp racket/base
+#lang racket/base
 
 (require racket/match
          racket/contract
@@ -128,7 +128,7 @@
      (display (number-word/de correct-pick-options-count))
      (display "** Antworten aus, die am besten passen."))
     ((cons _ "en") 
-     (display "| P-Questions:") (newline)
+     (display "| P-Question:") (newline)
      (display "| From the following ")
      (display (number-word/en pick-options-count))
      (display " answers select **")

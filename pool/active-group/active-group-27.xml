@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-27" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-06" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was soll für die Kopplung von Bausteinen gelten?
+        </text>
+        <text xml:lang="en">
+            What should apply to the coupling of blocks?
+        </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+        <statements>
+            <statement correctCategory="b" identifier="A">
+                <text xml:lang="de">
+                    Möglichst enge Kopplung ähnlicher Komponenten
+                </text>
+                <text xml:lang="en">
+                    Closest possible coupling of similar components
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="B">
+                <text xml:lang="de">
+                    Möglichst lose Kopplung
+                </text>
+                <text xml:lang="en">
+                    Coupling as loose as possible
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="C">
+                <text xml:lang="de">
+                    Kopplung muss funktional ausreichend sein
+                </text>
+                <text xml:lang="en">
+                    Coupling must be functionally sufficient
+                </text>
+            </statement>
+
+            <statement correctCategory="a" identifier="D">
+                <text xml:lang="de">
+                    Keine Kopplung zwischen Schichten, die nicht direkt aneinander angrenzen
+                </text>
+                <text xml:lang="en">
+                    No coupling between layers that are not directly adjacent to each other
+                </text>
+            </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

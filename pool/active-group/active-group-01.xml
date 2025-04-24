@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-01" points="1">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-01" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Welche dieser Entscheidungen betrifft in aller Regel den gesamten Lebenszyklus einer
+      Anwendung? Wählen Sie zwei Antworten aus.
+    </text>
+    <text xml:lang="en">
+      Which of these decisions usually affect the entire lifecycle of an
+      application? Choose two answers.
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Version der Programmiersprache
+      </text>
+      <text xml:lang="en">
+        Version of the programming language
+      </text>
+    </option>
+    <option false="false" identifier="B">
+      <text xml:lang="de">
+        Modellierung der Daten
+      </text>
+      <text xml:lang="en">
+        Modeling of the data
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        Auswahl des Datenbanksystems
+      </text>
+      <text xml:lang="en">
+        Selection of the database system
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Spezifikationen externer Schnittstellen
+      </text>
+      <text xml:lang="en">
+        Specification of external interfaces
+      </text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        Entwicklungsplattform
+      </text>
+      <text xml:lang="en">
+        Development platform
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

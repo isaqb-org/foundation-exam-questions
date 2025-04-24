@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-39" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-06" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+          Was sind geeignete Mechanismen für die Beschreibung von Schnittstellen?
+        </text>
+        <text xml:lang="en">
+	  What are appropriate mechanisms for describing interfaces?
+        </text>
+
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                Java-Klasse
+            </text>
+            <text xml:lang="en">
+                Java class
+            </text>
+
+        </option>
+        <option correct="correct" identifier="B">
+            <text xml:lang="de">
+                XML-Schema
+            </text>
+            <text xml:lang="en">
+                XML schema
+            </text>
+        </option>
+        <option correct="correct" identifier="C">
+            <text xml:lang="de">
+                Java-Interface
+            </text>
+            <text xml:lang="en">
+                Java interface
+            </text>
+        </option>
+        <option distractor="distractor" identifier="D">
+            <text xml:lang="de">
+                Datenbank-Schema
+            </text>
+            <text xml:lang="en">
+                Database schema
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

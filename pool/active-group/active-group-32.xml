@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-32" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-01" />
+    </refersToLgs>
+
+     <stem>
+        <text xml:lang="de">
+            Wer kann die Verständlichkeit der Architekturdokumentation beurteilen?
+        </text>
+        <text xml:lang="en">
+            Who can assess the comprehensibility of the architecture documentation?
+        </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+        <statements>
+            <statement correctCategory="a" identifier="A">
+                <text xml:lang="de">
+                    Business-Analyst:innen
+                </text>
+                <text xml:lang="en">
+                    business analysts
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="B">
+                <text xml:lang="de">
+                    Projektleiter:innen
+                </text>
+                <text xml:lang="en">
+                    project managers
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="C">
+                <text xml:lang="de">
+                    Entwickler:innen
+                </text>
+                <text xml:lang="en">
+                    developers
+                </text>
+            </statement>
+
+            <statement correctCategory="a" identifier="D">
+                <text xml:lang="de">
+                    andere Softwarearchitekt:innen
+                </text>
+                <text xml:lang="en">
+                    other software architects
+                </text>
+            </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

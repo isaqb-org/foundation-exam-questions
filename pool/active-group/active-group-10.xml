@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-10" points="2">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-05" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Ein “Big Upfront Design” bedeutet …
+    </text>
+    <text xml:lang="en">
+      A “Big Upfront Design” means …
+    </text>
+  </stem>
+
+  <categoryStatements>
+
+    <categories>
+      <category label="a">
+        <text xml:lang="de">trifft zu</text>
+        <text xml:lang="en">True</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">trifft nicht zu</text>
+        <text xml:lang="en">False</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Dass Architekturentscheidungen getroffen werden, obwohl es am Projektanfang inhärente
+          Unsicherheit gibt.
+        </text>
+        <text xml:lang="en">
+          That architectural decisions are made despite the inherent uncertanity at the beginning of
+          the project.
+        </text>
+      </statement>
+      <statement correctCategory="b" identifier="B">
+        <text xml:lang="de">
+          Bessere Architektur als bei iterativem Vorgehen.
+        </text>
+        <text xml:lang="en">
+          Better architecture than with an iterative approach.
+        </text>
+      </statement>
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">
+          Schlechtere Entscheidungen als bei iterativem Vorgehen.
+        </text>
+        <text xml:lang="en">
+          Poorer decisions than with an iterative approach.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">
+          Mehr Nachdenken über Architektur am Stück.
+        </text>
+        <text xml:lang="en">
+          Thinking more about architecture in one go.
+        </text>
+      </statement>
+    </statements>
+  </categoryStatements>
+</categoryQuestion>

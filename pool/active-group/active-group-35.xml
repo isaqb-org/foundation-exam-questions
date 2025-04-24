@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-35" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-03" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was sind keine gängigen Architektursichten?
+        </text>
+        <text xml:lang="en">
+            Which are not common architectural views?
+        </text>
+
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                Kontextsicht
+            </text>
+            <text xml:lang="en">
+                Context view
+            </text>
+
+        </option>
+        <option correct="correct" identifier="B">
+            <text xml:lang="de">
+                Benutzerebenensicht
+            </text>
+            <text xml:lang="en">
+                User level view
+            </text>
+        </option>
+        <option distractor="distractor" identifier="C">
+            <text xml:lang="de">
+                Verteilungs-/Deploymentsicht
+            </text>
+            <text xml:lang="en">
+                Distribution/deployment view
+            </text>
+        </option>
+        <option distractor="distractor" identifier="D">
+            <text xml:lang="de">
+                Laufzeitsicht
+            </text>
+            <text xml:lang="en">
+                Run-time view
+            </text>
+
+        </option>
+        <option correct="correct" identifier="E">
+            <text xml:lang="de">
+                Abstraktionssicht
+            </text>
+            <text xml:lang="en">
+                Abstraction view
+            </text>
+        </option>
+        <option correct="correct" identifier="F">
+            <text xml:lang="de">
+                Plattformsicht
+            </text>
+            <text xml:lang="en">
+                Platform view
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

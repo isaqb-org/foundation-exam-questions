@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-05" points="1">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-01" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Wo ist Softwarearchitektur im Lebenszyklus von Software anzuordnen?
+    </text>
+    <text xml:lang="en">
+      Where should software architecture be placed in the software lifecycle?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option false="false" identifier="A">
+      <text xml:lang="de">
+        Am Anfang
+      </text>
+      <text xml:lang="en">
+        At the beginning
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Durchgehend.
+      </text>
+      <text xml:lang="en">
+        Continuous
+      </text>
+    </option>
+    <option false="false" identifier="C">
+      <text xml:lang="de">
+        Am Ende.
+      </text>
+      <text xml:lang="en">
+        At the end
+      </text>
+    </option>
+    <option false="false" identifier="D">
+      <text xml:lang="de">
+        Am Anfang und am Ende.
+      </text>
+      <text xml:lang="en">
+        At the beginning and at the end
+      </text>
+    </option>
+  </pickOptions>
+
+</pickQuestion>

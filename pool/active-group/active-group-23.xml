@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-23" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-09" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Welche Patterns sind miteinander verwandt?
+        </text>
+        <text xml:lang="en">
+            Which patterns are related to each other?
+        </text>
+    </stem>
+
+    <pickOptions>
+        <option correct="correct" identifier="A">
+            <text xml:lang="de">
+                Blackboard - Observer
+            </text>
+            <text xml:lang="en">
+                Blackboard - Observer
+            </text>
+
+        </option>
+        <option distractor="distractor" identifier="B">
+            <text xml:lang="de">
+                MVC - Plugin
+            </text>
+            <text xml:lang="en">
+                MVC - Plugin
+            </text>
+        </option>
+        <option correct="correct" identifier="C">
+            <text xml:lang="de">
+                Facade - Adapter
+            </text>
+            <text xml:lang="en">
+                Facade - Adapter
+            </text>
+        </option>
+        <option distractor="distractor" identifier="D">
+            <text xml:lang="de">
+                Client/Server - Pipes and Filters
+            </text>
+            <text xml:lang="en">
+                Client/Server - Pipes and Filters
+            </text>
+        </option>
+        <option distractor="distractor" identifier="E">
+            <text xml:lang="de">
+                Broker - RPC
+            </text>
+            <text xml:lang="en">
+                Broker - RPC
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-26" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-04" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was beschreibt das Geheimnisprinzip einer Softwarekomponente?
+        </text>
+        <text xml:lang="en">
+            What describes the information-hiding principle of a software component?
+        </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+        <statements>
+            <statement correctCategory="b" identifier="A">
+                <text xml:lang="de">
+                    Die Verwendung der Komponente ist geheim. Sie kann nicht allgemeingültig
+                    verwendet werden.
+                </text>
+                <text xml:lang="en">
+                    The use of the component is secret. It cannot be universally used.
+                </text>
+            </statement>
+            <statement correctCategory="b" identifier="B">
+                <text xml:lang="de">
+                    Kommunikation mit der Komponente darf ausschließlich verschlüsselt stattfinden.
+                </text>
+                <text xml:lang="en">
+                    Communication with the component may only take place in encrypted form.
+                </text>
+            </statement>
+            <statement correctCategory="b" identifier="C">
+                <text xml:lang="de">
+                    Die Funktionsweise der Komponente ist zum Schutz der Implementierung nicht
+                    dokumentiert.
+                </text>
+                <text xml:lang="en">
+                    The way the component works is not documented to protect the implementation.
+                </text>
+            </statement>
+
+            <statement correctCategory="a" identifier="D">
+                <text xml:lang="de">
+                    Interne Abläufe der Komponente sind von außen nicht einsehbar.
+                </text>
+                <text xml:lang="en">
+                    Internal processes of the component are not visible from the outside.
+                </text>
+            </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-08" points="1">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-06" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Welche Beiträge können Softwarearchitekt:innen für die Projektleitung erbringen?
+    </text>
+    <text xml:lang="en">
+      What contributions can architects make to project management?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Die Entwicklerinnen anleiten.
+      </text>
+      <text xml:lang="en">
+        Guide the developers
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Qualitäten dokumentieren, die durch die Softwarearchitektur ermittelt werden.
+      </text>
+      <text xml:lang="en">
+        Document qualities of the software determined by the architecture
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Vorschläge für die Aufteilung und Zusammenstellung von Teams machen.
+      </text>
+      <text xml:lang="en">
+        Suggestions for splitting and assembling teams
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-45" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="05-02" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was kann zur quantitativen Analyse und Bewertung von Software dienen?
+        </text>
+        <text xml:lang="en">
+            What can be used for the quantitative analysis and evaluation of software?
+        </text>
+
+    </stem>
+
+    <pickOptions>
+        <option correct="correct" identifier="A">
+            <text xml:lang="de">
+                Überlastungsangriff/Stresstest
+            </text>
+            <text xml:lang="en">
+                Overload attack/stress test
+            </text>
+
+        </option>
+        <option distractor="distractor" identifier="B">
+            <text xml:lang="de">
+                Benutzertests
+            </text>
+            <text xml:lang="en">
+                User tests
+            </text>
+        </option>
+        <option distractor="distractor" identifier="C">
+            <text xml:lang="de">
+                Abgleich funktionaler Anforderungen
+            </text>
+            <text xml:lang="en">
+                Comparison of functional requirements
+            </text>
+        </option>
+        <option correct="correct" identifier="D">
+            <text xml:lang="de">
+                Auswertung von Zugriffs- und Reaktionszeiten
+            </text>
+            <text xml:lang="en">
+                Evaluation of access and reaction times
+            </text>
+        </option>
+        <option correct="correct" identifier="E">
+            <text xml:lang="de">
+                Analyse von Logaufzeichnungen
+            </text>
+            <text xml:lang="en">
+                Analysis of log records
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-09" points="1">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-05" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Welche Risiken bringt konsequent agile Softwareentwicklung für die Architektur grundsätzlich
+      mit sich?
+    </text>
+    <text xml:lang="en">
+      What risks does consistent agile software development entail for the architecture?
+    </text>
+  </stem>
+
+  <categoryStatements>
+
+    <categories>
+      <category label="a">
+        <text xml:lang="de">trifft zu</text>
+        <text xml:lang="en">True</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">trifft nicht zu</text>
+        <text xml:lang="en">False</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Es ist unmöglich, die Architektur zu dokumentieren.
+        </text>
+        <text xml:lang="en">
+          It is impossible to document the architecture.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Für eine User Story getroffene Architekturentscheidungen müssen möglicherweise später
+          revidiert werden.
+        </text>
+        <text xml:lang="en">
+          Architectural decisions made for a user story may need to be revised later.
+        </text>
+      </statement>
+      <statement correctCategory="b" identifier="C">
+        <text xml:lang="de">
+          Der Architekturprozess wird ständig unterbrochen und darum nie fertig.
+        </text>
+        <text xml:lang="en">
+          The architectural process is constantly interrupted and therefore never ready.
+        </text>
+      </statement>
+    </statements>
+  </categoryStatements>
+
+</categoryQuestion>

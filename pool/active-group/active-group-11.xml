@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-11" points="2">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="05-02" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Welche dieser Punkte sind quantitative Anforderungen und welche qualitative Anforderungen?
+    </text>
+    <text xml:lang="en">
+      Which of these points are quantitative requirements and which are qualitative requirements?
+    </text>
+  </stem>
+
+  <categoryStatements>
+
+    <categories>
+      <category label="a">
+        <text xml:lang="de">qualitativ</text>
+        <text xml:lang="en">qualitativ</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">quantitativ</text>
+        <text xml:lang="en">quantitativ</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="b" identifier="A">
+        <text xml:lang="de">
+          1000 parallele Zugriffe sollen innerhalb einer Sekunde beantwortet sein.
+        </text>
+        <text xml:lang="en">
+          1000 parallel accesses should be answered within one second.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Mehr als 100 Zugriffe in einer Sekunde des gleichen Benutzers oder Rechners müssen nicht
+          mehr beantwortet werden.
+        </text>
+        <text xml:lang="en">
+          More than 100 hits in one second by the same user or computer should no longer be
+          answered.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">
+          Eine Überlastung der Anwendung durch zu schnelle Wiederholung von falschen Loginversuchen
+          soll durch eine kurze Sperrzeit verhindert werden.
+        </text>
+        <text xml:lang="en">
+          Overloading the application by repeating incorrect login attempts too quickly should be
+          prevented by a short blocking time.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">
+          Ab 100 parallelen Nutzern sollen weitere Anfragen nicht mehr beantwortet werden.
+        </text>
+        <text xml:lang="en">
+          Starting from 100 parallel users, further inquiries should no longer be answered.
+        </text>
+      </statement>
+    </statements>
+
+  </categoryStatements>
+</categoryQuestion>

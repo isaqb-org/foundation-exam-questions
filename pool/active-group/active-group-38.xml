@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-38" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-07" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            An welche Schnittstellen werden erhöhte Anforderungen gestellt?
+        </text>
+        <text xml:lang="en">
+            Which interfaces are subject to increased requirements?
+        </text>
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                interne Schnittstellen
+            </text>
+            <text xml:lang="en">
+                internal interfaces
+            </text>
+        </option>
+        <option false="false" identifier="B">
+            <text xml:lang="de">
+                externe Schnittstellen
+            </text>
+            <text xml:lang="en">
+                external interfaces
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

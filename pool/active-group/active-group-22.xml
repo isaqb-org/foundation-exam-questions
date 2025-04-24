@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-22" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-09" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was gilt für das Architekturmuster einer Proxy-Komponente?
+        </text>
+        <text xml:lang="en">
+            What is the architecture pattern of a proxy component? </text>
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                Stellt die Funktionalität ohne Änderungen oder Erweiterung nach
+            </text>
+            <text xml:lang="en">
+                Recreates the functionality without modification or extension
+            </text>
+        </option>
+        <option false="false" identifier="B">
+            <text xml:lang="de">
+                Kann nur alleinstehend betrieben werden
+            </text>
+            <text xml:lang="en">
+                Can only be operated standalone
+            </text>
+        </option>
+        <option correct="correct" identifier="C">
+            <text xml:lang="de">
+                Implementiert die gleiche Schnittstelle wie die eigentliche Funktionalität
+            </text>
+            <text xml:lang="en">
+                Implements the same interface as the actual functionality
+            </text>
+        </option>
+
+        <option false="false" identifier="D">
+            <text xml:lang="de">
+                Wird nie direkt angesprochen
+            </text>
+            <text xml:lang="en">
+                Is never addressed directly
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

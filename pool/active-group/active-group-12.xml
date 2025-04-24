@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-12" points="1">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-04" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was gehört zu Ihren Aufgaben als Softwarearchitekt:in?
+    </text>
+    <text xml:lang="en">
+      What is your job as a software architect?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option false="false" identifier="A">
+      <text xml:lang="de">
+        Anforderungen formulieren
+      </text>
+      <text xml:lang="en">
+        Formulating requirements
+      </text>
+    </option>
+    <option false="false" identifier="B">
+      <text xml:lang="de">
+        Leitung des Teams und Kontrolle aller Abläufe
+      </text>
+      <text xml:lang="en">
+        Leading the team and controlling of all processes
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        Umsetzung und Implementierung der Architektur begleiten
+      </text>
+      <text xml:lang="en">
+        Assist implementation of the architecture
+      </text>
+    </option>
+    <option false="false" identifier="D">
+      <text xml:lang="de">
+        Testabläufe der Gesamtanwendung definieren und kontrollieren
+      </text>
+      <text xml:lang="en">
+        Defining and controlling test procedures for the overall application
+      </text>
+    </option>
+  </pickOptions>
+
+</pickQuestion>

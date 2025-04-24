@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-14" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-02" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Wobei handelt es sich um eine präzise Qualitätsanforderung?
+    </text>
+    <text xml:lang="en">
+      What is a precise quality requirement?
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Bei bis zu 1000 parallelen Zugriffen soll jede aufgerufene Seite schnell angezeigt werden.
+      </text>
+      <text xml:lang="en">
+        With up to 1000 parallel accesses, each page accessed should be displayed fast.
+      </text>
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Bei bis zu 1000 parallelen Zugriffen soll jede aufgerufene Seite innerhalb einer Sekunde
+        angezeigt werden.
+      </text>
+      <text xml:lang="en">
+        With up to 1000 parallel accesses, each page accessed should be displayed within one second.
+      </text>
+    </option>
+    <option false="false" identifier="C">
+      <text xml:lang="de">
+        Die Anwendung soll stabil und möglichst unterbrechungsfrei laufen.
+      </text>
+      <text xml:lang="en">
+        The application should remain stable when running and with as few interruptions as possible.
+      </text>
+    </option>
+
+    <option false="false" identifier="D">
+      <text xml:lang="de">
+        Zu viele Anfragen des selben Benutzers sollen keinen Einfluss auf die Performance für andere
+        Benutzer haben.
+      </text>
+      <text xml:lang="en">
+        Too many requests from the same user should not affect the performance for other users.
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-44" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="05-02" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was ist hilfreich für die Bewertung von Architekturen?
+    </text>
+    <text xml:lang="en">
+      What is helpful for evaluating architectures?
+    </text>
+
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Umsetzungsstand
+      </text>
+      <text xml:lang="en">
+        State of implementation
+      </text>
+
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Komplexität des Systems
+      </text>
+      <text xml:lang="en">
+        Complexity of the system
+      </text>
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        Testfälle und Testergebnisse
+      </text>
+      <text xml:lang="en">
+        Test cases and test results
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Liste von Fehlern im Quellcode
+      </text>
+      <text xml:lang="en">
+        List of bugs in the source code
+      </text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        Anforderungs- und Architekturdokumentation
+      </text>
+      <text xml:lang="en">
+        Requirements and architecture documentation
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

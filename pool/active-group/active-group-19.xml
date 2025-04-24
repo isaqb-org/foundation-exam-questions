@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-19" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="prerequisite" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Welcher Begriff beschreibt die Möglichkeit, Operationen oder Aufgaben parallel in
+            beliebiger Abfolge ausführen zu können?
+        </text>
+        <text xml:lang="en">
+            Which term describes the possibility of being able to carry out operations or tasks in
+            parallel in any order?
+        </text>
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                Skalierbarkeit
+            </text>
+            <text xml:lang="en">
+                Scalability
+            </text>
+        </option>
+        <option false="false" identifier="B">
+            <text xml:lang="de">
+                Redundanz
+            </text>
+            <text xml:lang="en">
+                Redundancy
+            </text>
+        </option>
+        <option false="false" identifier="C">
+            <text xml:lang="de">
+                Isolation
+            </text>
+            <text xml:lang="en">
+                Isolation
+            </text>
+        </option>
+
+        <option correct="correct" identifier="D">
+            <text xml:lang="de">
+                Nebenläufigkeit
+            </text>
+            <text xml:lang="en">
+                Concurrency
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

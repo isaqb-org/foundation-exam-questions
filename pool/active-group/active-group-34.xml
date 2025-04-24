@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-34" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="prerequisite" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was ist UML?
+        </text>
+        <text xml:lang="en">
+            What is UML?
+        </text>
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                eine Strukturform für projektbezogene Kommunikation
+            </text>
+            <text xml:lang="en">
+                a structural form for project-related communication
+            </text>
+        </option>
+        <option false="false" identifier="B">
+            <text xml:lang="de">
+                ein Model zur iterativen Softwareentwicklung
+            </text>
+            <text xml:lang="en">
+                a model for iterative software development
+            </text>
+        </option>
+        <option correct="correct" identifier="C">
+            <text xml:lang="de">
+                eine grafische Modellierungssprache
+            </text>
+            <text xml:lang="en">
+                a graphical modeling language
+            </text>
+        </option>
+
+        <option correct="correct" identifier="D">
+            <text xml:lang="de">
+                eine Strukturierungsschicht für Prozesse
+            </text>
+            <text xml:lang="en">
+                a structuring layer for processes
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

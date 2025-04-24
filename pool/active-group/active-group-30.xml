@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-30" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-07" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Welche Eigenschaften sollten beim Entwurf von Schnittstellen zwischen Architekturbausteinen
+      berücksichtigt werden?
+    </text>
+    <text xml:lang="en">
+      What properties should be considered when designing interfaces between architectural building
+      blocks?
+    </text>
+
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">
+        funktional vollständig
+      </text>
+      <text xml:lang="en">
+        functionally complete
+      </text>
+
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">
+        allumfassend
+      </text>
+      <text xml:lang="en">
+        all-encompassing
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        fehlertolerant in der Benutzung
+      </text>
+      <text xml:lang="en">
+        fault-tolerant in use
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        schwer zu missbrauchen
+      </text>
+      <text xml:lang="en">
+        difficult to abuse
+      </text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        einfach zu benutzen
+      </text>
+      <text xml:lang="en">
+        easy to use
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        einfach zu erweitern
+      </text>
+      <text xml:lang="en">
+        easy to extend
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

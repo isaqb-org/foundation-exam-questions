@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-28" points="2">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="03-06" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was sind prinzipielle Möglichkeiten, die Kopplung zwischen zwei Bausteinen zu reduzieren oder
+      aufzulösen?
+    </text>
+    <text xml:lang="en">
+      What are the basic options for reducing or eliminating the coupling between two building blocks?
+    </text>
+  </stem>
+
+  <categoryStatements>
+
+    <categories>
+      <category label="a">
+        <text xml:lang="de">trifft zu</text>
+        <text xml:lang="en">True</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">trifft nicht zu</text>
+        <text xml:lang="en">False</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="b" identifier="A">
+        <text xml:lang="de">
+          Eine der Komponenten in zwei Teilkomponenten aufteilen, mit einem gekoppelten und einem
+          ungekoppelten Part.
+        </text>
+        <text xml:lang="en">
+          Split one of the components into two subcomponents, with a coupled and an uncoupled part.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Explizite Schnittstellen erstellen und benutzen.
+        </text>
+        <text xml:lang="en">
+          Create and use explicit interfaces.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">
+          Code zwischen den Bausteinen bewegen, so dass Kohäsion steigt und Abhängigkeiten reduziert
+          werden.
+        </text>
+        <text xml:lang="en">
+          Move code between the two building blocks to increase cohesion, and reduce dependencies.
+        </text>
+      </statement>
+    </statements>
+  </categoryStatements>
+</categoryQuestion>

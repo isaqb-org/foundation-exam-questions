@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-29" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-02" />
+    </refersToLgs>
+
+    <stem>
+      <text xml:lang="de">
+	Was sind typische Qualitätsmerkmale?
+      </text>
+      <text xml:lang="en">
+	What are typical quality attributes?
+      </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+	<statements>
+          <statement correctCategory="b" identifier="A">
+            <text xml:lang="de">
+              Schnittstellenfreiheit
+            </text>
+            <text xml:lang="en">
+              Interface freedom
+            </text>
+          </statement>
+          <statement correctCategory="a" identifier="B">
+            <text xml:lang="de">
+              Verfügbarkeit
+            </text>
+            <text xml:lang="en">
+              Availability
+            </text>
+          </statement>
+          <statement correctCategory="a" identifier="C">
+            <text xml:lang="de">
+              Effizienz
+            </text>
+            <text xml:lang="en">
+              Efficiency
+            </text>
+          </statement>
+          <statement correctCategory="a" identifier="D">
+            <text xml:lang="de">
+              Performance
+            </text>
+            <text xml:lang="en">
+              Performance
+            </text>
+          </statement>
+          <statement correctCategory="b" identifier="E">
+            <text xml:lang="de">
+              Datenpersistenz
+            </text>
+            <text xml:lang="en">
+              Data persistence
+            </text>
+          </statement>
+          <statement correctCategory="b" identifier="F">
+            <text xml:lang="de">
+              Verschlüsselte Kommunikation
+            </text>
+            <text xml:lang="en">
+              Encrypted communication
+            </text>
+          </statement>
+          <statement correctCategory="a" identifier="G">
+            <text xml:lang="de">
+              Wartbarkeit
+            </text>
+            <text xml:lang="en">
+              Maintainability
+            </text>
+          </statement>
+          <statement correctCategory="a" identifier="H">
+            <text xml:lang="de">
+              Vertikale Modularisierung
+            </text>
+            <text xml:lang="en">
+              Vertical modularization
+            </text>
+          </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

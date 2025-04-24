@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-06" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-04" />
+    
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was zählt zu Ihren Aufgaben bezüglich gestellten Anforderung an die Softwarearchitektur oder
+      die Software? Wählen Sie zwei Antworten aus.
+    </text>
+    <text xml:lang="en">
+      What is one of your tasks regarding the requirements placed on the software architecture or
+      the software? Choose two answers.
+    </text>
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Widersprechen
+      </text>
+      <text xml:lang="en">
+        Contradicting
+      </text>
+
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Hinterfragen
+      </text>
+      <text xml:lang="en">
+        Questioning
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Im Umfang erweitern
+      </text>
+      <text xml:lang="en">
+        Expanding in scope
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Klarstellen
+      </text>
+      <text xml:lang="en">
+        Clarifying
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

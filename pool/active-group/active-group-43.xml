@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-43" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="05-02" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was kann Ihnen zur Analyse und Bewertung von Architektur behilflich sein?
+    </text>
+    <text xml:lang="en">
+      What can help you analyze and evaluate architecture?
+    </text>
+
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">
+        Quellcode
+      </text>
+      <text xml:lang="en">
+        Source code
+      </text>
+
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Metriken
+      </text>
+      <text xml:lang="en">
+        Metrics
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Teamgröße
+      </text>
+      <text xml:lang="en">
+        Team size
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Architekturdokumentation
+      </text>
+      <text xml:lang="en">
+        Architecture documentation
+      </text>
+    </option>
+    <option correct="correct" identifier="E">
+      <text xml:lang="de">
+        Qualitätsanforderungen
+      </text>
+      <text xml:lang="en">
+        Quality requirements
+      </text>
+
+    </option>
+    <option correct="correct" identifier="F">
+      <text xml:lang="de">
+        Benutzerverhalten
+      </text>
+      <text xml:lang="en">
+        User behavior
+      </text>
+    </option>
+    <option distractor="distractor" identifier="G">
+      <text xml:lang="de">
+        Gesamtbudget
+      </text>
+      <text xml:lang="en">
+        Total budget
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

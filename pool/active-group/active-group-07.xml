@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-07" points="2">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="04-02" />
+ 
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben
+      Entwickler:innen an der Dokumentation der
+      Softwarearchitektur. Welche Methoden eignen sich zur
+      Gewährleistung einer konsistenten und zweckmäßigen Dokumentation
+      und welche nicht?
+    </text>
+    <text xml:lang="en">
+      In your project, three architects and seven developers are working on the
+      documentation of the software architecture. Which methods are
+      appropriate in order to achieve a consistent and adequate
+      documentation, and which are not?
+    </text>
+  </stem>
+
+  <categoryStatements>
+
+    <categories>
+      <category label="a">
+        <text xml:lang="de">trifft zu</text>
+        <text xml:lang="en">True</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">trifft nicht zu
+</text>
+        <text xml:lang="en">False</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Anwenderinnen
+        </text>
+        <text xml:lang="en">
+          Users
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Auftraggeber
+        </text>
+        <text xml:lang="en">
+          Clients
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">
+          Entwickler:innen
+        </text>
+        <text xml:lang="en">
+          Developers
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">
+          Management
+        </text>
+        <text xml:lang="en">
+          Management
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="E">
+        <text xml:lang="de">
+          Vertrieb
+        </text>
+        <text xml:lang="en">
+          Sales
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="F">
+        <text xml:lang="de">
+          Business-Analyst
+        </text>
+        <text xml:lang="en">
+          Business analysts
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="G">
+        <text xml:lang="de">
+          IT-Betrieb
+        </text>
+        <text xml:lang="en">
+          IT operations
+        </text>
+      </statement>
+    </statements>
+
+  </categoryStatements>
+</categoryQuestion>

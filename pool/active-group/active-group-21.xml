@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-21" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-10" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was sind Querschnittsthemen in der Architektur?
+        </text>
+        <text xml:lang="en">
+            What are cross-cutting concerns in software architecture?
+        </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+        <statements>
+            <statement correctCategory="a" identifier="A">
+                <text xml:lang="de">
+                    Persistenz
+                </text>
+                <text xml:lang="en">
+                    Persistence
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="B">
+                <text xml:lang="de">
+                    Kommunikation
+                </text>
+                <text xml:lang="en">
+                    Communication
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="C">
+                <text xml:lang="de">
+                    Nebenläufigkeit
+                </text>
+                <text xml:lang="en">
+                    Concurrency
+                </text>
+            </statement>
+
+            <statement correctCategory="b" identifier="D">
+                <text xml:lang="de">
+                    Warenkorb
+                </text>
+                <text xml:lang="en">
+                    Shopping cart
+                </text>
+            </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

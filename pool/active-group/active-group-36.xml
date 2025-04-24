@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-36" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-05" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Wie sollte Kontext von Systemen differenziert werden?
+        </text>
+        <text xml:lang="en">
+            How should the context of a system be classified?
+        </text>
+    </stem>
+
+    <pickOptions>
+        <option false="false" identifier="A">
+            <text xml:lang="de">
+                entsprechend der verschiedenen Anforderungen
+            </text>
+            <text xml:lang="en">
+                according to different requirements
+            </text>
+        </option>
+        <option correct="correct" identifier="B">
+            <text xml:lang="de">
+                bezüglich fachlichem und technischem Kontext
+            </text>
+            <text xml:lang="en">
+                regarding business and technical context
+            </text>
+        </option>
+        <option false="false" identifier="C">
+            <text xml:lang="de">
+                zwischen erforderlichem und optionalem Kontext
+            </text>
+            <text xml:lang="en">
+                between required and optional contextetween required and optional context
+            </text>
+        </option>
+        <option false="false" identifier="D">
+            <text xml:lang="de">
+                entsprechend der Einordnung im Gesamtsystem
+            </text>
+            <text xml:lang="en">
+                according to the classification in the overall system
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

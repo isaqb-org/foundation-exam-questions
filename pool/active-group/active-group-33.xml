@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-33" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-01" />
+     </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Vervollständigen Sie: Dokumentation und Kommunikation muss…
+        </text>
+        <text xml:lang="en">
+            Complete: Documentation and communication must…
+        </text>
+    </stem>
+
+    <pickOptions>
+        <option correct="correct" identifier="A">
+            <text xml:lang="de">
+                … individuell auf unterschiedliche Zielgruppen addressiert sein.
+            </text>
+            <text xml:lang="en">
+                … be individually addressed to different target groups.
+            </text>
+        </option>
+        <option false="false" identifier="B">
+            <text xml:lang="de">
+                … einer vorgegebenen Form entsprechen.
+            </text>
+            <text xml:lang="en">
+                … correspond to a given shape.
+            </text>
+        </option>
+        <option false="false" identifier="C">
+            <text xml:lang="de">
+                … bilateral sein.
+            </text>
+            <text xml:lang="en">
+                … be bilateral.
+            </text>
+        </option>
+
+        <option false="false" identifier="D">
+            <text xml:lang="de">
+                … weisungsgebunden sein.
+            </text>
+            <text xml:lang="en">
+                … be bound by instructions.
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

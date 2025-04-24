@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-15" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-05" />
+  </refersToLgs>
+  <stem>
+    <text xml:lang="de">
+      Welche Annahmen aus den folgenden Anforderungen lassen sich nur implizit erschließen und
+      sollten vermieden werden?
+      Die Anwendung soll Datenreihen persistent speichern können. Jede Datenreihe soll mit einer
+      Abfragesprache einzeln eingelesen werden können. Die Anwendung soll für externe Zugriffe mit
+      einer Authentifizierung geschützt werden. Zur Vermeidung von Überlastung sollen maximal 100
+      Benutzer:innen gleichzeitig die App bedienen können. Weitere Benutzer:innen sollen mit einer
+      Vorschaltseite abgefangen werden. Auf dieser Seite soll angezeigt werden, wie viele Benutzer
+      insgesamt in den letzten fünf Minuten warten mussten.
+    </text>
+    <text xml:lang="en">
+      Which assumptions from the following requirements can only be
+      deduced implicitly and should be avoided? The application should
+      be able to store data series persistently. Each data series
+      should be read individually with a query language. The
+      application should be protected for external access with
+      authentication. To avoid overload, a maximum of 100 users should
+      be able to use to app simultaneously. Users beyond that number
+      should be intercepted with a landing page. This page should show
+      the total number of users that had to wait for the last five
+      minutes.
+    </text>
+
+  </stem>
+
+  <pickOptions>
+    <option correct="correct" identifier="A">
+      <text xml:lang="de">
+        Interne Zugriffe sollen ohne Authenfizierung möglich sein.
+      </text>
+      <text xml:lang="en">
+        Internal access should be possible without authentication.
+      </text>
+
+    </option>
+    <option distractor="distractor" identifier="B">
+      <text xml:lang="de">
+        100 Benutzer:innen können die App gleichzeitig bedienen.
+      </text>
+      <text xml:lang="en">
+        100 users can operate the app at the same time.
+      </text>
+    </option>
+    <option distractor="distractor" identifier="C">
+      <text xml:lang="de">
+        Eine Vorschaltseite gibt einen Richtwert für die Anzahl an wartenden
+        Personen preis.
+      </text>
+      <text xml:lang="en">
+        A landing page shows the number of people waiting.
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        Zur Speicherung von Datenreihen soll eine Datenbank eingesetzt werden.
+      </text>
+      <text xml:lang="en">
+        A database should be used to store data series.
+      </text>
+    </option>
+  </pickOptions>
+</pickQuestion>

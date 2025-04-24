@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-03" points="1">
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="02-02" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Was für Änderungen haben potenziell Konsequenzen für die Softwarearchitektur? Wählen Sie zwei
+      Antworten aus.
+    </text>
+    <text xml:lang="en">
+      What changes have potential consequences for the software architecture? Choose two answers.
+    </text>
+
+  </stem>
+
+  <pickOptions>
+    <option distractor="distractor" identifier="A">
+      <text xml:lang="de">
+        Hardware-Upgrade
+      </text>
+      <text xml:lang="en">
+        Hardware upgrade
+      </text>
+
+    </option>
+    <option correct="correct" identifier="B">
+      <text xml:lang="de">
+        Umstrukturierung des Unternehmens
+      </text>
+      <text xml:lang="en">
+        Reorganization of the company
+      </text>
+
+    </option>
+    <option correct="correct" identifier="C">
+      <text xml:lang="de">
+        neue Betriebssystem-Version
+      </text>
+      <text xml:lang="en">
+        New operating system version
+      </text>
+    </option>
+    <option correct="correct" identifier="D">
+      <text xml:lang="de">
+        (interne und externe) Schnittstellen
+      </text>
+      <text xml:lang="en">
+        (internal and external) Interfaces
+      </text>
+    </option>
+    <option distractor="distractor" identifier="D">
+      <text xml:lang="de">
+        Neuwahlen
+      </text>
+      <text xml:lang="en">
+        New elections
+      </text>
+    </option>
+
+  </pickOptions>
+
+</pickQuestion>

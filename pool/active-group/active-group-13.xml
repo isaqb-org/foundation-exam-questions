@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-13" points="2">
+
+  <history>
+    <item date="2025-04-17">imported from Active Group sample exam</item>
+  </history>
+
+  <refersToLgs>
+    <lg curriculumVersion="2025.1" lg="01-03" />
+  </refersToLgs>
+
+  <stem>
+    <text xml:lang="de">
+      Handelt es sich um langfristige oder kurzfristige Ziele?
+    </text>
+    <text xml:lang="en">
+      What are long-term and what are short-term goals?
+    </text>
+  </stem>
+
+  <categoryStatements>
+
+    <categories>
+      <category label="a">
+        <text xml:lang="de">langfristig</text>
+        <text xml:lang="en">long-term</text>
+      </category>
+      <category label="b">
+        <text xml:lang="de">kurzfristig</text>
+        <text xml:lang="en">short-term</text>
+      </category>
+    </categories>
+
+    <statements>
+      <statement correctCategory="a" identifier="A">
+        <text xml:lang="de">
+          Die Software soll Seitenaufrufe unmittelbar (unter 100ms) beantworten.
+        </text>
+        <text xml:lang="en">
+          The software should respond to page views immediately (less than 100ms).
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="B">
+        <text xml:lang="de">
+          Mehr als 100 Zugriffe in einer Sekunde des gleichen Benutzers oder Rechners müssen nicht
+          mehr beantwortet werden.
+        </text>
+        <text xml:lang="en">
+          More than 100 hits in one second by the same user or computer should no longer be
+          answered.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="C">
+        <text xml:lang="de">
+          Eine Überlastung der Anwendung durch zu schnelle Wiederholung von falschen Loginversuchen
+          soll durch eine kurze Sperrzeit verhindert werden.
+        </text>
+        <text xml:lang="en">
+          Overloading the application by repeating incorrect login attempts too quickly should be
+          prevented by a short blocking time.
+        </text>
+      </statement>
+      <statement correctCategory="a" identifier="D">
+        <text xml:lang="de">
+          Ab 100 parallelen Nutzern sollen weitere Anfragen nicht mehr beantwortet werden.
+        </text>
+        <text xml:lang="en">
+          Starting from 100 parallel users, further inquiries should no longer be answered.
+        </text>
+      </statement>
+    </statements>
+
+  </categoryStatements>
+</categoryQuestion>

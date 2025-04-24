@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-18" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-06" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Welche Teilung in getrennte Bausteine ist allgemeingültig sinnvoll? Wählen Sie drei
+            Antworten.
+        </text>
+        <text xml:lang="en">
+            Which division into separate building blocks makes sense in general? Choose three
+            answers.
+        </text>
+
+    </stem>
+
+    <pickOptions>
+        <option correct="correct" identifier="A">
+            <text xml:lang="de">
+                Datenmodell und Datenbankmodell
+            </text>
+            <text xml:lang="en">
+                Data model and database model
+            </text>
+
+        </option>
+        <option distractor="distractor" identifier="B">
+            <text xml:lang="de">
+                View und Controller
+            </text>
+            <text xml:lang="en">
+                View and controllers
+            </text>
+        </option>
+        <option distractor="distractor" identifier="C">
+            <text xml:lang="de">
+                Linker und rechter Scheibenwischer
+            </text>
+            <text xml:lang="en">
+                Left and right wipers
+            </text>
+        </option>
+        <option correct="correct" identifier="D">
+            <text xml:lang="de">
+                Benutzerschnittstelle und Business-Logik
+            </text>
+            <text xml:lang="en">
+                User interface and business logic
+            </text>
+        </option>
+        <option correct="correct" identifier="E">
+            <text xml:lang="de">
+                Warenkorb und Artikelsicht
+            </text>
+            <text xml:lang="en">
+                Shopping cart and article view
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

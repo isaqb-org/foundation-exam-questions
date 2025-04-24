@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-25" points="1">
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="03-04" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Was beschreibt den Begriff der Abstraktion in der Architektur? Wählen Sie zwei
+            Antworten.
+        </text>
+        <text xml:lang="en">
+            What describes the concept of abstraction? Choose two answers.
+        </text>
+
+    </stem>
+
+    <pickOptions>
+        <option distractor="distractor" identifier="A">
+            <text xml:lang="de">
+                Wiederverwendbarkeit
+            </text>
+            <text xml:lang="en">
+                Reusability
+            </text>
+
+        </option>
+        <option correct="correct" identifier="B">
+            <text xml:lang="de">
+                Überführung auf etwas Allgemeines
+            </text>
+            <text xml:lang="en">
+                Transfer to something general
+            </text>
+        </option>
+        <option correct="correct" identifier="C">
+            <text xml:lang="de">
+                Weglassen von Details
+            </text>
+            <text xml:lang="en">
+                Omission of details
+            </text>
+        </option>
+        <option distractor="distractor" identifier="D">
+            <text xml:lang="de">
+                Codeduplizierung mit geringfügigen Anpassungen
+            </text>
+            <text xml:lang="en">
+                Code duplication with minor adjustments
+            </text>
+        </option>
+    </pickOptions>
+</pickQuestion>

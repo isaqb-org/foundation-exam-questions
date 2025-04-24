@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-42" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="02-03" />
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Welche Qualitätsmerkmale stehen oft im Widerspruch zueinander?
+        </text>
+        <text xml:lang="en">
+            Which qualities often conflict with each other?
+        </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+        <statements>
+            <statement correctCategory="b" identifier="A">
+                <text xml:lang="de">
+                    Sicherheit - Benutzbarkeit
+                </text>
+                <text xml:lang="en">
+                    Security - Usability
+                </text>
+            </statement>
+            <statement correctCategory="b" identifier="B">
+                <text xml:lang="de">
+                    Wartbarkeit - Konfigurierbarkeit
+                </text>
+                <text xml:lang="en">
+                    Maintainability - Configurability
+                </text>
+            </statement>
+            <statement correctCategory="b" identifier="C">
+                <text xml:lang="de">
+                    Konfigurierbarkeit - Benutzbarkeit
+                </text>
+                <text xml:lang="en">
+                    Configurability - Usability
+                </text>
+            </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

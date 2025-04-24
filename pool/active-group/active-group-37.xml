@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="AG-37" points="2">
+
+    <history>
+        <item date="2025-04-17">imported from Active Group sample exam</item>
+    </history>
+
+    <refersToLgs>
+        <lg curriculumVersion="2025.1" lg="04-07" />
+        
+    </refersToLgs>
+
+    <stem>
+        <text xml:lang="de">
+            Welche Aussagen über Logging als Querschnittsthema sind richtig?
+        </text>
+        <text xml:lang="en">
+	  Which statements about logging as a cross-cutting concern are correct?
+        </text>
+    </stem>
+
+    <categoryStatements>
+
+        <categories>
+            <category label="a">
+                <text xml:lang="de">trifft zu</text>
+                <text xml:lang="en">True</text>
+            </category>
+            <category label="b">
+                <text xml:lang="de">trifft nicht zu</text>
+                <text xml:lang="en">False</text>
+            </category>
+        </categories>
+
+        <statements>
+            <statement correctCategory="b" identifier="A">
+                <text xml:lang="de">
+                    Jede Komponente schreibt Log-Daten in ihre eigene Datei.
+                </text>
+                <text xml:lang="en">
+                    Each component writes log data to its own file.
+                </text>
+            </statement>
+            <statement correctCategory="a" identifier="B">
+                <text xml:lang="de">
+                    Logging-Daten können komponentenübergreifend Abläufe abbilden.
+                </text>
+                <text xml:lang="en">
+                    Logging data can map cross-component processes.
+                </text>
+            </statement>
+            <statement correctCategory="b" identifier="C">
+                <text xml:lang="de">
+                    Zuverlässiges zentrales Logging ist unmöglich, weil es ein verteiltes System
+                    darstellt.
+                </text>
+                <text xml:lang="en">
+                    Reliable central logging is impossible because it is a distributed system.
+                </text>
+            </statement>
+        </statements>
+    </categoryStatements>
+</categoryQuestion>

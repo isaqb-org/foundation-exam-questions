@@ -105,9 +105,6 @@
 	    <attribute name="distractor">
 	      <value>distractor</value>
 	    </attribute>
-	    <attribute name="false">
-	      <value>false</value>
-	    </attribute>
 	    <attribute name="correct">
 	      <value>correct</value>
 	    </attribute>

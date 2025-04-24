@@ -28,7 +28,7 @@
                 Scalability
             </text>
         </option>
-        <option false="false" identifier="B">
+        <option distractor="distractor" identifier="B">
             <text xml:lang="de">
                 Redundanz
             </text>
@@ -36,7 +36,7 @@
                 Redundancy
             </text>
         </option>
-        <option false="false" identifier="C">
+        <option distractor="distractor" identifier="C">
             <text xml:lang="de">
                 Isolation
             </text>

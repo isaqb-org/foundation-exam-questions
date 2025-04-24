@@ -283,12 +283,12 @@
          "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    ")))
      (list
       (pick-option
-       'false
+       'distractor
        "A"
        (localized-text
         '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
       (pick-option
-       'false
+       'distractor
        "B"
        (localized-text
         '(("de"
@@ -346,13 +346,13 @@
         '(("de" . "\n        (interne und externe) Schnittstellen\n      ")
           ("en" . "\n        (internal and external) Interfaces\n      "))))
       (pick-option
-       'false
+       'distractor
        "D"
        (localized-text
         '(("de" . "\n        Programmierkonventionen (\"coding conventions\")\n      ")
           ("en" . "\n        Coding conventions\n      "))))
       (pick-option
-       'false
+       'distractor
        "E"
        (localized-text
         '(("de" . "\n        Hardware-Sizing\n      ")

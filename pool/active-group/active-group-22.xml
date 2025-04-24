@@ -25,7 +25,7 @@
                 Recreates the functionality without modification or extension
             </text>
         </option>
-        <option false="false" identifier="B">
+        <option distractor="distractor" identifier="B">
             <text xml:lang="de">
                 Kann nur alleinstehend betrieben werden
             </text>
@@ -42,7 +42,7 @@
             </text>
         </option>
 
-        <option false="false" identifier="D">
+        <option distractor="distractor" identifier="D">
             <text xml:lang="de">
                 Wird nie direkt angesprochen
             </text>

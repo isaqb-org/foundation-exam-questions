@@ -37,7 +37,7 @@
         Exactly one for all kinds of systems.
       </text>
     </option>
-    <option false="false" identifier="B">
+    <option distractor="distractor" identifier="B">
       <text xml:lang="de">
         Eine für jede Art von Softwaresystem (z. B. "eingebettet","Echtzeit", "Entscheidungsunterstützung", "Web", "Batch", …).
       </text>

@@ -19,7 +19,7 @@
   </stem>
 
   <pickOptions>
-    <option false="false" identifier="A">
+    <option distractor="distractor" identifier="A">
       <text xml:lang="de">
         Am Anfang
       </text>
@@ -35,7 +35,7 @@
         Continuous
       </text>
     </option>
-    <option false="false" identifier="C">
+    <option distractor="distractor" identifier="C">
       <text xml:lang="de">
         Am Ende.
       </text>
@@ -43,7 +43,7 @@
         At the end
       </text>
     </option>
-    <option false="false" identifier="D">
+    <option distractor="distractor" identifier="D">
       <text xml:lang="de">
         Am Anfang und am Ende.
       </text>

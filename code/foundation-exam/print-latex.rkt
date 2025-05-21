@@ -3,10 +3,9 @@
 #|
 Usage:
 
-racket --require print-latex.rkt --main -- --title "Test Exam" --author "Mike Sperber" --out exam.tex  ../../pool/active-group/*.xml
+racket --require print-latex.rkt --main -- --template exam.tex --out exam.tex  ../../pool/active-group/*.xml
 
 Additional flags:
---solutions    include solutions
 --language de  specify language
 --language en  specify language
 |#
@@ -15,10 +14,12 @@ Additional flags:
          racket/contract
          racket/cmdline
          (only-in racket/string string-trim string-join string-split)
+         (only-in racket/port with-output-to-string)
          (only-in srfi/19 date->string)
          xml)
 (require "question.rkt"
-         "parse.rkt")
+         "parse.rkt"
+         "file-template.rkt")
 
 (define (question-word language)
   (match language
@@ -26,81 +27,85 @@ Additional flags:
     ("en" "Question")))
 
 (define (write-question+explanation/language question language)
-  (display "\\subsection*{")
+  (display "\\begin{examQuestionStem}{")
   (display (question-id question))
-  (display " (")
-  (write-points (question-points question) language)
-  (display ")}")
+  (display "}{")
+  (display (question-points question))
+  (display "}{")
+  (write-points-word (question-points question) language)
+  (display "}")
   (newline)
-  
+  (write-localized-text (question-stem question) language)
+  (newline)
+  (display "\\end{examQuestionStem}")
+  (newline)
+           
   (write-question/language question language)
   
   (cond
     ((question-explanation question)
      => (lambda (explanation)
           (newline) (display "\\bigskip\\noindent{}")
-          (write-multi-line (get-localized-text explanation language)))))
+          (write-localized-text explanation language))))
   (newline))
 
 (define (write-question/language question language)
   (match question
     ((pick-question id points history learning-goals stem explanation pick-options)
      (write-pick-header pick-options points language)
-     (newline) (display "\\medskip\\noindent{}")
-     (write-multi-line (get-localized-text stem language))
-     (newline) (newline)
-     (display "\\begin{itemize}")
+     (newline)
+     (display "\\begin{examPQuestion}")
      (for-each (lambda (pick-option)
                  (newline)
                  (write-pick-option pick-option language))
                pick-options)
-     (display "\\end{itemize}") (newline))
+     (display "\\end{examPQuestion}") (newline))
     ((category-question id points history learning-goals stem explanation categories statements)
      (write-category-header points language)
-     (newline) (display "\\medskip\\noindent{}")
-     (write-multi-line (get-localized-text stem language))
-     (newline) 
-     (display "\\medskip\\noindent\\begin{tabularx}{\\textwidth}{cccX}") (newline)
-     (display (string-join
-               (map (lambda (category)
-                      (get-localized-text (category-text category)
-                                          language))
-                    categories)
-               " & "))
-     (display "\\\\")
+     (newline)
+     (display "\\begin{examKQuestion}")
+     (newline)
+     (display "\\examQuestionKHeader")
+     (for-each (lambda (category)
+                 (display "{")
+                 (write-localized-text (category-text category) language)
+                 (display "}"))
+               categories)
+     (newline)
      (for-each (lambda (statement)
                  (newline)
                  (write-statement statement categories language))
                statements)
-     (display "\\end{tabularx}") (newline))))
+     (display "\\end{examKQuestion}") (newline))))
 
 (define (write-statement statement categories language)
+  (display "\\examQuestionKItem{")
+  (display (string-downcase (statement-identifier statement)))
+  (display "}{")
+  (write-localized-text (statement-text statement) language)
+  (display "}")
   (for-each (lambda (category)
               (display
                (if (equal? category (statement-correct-category statement))
-                   "\\YES"
-                   "\\NOPE"))
-              (display " & "))
+                   "{\\examYes}"
+                   "{\\examNo}")))
             categories)
-  (display "(")
-  (display (string-downcase (statement-identifier statement)))
-  (display ") & ") (newline)
-  (write-multi-line
-   (get-localized-text (statement-text statement) language))
-  (display "\\\\")
   (newline))
 
 (define (write-category-header points language)
+  (display "\\examQuestionInstructions{")
   (match language
     ("de"
      (display "K-Frage: Bitte ordnen Sie jede Antwort einer Kategorie zu.") (newline))
     ("en"
-     (display "K-Question:  Assign all the answers.") (newline))))
+     (display "K-Question:  Assign all the answers.") (newline)))
+  (display "}"))
 
 (define (write-pick-header pick-options points language)
   (define pick-options-count (length pick-options))
   (define correct-pick-options-count (count-correct-pick-options pick-options))
 
+  (display "\\examQuestionInstructions{")
   (match (cons correct-pick-options-count language)
     ((cons 1 "de")
      (display "A-Frage: Bitte kreuzen Sie die richtige Antwort an.") (newline))
@@ -118,10 +123,13 @@ Additional flags:
      (display " answers select \\textbf{")
      (display (number-word/en correct-pick-options-count))
      (display "} that fit best.")))
-  (newline))
+  (display "}"))
   
 (define (write-points points language)
   (display points) (display " ")
+  (write-points-word points language))
+
+(define (write-points-word points language)
   (display
    (match (cons points language)
      ((cons 1 "de") "Punkt")
@@ -181,17 +189,20 @@ Additional flags:
            pick-options)))
 
 (define (write-pick-option pick-option language)
-  (display "\\item[")
+  (display "\\examQuestionPItem{")
+  (display (string-downcase (pick-option-identifier pick-option)))
+  (display "}{")
+  (write-localized-text (pick-option-text pick-option) language)
+  (display "}{")
   (display
    (case (pick-option-validity pick-option)
-     ((correct) "\\YES")
-     (else "\\NOPE")))
-  (display "] (")
-  (display (string-downcase (pick-option-identifier pick-option)))
-  (display ") ")
-  (write-multi-line
-   (get-localized-text (pick-option-text pick-option) language))
+     ((correct) "\\examYes")
+     (else "\\examNo")))
+  (display "}")
   (newline))
+
+(define (write-localized-text localized-text language)
+  (write-multi-line (quote-latex (get-localized-text localized-text language) language)))
 
 (define (write-multi-line text)
   (for-each (lambda (line)
@@ -207,63 +218,62 @@ Additional flags:
      (error "localized text not available for language"
             localized-text language))))
 
-(define (make-exam in-filenames out-filename language
-                   title author solutions?)
-  (with-output-to-file
-    out-filename
-    (lambda ()
-      (display "\\documentclass[a4paper]{article}") (newline)
-      (display "\\usepackage[utf8]{inputenc}") (newline)
-      (display "\\usepackage[T1]{fontenc}") (newline)
-      (display "\\usepackage{amssymb}") (newline)
-      (display "\\newcommand{\\NOPE}{$\\square$}") (newline)
-      (if solutions?
-          (display "\\newcommand{\\YES}{$\\boxtimes$}")
-          (display "\\newcommand{\\YES}{$\\square$}"))
-      (newline)
-      (display "\\usepackage{tabularx}") (newline)
-      (display "\\title{") (display title) (display "}") (newline)
-      (display "\\author{") (display author) (display "}") (newline)
-      (display "\\begin{document}") (newline)
-      (display "\\maketitle") (newline)
-      
-      (for-each (lambda (in-filename)
-                  (let ((question (parse-question-file in-filename)))
-                    (write-question+explanation/language question language)))
-                in-filenames)
-      (display "\\end{document}") (newline))
-    #:exists 'replace))
+(define (quote-latex text language)
+  (define-values (open-quote* closed-quote*)
+    (match language
+      ("de" (values "\"`" "\"'"))
+      ("en" (values "``" "''"))
+      (_
+       (error "unhandled language" language))))
+  (define open-quote (reverse (string->list open-quote*)))
+  (define closed-quote (reverse (string->list closed-quote*)))
+
+  (let loop ((chars (string->list text)) (open-quote? #f) (rev-result '()))
+    (if (null? chars)
+        (list->string (reverse rev-result))
+        (case (car chars)
+          ((#\&) (loop (cdr chars) open-quote? (cons #\& (cons #\\ rev-result))))
+          ((#\") (loop (cdr chars) (not open-quote?)
+                       (if open-quote?
+                           (append closed-quote rev-result)
+                           (append open-quote rev-result))))
+          (else (loop (cdr chars) open-quote? (cons (car chars) rev-result)))))))
+
+(define (make-exam question-filenames template-filename out-filename language)
+  (define questions (map parse-question-file question-filenames))
+  (define total-points (apply + (map question-points questions)))
+  (define questions-text
+    (with-output-to-string
+      (lambda ()
+        (for-each (lambda (question)
+                    (write-question+explanation/language question language))
+                  questions))))
+  (copy-file/replacing template-filename out-filename
+                       `(("%EXAMQUESTIONS%" . ,questions-text)
+                         ("%EXAMTOTALPOINTS%" . ,(number->string total-points)))))
 
 (define (main . argv)
-  (define document-title (make-parameter ""))
-  (define document-author (make-parameter ""))
+  (define template-filename (make-parameter #f))
   (define out-filename (make-parameter #f))
   (define language (make-parameter "en"))
-  (define solutions? (make-parameter #f))
   (command-line
    #:program "make-exam"
    #:argv argv
    #:once-each
-   [("-t" "--title") title
-                     "Document title"
-                     (document-title title)]
-   [("-a" "--author") author
-                      "Document author"
-                      (document-author author)]
    [("-o" "--out") filename
                    "Output filename"
+                   (out-filename filename)]
+   [("-t" "--template") filename
+                   "Template filename"
                    (out-filename filename)]
    [("-l" "--language") lang
                    "Language (de or en)"
                    (language lang)]
-   [("-s" "--solutions") "Include solutions"
-                         (solutions? #t)]
-   #:args in-filenames
-   (make-exam in-filenames
+   #:args question-filenames
+   (make-exam question-filenames
+              (template-filename)
               (out-filename)
-              (language)
-              (document-title) (document-author)
-              (solutions?))))
+              (language))))
 
 (module+ test
   (require rackunit)
@@ -287,12 +297,12 @@ Additional flags:
          "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    ")))
      (list
       (pick-option
-       'false
+       'distractor
        "A"
        (localized-text
         '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
       (pick-option
-       'false
+       'distractor
        "B"
        (localized-text
         '(("de"
@@ -350,13 +360,13 @@ Additional flags:
         '(("de" . "\n        (interne und externe) Schnittstellen\n      ")
           ("en" . "\n        (internal and external) Interfaces\n      "))))
       (pick-option
-       'false
+       'distractor
        "D"
        (localized-text
         '(("de" . "\n        Programmierkonventionen (\"coding conventions\")\n      ")
           ("en" . "\n        Coding conventions\n      "))))
       (pick-option
-       'false
+       'distractor
        "E"
        (localized-text
         '(("de" . "\n        Hardware-Sizing\n      ")
@@ -412,9 +422,14 @@ Additional flags:
     (write-question+explanation/language q1 "en")
     (write-question+explanation/language q2 "en")
     (write-question+explanation/language q4 "en")
+
+    (check-equal? (quote-latex "Hello \"Mike\" & \"Gernot\"" "de")
+                  "Hello \"`Mike\"' \\& \"`Gernot\"'")
+    (check-equal? (quote-latex "Hello \"Mike\" & \"Gernot\"" "en")
+                  "Hello ``Mike'' \\& ``Gernot''")
     )
 
 (provide (contract-out
-          (make-exam ((or/c path? string?) (or/c path? string?) string? string? string? boolean? . -> . any))
+          (make-exam ((listof (or/c path? string?)) (or/c path? string?) (or/c path? string?) string? . -> . any))
           (main (string? ... . -> . any))))
           

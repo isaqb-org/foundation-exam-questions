@@ -40,7 +40,8 @@
                         (pick-options->element pick-options)))))
     ((category-question id points history learning-goals stem explanation categories statements)
      (element* 'categoryQuestion
-               (list (attribute* 'id id)
+               (list (attribute* 'xmlns *ns*)
+                     (attribute* 'id id)
                      (attribute* 'points (number->string points)))
                (filter values
                        (list

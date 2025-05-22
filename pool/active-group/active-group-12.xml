@@ -19,7 +19,7 @@
   </stem>
 
   <pickOptions>
-    <option false="false" identifier="A">
+    <option distractor="distractor" identifier="A">
       <text xml:lang="de">
         Anforderungen formulieren
       </text>
@@ -27,7 +27,7 @@
         Formulating requirements
       </text>
     </option>
-    <option false="false" identifier="B">
+    <option distractor="distractor" identifier="B">
       <text xml:lang="de">
         Leitung des Teams und Kontrolle aller Abläufe
       </text>
@@ -43,7 +43,7 @@
         Assist implementation of the architecture
       </text>
     </option>
-    <option false="false" identifier="D">
+    <option distractor="distractor" identifier="D">
       <text xml:lang="de">
         Testabläufe der Gesamtanwendung definieren und kontrollieren
       </text>

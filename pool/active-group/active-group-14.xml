@@ -35,7 +35,7 @@
         With up to 1000 parallel accesses, each page accessed should be displayed within one second.
       </text>
     </option>
-    <option false="false" identifier="C">
+    <option distractor="distractor" identifier="C">
       <text xml:lang="de">
         Die Anwendung soll stabil und möglichst unterbrechungsfrei laufen.
       </text>
@@ -44,7 +44,7 @@
       </text>
     </option>
 
-    <option false="false" identifier="D">
+    <option distractor="distractor" identifier="D">
       <text xml:lang="de">
         Zu viele Anfragen des selben Benutzers sollen keinen Einfluss auf die Performance für andere
         Benutzer haben.

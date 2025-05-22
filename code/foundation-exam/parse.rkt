@@ -152,18 +152,16 @@
     ((element* option
                ((identifier identifier)
                 (correct correct-value)
-                (false false-value)
                 (distractor distractor-value))
                (((text) texts)))
      (pick-option
-      (parse-option-validity correct-value false-value distractor-value)
+      (parse-option-validity correct-value distractor-value)
       identifier
       (parse-texts texts)))))
 
-(define (parse-option-validity correct-value false-value distractor-value)
+(define (parse-option-validity correct-value distractor-value)
   (cond
     ((equal? correct-value "correct") 'correct)
-    ((equal? false-value "false") 'false)
     ((equal? distractor-value "distractor") 'distractor)))
 
 (define (parse-category xml)
@@ -224,7 +222,7 @@
        '(("de" . "Genau eine für alle Arten von Systemen.")
          ("en" . "Exactly one for all kinds of systems."))))
      (pick-option
-      'false
+      'distractor
       "B"
       (localized-text
        '(("de"

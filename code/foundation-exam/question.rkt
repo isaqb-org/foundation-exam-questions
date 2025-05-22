@@ -8,36 +8,36 @@
    learning-goals
    stem
    explanation)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct pick-question question
   (pick-options)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct category-question question
   (categories statements)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct history-item
   (date text)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct learning-goal-reference
   (curriculum-version
    lg-number)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct curriculum-version
   (year number)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct lg-number
   (section index)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct localized-text
   (langs+texts) ; assoc list
-  #:transparent)
+  #:transparent #:mutable)
 
 (define lang/c
   (or/c "en" "de")) ; at the moment
@@ -46,15 +46,15 @@
   (validity ; 'distractor, 'false, or 'correct
    identifier
    text)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct category
   (label text)
-  #:transparent)
+  #:transparent #:mutable)
 
 (struct statement
   (correct-category identifier text)
-  #:transparent)
+  #:transparent #:mutable)
 
 (provide
  (contract-out

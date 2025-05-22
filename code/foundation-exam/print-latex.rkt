@@ -255,7 +255,7 @@ Additional flags:
 (define (main . argv)
   (define template-filename (make-parameter #f))
   (define out-filename (make-parameter #f))
-  (define language (make-parameter "en"))
+  (define language (make-parameter #f))
   (command-line
    #:program "make-exam"
    #:argv argv
@@ -264,17 +264,25 @@ Additional flags:
                    "Output filename"
                    (out-filename filename)]
    [("-t" "--template") filename
-                   "Template filename"
-                   (out-filename filename)]
+                        "Template filename"
+                        (template-filename filename)]
    [("-l" "--language") lang
-                   "Language (de or en)"
-                   (language lang)]
+                        "Language (de or en)"
+                        (language lang)]
    #:args question-filenames
-   (make-exam question-filenames
-              (template-filename)
-              (out-filename)
-              (language))))
-
+   (cond
+     ((not (template-filename))
+      (display "you must specify a template filename via --template <filename>"))
+     ((not (out-filename))
+      (display "you must specify a output filename via --out <filename>"))
+     ((not (language))
+      (display "you must specify a language via --language <language>"))
+     (else
+      (make-exam question-filenames
+                 (template-filename)
+                 (out-filename)
+                 (language))))))
+  
 (module+ test
   (require rackunit)
   (require "parse.rkt")

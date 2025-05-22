@@ -25,11 +25,13 @@
 
 (define (question->element question)
   (match question
-    ((pick-question id points history learning-goals stem explanation pick-options)
+    ((pick-question id points release history learning-goals stem explanation pick-options)
      (element* 'pickQuestion
-               (list (attribute* 'xmlns *ns*)
-                     (attribute* 'id id)
-                     (attribute* 'points (number->string points)))
+               (filter values
+                       (list (attribute* 'xmlns *ns*)
+                             (attribute* 'id id)
+                             (attribute* 'points (number->string points))
+                             (and release (attribute* 'release (release->string release)))))
                (filter values
                        (list
                         (history->element history)
@@ -38,11 +40,13 @@
                         (and explanation
                              (explanation->element explanation))
                         (pick-options->element pick-options)))))
-    ((category-question id points history learning-goals stem explanation categories statements)
+    ((category-question id points release history learning-goals stem explanation categories statements)
      (element* 'categoryQuestion
-               (list (attribute* 'xmlns *ns*)
-                     (attribute* 'id id)
-                     (attribute* 'points (number->string points)))
+               (filter values
+                       (list (attribute* 'xmlns *ns*)
+                             (attribute* 'id id)
+                             (attribute* 'points (number->string points))
+                             (and release (attribute* 'release (release->string release)))))
                (filter values
                        (list
                         (history->element history)
@@ -54,7 +58,6 @@
                                   '()
                                   (list (categories->element categories)
                                         (statements->element statements)))))))))
-
 
 (define (history->element history)
   (element* 'history '()
@@ -84,6 +87,11 @@
   (string-append (number->string (curriculum-version-year curriculum-version))
                  "."
                  (number->string (curriculum-version-number curriculum-version))))
+
+(define (release->string release)
+  (string-append (number->string (exam-release-year release))
+                 "."
+                 (number->string (exam-release-number release))))
 
 (define (lg-number->string lg-number)
   (if (eq? lg-number 'prerequisite)

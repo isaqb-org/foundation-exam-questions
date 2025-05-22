@@ -39,7 +39,8 @@
   (match xml
     ((element* pickQuestion
                ((id id)
-                (points points))
+                (points points)
+                (release release))
                ((history history)
                 (refersToLgs refers-to-lgs)
                 (stem stem)
@@ -47,6 +48,7 @@
                 (explanation explanation)))
      (pick-question id
                     (string->number points)
+                    (and release (parse-release release))
                     (parse-history history)
                     (parse-refers-to-lgs refers-to-lgs)
                     (parse-stem stem)
@@ -54,7 +56,8 @@
                     (map parse-option pick-options)))
     ((element* categoryQuestion
                ((id id)
-                (points points))
+                (points points)
+                (release release))
                ((history history)
                 (refersToLgs refers-to-lgs)
                 (stem stem)
@@ -71,6 +74,7 @@
      (define categories (map parse-category categories-xml))
      (category-question id
                         (string->number points)
+                        (and release (parse-release release))
                         (parse-history history)
                         (parse-refers-to-lgs refers-to-lgs)
                         (parse-stem stem)
@@ -101,6 +105,14 @@
                (((lg) lgs)))
      (map parse-lg lgs))))
 
+(define (parse-release release)
+  (cond
+    ((regexp-match #rx"([0-9]+)\\.([0-9]+)" release)
+     => (lambda (list)
+          (apply (lambda (_ year number)
+                   (exam-release (string->number year) (string->number number)))
+                 list)))))
+          
 (define (parse-lg xml)
   (match xml
     ((element* lg
@@ -195,6 +207,7 @@
    (pick-question
     "Q-20-04-01"
     1
+    #f
     (list
      (history-item
       (date 0 0 0 8 8 2024 4 220 #f 0)
@@ -244,6 +257,7 @@
    (category-question
     "Q-17-13-02"
     2
+    #f
     (list
      (history-item
       (date 0 0 0 8 8 2024 4 220 #f 0)

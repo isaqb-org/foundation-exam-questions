@@ -51,7 +51,7 @@ Additional flags:
 
 (define (write-question/language question language)
   (match question
-    ((pick-question id points history learning-goals stem explanation pick-options)
+    ((pick-question id points release history learning-goals stem explanation pick-options)
      (write-pick-header pick-options points language)
      (newline)
      (display "\\begin{examPQuestion}")
@@ -60,7 +60,7 @@ Additional flags:
                  (write-pick-option pick-option language))
                pick-options)
      (display "\\end{examPQuestion}") (newline))
-    ((category-question id points history learning-goals stem explanation categories statements)
+    ((category-question id points release history learning-goals stem explanation categories statements)
      (write-category-header points language)
      (newline)
      (display "\\begin{examKQuestion}")

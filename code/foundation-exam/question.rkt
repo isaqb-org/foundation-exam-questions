@@ -4,6 +4,7 @@
 (struct question
   (id
    points
+   release
    history
    learning-goals
    stem
@@ -28,6 +29,10 @@
   #:transparent #:mutable)
 
 (struct curriculum-version
+  (year number)
+  #:transparent #:mutable)
+
+(struct exam-release
   (year number)
   #:transparent #:mutable)
 
@@ -61,6 +66,7 @@
   (struct question
     ((id string?)
      (points (integer-in 1 #f))
+     (release (or/c exam-release? #f))
      (history (listof history-item?))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
@@ -69,6 +75,7 @@
   (struct pick-question
     ((id string?)
      (points (integer-in 1 #f))
+     (release (or/c exam-release? #f))
      (history (listof history-item?))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
@@ -78,6 +85,7 @@
   (struct category-question
     ((id string?)
      (points (integer-in 1 #f))
+     (release (or/c exam-release? #f))
      (history (listof history-item?))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
@@ -94,6 +102,10 @@
      (lg-number (or/c lg-number? 'prerequisite))))
 
   (struct curriculum-version
+    ((year integer?)
+     (number integer?)))
+
+  (struct exam-release
     ((year integer?)
      (number integer?)))
 

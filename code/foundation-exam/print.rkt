@@ -173,12 +173,12 @@
          "The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.")))
      (list
       (pick-option
-       'false
+       'distractor
        "A"
        (localized-text
         '(("de" . "Genau eine für alle Arten von Systemen.") ("en" . "Exactly one for all kinds of systems."))))
       (pick-option
-       'false
+       'distractor
        "B"
        (localized-text
         '(("de"

@@ -26,7 +26,7 @@
                 … be individually addressed to different target groups.
             </text>
         </option>
-        <option false="false" identifier="B">
+        <option distractor="distractor" identifier="B">
             <text xml:lang="de">
                 … einer vorgegebenen Form entsprechen.
             </text>
@@ -34,7 +34,7 @@
                 … correspond to a given shape.
             </text>
         </option>
-        <option false="false" identifier="C">
+        <option distractor="distractor" identifier="C">
             <text xml:lang="de">
                 … bilateral sein.
             </text>
@@ -43,7 +43,7 @@
             </text>
         </option>
 
-        <option false="false" identifier="D">
+        <option distractor="distractor" identifier="D">
             <text xml:lang="de">
                 … weisungsgebunden sein.
             </text>

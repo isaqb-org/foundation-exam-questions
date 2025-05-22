@@ -43,7 +43,7 @@
   (or/c "en" "de")) ; at the moment
 
 (struct pick-option
-  (validity ; 'distractor, 'false, or 'correct
+  (validity ; 'distractor, or 'correct
    identifier
    text)
   #:transparent #:mutable)
@@ -107,7 +107,7 @@
   (lang/c contract?)
 
   (struct pick-option
-    ((validity (or/c 'distractor 'false 'correct))
+    ((validity (or/c 'distractor 'correct))
      (identifier string?)
      (text localized-text?)))
 

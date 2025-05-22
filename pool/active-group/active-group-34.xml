@@ -26,7 +26,7 @@
                 a structural form for project-related communication
             </text>
         </option>
-        <option false="false" identifier="B">
+        <option distractor="distractor" identifier="B">
             <text xml:lang="de">
                 ein Model zur iterativen Softwareentwicklung
             </text>

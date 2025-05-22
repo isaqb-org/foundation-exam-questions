@@ -2,12 +2,13 @@
 
 ; Parse schema-conformant exam questions from XML
 
-(require racket/match racket/date
+(require racket/match; racket/date
          xml
-         (only-in srfi/19 string->date)
+         (only-in racket/string string-trim)
          racket/contract)
 (require "question.rkt"
-         "match-xml.rkt")
+         "match-xml.rkt"
+         "date.rkt")
 
 (struct exn:parse-error exn:fail
   (base-exn filename))
@@ -90,8 +91,8 @@
     ((element* item
                ((date date))
                text)
-     (history-item (string->date date "~Y-~m-~d")
-                   text))))
+     (history-item (parse-date date)
+                   (string-trim text)))))
 
 (define (parse-refers-to-lgs xml)
   (match xml
@@ -135,7 +136,7 @@
     ((element* text
                ((xml:lang lang))
                text)
-     (cons lang text))))
+     (cons lang (string-trim text)))))
                
 
 (define (parse-explanation xml)
@@ -163,7 +164,7 @@
   (cond
     ((equal? correct-value "correct") 'correct)
     ((equal? false-value "false") 'false)
-    ((equal? distractor-value "distractor") 'false)))
+    ((equal? distractor-value "distractor") 'distractor)))
 
 (define (parse-category xml)
   (match xml
@@ -198,7 +199,7 @@
     1
     (list
      (history-item
-      (date* 0 0 0 8 8 2024 4 220 #f 3600 0 "")
+      (date 0 0 0 8 8 2024 4 220 #f 0)
       "content identical to mock exam 2024.1-rev0-DE-20240202"))
     (list
      (learning-goal-reference (curriculum-version 2025 1) (lg-number 1 1))
@@ -206,38 +207,38 @@
     (localized-text
      '(("de"
         .
-        "\n        Wie viele Definitionen des Begriffes \"Softwarearchitektur\" gibt es?\n    ")
-       ("en" . "\n        How many definitions of “software architecture” exist?\n    ")))
+        "Wie viele Definitionen des Begriffes \"Softwarearchitektur\" gibt es?")
+       ("en" . "How many definitions of “software architecture” exist?")))
     (localized-text
      '(("de"
         .
-        "\n      Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.\n    ")
+        "Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.")
        ("en"
         .
-        "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    ")))
+        "The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.")))
     (list
      (pick-option
-      'false
+      'distractor
       "A"
       (localized-text
-       '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ")
-         ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
+       '(("de" . "Genau eine für alle Arten von Systemen.")
+         ("en" . "Exactly one for all kinds of systems."))))
      (pick-option
       'false
       "B"
       (localized-text
        '(("de"
           .
-          "\n        Eine für jede Art von Softwaresystem (z. B. \"eingebettet\",\"Echtzeit\", \"Entscheidungsunterstützung\", \"Web\", \"Batch\", …).\n      ")
+          "Eine für jede Art von Softwaresystem (z. B. \"eingebettet\",\"Echtzeit\", \"Entscheidungsunterstützung\", \"Web\", \"Batch\", …).")
          ("en"
           .
-          "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))))
+          "One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …)."))))
      (pick-option
       'correct
       "C"
       (localized-text
-       '(("de" . "\n        Ein Dutzend oder mehr unterschiedliche Definitionen.\n      ")
-         ("en" . "\n        A dozen ore more different definitions.\n      ")))))))
+       '(("de" . "Ein Dutzend oder mehr unterschiedliche Definitionen.")
+         ("en" . "A dozen ore more different definitions.")))))))
 
 
   (check-equal?
@@ -247,7 +248,7 @@
     2
     (list
      (history-item
-      (date* 0 0 0 8 8 2024 4 220 #f 3600 0 "")
+      (date 0 0 0 8 8 2024 4 220 #f 0)
       "content identical to mock exam 2024.1-rev0-DE-20240202"))
     (list
      (learning-goal-reference (curriculum-version 2025 1) (lg-number 4 2))
@@ -255,17 +256,17 @@
     (localized-text
      '(("de"
         .
-        "\n      Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben\n      Entwickler:innen an der Dokumentation der\n      Softwarearchitektur. Welche Methoden eignen sich zur\n      Gewährleistung einer konsistenten und zweckmäßigen Dokumentation\n      und welche nicht?\n    ")
+        "Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben\n      Entwickler:innen an der Dokumentation der\n      Softwarearchitektur. Welche Methoden eignen sich zur\n      Gewährleistung einer konsistenten und zweckmäßigen Dokumentation\n      und welche nicht?")
        ("en"
         .
-        "\n      In your project, three architects and seven developers are working on the\n      documentation of the software architecture. Which methods are\n      appropriate in order to achieve a consistent and adequate\n      documentation, and which are not?\n    ")))
+        "In your project, three architects and seven developers are working on the\n      documentation of the software architecture. Which methods are\n      appropriate in order to achieve a consistent and adequate\n      documentation, and which are not?")))
     (localized-text
      '(("de"
         .
-        "\n      Um eine konsistente und zweckmäßige Dokumentation sicherzustellen, eignet sich die Koordination durch die leitende Architekt:in sowie die Verwendung identischer Vorlagen. Die automatische Extraktion aller Teile der Dokumentation aus dem Quellcode ist weniger empfehlenswert, da dies möglicherweise nicht alle relevanten Informationen oder Kontexte berücksichtigt und die Qualität der Dokumentation beeinträchtigen kann.\n      Aspekte wie Begründungen oder Alternativen sind nicht im Code enthalten, sondern müssen in die Dokumentation aufgenommen werden, daher können nicht alle Teile der Dokumentation aus dem Quellcode extrahiert werden. \n    ")
+        "Um eine konsistente und zweckmäßige Dokumentation sicherzustellen, eignet sich die Koordination durch die leitende Architekt:in sowie die Verwendung identischer Vorlagen. Die automatische Extraktion aller Teile der Dokumentation aus dem Quellcode ist weniger empfehlenswert, da dies möglicherweise nicht alle relevanten Informationen oder Kontexte berücksichtigt und die Qualität der Dokumentation beeinträchtigen kann.\n      Aspekte wie Begründungen oder Alternativen sind nicht im Code enthalten, sondern müssen in die Dokumentation aufgenommen werden, daher können nicht alle Teile der Dokumentation aus dem Quellcode extrahiert werden.")
        ("en"
         .
-        "\n      To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.\n      Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code. \n    ")))
+        "To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.\n      Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code.")))
     (list
      (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
      (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate")))))
@@ -276,30 +277,30 @@
       (localized-text
        '(("de"
           .
-          "\n          Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.\n        ")
+          "Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.")
          ("en"
           .
-          "\n          The lead architect coordinates the creation of the documentation.\n        "))))
+          "The lead architect coordinates the creation of the documentation."))))
      (statement
       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
       "B"
       (localized-text
        '(("de"
           .
-          "\n          Für die Dokumentation werden identische Vorlagen verwendet.\n        ")
+          "Für die Dokumentation werden identische Vorlagen verwendet.")
          ("en"
           .
-          "\n          Identical templates are used for the documentation.\n        "))))
+          "Identical templates are used for the documentation."))))
      (statement
       (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate"))))
       "C"
       (localized-text
        '(("de"
           .
-          "\n          Alle Teile der Dokumentation werden automatisch aus dem Quellcode extrahiert.\n        ")
+          "Alle Teile der Dokumentation werden automatisch aus dem Quellcode extrahiert.")
          ("en"
           .
-          "\n          All parts of the documentation are automatically extracted from the source code.\n        ")))))))
+          "All parts of the documentation are automatically extracted from the source code.")))))))
   
    )
   

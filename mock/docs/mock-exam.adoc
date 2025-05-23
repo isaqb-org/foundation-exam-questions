@@ -22,6 +22,11 @@ ifdef::backend-pdf[]
 endif::[]
 
 <<<
+:sectnums!:
+include::../license-copyright/copyright.adoc[{include_configuration}]
+
+<<<
+:sectnums:
 include::preamble/introduction.adoc[{include_configuration}]
 
 <<<

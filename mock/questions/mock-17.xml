@@ -11,10 +11,10 @@
 
   <stem>
     <text xml:lang="de">
-      Es gibt zahlreiche Ansätze, die zu einer Softwarearchitektur führen. Welche DREI der folgenden Ansätze kommen in der Praxis am häufigsten vor?
+      Welche ZWEI der folgenden Ansätze können typischerweise eine zentrale Rolle bei der Entwicklung einer Softwarearchitektur spielen?
     </text>
     <text xml:lang="en">
-      There are many approaches that lead to a software architecture. Which of the following are the THREE most often found in practice?
+      Which TWO of the following approaches can typically play a central role in the development of a software architecture?
     </text>
   </stem>
 
@@ -25,21 +25,16 @@
     </option>
 
     <option correct="correct" identifier="B">
-      <text xml:lang="de">Domain-driven Design</text>
-      <text xml:lang="en">Domain driven design</text>
-    </option>
-
-    <option correct="correct" identifier="C">
       <text xml:lang="de">Sichtenbasierte Architekturentwicklung</text>
       <text xml:lang="en">View based architecture development</text>
     </option>
 
-    <option correct="correct" identifier="D">
+    <option correct="correct" identifier="C">
       <text xml:lang="de">Bottom-up Design</text>
       <text xml:lang="en">Bottom-up design</text>
     </option>
 
-    <option distractor="distractor" identifier="E">
+    <option distractor="distractor" identifier="D">
       <text xml:lang="de">Mehrheitsentscheid</text>
       <text xml:lang="en">Majority voting</text>
     </option>

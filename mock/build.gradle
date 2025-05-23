@@ -1,44 +1,107 @@
+import org.asciidoctor.gradle.jvm.AsciidoctorTask
+import org.asciidoctor.gradle.jvm.pdf.AsciidoctorPdfTask
+
+import java.text.ParseException
 import java.text.SimpleDateFormat
 
+
 plugins {
-    id "java"
-    id "application"
+    id 'application'
+    id 'org.asciidoctor.jvm.convert' version '4.0.3'
+    id 'org.asciidoctor.jvm.pdf' version '4.0.3'
 }
 
-def group = "org.isaqb"
-def releaseVersion = System.getenv("RELEASE_VERSION")
-def localVersion = "LocalBuild"
-project.version = releaseVersion == null ? localVersion : releaseVersion
-def curriculumFileName = "mock-exam"
-def versionDate = new SimpleDateFormat("yyyyMMdd").format(new Date())
-def languages = ["DE", "EN"]
+dependencies {
+    implementation 'org.asciidoctor:asciidoctorj:3.5.1'
+}
+
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation("org.asciidoctor:asciidoctorj:2.5.13")
-    implementation("org.asciidoctor:asciidoctorj-pdf:2.3.13")
+pdfThemes {
+    local 'isaqb', {
+        themeDir = '../pdf-theme/themes'
+        themeName = 'isaqb'
+    }
 }
 
+ext {
+
+    // workDirectory = rootProject.projectDir
+    project.version = System.getenv("RELEASE_VERSION") ?: "LocalBuild"
+    versionDate = new SimpleDateFormat("yyyyMMdd").format(new Date())
+    curriculumFileName = "mock-exam"
+    validity = rootProject.findProperty("validity")
+    languages = rootProject.findProperty("languages") ?: ["DE", "EN"]
+    suffixTags = rootProject.findProperty("suffixTags") ? rootProject.suffixTags : [""]
+    group = "org.isaqb"
+    languages = ["DE", "EN"]
+}
+
+
+// Automatische Task-Erstellung für PDF
+def registerAsciiDocTask(String format, Class<?> taskType) {
+    languages.each { lang ->
+        tasks.register("${format}${lang}", taskType) {
+
+            println "Here goes ${format}${lang}"
+
+            jvm {
+                jvmArgs("--add-opens", "java.base/sun.nio.ch=ALL-UNNAMED", "--add-opens", "java.base/java.io=ALL-UNNAMED")
+            }
+
+            sourceDir = file("${workDirectory}/docs/")
+            baseDir = file("${workDirectory}/docs/")
+            sources {
+                include  "${curriculumFileName}.adoc"
+            }
+
+            outputDir = file("${workDirectory}/build/")
+
+            def fileVersion = "${project.version.trim()}-${lang}"
+
+            attributes = ['icons'                : 'font',
+                          'version-label'        : '',
+                          'revnumber'            : fileVersion,
+                          'revdate'              : versionDate,
+                          'document-version'     : "${fileVersion}-${versionDate}",
+                          'currentDate'          : versionDate,
+                          'release-version'      : project.version,
+                          'language'             : lang,
+                          'curriculumFileName'   : curriculumFileName,
+                          'data-uri'             : true,
+                          'allow-uri-read'       : true,
+                          'include-configuration': "tags=**;${lang};!*",
+            ]
+
+            theme "isaqb"
+            fontsDirs '../pdf-theme/fonts'
+
+            doLast {
+                File source = file("${workDirectory}/build/${curriculumFileName}.${format}")
+                File target = file("${workDirectory}/build/${curriculumFileName}${lang.toLowerCase()}.${format}")
+                source.renameTo(target)
+            }
+        }
+    }
+}
+
+registerAsciiDocTask("pdf", AsciidoctorPdfTask)
+
+
 application {
-    mainClass.set("org.isaqb.asciidoc.Main")
-    applicationDefaultJvmArgs = [
-        """-DprojectVersion=${project.version}""",
-        """-DcurriculumFileName=${curriculumFileName}""",
-        """-DversionDate=${versionDate}""",
-        """-Dlanguages=${languages.join(',')}""",
-        """--add-opens""", """java.base/sun.nio.ch=ALL-UNNAMED""",
-        """--add-opens""", """java.base/java.io=ALL-UNNAMED"""]
+    applicationDefaultJvmArgs = ["""--add-opens""", """java.base/sun.nio.ch=ALL-UNNAMED""",
+                                 """--add-opens""", """java.base/java.io=ALL-UNNAMED""",]
 }
 
 tasks.register('buildDocs') {
     description = 'Grouping task for generating all languages in several formats'
     group = 'documentation'
     exec {
-	workingDir '.'
-	commandLine 'racket', '--require', '../code/foundation-exam/print-asciidoc.rkt', '--main', 'questions', 'docs/questions', 'de', 'en'
+        workingDir '.'
+        commandLine 'racket', '--require', '../code/foundation-exam/print-asciidoc.rkt', '--main', 'questions', 'docs/questions', 'de', 'en'
     }
     dependsOn "run"
 }

@@ -15,12 +15,13 @@ repositories {
 
 pdfThemes {
     local 'isaqb', {
-        themeDir = '../pdf-theme/themes'
+        themeDir = './pdf-theme/themes'
         themeName = 'isaqb'
     }
 }
 
 ext {
+    workingDir = '.'
 
     // workDirectory = rootProject.projectDir
     project.version = System.getenv("RELEASE_VERSION") ?: "LocalBuild"
@@ -45,13 +46,13 @@ def registerAsciiDocTask(String format, Class<?> taskType) {
                 jvmArgs("--add-opens", "java.base/sun.nio.ch=ALL-UNNAMED", "--add-opens", "java.base/java.io=ALL-UNNAMED")
             }
 
-            sourceDir = file("${workDirectory}/docs/")
-            baseDir = file("${workDirectory}/docs/")
+            sourceDir = file("docs/")
+            baseDir = file("docs/")
             sources {
                 include  "${curriculumFileName}.adoc"
             }
 
-            outputDir = file("${workDirectory}/build/")
+            outputDir = file("build/")
 
             def fileVersion = "${project.version.trim()}-${lang}"
 
@@ -70,11 +71,11 @@ def registerAsciiDocTask(String format, Class<?> taskType) {
             ]
 
             theme "isaqb"
-            fontsDirs '../pdf-theme/fonts'
+            fontsDirs 'pdf-theme/fonts'
 
             doLast {
-                File source = file("${workDirectory}/build/${curriculumFileName}.${format}")
-                File target = file("${workDirectory}/build/${curriculumFileName}${lang.toLowerCase()}.${format}")
+                File source = file("build/${curriculumFileName}.${format}")
+                File target = file("build/${curriculumFileName}-${lang.toLowerCase()}.${format}")
                 source.renameTo(target)
             }
         }
@@ -96,7 +97,7 @@ tasks.register('buildDocs') {
         workingDir '.'
         commandLine 'racket', '--require', '../code/foundation-exam/print-asciidoc.rkt', '--main', 'questions', 'docs/questions', 'de', 'en'
     }
-    dependsOn "run"
+    dependsOn "pdfDE", "pdfEN"
 }
 
 defaultTasks "buildDocs"

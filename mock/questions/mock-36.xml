@@ -30,25 +30,21 @@
       <text xml:lang="en">By defining explicit interfaces.</text>
     </option>
     <option correct="correct" identifier="C">
-      <text xml:lang="de">Durch Erstellen, verfassen oder diskutieren von Szenarien.</text>
-      <text xml:lang="en">By discussing or writing scenarios.</text>
+      <text xml:lang="de">Durch Erstellen, Verfassen oder Diskutieren von Qualitätsszenarien.</text>
+      <text xml:lang="en">By discussing or writing quality scenarios.</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Durch Erstellen automatisierter Tests.</text>
       <text xml:lang="en">By creating automated tests.</text>
     </option>
-    <option correct="correct" identifier="E">
-      <text xml:lang="de">Durch Erstellen eines Qualitätsbaums.</text>
-      <text xml:lang="en">By creating a quality tree.</text>
-    </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">
-      Qualitätsszenarien und Qualitätsbäume sind etablierte Methoden zur Konkretisierung von Qualitätsanforderungen. Sie helfen dabei, abstrakte Qualitätseigenschaften in überprüfbare Anforderungen zu überführen. UI-Prototypen, Schnittstellen und automatisierte Tests sind dagegen eher Implementierungs- oder Validierungstechniken und weniger geeignet zur initialen Konkretisierung von Qualitätsanforderungen.
+      Qualitätsszenarien sind etablierte Methoden zur Konkretisierung von Qualitätsanforderungen. Sie helfen dabei, abstrakte Qualitätseigenschaften in überprüfbare Anforderungen zu überführen. UI-Prototypen, Schnittstellen und automatisierte Tests sind dagegen eher Implementierungs- oder Validierungstechniken und weniger geeignet zur initialen Konkretisierung von Qualitätsanforderungen.
     </text>
     <text xml:lang="en">
-      Quality scenarios and quality trees are established methods for making quality requirements more concrete. They help transform abstract quality characteristics into verifiable requirements. UI prototypes, interfaces, and automated tests are implementation or validation techniques and are less suitable for initial concretization of quality requirements.
+      Quality scenarios are established methods for making quality requirements more concrete. They help transform abstract quality characteristics into verifiable requirements. UI prototypes, interfaces, and automated tests are implementation or validation techniques and are less suitable for initial concretization of quality requirements.
     </text>
   </explanation>
 </pickQuestion>

@@ -1,7 +1,5 @@
-import org.asciidoctor.gradle.jvm.AsciidoctorTask
 import org.asciidoctor.gradle.jvm.pdf.AsciidoctorPdfTask
 
-import java.text.ParseException
 import java.text.SimpleDateFormat
 
 
@@ -10,11 +8,6 @@ plugins {
     id 'org.asciidoctor.jvm.convert' version '4.0.3'
     id 'org.asciidoctor.jvm.pdf' version '4.0.3'
 }
-
-dependencies {
-    implementation 'org.asciidoctor:asciidoctorj:3.5.1'
-}
-
 
 repositories {
     mavenCentral()

@@ -17,7 +17,18 @@
             pkgs.gradle
             pkgs.racket
             pkgs.libxml2
+            self.packages.${system}.make-exam
           ];
+        };
+      };
+      packages = {
+        default = self.packages.${system}.make-exam;
+        make-exam = pkgs.stdenv.mkDerivation {
+          name = "make-exam";
+          src = ./code/foundation-exam;
+          buildInputs = [ pkgs.racket ];
+          buildPhase = "mkdir $out && raco exe make-exam.rkt";
+          installPhase = "mkdir -p $out/bin && cp make-exam $out/bin";
         };
       };
     });

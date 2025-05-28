@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{a4}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{xparse}
+\usepackage{textcomp}
+
+\newcounter{examQuestionCount}
+\setcounter{examQuestionCount}{
+  %EXAMQUESTIONCOUNT%
+}  
+\newcounter{examTotalPoints}
+\setcounter{examTotalPoints}{
+  %EXAMTOTALPOINTS%
+}
+\newcounter{examMinPoints}
+\setcounter{examMinPoints}{\theexamTotalPoints * 60 / 100}
+
+\newif\ifsolutions
+
+% \solutionstrue
+
+\newcommand{\examNo}{$\square$}
+\newcommand{\examYes}{\ifsolutions{$\boxtimes$}\else{$\square$}\fi}
+
+\newcounter{examQuestion}\setcounter{examQuestion}{1}
+
+% https://tex.stackexchange.com/questions/17036/why-cant-the-end-code-of-an-environment-contain-an-argument
+\NewDocumentEnvironment{examQuestionStem}{mmm}%
+  {{\small\arabic{examQuestion}\stepcounter{examQuestion} --- \textit{Id: #1}}\par%
+    \begin{minipage}[t]{0.85\textwidth}}%
+  {\end{minipage} \hfill\mbox{\small [#2 #3]}\par\medskip}
+
+% \newcommand{\examQuestionStem}[4]{\textbf{#2}\hfill \mbox{[#3 #4]}\par}
+\newcommand{\examQuestionInstructions}[1]{\textit{#1}\par}
+
+\newenvironment{examAQuestion}{\begin{itemize}}{\end{itemize}}
+\newcommand{\examQuestionAItem}[3]{\item[#3] #1) #2}
+
+\newenvironment{examPQuestion}{\begin{itemize}}{\end{itemize}}
+\newcommand{\examQuestionPItem}[3]{\item[#3] #1) #2}
+
+% https://tex.stackexchange.com/questions/573100/defining-a-new-environment-that-contains-tabularx-inside-another-environment-e
+\newenvironment{examKQuestion}%
+  {\flushleft\tabularx{\textwidth}{cccX}}%
+  {\endtabularx\endflushleft}
+\newcommand{\examQuestionKHeader}[2]{#1 & #2\\}
+\newcommand{\examQuestionKItem}[4]{#3 & #4 & #1) & #2\\}
+
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\registered}{$^\textrm{\tiny\textregistered}$}
+
+\begin{document}
+
+\begin{titlepage}
+  % FIXME Logo
+  \begin{center}
+   {\huge\bfseries Mock Exam
+
+     iSAQB\registered{} Certified Professional for\\ Software Architecture ---\\[2ex]
+     
+     Foundation Level (CPSA-F\registered{})}
+
+  \bigskip
+  
+  {\large International Software Architecture Qualification Board
+    e. V.}
+
+  \bigskip
+
+  % FIXME: mustache?
+  Document version: 2020.1-EN-rev5\\
+  Based on curriculum - version V5.1-EN; January 2, 2020
+
+\end{center}
+
+\vspace*{\fill}
+
+  % FIXME: logo
+\end{titlepage}
+
+\section*{Examination Rules}
+
+This examination is a mock exam, which is based on the certification
+exam of the Certified Professional for Software Architecture ~--
+Foundation Level (CPSA-F\registered{}) in form and scope. It serves to illustrate
+the real iSAQB\registered{} CPSA\registered{} examination as well as to prepare for the
+corresponding exam.
+
+The mock exam consists of \theexamQuestionCount{} multiple-choice
+questions, which can be evaluated with 1 or 2 points depending on the
+level of difficulty. At least 60 percent must be achieved to pass the
+exam.
+
+\theexamTotalPoints{} points can be achieved in this mock examination,
+you would need \theexamMinPoints{} points to pass.
+
+The following general rules apply: Correct answers result in plus
+points, incorrect answers result in a deduction of points, but only
+with regard to the respective question. If the wrong answer to a
+question leads to a negative score, this question is evaluated with a
+total of 0 points.
+
+The multiple-choice questions of the mock exam are divided into three
+types of questions:
+
+\begin{description}
+\item[A-Questions (Single Choice, Single Correct Answer)] Select the
+  only correct answer to a question from the list of possible
+  answers. There is only one correct answer. You receive the specified
+  score for selecting the correct answer. Depending on the level of
+  difficulty, you can achieve a score of 1 or 2 points.
+\item[P-Questions (Pick-from-many, Pick Multiple)] Select the number
+  of correct answers given in the text from the list of possible
+  answers to a question. Select just as many answers as are required
+  in the introductory text. You receive 1/n of the total points for
+  each correct answer. For each incorrect cross, 1/n of the points are
+  deducted. The score is 1 or 2 points depending on the level of
+  difficulty.
+\item[K-Questions (Allocation Questions, Choose Category)] For a
+  question, select the correct of the two options for each answer
+  choice ("correct" or "incorrect" or "applicable" or "not
+  applicable"). You will receive 1/n of the points for each correctly
+  placed cross. Incorrectly placed crosses result in the deduction of
+  1/n of the points. If NO answer is selected in a line, there are
+  neither points nor deductions. The score is 1 or 2 points depending
+  on the level of difficulty.
+\end{description}
+
+For a more detailed explanation of the question types and scoring
+system, further information is available in the CPSA-F examination
+guide.
+
+The processing time is 75 minutes for native speakers and 90 minutes
+for non-native speakers. In order to ensure that the preparation for
+the exam is as authentic as possible, the processing time should be
+adhered to and any aids (such as seminar materials, books, internet,
+etc.) should not be used.
+
+The exam can subsequently be evaluated using the solution for this
+mock exam.
+
+Given that the iSAQB\registered{} e.V. is indicated as source and copyright
+holder, the present mock exam may be used in the context of training
+courses, for exam preparation or it may be passed on free of charge.
+
+However, it is explicitly prohibited to use these exam questions in a
+real examination.
+
+\newpage
+
+\setcounter{examQuestion}{1}
+
+%EXAMQUESTIONS%
+
+\end{document}

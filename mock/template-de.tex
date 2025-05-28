@@ -1,0 +1,160 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{a4}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{xparse}
+\usepackage{textcomp}
+
+\newcounter{examQuestionCount}
+\setcounter{examQuestionCount}{
+  %EXAMQUESTIONCOUNT%
+}  
+\newcounter{examTotalPoints}
+\setcounter{examTotalPoints}{
+  %EXAMTOTALPOINTS%
+}
+\newcounter{examMinPoints}
+\setcounter{examMinPoints}{\theexamTotalPoints * 60 / 100}
+
+\newif\ifsolutions
+
+% \solutionstrue
+
+\newcommand{\examNo}{$\square$}
+\newcommand{\examYes}{\ifsolutions{$\boxtimes$}\else{$\square$}\fi}
+
+\newcounter{examQuestion}\setcounter{examQuestion}{1}
+
+% https://tex.stackexchange.com/questions/17036/why-cant-the-end-code-of-an-environment-contain-an-argument
+\NewDocumentEnvironment{examQuestionStem}{mmm}%
+  {{\small\arabic{examQuestion}\stepcounter{examQuestion} --- \textit{Id: #1}}\par%
+    \begin{minipage}[t]{0.85\textwidth}}%
+  {\end{minipage} \hfill\mbox{\small [#2 #3]}\par\medskip}
+
+% \newcommand{\examQuestionStem}[4]{\textbf{#2}\hfill \mbox{[#3 #4]}\par}
+\newcommand{\examQuestionInstructions}[1]{\textit{#1}\par}
+
+\newenvironment{examAQuestion}{\begin{itemize}}{\end{itemize}}
+\newcommand{\examQuestionAItem}[3]{\item[#3] #1) #2}
+
+\newenvironment{examPQuestion}{\begin{itemize}}{\end{itemize}}
+\newcommand{\examQuestionPItem}[3]{\item[#3] #1) #2}
+
+% https://tex.stackexchange.com/questions/573100/defining-a-new-environment-that-contains-tabularx-inside-another-environment-e
+\newenvironment{examKQuestion}%
+  {\flushleft\tabularx{\textwidth}{cccX}}%
+  {\endtabularx\endflushleft}
+\newcommand{\examQuestionKHeader}[2]{#1 & #2\\}
+\newcommand{\examQuestionKItem}[4]{#3 & #4 & #1) & #2\\}
+
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\registered}{$^\textrm{\tiny\textregistered}$}
+
+\begin{document}
+
+\begin{titlepage}
+  % FIXME Logo
+  \begin{center}
+   {\huge\bfseries Beispielprüfung
+
+     iSAQB\registered{} Certified Professional for\\ Software Architecture ---\\[2ex]
+     
+     Foundation Level (CPSA-F\registered{})}
+
+  \bigskip
+  
+  {\large International Software Architecture Qualification Board
+    e. V.}
+
+  \bigskip
+
+  % FIXME: mustache?
+  Document version: 2020.1-EN-rev5\\
+  Based on curriculum - version V5.1-EN; January 2, 2020
+
+\end{center}
+
+\vspace*{\fill}
+
+  % FIXME: logo
+\end{titlepage}
+
+\section*{Prüfungsregeln}
+
+Die vorliegende Prüfung ist eine Beispielprüfung, welche in Form und
+Umfang an die Zertifizierungsprüfung des Certified Professional for
+Software Architecture ~-- Foundation Level (CPSA-F\registered{})
+angelehnt ist. Sie dient der Veranschaulichung der echten
+iSAQB\registered{}-CPSA\registered{}--Prüfung sowie der entsprechenden
+Prüfungsvorbereitung.
+
+Die Beispielprüfung besteht aus \theexamQuestionCount{} Multiple-Choice-Fragen, welche je
+nach Schwierigkeitsgrad mit 1 bis 2 Punkten bewertet werden können. Es
+müssen zum Bestehen der Prüfung mindestens 60 Prozent erreicht
+werden. In dieser Probeprüfung können \theexamTotalPoints{} Punkte erreicht werden, zum
+Bestehen wären \theexamMinPoints{} Punkte erforderlich.
+
+Grundsätzlich gelten folgende Hinweise: Richtige Antworten ergeben
+Pluspunkte, falsche Antworten führen zu Punktabzug, jedoch nur in
+Bezug auf die jeweilige Frage. Führt die falsche Beantwortung einer
+Frage zu einem negativen Punktergebnis, so wird diese Frage mit
+insgesamt 0 Punkten bewertet.  Falls Sie mehr Kreuze setzen als
+gefordert, erhalten Sie grundsätzlich null Punkte.
+
+Es gibt in dieser Beispielprüfung (wie auch in der Originalprüfung)
+nur folgende drei Typen von Prüfungsfragen:
+
+\begin{description}
+\item[A-Fragen (Einfachauswahlfragen, "`Auswahl"')] Wählen Sie zu
+  einer Frage aus der Liste von Antwortmöglichkeiten die einzig
+  korrekte Antwort aus. Es gibt nur eine korrekte Antwort. Sie
+  erhalten die angegebene Punktzahl für das Ankreuzen der korrekten
+  Antwort.
+\item[P-Fragen (Mehrfachauswahlfragen, "`Pick"')] Wählen Sie zu einer
+  Frage aus der Liste von Antwortmöglichkeiten die im Text vorgegebene
+  Anzahl von zutreffenden oder korrekten Antworten aus. Kreuzen Sie
+  maximal so viele Antworten an, wie im Einleitungstext verlangt
+  werden. Sie erhalten für jede korrekte Antwort anteilig 1/n der
+  Gesamtpunkte. Für jedes nicht-korrekte Kreuz wird 1/n der Punkte
+  abgezogen.
+\item[K-Fragen (Klärungsfragen, "`Kreuz"')] Wählen Sie zu einer Frage
+  die korrekte der beiden Optionen zu jeder Antwortmöglichkeit aus
+  ("`richtig"' oder "`falsch"' bzw. "`zutreffend"' oder "`nicht
+  zutreffend"'). Sie erhalten für jedes korrekt gesetzte Kreuz anteilig
+  1/n der Punkte. Nicht korrekt gesetzte Kreuze führen zum Abzug von
+  1/n der Punkte. Wird in einer Zeile KEINE Antwort ausgewählt, so
+  gibt es weder Punkte noch Abzüge.
+\end{description}
+%
+Zur genaueren Erläuterung der Fragetypen und Punkteverteilung stehen
+weitere Informationen unter der Prüfungsregeln des CPSA-F zur
+Verfügung.
+
+Die Bearbeitungsdauer beträgt 75 Minuten für Muttersprachler und 90
+Minuten für Nicht- Muttersprachler. Um eine möglichst authentische
+Prüfungsvorbereitung zu gewährleisten, sollte die Bearbeitungszeit
+eingehalten sowie auf jegliche Hilfsmittel (wie Seminarunterlagen,
+Bücher, Internet etc.) verzichtet werden.
+
+Im Anschluss erfolgt die Auswertung der Prüfung mit Hilfe der
+Musterlösung. Sofern der iSAQB\registered{} e.V. als Quelle und
+Copyright-Inhaber angegeben wird, darf die vorliegende Beispielprüfung
+im Rahmen von Schulungen eingesetzt, zur Prüfungsvorbereitung genutzt
+oder unentgeltlich weitergegeben werden.
+
+Es ist ausdrücklich untersagt, diese Prüfungsfragen in einer echten
+Prüfung zu verwenden.
+
+\newpage
+
+\setcounter{examQuestion}{1}
+
+%EXAMQUESTIONS%
+
+\end{document}

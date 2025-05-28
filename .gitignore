@@ -29,3 +29,8 @@ Thumbs.db
 *.bak
 
 mock/docs/questions/mock-*.adoc
+
+*.aux
+*.log
+*.synctex.gz
+_region_.tex

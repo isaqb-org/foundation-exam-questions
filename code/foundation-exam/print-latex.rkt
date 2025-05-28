@@ -250,6 +250,7 @@ Additional flags:
                   questions))))
   (copy-file/replacing template-filename out-filename
                        `(("%EXAMQUESTIONS%" . ,questions-text)
+                         ("%EXAMQUESTIONCOUNT%" . ,(number->string (length questions)))
                          ("%EXAMTOTALPOINTS%" . ,(number->string total-points)))))
 
 (define (main . argv)

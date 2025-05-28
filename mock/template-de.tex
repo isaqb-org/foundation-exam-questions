@@ -22,7 +22,8 @@
 
 \newif\ifsolutions
 
-% \solutionstrue
+% \solutionstrue or nothing
+{{solutions}}
 
 \newcommand{\examNo}{$\square$}
 \newcommand{\examYes}{\ifsolutions{$\boxtimes$}\else{$\square$}\fi}
@@ -31,7 +32,8 @@
 
 % https://tex.stackexchange.com/questions/17036/why-cant-the-end-code-of-an-environment-contain-an-argument
 \NewDocumentEnvironment{examQuestionStem}{mmm}%
-  {{\small\arabic{examQuestion}\stepcounter{examQuestion} --- \textit{Id: #1}}\par%
+  {% avoid mustache
+  {\small\arabic{examQuestion}\stepcounter{examQuestion} --- \textit{Id: #1}}\par%
     \begin{minipage}[t]{0.85\textwidth}}%
   {\end{minipage} \hfill\mbox{\small [#2 #3]}\par\medskip}
 
@@ -74,10 +76,8 @@
 
   \bigskip
 
-  % FIXME: mustache?
-  Document version: 2020.1-EN-rev5\\
-  Based on curriculum - version V5.1-EN; January 2, 2020
-
+  Document version: {{documentVersion}}\\
+  Based on curriculum - version {{curriculumVersion}}
 \end{center}
 
 \vspace*{\fill}

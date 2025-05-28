@@ -27,6 +27,7 @@
               pkgs.libxml2
               pkgs.texlive.combined.scheme-medium
               self.packages.${system}.make-exam
+              pkgs.python3Packages.chevron
             ];
           };
         };
@@ -47,25 +48,37 @@
               substituteInPlace $out/bin/make-exam --replace-fail $PWD $out/code/foundation-exam
             '';
           };
-          mock-exam = pkgs.stdenv.mkDerivation {
-            name = "mock-exam";
-            src = ./mock;
-            buildInputs = [
-              self.packages.${system}.make-exam
-              pkgs.texlive.combined.scheme-medium
-            ];
-            buildPhase = ''
-              make-exam --template template-en.tex --out mock-en.tex --language en questions/*.xml
-              pdflatex mock-en.tex ; pdflatex mock-en.tex ; pdflatex mock-en.tex
-              make-exam --template template-de.tex --out mock-de.tex --language de questions/*.xml
-              pdflatex mock-de.tex ; pdflatex mock-de.tex ; pdflatex mock-de.tex
-            '';
-            installPhase = ''
-              mkdir -p $out/pdf
-              cp mock-en.pdf $out/pdf
-              cp mock-de.pdf $out/pdf
-            '';
-          };
+          mock-exam =
+            let
+              mkBuild =
+                lang: data: suffix:
+                let
+                  outfile = "mock-${lang}${suffix}.tex";
+                in
+                ''
+                  make-exam --template template-${lang}.tex --out mock-temp.tex --language ${lang} questions/*.xml
+                  chevron -d ${data} mock-temp.tex > ${outfile}
+                  pdflatex ${outfile} && pdflatex ${outfile} && pdflatex ${outfile} 
+                '';
+            in
+            pkgs.stdenv.mkDerivation {
+              name = "mock-exam";
+              src = ./mock;
+              buildInputs = [
+                self.packages.${system}.make-exam
+                pkgs.texlive.combined.scheme-medium
+                pkgs.python3Packages.chevron
+              ];
+              buildPhase =
+                (mkBuild "de" "template-data-nosolutions.json" "")
+                + (mkBuild "de" "template-data-solutions.json" "-solutions")
+                + (mkBuild "en" "template-data-nosolutions.json" "")
+                + (mkBuild "en" "template-data-solutions.json" "-solutions");
+              installPhase = ''
+                mkdir -p $out/pdf
+                cp mock-en.pdf mock-en-solutions.pdf mock-de.pdf mock-de-solutions.pdf $out/pdf
+              '';
+            };
         };
       }
     );

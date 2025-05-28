@@ -34,3 +34,5 @@ mock/docs/questions/mock-*.adoc
 *.log
 *.synctex.gz
 _region_.tex
+
+result

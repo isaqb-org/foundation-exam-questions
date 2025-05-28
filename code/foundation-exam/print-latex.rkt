@@ -45,8 +45,10 @@ Additional flags:
   (cond
     ((question-explanation question)
      => (lambda (explanation)
-          (newline) (display "\\bigskip\\noindent{}")
-          (write-localized-text explanation language))))
+          (newline)
+          (display "\\begin{examQuestionExplanation}") (newline)
+          (write-localized-text explanation language)
+          (display "\\end{examQuestionExplanation}") (newline))))
   (newline))
 
 (define (write-question/language question language)

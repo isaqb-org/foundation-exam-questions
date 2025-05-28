@@ -8,6 +8,7 @@
 \usepackage{calc}
 \usepackage{xparse}
 \usepackage{textcomp}
+\usepackage{environ}
 
 \newcounter{examQuestionCount}
 \setcounter{examQuestionCount}{
@@ -52,6 +53,13 @@
   {\endtabularx\endflushleft}
 \newcommand{\examQuestionKHeader}[2]{#1 & #2\\}
 \newcommand{\examQuestionKItem}[4]{#3 & #4 & #1) & #2\\}
+
+% https://tex.stackexchange.com/questions/501698/environment-that-ignores-the-content
+\ifsolutions
+  \newenvironment{examQuestionExplanation}{}{}
+\else
+  \NewEnviron{examQuestionExplanation}{}{}
+\fi
 
 \setlength{\parskip}{3pt}
 \setlength{\parindent}{0pt}

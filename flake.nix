@@ -17,6 +17,12 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
+        tex = pkgs.texlive.combine {
+          inherit (pkgs.texlive)
+            scheme-medium
+            environ
+            ;
+        };
       in
       {
         devShells = {
@@ -25,7 +31,7 @@
               pkgs.gradle
               pkgs.racket
               pkgs.libxml2
-              pkgs.texlive.combined.scheme-medium
+              tex
               self.packages.${system}.make-exam
               pkgs.python3Packages.chevron
             ];
@@ -66,7 +72,7 @@
               src = ./mock;
               buildInputs = [
                 self.packages.${system}.make-exam
-                pkgs.texlive.combined.scheme-medium
+                tex
                 pkgs.python3Packages.chevron
               ];
               buildPhase =

@@ -6,36 +6,52 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }@inputs:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      ...
+    }@inputs:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = import nixpkgs { inherit system; };
-      in {
-      devShells = {
-        default = pkgs.mkShell {
-          packages = [
-            pkgs.gradle
-            pkgs.racket
-            pkgs.libxml2
-            self.packages.${system}.make-exam
-          ];
+      in
+      {
+        devShells = {
+          default = pkgs.mkShell {
+            packages = [
+              pkgs.gradle
+              pkgs.racket
+              pkgs.libxml2
+              self.packages.${system}.make-exam
+            ];
+          };
         };
-      };
-      packages = {
-        default = self.packages.${system}.make-exam;
-        make-exam-rkt = pkgs.stdenv.mkDerivation {
-          name = "make-exam-rkt";
-          src = ./code/foundation-exam;
-          installPhase = "mkdir -p $out/code/foundation-exam && cp *.rkt $out/code/foundation-exam";
+        packages = {
+          default = self.packages.${system}.make-exam;
+          make-exam-rkt = pkgs.stdenv.mkDerivation {
+            name = "make-exam-rkt";
+            src = ./code/foundation-exam;
+            installPhase = "mkdir -p $out/code/foundation-exam && cp *.rkt $out/code/foundation-exam";
+          };
+          make-exam = pkgs.stdenv.mkDerivation {
+            name = "make-exam";
+            src = ./code/foundation-exam;
+            buildInputs = [ pkgs.racket ];
+            buildPhase = "raco exe --launcher make-exam.rkt";
+            installPhase = ''
+              mkdir -p $out/bin
+              cp make-exam $out/bin
+              mkdir -p $out/code/foundation-exam
+              cp *.rkt $out/code/foundation-exam
+            '';
+            fixupPhase = ''
+              substituteInPlace $out/bin/make-exam --replace-fail $PWD $out/code/foundation-exam
+            '';
+          };
         };
-        make-exam = pkgs.stdenv.mkDerivation {
-          name = "make-exam";
-          src = ./code/foundation-exam;
-          buildInputs = [ pkgs.racket ];
-          buildPhase = "raco exe make-exam.rkt";
-          installPhase = "mkdir -p $out/bin && cp make-exam $out/bin";
-        };
-      };
-    });
+      }
+    );
 }
-

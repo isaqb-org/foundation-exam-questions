@@ -292,6 +292,7 @@ Additional flags:
     (pick-question
      "Q-20-04-01"
      1
+     #f
      (list (history-item (date* 0 0 0 8 8 2024 4 220 #f 7200 0 "") "content identical to mock exam 2024.1-rev0-DE-20240202"))
      (list (learning-goal-reference (curriculum-version 2025 1) (lg-number 1 1)) (learning-goal-reference (curriculum-version 2023 1) (lg-number 1 1)))
      (localized-text
@@ -329,6 +330,7 @@ Additional flags:
     (pick-question
      "Q-20-04-02"
      1
+     #f
      (list
       (history-item
        (date* 0 0 0 8 8 2024 4 220 #f 3600 0 "")
@@ -385,6 +387,7 @@ Additional flags:
     (category-question
      "Q-17-13-02"
      2
+     #f
      (list (history-item (date* 0 0 0 8 8 2024 4 220 #f 7200 0 "") "content identical to mock exam 2024.1-rev0-DE-20240202"))
      (list (learning-goal-reference (curriculum-version 2023 1) (lg-number 3 2)))
      (localized-text

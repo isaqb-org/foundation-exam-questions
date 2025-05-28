@@ -1,0 +1,17 @@
+name: ci
+on: [ push, workflow_dispatch ]
+
+env:
+  NIX_PATH: "nixpkgs=channel:nixos-unstable"
+
+jobs:
+  test-build:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - name: build mock exam
+        run: nix build .#mock-exam

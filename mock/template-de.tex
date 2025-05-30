@@ -5,26 +5,38 @@
 \usepackage{ngerman}
 \usepackage{amssymb}
 \usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
 \usepackage{calc}
 \usepackage{xparse}
 \usepackage{textcomp}
 \usepackage{environ}
+\usepackage{etoolbox}
+
+\newcommand{\examQuestionCountCommand}{%
+  %EXAMQUESTIONCOUNT%
+}
 
 \newcounter{examQuestionCount}
-\setcounter{examQuestionCount}{
-  %EXAMQUESTIONCOUNT%
-}  
-\newcounter{examTotalPoints}
-\setcounter{examTotalPoints}{
+\ifdefstring{\examQuestionCountCommand}{}%
+  {\setcounter{examQuestionCount}{40}}%
+  {\setcounter{examQuestionCount}{\examQuestionCountCommand}}
+
+\newcommand{\examTotalPointsCommand}{%
   %EXAMTOTALPOINTS%
 }
+
+\newcounter{examTotalPoints}
+\ifdefstring{\examTotalPointsCommand}{}%
+  {\setcounter{examTotalPoints}{60}}
+  {\setcounter{examQuestionCount}{\examTotalPointsCommand}}
+
 \newcounter{examMinPoints}
 \setcounter{examMinPoints}{\theexamTotalPoints * 60 / 100}
 
 \newif\ifsolutions
 
-% \solutionstrue or nothing
-{{solutions}}
+\ifstrequal{\equal{{{solutions}}}{yes}}{\solutionstrue}{}
 
 \newcommand{\examNo}{$\square$}
 \newcommand{\examYes}{\ifsolutions{$\boxtimes$}\else{$\square$}\fi}
@@ -66,10 +78,13 @@
 
 \newcommand{\registered}{$^\textrm{\tiny\textregistered}$}
 
+\fancyhead[L]{iSAQB\registered{} CPSA-F\registered{} Beispielprüfung{}}
+\fancyhead[R]{\includegraphics[width=2cm]{isaqb-logo-plain}}
+
 \begin{document}
+\pagestyle{fancy}
 
 \begin{titlepage}
-  % FIXME Logo
   \begin{center}
    {\huge\bfseries Beispielprüfung
 
@@ -90,7 +105,9 @@
 
 \vspace*{\fill}
 
-  % FIXME: logo
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{isaqb-logo}
+\end{center}
 \end{titlepage}
 
 \section*{Prüfungsregeln}

@@ -2,7 +2,7 @@ name: ci
 on:
   push:
       tags:
-        - 'mock-'*
+        - 'mock-*'
 
   workflow_dispatch:
 

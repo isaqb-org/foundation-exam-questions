@@ -12,20 +12,6 @@
 
   <define name="pickQuestion">
     <element name="pickQuestion">
-      <attribute name="id">
-	<text/>
-      </attribute>
-      <attribute name="points">
-	<data type="positiveInteger"/>
-      </attribute>
-      <optional>
-	<attribute name="release">
-	  <data type="string">
-	    <param name="pattern">20[0-9][0-9]\.[0-9]</param>
-	  </data>
-	</attribute>
-      </optional>
-
       <ref name="prelude"/>
       <ref name="pickOptions"/>
       <ref name="postlude"/>
@@ -34,13 +20,6 @@
 
   <define name="categoryQuestion">
     <element name="categoryQuestion">
-      <attribute name="id">
-	<text/>
-      </attribute>
-      <attribute name="points">
-	<data type="positiveInteger"/>
-      </attribute>
-
       <ref name="prelude"/>
       <ref name="categoryStatements"/>
       <ref name="postlude"/>
@@ -48,6 +27,22 @@
   </define>
 
   <define name="prelude">
+      <attribute name="id">
+	<text/>
+      </attribute>
+      
+      <attribute name="points">
+	<data type="positiveInteger"/>
+      </attribute>
+      
+      <optional>
+	<attribute name="release">
+	  <data type="string">
+	    <param name="pattern">20[0-9][0-9]\.[0-9]</param>
+	  </data>
+	</attribute>
+      </optional>
+
       <optional>
 	<ref name="history"/>
       </optional>

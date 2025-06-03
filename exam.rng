@@ -164,6 +164,11 @@
 	<attribute name="xml:lang">
 	  <data type="language"/>
 	</attribute>
+	<optional>
+	  <attribute name="outdated">
+	    <value>outdated</value>
+	  </attribute>
+	</optional>
 	<text/>
       </element>
     </oneOrMore>

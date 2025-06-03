@@ -12,7 +12,6 @@ Additional flags:
 
 (require racket/match
          racket/contract
-         racket/cmdline
          (only-in racket/string string-trim string-join string-split)
          (only-in racket/port with-output-to-string)
          (only-in srfi/19 date->string)
@@ -241,8 +240,7 @@ Additional flags:
                            (append open-quote rev-result))))
           (else (loop (cdr chars) open-quote? (cons (car chars) rev-result)))))))
 
-(define (make-exam question-filenames template-filename out-filename language)
-  (define questions (map parse-question-file question-filenames))
+(define (make-exam questions template-filename out-filename language)
   (define total-points (apply + (map question-points questions)))
   (define questions-text
     (with-output-to-string
@@ -255,36 +253,6 @@ Additional flags:
                          ("%EXAMQUESTIONCOUNT%" . ,(number->string (length questions)))
                          ("%EXAMTOTALPOINTS%" . ,(number->string total-points)))))
 
-(define (main . argv)
-  (define template-filename (make-parameter #f))
-  (define out-filename (make-parameter #f))
-  (define language (make-parameter #f))
-  (command-line
-   #:program "make-exam"
-   #:argv argv
-   #:once-each
-   [("-o" "--out") filename
-                   "Output filename"
-                   (out-filename filename)]
-   [("-t" "--template") filename
-                        "Template filename"
-                        (template-filename filename)]
-   [("-l" "--language") lang
-                        "Language (de or en)"
-                        (language lang)]
-   #:args question-filenames
-   (cond
-     ((not (template-filename))
-      (display "you must specify a template filename via --template <filename>"))
-     ((not (out-filename))
-      (display "you must specify a output filename via --out <filename>"))
-     ((not (language))
-      (display "you must specify a language via --language <language>"))
-     (else
-      (make-exam question-filenames
-                 (template-filename)
-                 (out-filename)
-                 (language))))))
   
 (module+ test
   (require rackunit)
@@ -444,6 +412,5 @@ Additional flags:
     )
 
 (provide (contract-out
-          (make-exam ((listof (or/c path? string?)) (or/c path? string?) (or/c path? string?) string? . -> . any))
-          (main (string? ... . -> . any))))
+          (make-exam ((listof question?) (or/c path? string?) (or/c path? string?) string? . -> . any))))
           

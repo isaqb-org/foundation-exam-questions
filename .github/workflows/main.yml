@@ -18,7 +18,7 @@ jobs:
       - name: build mock exam
         run: nix build .#mock-exam
       - name: copy mock exam out of Nix store
-        run: cp result/pdf/* .
+        run: cp -v result/pdf/* .
 
   mock-upload:
     needs: mock-build

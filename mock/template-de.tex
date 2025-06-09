@@ -29,7 +29,7 @@
 \newcounter{examTotalPoints}
 \ifdefstring{\examTotalPointsCommand}{}%
   {\setcounter{examTotalPoints}{60}}
-  {\setcounter{examQuestionCount}{\examTotalPointsCommand}}
+  {\setcounter{examTotalPoints}{\examTotalPointsCommand}}
 
 \newcounter{examMinPoints}
 \setcounter{examMinPoints}{\theexamTotalPoints * 60 / 100}

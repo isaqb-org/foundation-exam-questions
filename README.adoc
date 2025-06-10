@@ -26,12 +26,12 @@ xmllint --relaxng exam.ng <filename> ...
 
 == Code
 
-[Racket](https://racket-lang.org/) code for parsing XML exam questions
+https://racket-lang.org/[Racket] code for parsing XML exam questions
 and producing output from them is in the `+code+` directory.
 
 == Development
 
-There is a [Nix](https://nixos.org/) flake that provides the
+There is a https://nixos.org/[Nix] flake that provides the
 prerequisite software.  Enter a shell with these prerequisites via:
 
 [source,bash]
@@ -53,12 +53,12 @@ For example, the English language Mock exam is built like this (in the +`mock`+ 
 
  make-exam --template template-en.tex --out mock-en.tex --language e questions/*.xml
 
-There's also an option +`--ids-file`+ that specifies a file that
+There's also an option `+--ids-file+` that specifies a file that
 contains question ids, which will be selected from the set of
 questions.
 
-The Mock exam templates are in +`mock/template-en.tex`+ and
-+`mock/template-en.tex`+.  Note that +`make-exam`+ only fills in
+The Mock exam templates are in `+mock/template-en.tex+` and
+`+mock/template-en.tex+`.  Note that `+make-exam+` only fills in
 questions and points, there are more Mustache placeholders in it for
 release information.
 
@@ -67,7 +67,7 @@ processing the Mock exam.
 
 == Building the Mock exam
 
-Build PDFs using [Nix](https://nixos.org) with:
+Build PDFs using https://nixos.org[Nix] with:
 
  nix build nix build .#mock-exam
 

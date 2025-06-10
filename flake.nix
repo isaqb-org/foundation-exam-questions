@@ -20,7 +20,7 @@
         tex = pkgs.texlive.combine {
           inherit (pkgs.texlive)
             scheme-medium
-            environ
+            environ roboto
             ;
         };
       in

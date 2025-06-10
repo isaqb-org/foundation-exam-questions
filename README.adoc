@@ -13,8 +13,8 @@ information.
 == Examples
 
 The Mock exam is in
-[`+tree/main/mock/questions+`](tree/main/mock/questions), and there is
-a pool of contributed questions in [`+pool+`](tree/main/pool)
+tree/main/mock/questions[`+tree/main/mock/questions+`], and there is
+a pool of contributed questions in tree/main/pool[`+pool+`].
 
 == XML Validation
 
@@ -42,7 +42,7 @@ nix develop
 == Creating Sample Exams
 
 The Nix flake development shell (invoked via `nix develop`) puts a
-tool called +`make-exam`+ in the path that can be used to create a
+tool called `+make-exam+` in the path that can be used to create a
 sample exam from a LaTeX template and a set of XML questions.
 
 It is invoked like so:
@@ -71,7 +71,7 @@ Build PDFs using https://nixos.org[Nix] with:
 
  nix build nix build .#mock-exam
 
-The output will be in +`result/pdf`+.
+The output will be in `+result/pdf+`.
 
 == Building Documentation
 

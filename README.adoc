@@ -13,8 +13,8 @@ information.
 == Examples
 
 The Mock exam is in
-link:tree/main/mock/questions/[`+mock/questions+`], and there is
-a pool of contributed questions in link:tree/main/pool/[`+pool+`].
+link:mock/questions/[`+mock/questions+`], and there is
+a pool of contributed questions in link:pool/[`+pool+`].
 
 == XML Validation
 

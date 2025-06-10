@@ -51,7 +51,7 @@ It is invoked like so:
 
 For example, the English language Mock exam is built like this (in the +`mock`+ directory):
 
- make-exam --template template-en.tex --out mock-en.tex --language e questions/*.xml
+ make-exam --template template-en.tex --out mock-en.tex --language en questions/*.xml
 
 There's also an option `+--ids-file+` that specifies a file that
 contains question ids, which will be selected from the set of

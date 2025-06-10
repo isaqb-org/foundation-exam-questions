@@ -1,11 +1,7 @@
-= New Foundation Examination Questions
+= Foundation Examination Questions
 
-== Status
-
-Work in progress.
-
-We are currently working on creating or selecting a suitable markup
-format for the new examination questions.
+This repository contains information and code for the iSAQB Foundation
+exam.  It is also the home of the official iSAQB Foundation Mock exam.
 
 == XML Schema
 
@@ -16,59 +12,66 @@ information.
 
 == Examples
 
-We're currently transcribing the mock exam
-(https://public.isaqb.org/examination-foundation/mock_exam/mock-exam-answers-en.pdf)
-into the new format, results are in the `+examples+` directory.
+The Mock exam is in
+[`+tree/main/mock/questions+`](tree/main/mock/questions), and there is
+a pool of contributed questions in [`+pool+`](tree/main/pool)
+
+== XML Validation
+
+Validate a single XML file:
+[source,bash]
+----
+xmllint --relaxng exam.ng <filename> ...
+----
 
 == Code
 
-Racket code for parsing XML exam questions and producing output from
-them is in the `+code+` directory.
+[Racket](https://racket-lang.org/) code for parsing XML exam questions
+and producing output from them is in the `+code+` directory.
 
-== Build System
+== Development
 
-The project uses Gradle for building and validation. The Gradle wrapper is included, so you don't need to install Gradle separately.
-
-=== Nix flake
-
-If you use Nix, there is a Nix flake that provides the prerequisite software.
-Enter a shell with these prerequisites via:
+There is a [Nix](https://nixos.org/) flake that provides the
+prerequisite software.  Enter a shell with these prerequisites via:
 
 [source,bash]
 ----
 nix develop
 ----
 
-Specifically, the flake provides a working Gradle installation.
-To use it, invoke via `+gradle+` from the Nix shell instead of `+gradlew+`.
+== Creating Sample Exams
 
-=== Prerequisites
+The Nix flake development shell (invoked via `nix develop`) puts a
+tool called +`make-exam`+ in the path that can be used to create a
+sample exam from a LaTeX template and a set of XML questions.
 
-* Java Development Kit (JDK) 8 or higher
-** Note: Gradle works with any JVM version between 8 and 23
+It is invoked like so:
 
-=== Getting Started
+ make-exam --out <out-filename> --template <template> --language en|de <question>.xml ...
 
-[source,bash]
-----
-./gradlew tasks # Lists all available tasks
-----
+For example, the English language Mock exam is built like this (in the +`mock`+ directory):
 
-=== XML Validation
+ make-exam --template template-en.tex --out mock-en.tex --language e questions/*.xml
 
-Validate a single XML file:
-[source,bash]
-----
-./gradlew validateFile -Pfile=mock/mock-01.xml
-----
+There's also an option +`--ids-file`+ that specifies a file that
+contains question ids, which will be selected from the set of
+questions.
 
-Validate all XML files in the mock directory:
-[source,bash]
-----
-./gradlew validate
-----
+The Mock exam templates are in +`mock/template-en.tex`+ and
++`mock/template-en.tex`+.  Note that +`make-exam`+ only fills in
+questions and points, there are more Mustache placeholders in it for
+release information.
 
-Both tasks will validate the XML files against the RELAX NG schema (`exam.rng`).
+The Nix shell also contains a LaTeX installation suitable for
+processing the Mock exam.
+
+== Building the Mock exam
+
+Build PDFs using [Nix](https://nixos.org) with:
+
+ nix build nix build .#mock-exam
+
+The output will be in +`result/pdf`+.
 
 == Building Documentation
 
@@ -77,10 +80,11 @@ The project uses Gradle to generate the documentation in both HTML and PDF forma
 [source,bash]
 ----
 # First time and regular builds
-./gradlew buildDocs
+nix develop
+gradle buildDocs
 
 # Clean and rebuild
-./gradlew clean buildDocs
+gradle clean buildDocs
 ----
 
 The generated documentation will be available in:
@@ -91,7 +95,7 @@ The generated documentation will be available in:
 
 == Contributing
 
-Create a subdirectory in `+examples+` whose name makes clear the
+Create a subdirectory in `+pool+` whose name makes clear the
 source, and file away!
 
 

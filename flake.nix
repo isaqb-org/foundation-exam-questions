@@ -20,7 +20,9 @@
         tex = pkgs.texlive.combine {
           inherit (pkgs.texlive)
             scheme-medium
-            environ roboto
+            environ
+            roboto
+            fontaxes # dependency of roboto
             ;
         };
       in

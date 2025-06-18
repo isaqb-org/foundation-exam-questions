@@ -18,22 +18,25 @@
   %EXAMQUESTIONCOUNT%
 }
 
-\newcounter{examQuestionCount}
 \ifdefstring{\examQuestionCountCommand}{}%
-  {\setcounter{examQuestionCount}{40}}%
-  {\setcounter{examQuestionCount}{\examQuestionCountCommand}}
+  {\newcommand{\examQuestionCount}{40}}%
+  {\newcommand{\examQuestionCount}{\examQuestionCountCommand}}
 
 \newcommand{\examTotalPointsCommand}{%
   %EXAMTOTALPOINTS%
 }
 
-\newcounter{examTotalPoints}
 \ifdefstring{\examTotalPointsCommand}{}%
-  {\setcounter{examTotalPoints}{60}}
-  {\setcounter{examTotalPoints}{\examTotalPointsCommand}}
+  {\newcommand{\examTotalPoints}{60}}
+  {\newcommand{\examTotalPoints}{\examTotalPointsCommand}}
 
-\newcounter{examMinPoints}
-\setcounter{examMinPoints}{\theexamTotalPoints * 60 / 100}
+\newcommand{\examMinPointsCommand}{%
+  %EXAMMINPOINTS%
+}
+
+\ifdefstring{\examMinPointsCommand}{}%
+  {\newcommand{\examMinPoints}{36}}
+  {\newcommand{\examMinPoints}{\examMinPointsCommand}}
 
 \newif\ifsolutions
 
@@ -120,11 +123,11 @@ angelehnt ist. Sie dient der Veranschaulichung der echten
 iSAQB\registered{}-CPSA\registered{}--Prüfung sowie der entsprechenden
 Prüfungsvorbereitung.
 
-Die Beispielprüfung besteht aus \theexamQuestionCount{} Multiple-Choice-Fragen, welche je
+Die Beispielprüfung besteht aus \examQuestionCount{} Multiple-Choice-Fragen, welche je
 nach Schwierigkeitsgrad mit 1 bis 2 Punkten bewertet werden können. Es
 müssen zum Bestehen der Prüfung mindestens 60 Prozent erreicht
-werden. In dieser Probeprüfung können \theexamTotalPoints{} Punkte erreicht werden, zum
-Bestehen wären \theexamMinPoints{} Punkte erforderlich.
+werden. In dieser Probeprüfung können \examTotalPoints{} Punkte erreicht werden, zum
+Bestehen wären \examMinPoints{} Punkte erforderlich.
 
 Grundsätzlich gelten folgende Hinweise: Richtige Antworten ergeben
 Pluspunkte, falsche Antworten führen zu Punktabzug, jedoch nur in

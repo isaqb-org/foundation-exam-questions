@@ -242,6 +242,18 @@ Additional flags:
                            (append open-quote rev-result))))
           (else (loop (cdr chars) open-quote? (cons (car chars) rev-result)))))))
 
+(define (min-points-as-string total-points language)
+  (define min-points100  (* total-points 60))
+  (if (zero? min-points100)
+      "0"
+      (let* ((digits (number->string min-points100))
+             (count (string-length digits)))
+        (string-append (substring digits 0 (- count 2))
+                       (match language
+                         ("de" ",")
+                         ("en" "."))
+                       (substring digits 2 count)))))
+
 (define (make-exam questions template-filename out-filename language)
   (define total-points (apply + (map question-points questions)))
   (define questions-text
@@ -253,12 +265,17 @@ Additional flags:
   (copy-file/replacing template-filename out-filename
                        `(("%EXAMQUESTIONS%" . ,questions-text)
                          ("%EXAMQUESTIONCOUNT%" . ,(number->string (length questions)))
-                         ("%EXAMTOTALPOINTS%" . ,(number->string total-points)))))
-
+                         ("%EXAMTOTALPOINTS%" . ,(number->string total-points))
+                         ("%EXAMMINPOINTS%" . ,(min-points-as-string total-points language)))))
   
 (module+ test
   (require rackunit)
   (require "parse.rkt")
+
+  (check-equal? (min-points-as-string 88 "de")
+                "52,80")
+  (check-equal? (min-points-as-string 88 "en")
+                "52.80")
 
   (define q1
     (pick-question

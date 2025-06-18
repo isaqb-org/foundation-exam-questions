@@ -17,22 +17,25 @@
   %EXAMQUESTIONCOUNT%
 }
 
-\newcounter{examQuestionCount}
 \ifdefstring{\examQuestionCountCommand}{}%
-  {\setcounter{examQuestionCount}{40}}%
-  {\setcounter{examQuestionCount}{\examQuestionCountCommand}}
+  {\newcommand{\examQuestionCount}{40}}%
+  {\newcommand{\examQuestionCount}{\examQuestionCountCommand}}
 
 \newcommand{\examTotalPointsCommand}{%
   %EXAMTOTALPOINTS%
 }
 
-\newcounter{examTotalPoints}
 \ifdefstring{\examTotalPointsCommand}{}%
-  {\setcounter{examTotalPoints}{60}}
-  {\setcounter{examTotalPoints}{\examTotalPointsCommand}}
+  {\newcommand{\examTotalPoints}{60}}
+  {\newcommand{\examTotalPoints}{\examTotalPointsCommand}}
 
-\newcounter{examMinPoints}
-\setcounter{examMinPoints}{\theexamTotalPoints * 60 / 100}
+\newcommand{\examMinPointsCommand}{%
+  %EXAMMINPOINTS%
+}
+
+\ifdefstring{\examMinPointsCommand}{}%
+  {\newcommand{\examMinPoints}{36}}
+  {\newcommand{\examMinPoints}{\examMinPointsCommand}}
 
 \newif\ifsolutions
 
@@ -119,13 +122,13 @@ Foundation Level (CPSA-F\registered{}) in form and scope. It serves to illustrat
 the real iSAQB\registered{} CPSA\registered{} examination as well as to prepare for the
 corresponding exam.
 
-The mock exam consists of \theexamQuestionCount{} multiple-choice
+The mock exam consists of \examQuestionCount{} multiple-choice
 questions, which can be evaluated with 1 or 2 points depending on the
 level of difficulty. At least 60 percent must be achieved to pass the
 exam.
 
-\theexamTotalPoints{} points can be achieved in this mock examination,
-you would need \theexamMinPoints{} points to pass.
+\examTotalPoints{} points can be achieved in this mock examination,
+you would need \examMinPoints{} points to pass.
 
 The following general rules apply: Correct answers result in plus
 points, incorrect answers result in a deduction of points, but only

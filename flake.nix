@@ -56,6 +56,15 @@
               substituteInPlace $out/bin/make-exam --replace-fail $PWD $out/code/foundation-exam
             '';
           };
+          pool = pkgs.stdenv.mkDerivation {
+            name = "pool";
+            src = ./.;
+            buildInputs = [ ];
+            installPhase = ''
+              mkdir -p $out/xml
+              cp -R pool/* $out/xml/
+            '';
+          };
           mock-exam =
             let
               mkBuild =

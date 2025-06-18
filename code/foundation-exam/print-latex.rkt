@@ -234,6 +234,7 @@ Additional flags:
         (list->string (reverse rev-result))
         (case (car chars)
           ((#\&) (loop (cdr chars) open-quote? (cons #\& (cons #\\ rev-result))))
+          ((#\#) (loop (cdr chars) open-quote? (cons #\# (cons #\\ rev-result))))
           ((#\") (loop (cdr chars) (not open-quote?)
                        (if open-quote?
                            (append closed-quote rev-result)

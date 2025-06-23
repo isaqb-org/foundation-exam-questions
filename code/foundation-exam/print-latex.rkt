@@ -1,15 +1,5 @@
 #lang racket/base
 
-#|
-Usage:
-
-racket --require print-latex.rkt --main -- --template exam.tex --out exam.tex  ../../pool/active-group/*.xml
-
-Additional flags:
---language de  specify language
---language en  specify language
-|#
-
 (require racket/match
          racket/contract
          (only-in racket/string string-trim string-join string-split)

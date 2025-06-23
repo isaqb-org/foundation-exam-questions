@@ -8,6 +8,16 @@
 
 (define *ns* "https://www.isaqb.org/ns/exam/foundation/v1")
 
+(define (write-question-to-file question filename)
+  (call-with-output-file
+    filename
+    (lambda (port)
+      (display "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" port)
+      (newline port)
+      (display-xml (question->document question)
+                   port))
+    #:exists 'replace))
+
 (define (element* name attributes content)
   (element #f #f name attributes content))
 
@@ -251,4 +261,5 @@
                                       
 
 (provide (contract-out
+          (write-question-to-file (question? (or/c path? string?) . -> . any))
           (question->document (question? . -> . document?))))

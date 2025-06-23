@@ -37,9 +37,9 @@
                         (history->element history)
                         (learning-goals->element learning-goals)
                         (stem->element stem)
+                        (pick-options->element pick-options)
                         (and explanation
-                             (explanation->element explanation))
-                        (pick-options->element pick-options)))))
+                             (explanation->element explanation))))))
     ((category-question id points release history learning-goals stem explanation categories statements)
      (element* 'categoryQuestion
                (filter values
@@ -52,12 +52,12 @@
                         (history->element history)
                         (learning-goals->element learning-goals)
                         (stem->element stem)
-                        (and explanation
-                             (explanation->element explanation))
                         (element* 'categoryStatements
                                   '()
                                   (list (categories->element categories)
-                                        (statements->element statements)))))))))
+                                        (statements->element statements)))
+                        (and explanation
+                             (explanation->element explanation))))))))
 
 (define (history->element history)
   (element* 'history '()

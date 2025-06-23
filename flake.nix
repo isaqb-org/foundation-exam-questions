@@ -35,6 +35,7 @@
               pkgs.libxml2
               tex
               self.packages.${system}.make-exam
+              self.packages.${system}.tag-release
               pkgs.python3Packages.chevron
             ];
           };
@@ -54,6 +55,21 @@
             '';
             fixupPhase = ''
               substituteInPlace $out/bin/make-exam --replace-fail $PWD $out/code/foundation-exam
+            '';
+          };
+          tag-release = pkgs.stdenv.mkDerivation {
+            name = "tag-release";
+            src = ./code/foundation-exam;
+            buildInputs = [ pkgs.racket ];
+            buildPhase = "raco exe --launcher tag-release.rkt";
+            installPhase = ''
+              mkdir -p $out/bin
+              cp tag-release $out/bin
+              mkdir -p $out/code/foundation-exam
+              cp *.rkt $out/code/foundation-exam
+            '';
+            fixupPhase = ''
+              substituteInPlace $out/bin/tag-release --replace-fail $PWD $out/code/foundation-exam
             '';
           };
           pool = pkgs.stdenv.mkDerivation {

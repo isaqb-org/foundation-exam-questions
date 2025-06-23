@@ -16,6 +16,7 @@
     ("en" "Question")))
 
 (define (write-question+explanation/language question language)
+  (display "\\begin{examQuestion}")
   (display "\\begin{examQuestionStem}{")
   (display (question-id question))
   (display "}{")
@@ -38,6 +39,8 @@
           (display "\\begin{examQuestionExplanation}") (newline)
           (write-localized-text explanation language)
           (display "\\end{examQuestionExplanation}") (newline))))
+  (newline)
+  (display "\\end{examQuestion}")
   (newline))
 
 (define (write-question/language question language)

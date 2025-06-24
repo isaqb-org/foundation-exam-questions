@@ -1,0 +1,69 @@
+\usepackage{a4}
+\usepackage[utf8]{inputenc}
+\usepackage{roboto}\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{calc}
+\usepackage{xparse}
+\usepackage{textcomp}
+\usepackage{environ}
+\usepackage{etoolbox}
+
+\newenvironment{examQuestion}{}{}
+
+\ifdefstring{\examQuestionCountCommand}{}%
+  {\newcommand{\examQuestionCount}{40}}%
+  {\newcommand{\examQuestionCount}{\examQuestionCountCommand}}
+
+\ifdefstring{\examTotalPointsCommand}{}%
+  {\newcommand{\examTotalPoints}{60}}
+  {\newcommand{\examTotalPoints}{\examTotalPointsCommand}}
+
+\ifdefstring{\examMinPointsCommand}{}%
+  {\newcommand{\examMinPoints}{36}}
+  {\newcommand{\examMinPoints}{\examMinPointsCommand}}
+
+\newif\ifsolutions
+
+\newcommand{\examNo}{$\square$}
+\newcommand{\examYes}{\ifsolutions{$\boxtimes$}\else{$\square$}\fi}
+
+\newcounter{examQuestion}\setcounter{examQuestion}{1}
+
+% https://tex.stackexchange.com/questions/17036/why-cant-the-end-code-of-an-environment-contain-an-argument
+\NewDocumentEnvironment{examQuestionStem}{mmm}%
+  {% avoid mustache
+  {\small\arabic{examQuestion}\stepcounter{examQuestion} --- \textit{Id: #1}}\par%
+    \begin{minipage}[t]{0.85\textwidth}}%
+  {\end{minipage} \hfill\mbox{\small [#2 #3]}\par\medskip}
+
+% \newcommand{\examQuestionStem}[4]{\textbf{#2}\hfill \mbox{[#3 #4]}\par}
+\newcommand{\examQuestionInstructions}[1]{\textit{#1}\par}
+
+\newenvironment{examAQuestion}{\begin{itemize}}{\end{itemize}}
+\newcommand{\examQuestionAItem}[3]{\item[#3] #1) #2}
+
+\newenvironment{examPQuestion}{\begin{itemize}}{\end{itemize}}
+\newcommand{\examQuestionPItem}[3]{\item[#3] #1) #2}
+
+% https://tex.stackexchange.com/questions/573100/defining-a-new-environment-that-contains-tabularx-inside-another-environment-e
+\newenvironment{examKQuestion}%
+  {\flushleft\tabularx{\textwidth}{cccX}}%
+  {\endtabularx\endflushleft}
+\newcommand{\examQuestionKHeader}[2]{#1 & #2\\}
+\newcommand{\examQuestionKItem}[4]{#3 & #4 & #1) & #2\\}
+
+% https://tex.stackexchange.com/questions/501698/environment-that-ignores-the-content
+\ifsolutions
+  \newenvironment{examQuestionExplanation}{}{}
+\else
+  \NewEnviron{examQuestionExplanation}{}{}
+\fi
+
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\registered}{$^\textrm{\tiny\textregistered}$}
+

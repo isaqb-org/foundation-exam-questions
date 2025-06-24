@@ -36,7 +36,7 @@
               tex
               self.packages.${system}.make-exam
               self.packages.${system}.tag-release
-              pkgs.python3Packages.chevron
+              pkgs.mustache-go
             ];
           };
         };
@@ -84,13 +84,15 @@
           mock-exam =
             let
               mkBuild =
-                lang: data: suffix:
+                lang: solutions:
                 let
+                  suffix = if solutions then "-solutions" else "";
+                  solutionsReplacement = if solutions then "true" else "false";
                   outfile = "mock-${lang}${suffix}.tex";
                 in
                 ''
                   make-exam --template template-${lang}.tex --out mock-temp.tex --language ${lang} questions/*.xml
-                  chevron -d ${data} mock-temp.tex > ${outfile}
+                  (cat release.yml; echo solutions: ${solutionsReplacement}) | mustache mock-temp.tex > ${outfile}
                   pdflatex ${outfile} && pdflatex ${outfile} && pdflatex ${outfile} 
                 '';
             in
@@ -100,13 +102,10 @@
               buildInputs = [
                 self.packages.${system}.make-exam
                 tex
-                pkgs.python3Packages.chevron
+                pkgs.mustache-go
               ];
               buildPhase =
-                (mkBuild "de" "template-data-nosolutions.json" "")
-                + (mkBuild "de" "template-data-solutions.json" "-solutions")
-                + (mkBuild "en" "template-data-nosolutions.json" "")
-                + (mkBuild "en" "template-data-solutions.json" "-solutions");
+                (mkBuild "de" false) + (mkBuild "de" true) + (mkBuild "en" false) + (mkBuild "en" true);
               installPhase = ''
                 mkdir -p $out/pdf
                 cp mock-en.pdf mock-en-solutions.pdf mock-de.pdf mock-de-solutions.pdf $out/pdf

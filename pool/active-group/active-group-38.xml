@@ -26,7 +26,7 @@
                 internal interfaces
             </text>
         </option>
-        <option distractor="distractor" identifier="B">
+        <option correct="correct" identifier="B">
             <text xml:lang="de">
                 externe Schnittstellen
             </text>

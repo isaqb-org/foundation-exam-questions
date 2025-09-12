@@ -12,11 +12,11 @@
   <stem>
     <text xml:lang="de">
       Welche dieser Entscheidungen betrifft in aller Regel den gesamten Lebenszyklus einer
-      Anwendung? Wählen Sie zwei Antworten aus.
+      Anwendung? Wählen Sie drei Antworten aus.
     </text>
     <text xml:lang="en">
       Which of these decisions usually affect the entire lifecycle of an
-      application? Choose two answers.
+      application? Choose three answers.
     </text>
   </stem>
 
@@ -53,7 +53,7 @@
         Specification of external interfaces
       </text>
     </option>
-    <option correct="distractor" identifier="E">
+    <option correct="correct" identifier="E">
       <text xml:lang="de">
         Entwicklungsplattform
       </text>

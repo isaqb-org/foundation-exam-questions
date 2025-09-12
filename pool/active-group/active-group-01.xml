@@ -29,7 +29,7 @@
         Version of the programming language
       </text>
     </option>
-    <option distractor="distractor" identifier="B">
+    <option correct="correct" identifier="B">
       <text xml:lang="de">
         Modellierung der Daten
       </text>
@@ -37,7 +37,7 @@
         Modeling of the data
       </text>
     </option>
-    <option correct="correct" identifier="C">
+    <option distractor="distractor" identifier="C">
       <text xml:lang="de">
         Auswahl des Datenbanksystems
       </text>
@@ -53,7 +53,7 @@
         Specification of external interfaces
       </text>
     </option>
-    <option correct="correct" identifier="E">
+    <option distractor="distractor" identifier="E">
       <text xml:lang="de">
         Entwicklungsplattform
       </text>

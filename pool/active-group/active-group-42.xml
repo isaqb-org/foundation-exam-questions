@@ -32,7 +32,7 @@
         </categories>
 
         <statements>
-            <statement correctCategory="b" identifier="A">
+            <statement correctCategory="a" identifier="A">
                 <text xml:lang="de">
                     Sicherheit - Benutzbarkeit
                 </text>

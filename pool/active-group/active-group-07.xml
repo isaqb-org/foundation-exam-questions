@@ -12,17 +12,10 @@
 
   <stem>
     <text xml:lang="de">
-      Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben
-      Entwickler:innen an der Dokumentation der
-      Softwarearchitektur. Welche Methoden eignen sich zur
-      Gewährleistung einer konsistenten und zweckmäßigen Dokumentation
-      und welche nicht?
+      Mit welchen Stakeholdern sollten Softwarearchitekt:innen kommunizieren?
     </text>
     <text xml:lang="en">
-      In your project, three architects and seven developers are working on the
-      documentation of the software architecture. Which methods are
-      appropriate in order to achieve a consistent and adequate
-      documentation, and which are not?
+      With which stakeholders should an architect communicate?
     </text>
   </stem>
 

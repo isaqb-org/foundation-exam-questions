@@ -108,7 +108,7 @@
     ((cons _ "de")
      (display "P-Frage: Wählen Sie aus den folgenden ")
      (display (number-word/de pick-options-count))
-     (display " Anworten die \\textbf{")
+     (display " Antworten die \\textbf{")
      (display (number-word/de correct-pick-options-count))
      (display "} Antworten aus, die am besten passen."))
     ((cons _ "en") 

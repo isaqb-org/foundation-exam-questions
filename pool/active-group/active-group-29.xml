@@ -88,7 +88,7 @@
               Maintainability
             </text>
           </statement>
-          <statement correctCategory="a" identifier="H">
+          <statement correctCategory="b" identifier="H">
             <text xml:lang="de">
               Vertikale Modularisierung
             </text>

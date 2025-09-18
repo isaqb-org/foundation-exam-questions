@@ -33,7 +33,7 @@
     </categories>
 
     <statements>
-      <statement correctCategory="a" identifier="A">
+      <statement correctCategory="b" identifier="A">
         <text xml:lang="de">
           Es ist unmöglich, die Architektur zu dokumentieren.
         </text>

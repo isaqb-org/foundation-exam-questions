@@ -79,6 +79,7 @@
             installPhase = ''
               mkdir -p $out/xml
               cp -R pool/* $out/xml/
+              cp -R mock/questions $out/xml/mock
             '';
           };
           mock-exam =

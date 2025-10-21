@@ -69,7 +69,7 @@ processing the Mock exam.
 
 Build PDFs using https://nixos.org[Nix] with:
 
- nix build nix build .#mock-exam
+ nix build .#mock-exam
 
 The output will be in `+result/pdf+`.
 

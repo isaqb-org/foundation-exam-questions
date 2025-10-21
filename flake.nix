@@ -37,6 +37,7 @@
               self.packages.${system}.make-exam
               self.packages.${system}.tag-release
               pkgs.mustache-go
+              pkgs.jing-trang # for schema conversion
             ];
           };
         };

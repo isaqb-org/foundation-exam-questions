@@ -229,6 +229,8 @@
           ((#\&) (loop (cdr chars) open-quote? (cons #\& (cons #\\ rev-result))))
           ((#\#) (loop (cdr chars) open-quote? (cons #\# (cons #\\ rev-result))))
           ((#\%) (loop (cdr chars) open-quote? (cons #\% (cons #\\ rev-result))))
+          ((#\%) (loop (cdr chars) open-quote? (cons #\% (cons #\\ rev-result))))
+          ((#\„) (loop (cdr chars) #t (append open-quote rev-result)))
           ((#\") (loop (cdr chars) (not open-quote?)
                        (if open-quote?
                            (append closed-quote rev-result)

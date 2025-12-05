@@ -44,7 +44,7 @@
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">
-        (Eine einheitliche Ausnahmebehandlung (Exception Handling) kann man gut erreichen,
+        Eine einheitliche Ausnahmebehandlung (Exception Handling) kann man gut erreichen,
         indem die Architekt:innen mit den Entwickler:innen vor der Implementierung ein
         geeignetes Konzept vereinbaren.
       </text>

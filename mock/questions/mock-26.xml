@@ -28,11 +28,11 @@
       <text xml:lang="en">The components of the system that contain redundant code can be improved independently of each other.</text>
     </option>
     <option distractor="distractor" identifier="D">
-      <text xml:lang="de">Die Anwendung der Schichtenmuster ermöglicht eine konsistente Anwendung des DRY-Prinzips.</text>
+      <text xml:lang="de">Die Einhaltung von DRY führt zu einer Verringerung der Angriffsvektoren in der IT-Sicherheit.</text>
       <text xml:lang="en">Adherence to DRY leads to additional attack vectors in IT security.</text>
     </option>
     <option distractor="distractor" identifier="E">
-      <text xml:lang="de">Die Einhaltung von DRY führt zu einer Verringerung der Angriffsvektoren in der IT-Sicherheit.</text>
+      <text xml:lang="de">Die Anwendung der Schichtenmuster ermöglicht eine konsistente Anwendung des DRY-Prinzips.</text>
       <text xml:lang="en">Applying the Layer patterns allows a consistent application of the DRY principle.</text>
     </option>
   </pickOptions>

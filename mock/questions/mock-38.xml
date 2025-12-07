@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">Sie versuchen, Ihre Architektur qualitativ zu analysieren. Was sind die ZWEI zutreffendsten Anzeichen für architektonische Problembereiche?</text>
-    <text xml:lang="en">You try to analyze your architecture quantitatively. Which are the two most appropriate indicators for architectural problem areas?</text>
+    <text xml:lang="de">Sie versuchen, Ihre Architektur quantitativ zu vermessen. Was sind die ZWEI zutreffendsten Anzeichen für architektonische Problembereiche?</text>
+    <text xml:lang="en">You are trying to quantitatively measure your architecture. What are the TWO most appropriate indicators for architectural problem areas?</text>
   </stem>
 
   <pickOptions>

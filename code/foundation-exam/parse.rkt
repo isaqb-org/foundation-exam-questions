@@ -49,7 +49,7 @@
      (pick-question id
                     (string->number points)
                     (and release (parse-release release))
-                    (parse-history history)
+                    (and history (parse-history history))
                     (parse-refers-to-lgs refers-to-lgs)
                     (parse-stem stem)
                     (parse-explanation explanation)

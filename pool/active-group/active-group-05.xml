@@ -21,10 +21,10 @@
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">
-        Am Anfang
+        Am Anfang.
       </text>
       <text xml:lang="en">
-        At the beginning
+        At the beginning.
       </text>
     </option>
     <option correct="correct" identifier="B">
@@ -32,7 +32,7 @@
         Durchgehend.
       </text>
       <text xml:lang="en">
-        Continuous
+        Continuous.
       </text>
     </option>
     <option distractor="distractor" identifier="C">
@@ -40,7 +40,7 @@
         Am Ende.
       </text>
       <text xml:lang="en">
-        At the end
+        At the end.
       </text>
     </option>
     <option distractor="distractor" identifier="D">
@@ -48,7 +48,7 @@
         Am Anfang und am Ende.
       </text>
       <text xml:lang="en">
-        At the beginning and at the end
+        At the beginning and at the end.
       </text>
     </option>
   </pickOptions>

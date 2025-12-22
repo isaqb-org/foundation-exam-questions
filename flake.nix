@@ -114,6 +114,35 @@
               '';
             };
         };
+        apps = {
+          xmllint = {
+            type = "app";
+            program = toString (
+              pkgs.writeShellScript "lint-xml" ''
+                set -e
+
+                FAILED=0
+
+                for file in mock/questions/mock*.xml pool/*/*.xml; do
+                  echo "Validating: $file"
+                  if ${pkgs.libxml2}/bin/xmllint --relaxng exam.rng --noout "$file" 2>&1; then
+                    echo "  ✓ Valid"
+                  else
+                    echo "  ✗ Invalid"
+                    FAILED=1
+                  fi
+                done
+
+                if [ $FAILED -eq 1 ]; then
+                  echo "XML validation failed!"
+                  exit 1
+                fi
+
+                echo "All XML files are valid!"
+              ''
+            );
+          };
+        };
       }
     );
 }

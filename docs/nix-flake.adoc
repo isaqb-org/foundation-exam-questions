@@ -1,0 +1,61 @@
+[[section-nix-flake]]
+== Nix Flake
+
+The documentation infrastructure comes with a
+https://nixos.wiki/wiki/Flakes[Nix flake], which provides the
+following functionality:
+
+- a reproducible development environment for validating exam questions
+- the `make-exam` package with the `make-exam` program for creating LaTeX/PDF exams
+  from XML
+- the `mock-exam` package with the mock exam PDFs
+- the `pool` package with a pool of mock-exam and other donated example questions
+- a reproducible development environment for the infrastructure itself
+
+Using the functionality requires basic Nix and Nix flake competency.
+
+=== Development environment
+
+The development environment can be entered by:
+
+----
+nix develop
+----
+
+The resulting shell contains:
+
+- the https://linuxcommandlibrary.com/man/xmllint[xmllint] utility for
+  validating XML files against the exam schema
+
+- the `make-exam` program for creating LaTeX files from collections of
+  exam XML files
+
+- an installation of TeX/LaTeX for producing PDF from LaTeX source files
+
+=== Creating your own exams
+
+Add this to the flake inputs:
+
+----
+  inputs = {
+    ...
+    foundation-exam-questions.url = "github:isaqb-org/foundation-exam-questions";
+    ...
+  };
+----
+
+You can then refer to the `make-exam` command-line tool like this:
+
+----
+foundation-exam-questions.packages.${system}.make-exam
+----
+
+You can refer to the pool of questions like this:
+
+----
+foundation-exam-questions.packages.${system}.pool
+----
+
+The pool of questions is a directory containing question XML files in
+subdirectories `xml/<source>` where `<source>` can be `mock` or
+a vendor name like `active-group`.

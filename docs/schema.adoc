@@ -1,0 +1,17 @@
+[[section-schema]]
+== XML Schema
+
+The heart of the exam infrastructure is the XML RelaxNG schema in
+`exam.rng`.  Its current namespace is
+
+----
+https://www.isaqb.org/ns/exam/foundation/v1
+----
+
+Validate a single XML file like this:
+[source,bash]
+----
+xmllint --relaxng exam.ng <filename> ...
+----
+
+FIXME: docs go here

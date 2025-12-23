@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="Q-17-13-04-XXXXXXX" points="1">
+<pickQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="Q-17-13-04" points="1">
   <history>
     <item date="2024-08-10">content identical to mock exam 2024.1-rev0-DE-20240202</item>
   </history>
@@ -18,10 +18,10 @@
 
   <stem>
     <text xml:lang="de">
-      Welche DREI der folgenden Grundsätze gelten für das Testen?
+      Welche der folgenden Grundsätze gelten für das Testen?
     </text>
     <text xml:lang="en">
-      Which THREE of the following principles apply to testing?
+      Which of the following principles apply to testing?
     </text>
   </stem>
 

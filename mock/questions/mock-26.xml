@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">Welche ZWEI Aussagen zum „Don't repeat yourself"-Prinzip (DRY) treffen am ehesten zu? Anders gesagt: Was könnte passieren, wenn Teile des Quellcodes oder der Konfiguration im System mehrfach vorhanden sind?</text>
-    <text xml:lang="en">Which two statements about the principle "Don't repeat yourself" (DRY) fit best? In other words: What could happen, if parts of the source code or configuration do exist in multiple copies in the system?</text>
+    <text xml:lang="de">Welche Aussagen zum „Don't repeat yourself"-Prinzip (DRY) treffen am ehesten zu? Anders gesagt: Was könnte passieren, wenn Teile des Quellcodes oder der Konfiguration im System mehrfach vorhanden sind?</text>
+    <text xml:lang="en">Which statements about the principle "Don't repeat yourself" (DRY) fit best? In other words: What could happen, if parts of the source code or configuration do exist in multiple copies in the system?</text>
   </stem>
 
   <pickOptions>

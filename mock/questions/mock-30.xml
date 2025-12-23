@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">In der Kontextsicht können Sie einen geschäftlichen Kontext („business context") und einen technischen Kontext verwenden. Wählen Sie die ZWEI am besten passenden Antworten für den technischen Kontext aus.</text>
-    <text xml:lang="en">The context view might contain a business context and a technical context, or both. Pick the two most appropriate answers that apply to the technical context.</text>
+    <text xml:lang="de">In der Kontextsicht können Sie einen geschäftlichen Kontext („business context") und einen technischen Kontext verwenden. Wählen Sie die am besten passenden Antworten für den technischen Kontext aus.</text>
+    <text xml:lang="en">The context view might contain a business context and a technical context, or both. Pick the most appropriate answers that apply to the technical context.</text>
   </stem>
 
   <pickOptions>

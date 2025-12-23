@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">Die Dokumentation der Softwarearchitektur sollte Beschreibungen der Querschnittskonzepte enthalten. Wählen Sie die ZWEI besten Gründe, warum die Dokumentation von Querschnittskonzepten sinnvoll ist.</text>
-    <text xml:lang="en">Software architecture documentation could contain descriptions of cross-cutting concerns. Pick the TWO best reasons why documentation of cross-cutting concerns is useful.</text>
+    <text xml:lang="de">Die Dokumentation der Softwarearchitektur sollte Beschreibungen der Querschnittskonzepte enthalten. Wählen Sie die besten Gründe, warum die Dokumentation von Querschnittskonzepten sinnvoll ist.</text>
+    <text xml:lang="en">Software architecture documentation could contain descriptions of cross-cutting concerns. Pick the best reasons why documentation of cross-cutting concerns is useful.</text>
   </stem>
 
   <pickOptions>

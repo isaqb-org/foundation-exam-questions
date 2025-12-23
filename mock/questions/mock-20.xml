@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">Welche Voraussetzungen müssen vor der Entwicklung einer Softwarearchitektur erfüllt sein? Wählen Sie die ZWEI passendsten Antworten aus.</text>
-    <text xml:lang="en">Which prerequisites have to be fulfilled before developing a software architecture? Pick the TWO most appropriate answers.</text>
+    <text xml:lang="de">Welche Voraussetzungen müssen vor der Entwicklung einer Softwarearchitektur erfüllt sein? Wählen Sie die passendsten Antworten aus.</text>
+    <text xml:lang="en">Which prerequisites have to be fulfilled before developing a software architecture? Pick the most appropriate answers.</text>
   </stem>
 
   <pickOptions>

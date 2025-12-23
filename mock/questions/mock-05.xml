@@ -20,10 +20,10 @@
        top-level elements should be allowed -->
   <stem>
     <text xml:lang="de">
-        Welche VIER der folgenden Techniken sind am besten zur Darstellung von Abläufen oder Laufzeitverhalten geeignet?
+        Welche der folgenden Techniken sind am besten zur Darstellung von Abläufen oder Laufzeitverhalten geeignet?
     </text>
     <text xml:lang="en">
-        Which FOUR of the following techniques are best suited to illustrate the workflow or behavior of the system at runtime?
+        Which of the following techniques are best suited to illustrate the workflow or behavior of the system at runtime?
     </text>
   </stem>
 

@@ -18,10 +18,10 @@
        top-level elements should be allowed -->
   <stem>
     <text xml:lang="de">
-        Welche DREI der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt? 
+        Welche der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt?
     </text>
     <text xml:lang="en">
-        Which THREE of the following aspects are covered by the term “software architecture”? 
+        Which of the following aspects are covered by the term “software architecture”?
     </text>
 
   </stem>

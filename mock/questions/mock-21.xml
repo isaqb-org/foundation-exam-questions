@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">Welche Faktoren können den Entwurf einer Softwarearchitektur beeinflussen? Wählen Sie die DREI passendsten Antworten aus.</text>
-    <text xml:lang="en">Which factors can influence the design of a software architecture? Pick the THREE most appropriate answers.</text>
+    <text xml:lang="de">Welche Faktoren können den Entwurf einer Softwarearchitektur beeinflussen? Wählen Sie die passendsten Antworten aus.</text>
+    <text xml:lang="en">Which factors can influence the design of a software architecture? Pick the most appropriate answers.</text>
   </stem>
 
   <pickOptions>

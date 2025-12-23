@@ -10,8 +10,8 @@
   </refersToLgs>
 
   <stem>
-    <text xml:lang="de">Sie versuchen, ihre Architektur quantitativ zu untersuchen. Welche der folgenden Größen können Sie für Ihre Softwarearchitektur zuverlässig messen? Wählen Sie die DREI am besten passenden Antworten aus.</text>
-    <text xml:lang="en">You try to quantitatively analyze your architecture. Which three of the following properties can you measure reliably in your software architecture? Pick the three best fitting answers.</text>
+    <text xml:lang="de">Sie versuchen, ihre Architektur quantitativ zu untersuchen. Welche der folgenden Größen können Sie für Ihre Softwarearchitektur zuverlässig messen? Wählen Sie die am besten passenden Antworten aus.</text>
+    <text xml:lang="en">You try to quantitatively analyze your architecture. Which three of the following properties can you measure reliably in your software architecture? Pick the best fitting answers.</text>
   </stem>
 
   <pickOptions>

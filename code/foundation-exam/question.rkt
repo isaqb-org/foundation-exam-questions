@@ -41,11 +41,12 @@
   #:transparent #:mutable)
 
 (struct localized-text
-  (langs+texts) ; assoc list
+  (langs+texts  ; assoc list
+   outdated) ; list of langs
   #:transparent #:mutable)
 
 (define lang/c
-  (or/c "en" "de")) ; at the moment
+  (or/c "en" "de" "es" "fr" "it" "pt" "zh")) ; at the moment
 
 (struct pick-option
   (validity ; 'distractor, or 'correct
@@ -114,7 +115,8 @@
      (index integer?)))
 
   (struct localized-text
-    ((langs+texts (listof (cons/c lang/c string?)))))
+    ((langs+texts (listof (cons/c lang/c string?)))
+     (outdated (listof lang/c))))
 
   (lang/c contract?)
 

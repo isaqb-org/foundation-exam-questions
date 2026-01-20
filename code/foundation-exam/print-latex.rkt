@@ -281,20 +281,23 @@
      (list (learning-goal-reference (curriculum-version 2025 1) (lg-number 1 1)) (learning-goal-reference (curriculum-version 2023 1) (lg-number 1 1)))
      (localized-text
       '(("de" . "\n        Wie viele Definitionen des Begriffes \"Softwarearchitektur\" gibt es?\n    ")
-        ("en" . "\n        How many definitions of “software architecture” exist?\n    ")))
+        ("en" . "\n        How many definitions of “software architecture” exist?\n    "))
+      '())
      (localized-text
       '(("de"
          .
          "\n      Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.\n    ")
         ("en"
          .
-         "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    ")))
+         "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    "))
+      '())
      (list
       (pick-option
        'distractor
        "A"
        (localized-text
-        '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
+        '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))
+        '()))
       (pick-option
        'distractor
        "B"
@@ -302,13 +305,15 @@
         '(("de"
            .
            "\n        Eine für jede Art von Softwaresystem (z. B. \"eingebettet\",\"Echtzeit\", \"Entscheidungsunterstützung\", \"Web\", \"Batch\", …).\n      ")
-          ("en" . "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))))
+          ("en" . "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))
+        '()))
       (pick-option
        'correct
        "C"
        (localized-text
         '(("de" . "\n        Ein Dutzend oder mehr unterschiedliche Definitionen.\n      ")
-          ("en" . "\n        A dozen ore more different definitions.\n      ")))))))
+          ("en" . "\n        A dozen ore more different definitions.\n      "))
+        '())))))
 
   (define q2
     (pick-question
@@ -328,44 +333,50 @@
          "\n        Welche DREI der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt? \n    ")
         ("en"
          .
-         "\n        Which THREE of the following aspects are covered by the term “software architecture”? \n    ")))
+         "\n        Which THREE of the following aspects are covered by the term “software architecture”? \n    "))
+      '())
      (localized-text
       '(("de"
          .
          "\n      Programmierkonventionen und Hardware-Sizing sind in der Regel keine Hauptbestandteile der Softwarearchitektur, da die Architektur sich auf die logische Struktur des Systems konzentriert, während diese Aspekte eher auf der Implementierungsebene und den Ressourcenanforderungen liegen. \n    ")
         ("en"
          .
-         "\n      Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.\n    ")))
+         "\n      Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.\n    "))
+      '())
      (list
       (pick-option
        'correct
        "A"
        (localized-text
-        '(("de" . "\n        Komponenten\n      ") ("en" . "\n        Components\n      "))))
+        '(("de" . "\n        Komponenten\n      ") ("en" . "\n        Components\n      ")) '()))
       (pick-option
        'correct
        "B"
        (localized-text
         '(("de" . "\n        Querschnittskonzepte\n      ")
-          ("en" . "\n        Cross-cutting concepts\n      "))))
+          ("en" . "\n        Cross-cutting concepts\n      "))
+        '()))
       (pick-option
        'correct
        "C"
        (localized-text
         '(("de" . "\n        (interne und externe) Schnittstellen\n      ")
-          ("en" . "\n        (internal and external) Interfaces\n      "))))
+          ("en" . "\n        (internal and external) Interfaces\n      "))
+        '()))
       (pick-option
        'distractor
        "D"
        (localized-text
         '(("de" . "\n        Programmierkonventionen (\"coding conventions\")\n      ")
-          ("en" . "\n        Coding conventions\n      "))))
+          ("en" . "\n        Coding conventions\n      "))
+        '()))
       (pick-option
        'distractor
        "E"
        (localized-text
         '(("de" . "\n        Hardware-Sizing\n      ")
-          ("en" . "\n        Hardware sizing\n      ")))))))
+          ("en" . "\n        Hardware sizing\n      "))
+        '())))))
   
     (define q4
     (category-question
@@ -380,36 +391,41 @@
          "\n      Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben\n      Entwickler:innen an der Dokumentation der\n      Softwarearchitektur. Welche Methoden eignen sich zur\n      Gewährleistung einer konsistenten und zweckmäßigen Dokumentation\n      und welche nicht?\n    ")
         ("en"
          .
-         "\n      In your project, three architects and seven developers are working on the\n      documentation of the software architecture. Which methods are\n      appropriate in order to achieve a consistent and adequate\n      documentation, and which are not?\n    ")))
+         "\n      In your project, three architects and seven developers are working on the\n      documentation of the software architecture. Which methods are\n      appropriate in order to achieve a consistent and adequate\n      documentation, and which are not?\n    "))
+      '())
      (localized-text
       '(("de"
          .
          "\n      Um eine konsistente und zweckmäßige Dokumentation sicherzustellen, eignet sich die Koordination durch die leitende Architekt:in sowie die Verwendung identischer Vorlagen. Die automatische Extraktion aller Teile der Dokumentation aus dem Quellcode ist weniger empfehlenswert, da dies möglicherweise nicht alle relevanten Informationen oder Kontexte berücksichtigt und die Qualität der Dokumentation beeinträchtigen kann.\n      Aspekte wie Begründungen oder Alternativen sind nicht im Code enthalten, sondern müssen in die Dokumentation aufgenommen werden, daher können nicht alle Teile der Dokumentation aus dem Quellcode extrahiert werden. \n    ")
         ("en"
          .
-         "\n      To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.\n      Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code. \n    ")))
+         "\n      To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.\n      Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code. \n    "))
+      '())
      (list
-      (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
-      (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate")))))
+      (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate")) '()))
+      (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate")) '())))
      (list
       (statement
-       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
+       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate")) '()))
        "A"
        (localized-text
         '(("de" . "\n          Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.\n        ")
-          ("en" . "\n          The lead architect coordinates the creation of the documentation.\n        "))))
+          ("en" . "\n          The lead architect coordinates the creation of the documentation.\n        "))
+        '()))
       (statement
-       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
+       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate")) '()))
        "B"
        (localized-text
         '(("de" . "\n          Für die Dokumentation werden identische Vorlagen verwendet.\n        ")
-          ("en" . "\n          Identical templates are used for the documentation.\n        "))))
+          ("en" . "\n          Identical templates are used for the documentation.\n        "))
+        '()))
       (statement
-       (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate"))))
+       (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate"))'()))
        "C"
        (localized-text
         '(("de" . "\n          Alle Teile der Dokumentation werden automatisch aus dem Quellcode extrahiert.\n        ")
-          ("en" . "\n          All parts of the documentation are automatically extracted from the source code.\n        ")))))))
+          ("en" . "\n          All parts of the documentation are automatically extracted from the source code.\n        "))
+        '())))))
     
     (write-question+explanation/language q1 "de")
     (write-question+explanation/language q2 "de")

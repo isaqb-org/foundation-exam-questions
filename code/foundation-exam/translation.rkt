@@ -94,8 +94,6 @@
 (define (text-body localized)
   (list (pcdata% (localized-text localized))))
 
-; FIXME: what if no translations are needed
-
 (define (translations->xliff-file source-language target-language filename id translations)
   (let ((trans-units
          (filter
@@ -107,30 +105,29 @@
                                (equal? "" (localized-text target-localized))
                                (not (localized-outdated? target-localized)))
                           #f ; nothing to do
-                          (element% 'trans-unit
-                                    (list (attribute% 'id (string-append id "/" (number->string index))))
-                                    (list*
-                                     (element% 'source '() (text-body source-localized))
-                                     (element% 'target '()
-                                               (list (comment "translation goes here")))
-                                     (map (lambda (localized)
-                                            (element% 'alt-trans '()
-                                                      (list
-                                                       (element% 'target
-                                                                 (list (attribute% 'xml:lang (localized-language localized)))
-                                                                 (text-body localized)))))
-                                          rest-localizeds))))))
+                          (element% 'unit
+                                    (list (attribute% 'id (string-append id "_" (number->string index))))
+                                    (list
+                                     (element% 'notes '()
+                                               (map (lambda (localized)
+                                                      (element% 'note
+                                                                (list
+                                                                 (attribute% 'appliesTo "target")
+                                                                 (attribute% 'category "translation")
+                                                                 (attribute% 'xml:lang (localized-language localized)))
+                                                                (text-body localized)))
+                                                    rest-localizeds))
+                                     (element% 'segment '()
+                                               (list
+                                                (element% 'source '() (text-body source-localized))
+                                                (element% 'target '()
+                                                          (list (comment "translation goes here"))))))))))
                   (range (length translations))
                   translations))))
     (and (pair? trans-units)
          (element% 'file
-                   (list (attribute% 'original filename)
-                         (attribute% 'source-language source-language)
-                         (attribute% 'target-language target-language)
-                         (attribute% 'datatype "plaintext"))
-                   (list (element% 'body
-                                   '()
-                                   trans-units))))))
+                   (list (attribute% 'id filename))
+                   trans-units))))
 
 (define (file->xliff source-language target-language filename)
   (let-values (((id translations) (file-collect-translations filename))
@@ -143,8 +140,10 @@
                     '())
             (element% 'xliff
                       (list
-                       (attribute% 'version "1.2")
-                       (attribute% 'xmlns "urn:oasis:names:tc:xliff:document:1.2"))
+                       (attribute% 'version "2.2")
+                       (attribute% 'xmlns "urn:oasis:names:tc:xliff:document:2.2")
+                       (attribute% 'srcLang source-language)
+                       (attribute% 'trgLang target-language))
                       (filter values
                               (map (lambda (filename)
                                      (file->xliff source-language target-language filename))

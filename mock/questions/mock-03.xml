@@ -6,7 +6,7 @@
 
   <refersToLgs>
     <!-- referencing multiple LGs should be possible -->
-    <!-- declaring the curriculum version might be helpfull when migrating
+    <!-- declaring the curriculum version might be helpful when migrating
          from one curriuculum version to another -->
     <lg curriculumVersion="2025.1" lg="03-10" />
     <lg curriculumVersion="2023.1" lg="2-4" />
@@ -84,7 +84,7 @@
       <text xml:lang="en">
         A concept might be implemented by a single building block.
       </text>
-    </option>    
+    </option>
   </pickOptions>
 
   <explanation>

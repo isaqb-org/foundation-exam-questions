@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <categoryQuestion xmlns="https://www.isaqb.org/ns/exam/foundation/v1" id="Q-17-13-05" points="2">
-  
+
   <history>
     <item date="2024-08-10">content identical to mock exam 2024.1-rev0-DE-20240202</item>
   </history>
 
   <refersToLgs>
     <!-- referencing multiple LGs should be possible -->
-    <!-- declaring the curriculum version might be helpfull when migrating
+    <!-- declaring the curriculum version might be helpful when migrating
          from one curriuculum version to another -->
-    <lg curriculumVersion="2025.1" lg="03-04" />     
+    <lg curriculumVersion="2025.1" lg="03-04" />
     <lg curriculumVersion="2023.1" lg="2-6" />
   </refersToLgs>
 
@@ -27,7 +27,7 @@
   </stem>
 
   <categoryStatements>
-  
+
     <categories>
       <category label="a">
         <text xml:lang="de">Richtig</text>
@@ -38,7 +38,7 @@
         <text xml:lang="en">false</text>
       </category>
     </categories>
-    
+
     <statements>
       <statement correctCategory="a" identifier="A">
         <text xml:lang="de">
@@ -76,7 +76,7 @@
     </statements>
 
   </categoryStatements>
-  
+
   <explanation>
     <text xml:lang="de">
       Information Hiding erhöht die Flexibilität bei Änderungen, indem es interne Details kapselt und so Änderungen innerhalb einer Komponente ermöglicht, ohne den Rest des Systems zu beeinträchtigen. Dabei wird der Zugriff auf interne Details für Aufrufer bewusst eingeschränkt, was die Modularität fördert und Abhängigkeiten reduziert. Entgegen der Behauptung, dass Information Hiding die Bottom-up-Entwicklung erschwert, kann es solche Ansätze ggfs. sogar unterstützen, indem es Entwicklern ermöglicht, isoliert an einzelnen Komponenten zu arbeiten. Die letzte Option ist falsch und irreführend. Sie hat nichts mit inkrementeller Verfeinerung zu tun und scheint eine erfundene oder irrelevante Idee zu sein.

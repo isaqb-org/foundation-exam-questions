@@ -6,7 +6,7 @@
 
   <refersToLgs>
     <!-- referencing multiple LGs should be possible -->
-    <!-- declaring the curriculum version might be helpfull when migrating
+    <!-- declaring the curriculum version might be helpful when migrating
          from one curriuculum version to another -->
     <lg curriculumVersion="2025.1" lg="01-01" />
     <lg curriculumVersion="2023.1" lg="1-1" />
@@ -73,7 +73,7 @@
 
   <explanation>
     <text xml:lang="de">
-      Programmierkonventionen und Hardware-Sizing sind in der Regel keine Hauptbestandteile der Softwarearchitektur, da die Architektur sich auf die logische Struktur des Systems konzentriert, während diese Aspekte eher auf der Implementierungsebene und den Ressourcenanforderungen liegen. 
+      Programmierkonventionen und Hardware-Sizing sind in der Regel keine Hauptbestandteile der Softwarearchitektur, da die Architektur sich auf die logische Struktur des Systems konzentriert, während diese Aspekte eher auf der Implementierungsebene und den Ressourcenanforderungen liegen.
     </text>
     <text xml:lang="en">
       Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.

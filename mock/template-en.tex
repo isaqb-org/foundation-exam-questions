@@ -1,5 +1,9 @@
 \documentclass[12pt,a4paper]{article}
 
+% Build date im Format yyyymmdd
+\newcommand{\twodigits}[1]{\ifnum#1<10 0\fi\number#1}
+\newcommand{\builddate}{\number\year\twodigits{\month}\twodigits{\day}}
+
 \newcommand{\examQuestionCountCommand}{%
   %EXAMQUESTIONCOUNT%%
 }
@@ -33,7 +37,7 @@
 
   \bigskip
 
-  Document version: {{documentVersion}}\\
+  Document version: {{documentVersion}}, \builddate\\
   Based on curriculum - version {{curriculumVersion}}
 \end{center}
 

@@ -6,7 +6,7 @@
 
   <refersToLgs>
     <!-- referencing multiple LGs should be possible -->
-    <!-- declaring the curriculum version might be helpfull when migrating
+    <!-- declaring the curriculum version might be helpful when migrating
          from one curriuculum version to another -->
     <lg curriculumVersion="2025.1" lg="04-03" />
     <lg curriculumVersion="2025.1" lg="04-05" />
@@ -55,11 +55,11 @@
     <option distractor="distractor" identifier="G">
       <text xml:lang="de">Tabellarische Schnittstellenbeschreibung</text>
       <text xml:lang="en">Tabular description of interfaces</text>
-    </option>    
+    </option>
     <option distractor="distractor" identifier="H">
       <text xml:lang="de">Klassendiagramme</text>
       <text xml:lang="en">Class diagrams</text>
-    </option>    
+    </option>
   </pickOptions>
 
   <explanation>

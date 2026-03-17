@@ -6,7 +6,7 @@
 
   <refersToLgs>
     <!-- referencing multiple LGs should is possible -->
-    <!-- declaring the curriculum version might be helpfull when migrating
+    <!-- declaring the curriculum version might be helpful when migrating
          from one curriuculum version to another -->
     <lg curriculumVersion="2025.1" lg="prerequisite" />
     <lg curriculumVersion="2025.1" lg="05-02" />
@@ -79,7 +79,7 @@ Abwesenheit.
     </text>
     <text xml:lang="en">
       Testing principles acknowledge that it’s generally impossible to find all errors in a system. Components with a history of many errors are likely to have additional faults. This is often because these areas may be particularly complex or poorly understood or can be caused by architectural issues leading to frequent changes by different people (e.g. insufficient SoC or inappropriate abstractions).
-      Testing primarily reveals the presence of errors rather than proving their absence. Contrary to some misconceptions, sufficient testing cannot guarantee a program is error-free, and functional programming indeed supports automated testing. 
+      Testing primarily reveals the presence of errors rather than proving their absence. Contrary to some misconceptions, sufficient testing cannot guarantee a program is error-free, and functional programming indeed supports automated testing.
     </text>
   </explanation>
 

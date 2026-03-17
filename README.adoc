@@ -16,6 +16,10 @@ The Mock exam is in
 link:mock/questions/[`+mock/questions+`], and there is
 a pool of contributed questions in link:pool/[`+pool+`].
 
+The latest release of the Mock exam can be found here:
+
+https://public.isaqb.org/#_examination
+
 == XML Validation
 
 Validate a single XML file:

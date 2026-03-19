@@ -49,11 +49,15 @@ jobs:
     steps:
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      - name: Test
+        run: cat ./out/mock-en.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+          name: mock-2026.1 # temporary
+          files: |
+            ./out/mock-en.pdf
+            ./out/mock-de.pdf
+            ./out/mock-de-solutions.pdf
+            ./out/mock-en-solutions.pdf

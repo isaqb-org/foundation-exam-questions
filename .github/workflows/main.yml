@@ -31,6 +31,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './out/'
+      - name: Upload GitHub regular artifact
+        uses: actions/actions/upload-artifact@v4
+        with:
+          name: mock-exam
+          path: './out/*.pdf'
 
   mock-deploy:
     environment:
@@ -47,11 +52,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: mock-build
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mock-exam
+          path: './out'
       - name: Test
         run: cat ./out/mock-en.pdf
       - name: Release
         uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
+        # if: github.ref_type == 'tag'
         with:
           name: mock-2026.1 # temporary
           files: |

@@ -32,7 +32,7 @@ jobs:
         with:
           path: './out/'
       - name: Upload GitHub regular artifact
-        uses: actions/actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: mock-exam
           path: './out/*.pdf'

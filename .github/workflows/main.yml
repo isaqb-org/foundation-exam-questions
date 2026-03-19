@@ -47,8 +47,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: mock-build
     steps:
-      - name: Create Release
-        id: create_release
       - name: Test
         run: cat ./out/mock-en.pdf
       - name: Release

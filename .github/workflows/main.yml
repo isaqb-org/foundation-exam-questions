@@ -63,7 +63,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         # if: github.ref_type == 'tag'
         with:
-          name: mock-2026.1 # temporary
+          tag_name: mock-2026.1 # temporary
           files: |
             ./out/mock-en.pdf
             ./out/mock-de.pdf

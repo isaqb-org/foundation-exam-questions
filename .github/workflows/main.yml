@@ -63,9 +63,8 @@ jobs:
         run: cat ./out/mock-en.pdf
       - name: Release
         uses: ncipollo/release-action@v1
-        # if: github.ref_type == 'tag'
+        if: github.ref_type == 'tag'
         with:
-          tag: mock-2026.1 # temporary
           artifacts: |
             ./out/mock-en.pdf
             ./out/mock-de.pdf

@@ -94,36 +94,51 @@
 (define (text-body localized)
   (list (pcdata% (localized-text localized))))
 
+(struct missing-translation
+  (source-localized
+   target-language
+   additional-localizeds)
+  #:transparent)
+
+(define (translations-missing source-language target-language translations)
+  (filter
+   values
+   (map (lambda (translation)
+          (let-values (((source-localized target-localized rest-localizeds)
+                        (partition-translation source-language target-language translation)))
+            (if (and target-localized
+                     (not (equal? "" (localized-text target-localized)))
+                     (not (localized-outdated? target-localized)))
+                #f ; nothing to do
+                (missing-translation source-localized
+                                     target-language
+                                     rest-localizeds))))
+        translations)))
+
 (define (translations->xliff-file source-language target-language filename id translations)
-  (let ((trans-units
-         (filter
-             values
-             (map (lambda (index translation)
-                    (let-values (((source-localized target-localized rest-localizeds)
-                                  (partition-translation source-language target-language translation)))
-                      (if (and target-localized
-                               (equal? "" (localized-text target-localized))
-                               (not (localized-outdated? target-localized)))
-                          #f ; nothing to do
-                          (element% 'unit
-                                    (list (attribute% 'id (string-append id "_" (number->string index))))
-                                    (list
-                                     (element% 'notes '()
-                                               (map (lambda (localized)
-                                                      (element% 'note
-                                                                (list
-                                                                 (attribute% 'appliesTo "target")
-                                                                 (attribute% 'category "translation")
-                                                                 (attribute% 'xml:lang (localized-language localized)))
-                                                                (text-body localized)))
-                                                    rest-localizeds))
-                                     (element% 'segment '()
-                                               (list
-                                                (element% 'source '() (text-body source-localized))
-                                                (element% 'target '()
-                                                          (list (comment "translation goes here"))))))))))
-                  (range (length translations))
-                  translations))))
+  (let* ((missing-translations
+          (translations-missing source-language target-language translations))
+         (trans-units
+          (map (lambda (index missing)
+                 (element% 'unit
+                           (list (attribute% 'id (string-append id "_" (number->string index))))
+                           (list
+                            (element% 'notes '()
+                                      (map (lambda (localized)
+                                             (element% 'note
+                                                       (list
+                                                        (attribute% 'appliesTo "target")
+                                                        (attribute% 'category "translation")
+                                                        (attribute% 'xml:lang (localized-language localized)))
+                                                       (text-body localized)))
+                                           (missing-translation-additional-localizeds missing)))
+                            (element% 'segment '()
+                                      (list
+                                       (element% 'source '() (text-body (missing-translation-source-localized missing)))
+                                       (element% 'target '()
+                                                 (list (comment "translation goes here"))))))))
+               (range (length missing-translations))
+               missing-translations)))
     (and (pair? trans-units)
          (element% 'file
                    (list (attribute% 'id filename))

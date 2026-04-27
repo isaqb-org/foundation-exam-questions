@@ -150,3 +150,13 @@
                                    filenames)))
             '()))
 
+(define (generate-xliff source-language target-languages filenames output-path-prefix)
+  (for-each (lambda (target-language)
+              (let ((document (files->xliff-document source-language target-language filenames)))
+                (call-with-output-file
+                  (let-values (((name base must-be-dir?) (split-path output-path-prefix)))
+                    (build-path name (string-append (path->string base) "-" target-language ".xml")))
+                  (lambda (port)
+                    (display-xml document port))
+                  #:exists 'replace)))
+            target-languages))

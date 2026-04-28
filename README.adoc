@@ -3,6 +3,13 @@
 This repository contains information and code for the iSAQB Foundation
 exam.  It is also the home of the official iSAQB Foundation Mock exam.
 
+== Interactive Online Practice                                                                                                                    
+
+Take the mock exam interactively in your browser:                                                                                                 
+
+* https://enyineer.github.io/isaqb-exam/[iSAQB Exam Practice] - community-built exam trainer                                                      
+* https://johanneswseitz.codeberg.page/isaqb-foundation-mock-exam/[iSAQB Foundation Mock Exam] - another community practice tool                  
+
 == XML Schema
 
 The RELAX NG XML Schema (`+exam.rng+`) is good enough for creating examples and

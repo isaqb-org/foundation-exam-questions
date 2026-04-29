@@ -7,7 +7,7 @@
 
   <refersToLgs>
     <lg curriculumVersion="2025.1" lg="04-02" />
- 
+
   </refersToLgs>
 
   <stem>
@@ -36,7 +36,7 @@
     <statements>
       <statement correctCategory="a" identifier="A">
         <text xml:lang="de">
-          Anwenderinnen
+          Anwender:innen
         </text>
         <text xml:lang="en">
           Users
@@ -44,7 +44,7 @@
       </statement>
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">
-          Auftraggeber
+          Auftraggeber:innen
         </text>
         <text xml:lang="en">
           Clients
@@ -76,7 +76,7 @@
       </statement>
       <statement correctCategory="a" identifier="F">
         <text xml:lang="de">
-          Business-Analyst
+          Business-Analyst:innen
         </text>
         <text xml:lang="en">
           Business analysts

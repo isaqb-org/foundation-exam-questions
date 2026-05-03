@@ -31,6 +31,9 @@
       appropriate in order to achieve a consistent and adequate
       documentation, and which are not?
     </text>
+    <text xml:lang="zh">
+      在您的项目中，有三位架构师和七位开发人员正在进行软件架构的文档编写。哪些方法适合确保文档的一致性和适用性，哪些方法不适合？
+    </text>
   </stem>
 
   <categoryStatements>
@@ -39,10 +42,12 @@
       <category label="a">
         <text xml:lang="de">Geeignet</text>
         <text xml:lang="en">appropriate</text>
+        <text xml:lang="zh">适合</text>
       </category>
       <category label="b">
         <text xml:lang="de">Nicht geeignet</text>
         <text xml:lang="en">not appropriate</text>
+        <text xml:lang="zh">不适合</text>
       </category>
     </categories>
 
@@ -54,6 +59,9 @@
         <text xml:lang="en">
           The lead architect coordinates the creation of the documentation.
         </text>
+        <text xml:lang="zh">
+          首席架构师协调文档的创建。
+        </text>
       </statement>
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">
@@ -62,6 +70,9 @@
         <text xml:lang="en">
           Identical templates are used for the documentation.
         </text>
+        <text xml:lang="zh">
+          文档使用相同的模板进行编写。
+        </text>
       </statement>
       <statement correctCategory="b" identifier="C">
         <text xml:lang="de">
@@ -69,6 +80,9 @@
         </text>
         <text xml:lang="en">
           All parts of the documentation are automatically extracted from the source code.
+        </text>
+        <text xml:lang="zh">
+          文档的所有部分都从源代码中自动提取。
         </text>
       </statement>
     </statements>
@@ -83,6 +97,10 @@
     <text xml:lang="en">
       To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.
       Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code.
+    </text>
+    <text xml:lang="zh">
+      为了确保文档的一致性和适用性，由首席架构师进行协调管理以及使用统一的模板，是较为合适的做法。而将文档的所有部分都从源代码中自动提取出来则不太值得推荐，因为这种方式可能无法涵盖所有相关的信息与上下文，从而影响文档的质量。
+      诸如设计理由或备选方案这类内容并不会包含在代码之中，而是必须额外写入文档，因此，不可能将文档的所有内容都完全从源代码中提取出来。
     </text>
   </explanation>
 

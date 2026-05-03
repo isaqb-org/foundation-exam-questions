@@ -17,32 +17,41 @@
     <text xml:lang="en">
       Which of the following points are best suited to support the qualitative evaluation of a software architecture with regard to the fulfillment of quality requirements?
     </text>
+    <text xml:lang="zh">
+      以下哪些要点最适合用于支持从质量需求的满足程度这一角度，对软件架构进行定性评估？
+    </text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Quantitative Abhängigkeitsanalyse.</text>
       <text xml:lang="en">Quantitative dependency analysis.</text>
+      <text xml:lang="zh">量化依赖分析。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Architekturmodelle.</text>
       <text xml:lang="en">Architecture models.</text>
+      <text xml:lang="zh">架构模型。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Qualitätsszenarien.</text>
       <text xml:lang="en">Quality scenarios.</text>
+      <text xml:lang="zh">质量场景。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Teamgröße.</text>
       <text xml:lang="en">Team size.</text>
+      <text xml:lang="zh">团队规模。</text>
     </option>
     <option correct="correct" identifier="E">
       <text xml:lang="de">Logdateien.</text>
       <text xml:lang="en">Log files.</text>
+      <text xml:lang="zh">日志文件。</text>
     </option>
     <option distractor="distractor" identifier="F">
       <text xml:lang="de">Organigramm.</text>
       <text xml:lang="en">Organizational structure.</text>
+      <text xml:lang="zh">组织结构。</text>
     </option>
   </pickOptions>
 
@@ -52,6 +61,9 @@
     </text>
     <text xml:lang="en">
       The analysis of quality requirements is best supported by technical and architectural artifacts. Quantitative metrics, architecture models, concrete quality scenarios and runtime information from logs provide objective data for analysis. Organizational aspects like team size or organizational structure are less relevant for technical quality analysis.
+    </text>
+    <text xml:lang="zh">
+      对质量需求的分析，最适合通过技术性和架构性的工件来加以支持。量化指标、架构模型、具体的质量场景以及来自日志的运行时信息，都能够为分析提供客观的数据。相比之下，团队规模或组织结构图这类组织层面的因素，对于技术性的质量分析则相关性较低。
     </text>
   </explanation>
 </pickQuestion>

@@ -12,34 +12,41 @@
   <stem>
     <text xml:lang="de">Welche Aussagen zum „Don't repeat yourself"-Prinzip (DRY) treffen am ehesten zu? Anders gesagt: Was könnte passieren, wenn Teile des Quellcodes oder der Konfiguration im System mehrfach vorhanden sind?</text>
     <text xml:lang="en">Which statements about the principle "Don't repeat yourself" (DRY) fit best? In other words: What could happen, if parts of the source code or configuration do exist in multiple copies in the system?</text>
+    <text xml:lang="zh">关于“不要重复自己”（DRY）原则，哪些说法最合适？换句话说：如果系统中的源代码或配置存在多个副本，可能会发生什么？</text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">DRY verringert die Sicherheit.</text>
       <text xml:lang="en">DRY reduces security.</text>
+      <text xml:lang="zh">DRY原则会降低信息安全。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Die strenge Einhaltung von DRY könnte zu höherer Kopplung führen.</text>
       <text xml:lang="en">Strict adherence to DRY could lead to higher coupling.</text>
+      <text xml:lang="zh">严格遵循DRY原则可能导致更高的耦合度。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Die Komponenten des Systems mit redundantem Code können unabhängig voneinander verbessert werden.</text>
       <text xml:lang="en">The components of the system that contain redundant code can be improved independently of each other.</text>
+      <text xml:lang="zh">系统中包含冗余代码的组件可以独立于彼此进行改进。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Die Einhaltung von DRY führt zu einer Verringerung der Angriffsvektoren in der IT-Sicherheit.</text>
       <text xml:lang="en">Adherence to DRY leads to additional attack vectors in IT security.</text>
+      <text xml:lang="zh">遵循DRY原则会导致IT信息安全中出现额外的攻击向量。</text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">Die Anwendung der Schichtenmuster ermöglicht eine konsistente Anwendung des DRY-Prinzips.</text>
       <text xml:lang="en">Applying the Layer patterns allows a consistent application of the DRY principle.</text>
+      <text xml:lang="zh">应用分层模式能够使DRY原则得到一致的贯彻。</text>
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">Während das DRY-Prinzip generell eine gute Praxis ist, kann eine zu strenge Anwendung zu unerwünschten Abhängigkeiten zwischen Komponenten führen (erhöhte Kopplung). Redundanter Code ermöglicht zwar unabhängige Änderungen, erschwert aber die Wartung. Die anderen Optionen stellen keine korrekten Zusammenhänge zwischen DRY und Sicherheit bzw. Architekturmustern her.</text>
     <text xml:lang="en">While the DRY principle is generally good practice, strict adherence can lead to unwanted dependencies between components (increased coupling). Redundant code allows for independent changes but makes maintenance more difficult. The other options do not establish correct relationships between DRY and security or architectural patterns.</text>
+    <text xml:lang="zh">虽然 DRY 原则总体上是一种良好的实践，但如果执行得过于严格，可能会在组件之间引入不必要的依赖关系（即增强耦合度）。冗余代码虽然能够支持彼此独立的变更，但会增加维护难度。其余选项都没有正确建立起 DRY 与信息安全或架构模式之间的关系。</text>
   </explanation>
 
 </pickQuestion>

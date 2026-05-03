@@ -16,32 +16,40 @@
     <text xml:lang="en">
       There are many approaches that lead to a software architecture. Which of the following are the most often found in practice?
     </text>
+    <text xml:lang="zh">
+      有很多方法可以用来设计开发软件架构。以下哪些在实践中最常见？
+    </text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">User-Interface Driven Design</text>
       <text xml:lang="en">User interface driven design</text>
+      <text xml:lang="zh">用户界面驱动设计</text>
     </option>
 
     <option correct="correct" identifier="B">
       <text xml:lang="de">Domain-driven Design</text>
       <text xml:lang="en">Domain driven design</text>
+      <text xml:lang="zh">领域驱动设计</text>
     </option>
 
     <option correct="correct" identifier="C">
       <text xml:lang="de">Sichtenbasierte Architekturentwicklung</text>
       <text xml:lang="en">View based architecture development</text>
+      <text xml:lang="zh">基于视图的架构开发</text>
     </option>
 
     <option correct="correct" identifier="D">
       <text xml:lang="de">Bottom-up Design</text>
       <text xml:lang="en">Bottom-up design</text>
+      <text xml:lang="zh">自下而上设计</text>
     </option>
 
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">Mehrheitsentscheid</text>
       <text xml:lang="en">Majority voting</text>
+      <text xml:lang="zh">多数票表决</text>
     </option>
   </pickOptions>
 
@@ -51,6 +59,9 @@
     </text>
     <text xml:lang="en">
       Domain-driven design, view-based architecture development and bottom-up design are established and frequently used approaches in practice. User interface driven design is not a common architectural approach since the user interface represents only one aspect of the system and should not serve as the primary driver for architectural decisions. Majority voting is not a method for architecture development, but at best a decision-making process.
+    </text>
+    <text xml:lang="zh">
+      领域驱动设计、基于视图的架构开发和自下而上设计，都是实践中成熟且经常使用的方法。用户界面驱动设计并不是一种常见的架构方法，因为用户界面只代表系统的一个方面，不应作为架构决策的主要驱动因素。多数票表决不是一种架构开发方法，充其量只能算是一种决策形成过程。
     </text>
   </explanation>
 </pickQuestion>

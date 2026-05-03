@@ -12,6 +12,7 @@
   <stem>
     <text xml:lang="de">Welche der folgenden Aussagen zu Architekturentscheidungen sind wahr, welche falsch?</text>
     <text xml:lang="en">Which of the following statements regarding architecture decisions are true, which are false?</text>
+    <text xml:lang="zh">以下关于架构决策的陈述哪些是正确的，哪些是错误的？</text>
   </stem>
 
   <categoryStatements>
@@ -19,10 +20,12 @@
       <category label="a">
         <text xml:lang="de">Wahr</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
 
@@ -30,21 +33,25 @@
       <statement correctCategory="b" identifier="A">
         <text xml:lang="de">Architekturentscheidungen müssen nie aufgeschrieben werden, da diese bereits dem Entwicklungsteam bekannt sind.</text>
         <text xml:lang="en">Architecture decisions never need to be written down because they are already known to the development team.</text>
+        <text xml:lang="zh">架构决策永远不需要被书面记录下来，因为它们已经被为开发团队所知。</text>
       </statement>
 
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">Architecture Decision Records helfen dabei, Entscheidungen in ihrem Kontext nachzuvollziehen.</text>
         <text xml:lang="en">An architecture decision record helps to make the decision's context understood.</text>
+        <text xml:lang="zh">架构决策记录有助于理解决策的背景。</text>
       </statement>
 
       <statement correctCategory="b" identifier="C">
         <text xml:lang="de">Nachdem man sich für ein zentrales Framework (z.B. Persistenzframework) entschieden hat, darf diese Entscheidung nicht mehr geändert werden.</text>
         <text xml:lang="en">Once a decision has been made on a central or fundamental framework (e.g. persistence framework), that decision must not be changed.</text>
+        <text xml:lang="zh">一旦决定采用某个核心框架（例如持久化框架），这一决策就不允许再变更。</text>
       </statement>
 
       <statement correctCategory="a" identifier="D">
         <text xml:lang="de">Qualitätsanforderungen helfen maßgeblich bei Architekturentscheidungen.</text>
         <text xml:lang="en">Quality requirements help significantly with architecture decisions.</text>
+        <text xml:lang="zh">质量需求对架构决策有很大帮助。</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -52,6 +59,7 @@
   <explanation>
     <text xml:lang="de">Architekturentscheidungen sollten dokumentiert werden, da das Team sich ändern kann und die Gründe für Entscheidungen über die Zeit vergessen werden können. ADRs (Architecture Decision Records) sind ein bewährtes Mittel, um den Kontext und die Begründung von Entscheidungen festzuhalten. Entscheidungen, auch zu grundlegenden Frameworks, können sich im Laufe der Zeit ändern, wenn sich die Anforderungen oder der Kontext ändern. Qualitätsanforderungen sind ein wichtiger Treiber für Architekturentscheidungen, da sie oft bestimmen, welche architektonischen Lösungen am besten geeignet sind.</text>
     <text xml:lang="en">Architecture decisions should be documented as team members may change and the reasons for decisions can be forgotten over time. ADRs (Architecture Decision Records) are a proven way to capture the context and rationale of decisions. Decisions, even about fundamental frameworks, can change over time as requirements or context evolve. Quality requirements are a key driver for architecture decisions as they often determine which architectural solutions are most appropriate.</text>
+    <text xml:lang="zh">架构决策应该被书面记录下来，因为团队成员可能会发生变化，而且随着时间的推移，作出这些决策的原因也可能被遗忘。ADR（架构决策记录）是一种经过验证的有效手段，用于保存决策的背景和理由。即使是关于基础框架的决策，也可能在需求或北京发生变化时，随着时间的推移在后期发生调整。质量需求是推动架构决策的关键因素，因为它们往往决定了哪些架构解决方案最为合适。</text>
   </explanation>
 
 </categoryQuestion>

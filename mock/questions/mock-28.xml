@@ -14,6 +14,7 @@
   <stem>
     <text xml:lang="de">Welche der folgenden Aussagen zu Notationen für Architektursichten sind richtig und welche falsch?</text>
     <text xml:lang="en">Which of the following statements about notations for architectural views is true and which is false?</text>
+    <text xml:lang="zh">以下关于架构视图符号的陈述哪些正确，哪些错误？</text>
   </stem>
 
   <categoryStatements>
@@ -21,10 +22,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
 
@@ -32,18 +35,22 @@
       <statement correctCategory="b" identifier="A">
         <text xml:lang="de">Business Process Model &amp; Notation (BPMN) sollte nur von Business-Analysten und nicht zur Architekturdokumentation verwendet werden.</text>
         <text xml:lang="en">Business Process Model &amp; Notation (BPMN) should only be used by Business Analysts and not for architecture documentation.</text>
+        <text xml:lang="zh">业务流程模型和符号（BPMN）应该仅由业务分析人员使用，而不是用于架构文档。</text>
       </statement>
       <statement correctCategory="b" identifier="B">
         <text xml:lang="de">UML-Verteilungsdiagramme sind die einzige Möglichkeit zur Dokumentation des Mappings der Softwarekomponenten in Bezug auf die Infrastruktur.</text>
         <text xml:lang="en">UML deployment models are the only way to document the mapping of software components to infrastructure.</text>
+        <text xml:lang="zh">UML部署模型是记录软件组件与基础设施映射的唯一方式。</text>
       </statement>
       <statement correctCategory="a" identifier="C">
         <text xml:lang="de">UML-Paketdiagramme können zum Festhalten der Bausteinsicht der Softwarearchitektur verwendet werden.</text>
         <text xml:lang="en">UML Package Diagrams can be used to capture the building-block view of software architectures.</text>
+        <text xml:lang="zh">UML包图可以用于记录软件架构的构建件视图。</text>
       </statement>
       <statement correctCategory="a" identifier="D">
         <text xml:lang="de">Solange die Notation (z. B. mithilfe einer Legende) erläutert wird, kann eine beliebige Notation ausreichen, um Bausteinstrukturen und Zusammenarbeit zu beschreiben.</text>
         <text xml:lang="en">As long as the notation is explained (e.g. by a legend), any notation can be sufficient to describe building block structures and collaboration.</text>
+        <text xml:lang="zh">只要符号得到解释（例如通过图例），任何符号都足以描述构建件的结构和相互之间的协作。</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -53,5 +60,8 @@
       BPMN kann durchaus für die Architekturdokumentation verwendet werden, insbesondere für Laufzeitsichten. UML-Verteilungsdiagramme sind eine von mehreren Möglichkeiten, das Mapping von Software auf Infrastruktur zu dokumentieren. UML-Paketdiagramme sind tatsächlich eine gängige Möglichkeit, Bausteinsichten darzustellen. Eine beliebige Notation kann ausreichend sein, solange sie angemessen dokumentiert und erklärt wird.</text>
     <text xml:lang="en">
       BPMN can indeed be used for architecture documentation, especially for runtime views. UML deployment diagrams are one of several ways to document the mapping of software to infrastructure. UML package diagrams are indeed a common way to represent building block views. Any notation can be sufficient as long as it is properly documented and explained.</text>
+    <text xml:lang="zh">
+      BPMN可以用于架构文档，特别是运行时视图。UML部署图是记录软件到基础设施映射的几种方式之一。UML包图确实是表示构建块视图的常见方式。只要记录和说明足够恰当，任意一种符号和表示法都有可能是足够的。
+    </text>
   </explanation>
 </categoryQuestion>

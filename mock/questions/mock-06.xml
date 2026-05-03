@@ -23,6 +23,9 @@
     <text xml:lang="en">
       Which of the following principles apply to testing?
     </text>
+    <text xml:lang="zh">
+      以下哪些原则适用于测试？
+    </text>
   </stem>
 
   <pickOptions>
@@ -32,6 +35,9 @@
       </text>
       <text xml:lang="en">
         In general, it is not possible to discover all errors in the system.
+      </text>
+      <text xml:lang="zh">
+        一般来说，不可能发现系统中的所有错误。
       </text>
     </option>
     <option correct="correct" identifier="B">
@@ -43,6 +49,9 @@ zusätzliche Fehler hoch.
         In components with many known previous errors, the chances for additional errors are
 high.
       </text>
+      <text xml:lang="zh">
+        对于那些已知存在大量历史缺陷的组件，出现额外新缺陷的可能性通常也会较高。
+      </text>
     </option>
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">
@@ -51,6 +60,9 @@ ist.
       </text>
       <text xml:lang="en">
         Sufficient testing can show that a program is free of errors.
+      </text>
+      <text xml:lang="zh">
+        通过足够充分的测试可以证明程序没有错误。
       </text>
     </option>
     <option correct="correct" identifier="D">
@@ -61,6 +73,9 @@ Abwesenheit.
       <text xml:lang="en">
         Testing shows the existence of errors rather than the absence of errors.
       </text>
+      <text xml:lang="zh">
+        测试只能发现错误的存在，而不能证明错误不存在。
+      </text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">
@@ -68,6 +83,9 @@ Abwesenheit.
       </text>
       <text xml:lang="en">
         Functional programming does not allow automated testing.
+      </text>
+      <text xml:lang="zh">
+        函数式编程不允许自动化测试。
       </text>
     </option>
   </pickOptions>
@@ -80,6 +98,11 @@ Abwesenheit.
     <text xml:lang="en">
       Testing principles acknowledge that it’s generally impossible to find all errors in a system. Components with a history of many errors are likely to have additional faults. This is often because these areas may be particularly complex or poorly understood or can be caused by architectural issues leading to frequent changes by different people (e.g. insufficient SoC or inappropriate abstractions).
       Testing primarily reveals the presence of errors rather than proving their absence. Contrary to some misconceptions, sufficient testing cannot guarantee a program is error-free, and functional programming indeed supports automated testing.
+    </text>
+    <text xml:lang="zh">
+      原则上，在一个并非简单琐碎的系统中，要找出所有错误是不可能的。那些过去已经包含大量缺陷的组件，往往也更有可能继续隐藏着额外的错误。这通常是因为这些组件本身特别复杂、难以理解，或者存在架构层面的问题，导致其经常需要由不同人员反复修改（例如职责分离不足，即SoC不充分，或抽象层次设计不当）。
+      测试的首要目标在于揭示错误的存在，而不是证明错误不存在。与某些常见误解相反，即使进行了足够充分的测试，也无法保证一个程序完全没有缺陷。
+      此外，函数式编程实际上是支持自动化测试的。
     </text>
   </explanation>
 

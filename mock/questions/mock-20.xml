@@ -12,28 +12,34 @@
   <stem>
     <text xml:lang="de">Welche Voraussetzungen müssen vor der Entwicklung einer Softwarearchitektur erfüllt sein? Wählen Sie die passendsten Antworten aus.</text>
     <text xml:lang="en">Which prerequisites have to be fulfilled before developing a software architecture? Pick the most appropriate answers.</text>
+    <text xml:lang="zh">在开发软件架构之前，必须满足哪些先决条件？请选择最合适的答案。</text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Die Anforderungsspezifikation für das System ist vollständig, detailliert und konsistent.</text>
       <text xml:lang="en">The requirements specification for the system is complete, detailed and consistent.</text>
+      <text xml:lang="zh">系统的需求规范是完整、详细和一致的。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Die wichtigsten Qualitätsanforderungen an das System sind bekannt.</text>
       <text xml:lang="en">The most important qualities for the system are known.</text>
+      <text xml:lang="zh">系统最重要的质量需求是已知的。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Die organisatorischen Randbedingungen sind bekannt.</text>
       <text xml:lang="en">Organizational constraints are known.</text>
+      <text xml:lang="zh">组织上的约束限制条件是已知的。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Die Programmiersprache wurde ausgewählt.</text>
       <text xml:lang="en">The programming language has been selected.</text>
+      <text xml:lang="zh">编程语言已经选定。</text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">Die Hardware für das Entwicklungsteam ist verfügbar.</text>
       <text xml:lang="en">Hardware for the development team is available.</text>
+      <text xml:lang="zh">开发团队的硬件是可用的。</text>
     </option>
   </pickOptions>
 
@@ -47,6 +53,11 @@
       The most important prerequisites for developing a software architecture are knowledge of the essential quality requirements and organizational constraints. A complete, detailed requirements specification is unrealistic in most cases and not necessary - often an overview and knowledge of certain details (e.g. quality requirements) is sufficient.
 
       The choice of programming language and availability of hardware for the development team are rather technical implementation details that sometimes may be not yet relevant for fundamental architectural decisions. These decisions can and often should only be made after the fundamental architectural decisions.
+    </text>
+    <text xml:lang="zh">
+      开发软件架构的最重要的先决条件是了解系统的基本质量需求和组织上的边界条件。完整、详细的需求规范在大多数情况下是既不现实，也并非必要，通常只需要具备总体性的了解以及掌握某些特定细节（例如质量需求）就已经足够了。
+
+      编程语言的选择以及开发团队可用硬件的情况，更多属于技术实现层面的细节，对于基础性的架构决策而言，未必在一开始就是相关的。这些决定往往可以并且也应当在完成基本架构决策之后再作出。
     </text>
   </explanation>
 

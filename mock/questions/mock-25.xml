@@ -12,6 +12,7 @@
   <stem>
     <text xml:lang="de">Was sind die Eigenschaften von enger (hoher) bzw. loser (niedriger) Kopplung?</text>
     <text xml:lang="en">What are characteristics of tight (high) or loose (low) coupling?</text>
+    <text xml:lang="zh">紧（高）耦合和松（低）耦合的特征是什么？</text>
   </stem>
 
   <categoryStatements>
@@ -19,10 +20,12 @@
       <category label="a">
         <text xml:lang="de">enge Kopplung</text>
         <text xml:lang="en">tight coupling</text>
+        <text xml:lang="zh">紧耦合</text>
       </category>
       <category label="b">
         <text xml:lang="de">lose Kopplung</text>
         <text xml:lang="en">loose coupling</text>
+        <text xml:lang="zh">松耦合</text>
       </category>
     </categories>
 
@@ -30,18 +33,22 @@
       <statement correctCategory="a" identifier="A">
         <text xml:lang="de">Bausteine können abhängige Bausteine direkt, d.h. ohne Umwege über Schnittstellen oder Abstraktionen, aufrufen.</text>
         <text xml:lang="en">Building blocks directly call dependent building blocks, i.e., without using indirect calls via interfaces or abstractions.</text>
+        <text xml:lang="zh">构建块直接调用依赖的构建块，即不通过接口或抽象进行间接调用。</text>
       </statement>
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">Bausteine verwenden gemeinsame komplexe Datenstrukturen.</text>
         <text xml:lang="en">Building blocks use shared complex data structures.</text>
+        <text xml:lang="zh">构建块使用共享的复杂数据结构。</text>
       </statement>
       <statement correctCategory="a" identifier="C">
         <text xml:lang="de">Bausteine verwenden eine gemeinsame Tabelle (für Schreib- und Leseoperationen) innerhalb einer relationalen Datenbank.</text>
         <text xml:lang="en">Building blocks use a shared table (for read- and write operations) within a relational database.</text>
+        <text xml:lang="zh">构建块在关系数据库中使用共享表（用于读写操作）。</text>
       </statement>
       <statement correctCategory="b" identifier="D">
         <text xml:lang="de">Beim Baustein-Design haben Sie das Dependency-Inversion-Prinzip konsequent umgesetzt.</text>
         <text xml:lang="en">When designing building blocks, you have consistently applied the dependency inversion principle.</text>
+        <text xml:lang="zh">在设计构建块时，一直遵循依赖倒置原则。</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -49,6 +56,7 @@
   <explanation>
     <text xml:lang="de">Enge Kopplung entsteht durch direkte Abhängigkeiten zwischen Bausteinen, gemeinsam genutzte komplexe Datenstrukturen und gemeinsam genutzte Ressourcen wie Datenbanktabellen. Diese Art der Kopplung macht das System schwerer zu ändern und zu warten. Lose Kopplung wird durch die Anwendung von Prinzipien wie dem Dependency-Inversion-Prinzip erreicht, bei dem Abhängigkeiten über Abstraktionen erfolgen. Dies ermöglicht eine bessere Wartbarkeit und Flexibilität des Systems.</text>
     <text xml:lang="en">Tight coupling occurs through direct dependencies between building blocks, shared complex data structures, and shared resources like database tables. This type of coupling makes the system harder to change and maintain. Loose coupling is achieved through the application of principles like the Dependency Inversion Principle, where dependencies are managed through abstractions. This enables better maintainability and flexibility of the system.</text>
+    <text xml:lang="zh">紧耦合是由于构建块之间的直接依赖、共享的复杂数据结构以及共享资源（如数据库表）造成的。这种类型的耦合使得系统更难变更和维护。松耦合则是通过应用诸如依赖倒置原则之类的方法来实现的，在这种情况下，依赖关系通过抽象来建立。这样便能够提升系统的可维护性和灵活性。</text>
   </explanation>
 
 </categoryQuestion>

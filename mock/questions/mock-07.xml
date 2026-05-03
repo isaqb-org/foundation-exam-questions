@@ -24,6 +24,9 @@
     <text xml:lang="en">
       Which of the following statements regarding the information hiding principle are true and which are false?
     </text>
+    <text xml:lang="zh">
+      以下是关于信息隐藏原则的陈述，哪些是正确的，哪些是错误的？
+    </text>
   </stem>
 
   <categoryStatements>
@@ -32,10 +35,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
 
@@ -47,6 +52,9 @@
         <text xml:lang="en">
           Adhering to the information hiding principle increases flexibility for modifications.
         </text>
+        <text xml:lang="zh">
+          遵循信息隐藏原则可以增加变更的灵活性。
+        </text>
       </statement>
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">
@@ -54,6 +62,9 @@
         </text>
         <text xml:lang="en">
           Information hiding involves deliberately hiding information from callers or consumers of the building block.
+        </text>
+        <text xml:lang="zh">
+          在信息隐藏中，会有意地将某些信息对构建块的调用者或使用者隐藏起来。
         </text>
       </statement>
       <statement correctCategory="b" identifier="C">
@@ -63,6 +74,9 @@
         <text xml:lang="en">
           Information hiding makes it harder to work bottom-up.
         </text>
+        <text xml:lang="zh">
+          信息隐藏使得自下而上（Bottom-Up）的开发方式变得更加困难。
+        </text>
       </statement>
       <statement correctCategory="b" identifier="D">
         <text xml:lang="de">
@@ -70,6 +84,9 @@
         </text>
         <text xml:lang="en">
           Information hiding is a derivative of the approach of incremental refinement along the control flow.
+        </text>
+        <text xml:lang="zh">
+          信息隐藏是从沿控制流进行增量细化的方法衍生出来的。
         </text>
       </statement>
 
@@ -83,6 +100,11 @@
     </text>
     <text xml:lang="en">
       Information hiding increases flexibility for modifications by encapsulating internal details, allowing changes within a component without affecting the rest of the system. It involves deliberately restricting access to internal details from callers, promoting modularity and reducing dependencies. Contrary to the claim that information hiding makes bottom-up development harder, it actually might supports such approaches by enabling developers to work on individual components in isolation. The last option is incorrect and misleading, as it is not related to incremental refinement and appears to be a fabricated or irrelevant idea.
+    </text>
+    <text xml:lang="zh">
+      信息隐藏通过封装内部细节来增加发生变更时的灵活性，使得组件内部的修改不会影响系统的其他部分。为此，它有意识地限制调用者对内部细节的访问，从而增强模块化程度并减少不必要依赖关系。
+      与信息隐藏会使得自下而上开发更困难的说法相反，它在某些情况下甚至能够支持这种开发方法，因为它允许开发人员在清晰边界下相对独立地实现和测试单个组件。
+      最后一个选项是错误且具有误导性的，因为它与增量细化并无关联，看起来更像是一个凭空拼凑出来、与该概念无关的说法。
     </text>
   </explanation>
 

@@ -16,6 +16,9 @@
     <text xml:lang="en">
       What are your most important responsibilities as a software architect with respect to requirements?
     </text>
+    <text xml:lang="zh">
+      作为软件架构师，您在需求方面的最重要职责是什么？
+    </text>
   </stem>
 
   <pickOptions>
@@ -26,6 +29,9 @@
       <text xml:lang="en">
         Support the business people to specify explicit and concrete quality requirements.
       </text>
+      <text xml:lang="zh">
+        支持业务人员将质量需求具体且明确地表述出来。
+      </text>
     </option>
 
     <option correct="correct" identifier="B">
@@ -34,6 +40,9 @@
       </text>
       <text xml:lang="en">
         Help to identify new business opportunities based on your technology know-how.
+      </text>
+      <text xml:lang="zh">
+        基于您的技术知识，帮助识别新的业务机会。
       </text>
     </option>
 
@@ -44,6 +53,9 @@
       <text xml:lang="en">
         Reject business requirements that contain technical risks.
       </text>
+      <text xml:lang="zh">
+        拒绝包含技术风险的业务需求。
+      </text>
     </option>
 
     <option distractor="distractor" identifier="D">
@@ -52,6 +64,9 @@
       </text>
       <text xml:lang="en">
         Capture all business requirements in a terminology that can be understood by your development team.
+      </text>
+      <text xml:lang="zh">
+        将所有业务需求转换为开发团队能够理解的表述方式。
       </text>
     </option>
 
@@ -62,6 +77,9 @@
       <text xml:lang="en">
         Check requirements for technological feasibility.
       </text>
+      <text xml:lang="zh">
+        检查需求的技术可行性。
+      </text>
     </option>
   </pickOptions>
 
@@ -71,6 +89,10 @@
     </text>
     <text xml:lang="en">
       The main responsibilities of software architects regarding requirements are: 1) Supporting the concrete formulation of quality requirements, as these are often defined too vaguely, 2) Using technical knowledge to identify new business opportunities, and 3) Checking technical feasibility. It is not their task to reject requirements just because they contain technical risks - instead, these risks should be communicated and discussed. Also, completely reformulating all business requirements is not purposeful as this could lead to loss of information or misunderstandings.
+    </text>
+    <text xml:lang="zh">
+      软件架构师在需求方面的主要职责是：1）协助对质量需求进行具体化表述，因为这类需求往往定义得过于模糊；2）利用技术知识识别新的业务机会；3）审查技术可行性。而仅仅因为技术风险就直接否定需求，并不是软件架构师的职责——相反，这些风险应该被沟通并加以讨论。
+      同样，将所有业务需求全部重新表述也并非合适的做法，因为这可能导致信息丢失或产生误解。
     </text>
   </explanation>
 </pickQuestion>

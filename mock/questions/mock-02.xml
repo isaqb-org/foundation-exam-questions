@@ -23,7 +23,9 @@
     <text xml:lang="en">
         Which of the following aspects are covered by the term “software architecture”?
     </text>
-
+    <text xml:lang="zh">
+        以下哪些方面包含在术语“软件架构”内？
+    </text>
   </stem>
 
   <pickOptions>
@@ -34,7 +36,9 @@
       <text xml:lang="en">
         Components
       </text>
-
+      <text xml:lang="zh">
+        组件
+      </text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">
@@ -42,6 +46,9 @@
       </text>
       <text xml:lang="en">
         Cross-cutting concepts
+      </text>
+      <text xml:lang="zh">
+        横切概念
       </text>
     </option>
     <option correct="correct" identifier="C">
@@ -51,6 +58,9 @@
       <text xml:lang="en">
         (internal and external) Interfaces
       </text>
+      <text xml:lang="zh">
+        （内部和外部）接口
+      </text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">
@@ -59,6 +69,9 @@
       <text xml:lang="en">
         Coding conventions
       </text>
+      <text xml:lang="zh">
+        编码规则
+      </text> 
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">
@@ -67,7 +80,9 @@
       <text xml:lang="en">
         Hardware sizing
       </text>
-
+      <text xml:lang="zh">
+        硬件尺寸
+      </text>
     </option>
   </pickOptions>
 
@@ -77,6 +92,9 @@
     </text>
     <text xml:lang="en">
       Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.
+    </text>
+    <text xml:lang="zh">
+      编码规则和硬件尺寸通常不是软件架构的主要组成部分，因为架构关注的是系统的逻辑结构，而这些方面更多地涉及实现层面和资源需求。
     </text>
   </explanation>
 

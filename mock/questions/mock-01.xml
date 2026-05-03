@@ -26,6 +26,9 @@
     <text xml:lang="en">
         How many definitions of “software architecture” exist?
     </text>
+    <text xml:lang="zh">
+        软件架构存在多少种定义？
+    </text>
   </stem>
 
   <pickOptions>
@@ -36,6 +39,9 @@
       <text xml:lang="en">
         Exactly one for all kinds of systems.
       </text>
+      <text xml:lang="zh">
+        对于所有类型的系统只存在一种定义。
+      </text>
     </option>
     <option distractor="distractor" identifier="B">
       <text xml:lang="de">
@@ -44,6 +50,9 @@
       <text xml:lang="en">
         One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).
       </text>
+      <text xml:lang="zh">
+        对于每种类型的例如，“嵌入式”，“实时”，“决策支持”，“web网络”，“批处理”，…）软件系统都只存在一种定义。
+      </text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">
@@ -51,6 +60,9 @@
       </text>
       <text xml:lang="en">
         A dozen ore more different definitions.
+      </text>
+      <text xml:lang="zh">
+        十几种或者更多不同的定义。
       </text>
     </option>
   </pickOptions>
@@ -61,6 +73,9 @@
     </text>
     <text xml:lang="en">
       The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.
+    </text>
+    <text xml:lang="zh">
+      软件架构定义的多样性源于不同的视角、目标群体和开发方法。
     </text>
   </explanation>
 

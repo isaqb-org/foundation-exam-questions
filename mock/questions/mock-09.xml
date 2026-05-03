@@ -16,6 +16,9 @@
     <text xml:lang="en">
       Put yourself in the position of a software architect for a large, distributed business application in the banking or insurance domain. Which of the following statements is true and which is false?
     </text>
+    <text xml:lang="zh">
+      假设您是银行或保险领域大型分布式业务应用程序的软件架构师。以下哪些陈述是正确的，哪些是错误的？
+    </text>
   </stem>
 
   <categoryStatements>
@@ -23,10 +26,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
     
@@ -38,6 +43,9 @@
         <text xml:lang="en">
           The architect collaborates with the stakeholders to determine where the requirements and constraints will change often (e.g., business processes, technologies), and designs the architecture such that changes can occur without requiring extensive restructuring of the software architecture.
         </text>
+        <text xml:lang="zh">
+          在构建软件架构时，应确保能够在无需对软件架构进行大规模调整的情况下，应对相关业务流程中频繁出现的变更。
+        </text>
       </statement>
       
       <statement correctCategory="a" identifier="B">
@@ -47,6 +55,9 @@
         <text xml:lang="en">
           Required product qualities should drive your architectural decisions.
         </text>
+        <text xml:lang="zh">
+          所需的产品质量应指导您的架构决策。
+        </text>
       </statement>
       
       <statement correctCategory="b" identifier="C">
@@ -55,6 +66,9 @@
         </text>
         <text xml:lang="en">
           The software architecture can be designed completely independent of the hardware and infrastructure.
+        </text>
+        <text xml:lang="zh">
+          软件架构可以完全独立于硬件和基础设施进行设计。
         </text>
       </statement>
     </statements>
@@ -66,6 +80,9 @@
     </text>
     <text xml:lang="en">
       In large distributed business applications, it is essential to design the architecture so that it can flexibly accommodate frequent changes. The product's quality requirements are important drivers for architectural decisions. However, the architecture cannot be designed completely independently of hardware and infrastructure, as these represent important constraints that must be taken into account.  
+    </text>
+    <text xml:lang="zh">
+      在大型分布式业务应用中，至关重要的是要将架构设计成能够灵活应对频繁变化的形式。产品的质量需求在这一过程中是推动架构决策的重要因素。然而，架构并不能完全脱离硬件和基础设施而独立设计，因为它们构成了架构开发设计过程中必须加以考虑的重要边界条件。
     </text>
   </explanation>
 </categoryQuestion>

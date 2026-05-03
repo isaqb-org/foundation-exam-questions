@@ -12,30 +12,36 @@
   <stem>
     <text xml:lang="de">Welche Faktoren können den Entwurf einer Softwarearchitektur beeinflussen? Wählen Sie die passendsten Antworten aus.</text>
     <text xml:lang="en">Which factors can influence the design of a software architecture? Pick the most appropriate answers.</text>
+    <text xml:lang="zh">哪些因素会影响软件架构的设计？请选择最合适的答案。</text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Politische.</text>
       <text xml:lang="en">Political.</text>
+      <text xml:lang="zh">政治因素。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Organisatorische.</text>
       <text xml:lang="en">Organizational.</text>
+      <text xml:lang="zh">组织因素。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Technische.</text>
       <text xml:lang="en">Technical.</text>
+      <text xml:lang="zh">技术因素。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Virtuelle.</text>
       <text xml:lang="en">Virtual.</text>
+      <text xml:lang="zh">虚拟因素。</text>
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">Politische, organisatorische und technische Faktoren haben direkten Einfluss auf den Entwurf einer Softwarearchitektur. Sie bilden wichtige Randbedingungen und können die Architekturentscheidungen maßgeblich beeinflussen. "Virtuelle" Faktoren hingegen sind ein erfundener Begriff ohne konkrete Bedeutung im Kontext von Softwarearchitektur.</text>
     <text xml:lang="en">Political, organizational and technical factors have a direct influence on software architecture design. They form important constraints and can significantly influence architectural decisions. "Virtual" factors, on the other hand, are a made-up term without concrete meaning in the context of software architecture.</text>
+    <text xml:lang="zh">政治因素、组织因素和技术因素都会对软件架构的设计产生直接影响。它们构成重要的边界条件，并能够在很大程度上影响架构决策。相反，“虚拟因素”则是一个在软件架构语境中并无明确含义的杜撰概念。</text>
   </explanation>
 
 </pickQuestion>

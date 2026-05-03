@@ -12,24 +12,29 @@
   <stem>
     <text xml:lang="de">Die Dokumentation der Softwarearchitektur sollte Beschreibungen der Querschnittskonzepte enthalten. Wählen Sie die besten Gründe, warum die Dokumentation von Querschnittskonzepten sinnvoll ist.</text>
     <text xml:lang="en">Software architecture documentation could contain descriptions of cross-cutting concerns. Pick the best reasons why documentation of cross-cutting concerns is useful.</text>
+    <text xml:lang="zh">软件架构文档可以包含对横切概念方案的描述。请选择说明为什么记录横切概念方案是有意义的最佳理由。</text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Querschnittskonzepte sollten sich auf die Fachdomäne konzentrieren und frei von technischen Informationen sein.</text>
       <text xml:lang="en">Cross-cutting concepts should focus on the domain and be free of technical information.</text>
+      <text xml:lang="zh">横切概念应该专注于业务领域，而与技术信息无关。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Aspekte oder Konzepte, die in mehreren Teilen Ihrer Softwarearchitektur verwendet werden, sollten auf nicht redundante Weise beschrieben werden.</text>
       <text xml:lang="en">Aspects or concepts that are used in multiple parts of your software architecture should be described in a non-redundant way.</text>
+      <text xml:lang="zh">在软件架构的多个部分中使用的方面或概念应该以非冗余的方式进行描述。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Querschnittskonzepte können in weiteren Produkten innerhalb der gleichen Organisation erneut verwendet werden.</text>
       <text xml:lang="en">Cross-cutting concepts can be reused in more products within the same organization.</text>
+      <text xml:lang="zh">横切概念方案可以在同一组织内的其他产品中重复使用。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Querschnittskonzepte sollten von Spezialist:innen implementiert werden. Daher ist eine separate Dokumentation hilfreich.</text>
       <text xml:lang="en">Cross-cutting concepts should be implemented by specialists. Therefore, separate documentation is useful.</text>
+      <text xml:lang="zh">横切概念方案应该由专家来实现。因此，单独对其进行文档化是有帮助的。</text>
     </option>
   </pickOptions>
 </pickQuestion>

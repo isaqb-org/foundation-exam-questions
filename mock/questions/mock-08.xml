@@ -16,6 +16,9 @@
     <text xml:lang="en">
       What are the most important goals of software architecture?
     </text>
+    <text xml:lang="zh">
+      软件架构的最重要目标是什么？
+    </text>
   </stem>
 
   <pickOptions>
@@ -26,6 +29,9 @@
       <text xml:lang="en">
         Improve accuracy of patterns in structure and implementation.
       </text>
+      <text xml:lang="zh">
+        提高模式在结构和实现方面的准确性。
+      </text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">
@@ -33,6 +39,9 @@
       </text>
       <text xml:lang="en">
         Achieve quality requirements in a comprehensible way.
+      </text>
+      <text xml:lang="zh">
+        以易于理解的方式实现质量需求。
       </text>
     </option>
     <option distractor="distractor" identifier="C">
@@ -42,6 +51,9 @@
       <text xml:lang="en">
         Enable cost-effective integration and acceptance tests of the system.
       </text>
+      <text xml:lang="zh">
+        实现有性价比的系统集成和验收测试。
+      </text>
     </option>
     <option correct="correct" identifier="D">
       <text xml:lang="de">
@@ -49,6 +61,9 @@
       </text>
       <text xml:lang="en">
         Enable a basic understanding of structures and concepts for the development team and other stakeholders.
+      </text>
+      <text xml:lang="zh">
+        为开发团队和其他利益相关者提供对结构和概念方案的基本理解。
       </text>
     </option>
   </pickOptions>
@@ -59,6 +74,9 @@
     </text>
     <text xml:lang="en">
       The two main goals of software architecture are achieving quality requirements in a traceable way and creating a shared understanding of system structure for all stakeholders. While the other options are important, they don't represent primary architectural goals. Improving patterns is a means to an end, not a main goal, and efficient testing is more a consequence of good architecture rather than a primary objective.
+    </text>
+    <text xml:lang="zh">
+      软件架构的两个主要目标是以可追溯的方式实现质量需求，并为所有利益相关者建立对系统结构的共同理解。其他选项虽然也很重要，但它们并不是架构的主要目标。对模式的改进是实现目标的一种手段，而不是主要目标，而高效的测试更多是良好架构带来的结果，而不是首要目标。
     </text>
   </explanation>
 </pickQuestion>

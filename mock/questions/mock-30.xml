@@ -12,37 +12,44 @@
   <stem>
     <text xml:lang="de">In der Kontextsicht können Sie einen geschäftlichen Kontext („business context") und einen technischen Kontext verwenden. Wählen Sie die am besten passenden Antworten für den technischen Kontext aus.</text>
     <text xml:lang="en">The context view might contain a business context and a technical context, or both. Pick the most appropriate answers that apply to the technical context.</text>
+    <text xml:lang="zh">上下文视图可能包含业务上下文和技术上下文，或者两者兼而有之。请选择最适合技术上下文的答案。</text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Der technische Kontext enthält die physischen Übertragungskanäle zwischen Ihrem System und der Umgebung.</text>
       <text xml:lang="en">The technical context contains the physical channels between your system and its environment.</text>
+      <text xml:lang="zh">技术上下文包含系统与其环境之间的物理通道。</text>
     </option>
 
     <option distractor="distractor" identifier="B">
       <text xml:lang="de">Der technische Kontext enthält die gesamte Infrastruktur, über die die Komponenten Ihres Systems verteilt werden.</text>
       <text xml:lang="en">The technical context contains all the infrastructure on which the components of your system are deployed.</text>
+      <text xml:lang="zh">技术上下文包含部署系统组件所需的所有基础设施。</text>
     </option>
 
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">Der technische Kontext sollte die Hardware-Preisliste oder die Preisgestaltung von Cloud-Diensten, die als Infrastruktur für Ihre Architektur verwendet werden, enthalten.</text>
       <text xml:lang="en">The technical context should include hardware pricing or pricing of cloud services used as infrastructure for your architecture.</text>
+      <text xml:lang="zh">技术上下文应该包含用作架构基础设施的硬件价格或云服务定价。</text>
     </option>
 
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Der technische Kontext enthält Informationen zur gewählten Programmiersprache sowie allen zur Implementierung Ihrer Softwarearchitektur verwendeten Frameworks.</text>
       <text xml:lang="en">The technical context contains information about the chosen programming language as well as all frameworks used to implement your software architecture.</text>
+      <text xml:lang="zh">技术上下文包含有关所选编程语言以及用于实现软件架构的所有框架的信息。</text>
     </option>
 
     <option correct="correct" identifier="E">
       <text xml:lang="de">Der technische Kontext enthält gegebenenfalls andere Elemente als der Geschäftskontext ("business context").</text>
       <text xml:lang="en">The technical context might contain different elements than the business context.</text>
+      <text xml:lang="zh">技术上下文可能包含与业务上下文不同的元素。</text>
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">Der technische Kontext konzentriert sich auf die technischen Aspekte der Systemintegration, insbesondere die physischen Verbindungen und Schnittstellen zu anderen Systemen. Er unterscheidet sich vom Geschäftskontext und kann andere Elemente enthalten. Infrastrukturdetails, Preisgestaltung und Implementierungsdetails gehören nicht zum technischen Kontext, da diese eher Bestandteil der Verteilungssicht oder der Implementierungsdokumentation sind.</text>
     <text xml:lang="en">The technical context focuses on the technical aspects of system integration, particularly the physical connections and interfaces to other systems. It differs from the business context and may contain different elements. Infrastructure details, pricing information, and implementation details do not belong to the technical context as these are rather part of the deployment view or implementation documentation.</text>
+    <text xml:lang="zh">技术上下文侧重于系统集成中的技术性方面，尤其是与其他系统之间的物理连接和接口。它区别于业务上下文，因此可以包含不同的元素。基础设施细节、价格信息以及实现细节并不属于技术上下文，因为这些内容更偏向于部署视图或实现文档的组成部分。</text>
   </explanation>
 </pickQuestion>

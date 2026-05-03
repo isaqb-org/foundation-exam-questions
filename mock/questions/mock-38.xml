@@ -12,33 +12,40 @@
   <stem>
     <text xml:lang="de">Sie versuchen, Ihre Architektur qualitativ zu analysieren. Was sind die zutreffendsten Anzeichen für architektonische Problembereiche?</text>
     <text xml:lang="en">You try to analyze your architecture quantitatively. Which are the most appropriate indicators for architectural problem areas?</text>
+    <text xml:lang="zh">您正在对软件架构进行定性分析。以下哪些指标最能表明架构中存在的问题区域？</text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Hohe Kopplung der Komponenten.</text>
       <text xml:lang="en">High coupling of components.</text>
+      <text xml:lang="zh">组件之间的高耦合。</text>
     </option>
     <option distractor="distractor" identifier="B">
       <text xml:lang="de">Namen öffentlicher Methoden geben nicht deren Zweck wieder.</text>
       <text xml:lang="en">Names of public methods do not reflect their purpose.</text>
+      <text xml:lang="zh">公共方法的名称没有反映其目的。</text>
     </option>
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">Fehlende Kommentare.</text>
       <text xml:lang="en">Missing comments.</text>
+      <text xml:lang="zh">缺少注释。</text>
     </option>
     <option correct="correct" identifier="D">
       <text xml:lang="de">Häufung von Fehlern in bestimmten Bausteinen des Systems.</text>
       <text xml:lang="en">Clusters of errors in certain building blocks of the system.</text>
+      <text xml:lang="zh">系统中某些构建块的错误集中出现。</text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">Anzahl der Testfälle pro Komponente.</text>
       <text xml:lang="en">Number of test cases per component.</text>
+      <text xml:lang="zh">每个组件的测试用例数量。</text>
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">Hohe Kopplung zwischen Komponenten und die Häufung von Fehlern in bestimmten Systembausteinen sind klare Indikatoren für architektonische Probleme. Die anderen Optionen wie Methodennamen, fehlende Kommentare oder die Anzahl der Testfälle sind eher Implementierungs- oder Qualitätssicherungsaspekte und weniger architektonische Probleme.</text>
     <text xml:lang="en">High coupling between components and clusters of errors in certain system building blocks are clear indicators of architectural problems. The other options like method names, missing comments, or number of test cases are more related to implementation or quality assurance aspects rather than architectural problems.</text>
+    <text xml:lang="zh">组件之间的高耦合，以及系统中某些构建块内错误的集中出现，都是架构问题的明显指示信号。其他选项，例如方法命名、缺少注释或测试用例数量，更多属于实现层面或质量保证层面的问题，而较少体现为架构性问题。</text>
   </explanation>
 </pickQuestion>

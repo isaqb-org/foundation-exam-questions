@@ -23,6 +23,9 @@
     <text xml:lang="en">
         Which FOUR of the following statements about (crosscutting) concepts are most appropriate?
     </text>
+    <text xml:lang="zh">
+        以下关于（横切）方案的陈述中最为恰当的是哪四个？
+    </text>
   </stem>
 
   <pickOptions>
@@ -33,6 +36,9 @@
       <text xml:lang="en">
         Uniform usage of concepts reduces coupling between building blocks.
       </text>
+      <text xml:lang="zh">
+        该方案的统一使用减少了构建块之间的耦合。
+      </text>
     </option>
     <option distractor="distractor" identifier="B">
       <text xml:lang="de">
@@ -40,6 +46,9 @@
       </text>
       <text xml:lang="en">
         The definition of appropriate concepts ensures the pattern compliance of the architecture.
+      </text>
+      <text xml:lang="zh">
+        适当方案的定义确保了架构的模式合规性。
       </text>
     </option>
     <option correct="correct" identifier="C">
@@ -52,6 +61,9 @@
         Uniform exception handling can be achieved when architects agree with developers
         upon a suitable concept prior to implementation.
       </text>
+      <text xml:lang="zh">
+        当架构师和开发人员在实现前就合适的方案达成一致时，可以实现统一的异常处理。
+      </text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">
@@ -59,6 +71,9 @@
       </text>
       <text xml:lang="en">
         For each quality goal there should be an explicitly documented concept.
+      </text>
+      <text xml:lang="zh">
+        每个质量目标都应有一个明确编档记录的方案。
       </text>
     </option>
     <option correct="correct" identifier="E">
@@ -68,6 +83,9 @@
       <text xml:lang="en">
         Concepts are a means to increase consistency.
       </text>
+      <text xml:lang="zh">
+        方案是提高一致性的一种手段。
+      </text>
     </option>
     <option correct="correct" identifier="F">
       <text xml:lang="de">
@@ -76,6 +94,9 @@
       <text xml:lang="en">
         A concept can define constraints for the implementation of many building blocks.
       </text>
+      <text xml:lang="zh">
+        一个方案可以为多个构建块的实现定义约束。
+      </text>
     </option>
     <option correct="correct" identifier="G">
       <text xml:lang="de">
@@ -83,6 +104,9 @@
       </text>
       <text xml:lang="en">
         A concept might be implemented by a single building block.
+      </text>
+      <text xml:lang="zh">
+        一个方案可以由单个构建块实现。
       </text>
     </option>
   </pickOptions>
@@ -105,6 +129,15 @@
       (E) The primary purposes of using crosscutting concepts in software architecture is to ensure consistency across different parts of the system. For example, concepts like logging, error handling, or data access patterns, when uniformly applied, help maintain a consistent approach throughout the system.
       (F) A crosscutting concept often imposes certain constraints that affect multiple building blocks. For instance, a security concept might define that all data access methods must include authentication checks, thus constraining the way those methods are implemented across the system.
       (G) While many crosscutting concepts affect multiple building blocks, some concepts might be fully encapsulated within a single building block. For example, a specific utility class that handles encryption could represent the implementation of a security concept within a single building block.
+    </text>
+    <text xml:lang="zh">
+      (A) 方案的统一使用不一定会减少耦合。如果多个构建块依赖于同一个方案，甚至可能会增加耦合。
+      (B) 方案通常促进一致性，但不能保证遵守架构模式。还要注意，“模式合规性”是一个凭空杜撰出来、听上去像是某种可取的术语，但在iSAQB课程大纲中甚至根本没有被提及。
+      (C) 在实现之前，针对诸如错误处理这类重要概念进行统一协调，能够确保系统的一致性和可维护性，因此通常应被视为一种良好的实践。
+      (D) 即使可以针对某些选定的质量目标制定相应的方案，也并不意味着每一个质量目标都必须拥有一个独立的专门方案。质量目标可以通过各种不同的方式来考量。
+      (E) 在软件架构中使用横切概念的主要目的，在于确保系统不同部分之间的一致性。当诸如日志记录、错误处理或数据访问模式等概念被统一应用时，它们有助于在整个系统范围内采用一致的解决方案和实现思路。
+      (F) 一个横切概念通常会会设定某些会影响多个构建块的约束条件。例如，一个安全概念可能规定所有的数据访问方法必须包含身份验证检查，从而限制了这些方法在整个系统中的实现方式。
+      (G) 虽然许多横切概念会影响多个构建块，但也有些概念可能完全封装在单个构建块内。例如，一个专门负责加密功能工具类（Utility Class）,就可能在单个构建块内部集中实现某项安全相关概念。
     </text>
   </explanation>
 

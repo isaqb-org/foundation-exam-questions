@@ -20,6 +20,9 @@
     <text xml:lang="en">
       You are responsible as an architect for keeping a legacy system up and running according to the ongoing requirements of your business. What are the most important action items on your agenda?
     </text>
+    <text xml:lang="zh">
+      作为架构师，您负责根据业务的持续需求维护一个遗留系统的正常运行。您最重要的任务是什么？
+    </text>
   </stem>
 
   <pickOptions>
@@ -30,6 +33,9 @@
       <text xml:lang="en">
         Negotiating the maintenance budget for your team
       </text>
+      <text xml:lang="zh">
+        为您的团队就维护的预算进行谈判
+      </text>
     </option>
 
     <option correct="correct" identifier="B">
@@ -38,6 +44,9 @@
       </text>
       <text xml:lang="en">
         Assuring up-to-date documentation of the deployed system
+      </text>
+      <text xml:lang="zh">
+        确保已交付的系统具备最新的文档
       </text>
     </option>
 
@@ -48,6 +57,9 @@
       <text xml:lang="en">
         Analyzing the impact of new requirements on the current system
       </text>
+      <text xml:lang="zh">
+        分析新需求对当前系统的影响
+      </text>
     </option>
 
     <option distractor="distractor" identifier="D">
@@ -56,6 +68,9 @@
       </text>
       <text xml:lang="en">
         Encouraging the team members to learn new programming languages
+      </text>
+      <text xml:lang="zh">
+        鼓励团队成员学习新的编程语言
       </text>
     </option>
 
@@ -66,6 +81,9 @@
       <text xml:lang="en">
         Suggesting technology updates in addition to the business requirements to your management
       </text>
+      <text xml:lang="zh">
+        除业务需求之外，向您的上级额外提出技术更新建议
+      </text>
     </option>
   </pickOptions>
 
@@ -75,6 +93,10 @@
     </text>
     <text xml:lang="en">
       When maintaining a legacy system, the most important tasks of an architect are: 1) Keeping documentation up-to-date to ensure system understanding, 2) Carefully analyzing the impact of new requirements to avoid unexpected side effects, and 3) Proactively suggesting technological updates to reduce technical debt and keep the system future-proof. While encouraging learning new skills is important for the team's long-term development, it has less immediate priority for system maintenance. Budget negotiations are typically the responsibility of project management.
+    </text>
+    <text xml:lang="zh">
+      在维护遗留系统时，架构师最重要的任务是：1)保持文档的最新状态以确保对系统的理解；2) 仔细分析新需求的影响以避免出现意料之外的连带副作用；3)主动提出技术更新建议，以减少技术债务并保持系统的未来适应性。
+      鼓励学习新技能虽然对于团队的长期发展很重要，但对于系统的即时维护来说，其优先级较低。预算谈判通常是项目管理的职责。
     </text>
   </explanation>
 </pickQuestion>

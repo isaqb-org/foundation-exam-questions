@@ -12,24 +12,29 @@
   <stem>
     <text xml:lang="de">Sie dokumentieren einen Baustein einer Softwarearchitektur. Welche Informationen sollten in seiner Black-Box-Beschreibung enthalten sein?</text>
     <text xml:lang="en">When documenting a building block of your software architecture, what information should the black-box description contain?</text>
+    <text xml:lang="zh">当记录软件架构的构建块时，黑盒描述应该包含哪些信息？</text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Öffentliche Schnittstellen.</text>
       <text xml:lang="en">Public interfaces.</text>
+      <text xml:lang="zh">公开接口。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Verantwortlichkeiten des Bausteins.</text>
       <text xml:lang="en">Responsibility of the building block.</text>
+      <text xml:lang="zh">构建块的职责。</text>
     </option>
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">Interne Struktur des Bausteins.</text>
       <text xml:lang="en">Internal structure of the building block.</text>
+      <text xml:lang="zh">构建块的内部结构。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Spezifikation von Implementierungsdetails.</text>
       <text xml:lang="en">Specification of the implementation details.</text>
+      <text xml:lang="zh">实现细节的规范。</text>
     </option>
   </pickOptions>
 
@@ -39,6 +44,9 @@
     </text>
     <text xml:lang="en">
       A black-box description focuses exclusively on the externally visible aspects of a building block - its interfaces and responsibilities. By definition, internal structure and implementation details are not part of a black-box description, as it deliberately abstracts from internal details. These details would instead be covered in a white-box description.
+    </text>
+    <text xml:lang="zh">
+      黑盒描述专注于一个构建块对外可见的方面——也就是它的接口以及它所承担的职责。根据定义，内部结构和实现细节并不属于黑盒描述的内容，因为黑盒描述本身就是有意识地对内部细节进行抽象。这些细节则应当在白盒描述中加以说明。
     </text>
   </explanation>
 

@@ -18,24 +18,31 @@
     <text xml:lang="en">
       ISO 25010 provides generic quality characteristics for software systems. How can quality requirements concerning these characteristics be made more concrete?
     </text>
+    <text xml:lang="zh">
+      ISO 25010为软件系统提供了通用的质量特性。以下哪些方法可以使与这些质量特性相关的需求更具体？
+    </text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Durch Entwickeln von UI-Prototypen.</text>
       <text xml:lang="en">By developing UI prototypes.</text>
+      <text xml:lang="zh">通过开发用户界面原型。</text>
     </option>
     <option distractor="distractor" identifier="B">
       <text xml:lang="de">Durch Definieren expliziter Schnittstellen.</text>
       <text xml:lang="en">By defining explicit interfaces.</text>
+      <text xml:lang="zh">通过定义明确的接口。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Durch Erstellen, Verfassen oder Diskutieren von Qualitätsszenarien.</text>
       <text xml:lang="en">By discussing or writing quality scenarios.</text>
+      <text xml:lang="zh">通过创建、撰写或讨论质量场景。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Durch Erstellen automatisierter Tests.</text>
       <text xml:lang="en">By creating automated tests.</text>
+      <text xml:lang="zh">通过创建自动化测试。</text>
     </option>
   </pickOptions>
 
@@ -45,6 +52,9 @@
     </text>
     <text xml:lang="en">
       Quality scenarios are established methods for making quality requirements more concrete. They help transform abstract quality characteristics into verifiable requirements. UI prototypes, interfaces, and automated tests are implementation or validation techniques and are less suitable for initial concretization of quality requirements.
+    </text>
+    <text xml:lang="zh">
+      质量场景是将质量需求具体化的一种成熟方法。它们有助于把抽象的质量属性转化为可验证的需求。相比之下，用户界面原型、接口以及自动化测试更多属于实现或验证技术，并不太适合用于对质量需求进行初始具体化。
     </text>
   </explanation>
 </pickQuestion>

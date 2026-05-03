@@ -16,32 +16,41 @@
     <text xml:lang="en">
       Several architecture development methods suggest a view-based approach. Which of the following views are most often used?
     </text>
+    <text xml:lang="zh">
+      不少架构开发都建议采用基于视图的方法。以下哪些视图最常用？
+    </text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Physische Datenbanksicht</text>
       <text xml:lang="en">Physical database view</text>
+      <text xml:lang="zh">物理数据库视图</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Kontextsicht</text>
       <text xml:lang="en">Context view</text>
+      <text xml:lang="zh">上下文视图</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Bausteinsicht oder Komponentensicht</text>
       <text xml:lang="en">Building Block/Component view</text>
+      <text xml:lang="zh">构建块/组件视图</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Testbasierte Sicht</text>
       <text xml:lang="en">Test-driven view</text>
+      <text xml:lang="zh">测试驱动视图</text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">Konfigurationssicht</text>
       <text xml:lang="en">Configuration view</text>
+      <text xml:lang="zh">配置视图</text>
     </option>
     <option correct="correct" identifier="F">
       <text xml:lang="de">Laufzeitsicht</text>
       <text xml:lang="en">Runtime view</text>
+      <text xml:lang="zh">运行时视图</text>
     </option>
   </pickOptions>
 
@@ -62,5 +71,13 @@
 
       While the other views mentioned (database, test, and configuration views) might be useful in certain projects, they are not among the fundamental architectural views used in most methods.
     </text>
+    <text xml:lang="zh">
+      最重要且最常使用的三种架构视图是：
+      1. 上下文视图，用于展示系统所处的环境
+      2. 构建块/组件视图，用于展示系统的内部结构
+      3. 运行时视图，用于展示系统的动态行为
+
+      其他提到的视图（数据库视图、测试视图和配置视图）虽然在某些特定项目中可能是有用的，但它们并不属于大多数方法中所采用的基础架构视图。
+    </text> 
   </explanation>
 </pickQuestion>

@@ -12,30 +12,36 @@
   <stem>
     <text xml:lang="de">Welche der folgenden Eigenschaften lässt sich am ehesten durch eine Schichtenarchitektur verbessern?</text>
     <text xml:lang="en">Which of the following qualities can most likely be improved by using a layered architecture?</text>
+    <text xml:lang="zh">以下哪些特性最有可能通过使用分层架构得到改善？</text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Laufzeiteffizienz (Performance).</text>
       <text xml:lang="en">Runtime efficiency (performance).</text>
+      <text xml:lang="zh">运行时效率（性能）。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Flexibilität bei der Modifizierung oder Änderung des Systems.</text>
       <text xml:lang="en">Flexibility in modifying or changing the system.</text>
+      <text xml:lang="zh">修改或变更系统的灵活性。</text>
     </option>
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">Flexibilität bei der Laufzeit (Konfigurierbarkeit).</text>
       <text xml:lang="en">Flexibility at runtime (configurability).</text>
+      <text xml:lang="zh">运行时的灵活性（易配置性）。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Nichtabstreitbarkeit.</text>
       <text xml:lang="en">Non-repudiability.</text>
+      <text xml:lang="zh">不可否认性。</text>
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">Eine Schichtenarchitektur verbessert primär die Modifizierbarkeit und Wartbarkeit eines Systems, da Änderungen in einer Schicht die anderen Schichten nicht beeinflussen müssen, solange die Schnittstellen stabil bleiben. Die Schichtenarchitektur kann sich sogar negativ auf die Performance auswirken, da Aufrufe durch mehrere Schichten geleitet werden müssen. Konfigurierbarkeit zur Laufzeit und Nichtabstreitbarkeit sind keine primären Ziele der Schichtenarchitektur.</text>
     <text xml:lang="en">A layered architecture primarily improves the modifiability and maintainability of a system, as changes in one layer don't need to affect other layers as long as interfaces remain stable. The layered architecture might actually have a negative impact on performance since calls need to be routed through multiple layers. Runtime configurability and non-repudiability are not primary goals of the layered architecture.</text>
+    <text xml:lang="zh">分层架构首先提升的是系统的易修改性和维护性，因为只要接口保持稳定，一个层中的变更就不一定会影响其他层。分层架构甚至可能对性能产生负面影响，因为调用往往必须经过多个层级的传递。运行时易配置性和不可否认性并不是分层架构的主要目标。</text>
   </explanation>
 
 </pickQuestion>

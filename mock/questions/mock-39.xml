@@ -12,28 +12,34 @@
   <stem>
     <text xml:lang="de">Sie versuchen, ihre Architektur quantitativ zu untersuchen. Welche der folgenden Größen können Sie für Ihre Softwarearchitektur zuverlässig messen? Wählen Sie die am besten passenden Antworten aus.</text>
     <text xml:lang="en">You try to quantitatively analyze your architecture. Which three of the following properties can you measure reliably in your software architecture? Pick the best fitting answers.</text>
+    <text xml:lang="zh">您正在对软件架构进行定量分析。以下哪些量是您能够在软件架构中进行可靠测量的？请选择最合适的答案。</text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Größe der Bausteine (z. B. Lines-of-Code).</text>
       <text xml:lang="en">Size of building blocks (e.g. LOC).</text>
+      <text xml:lang="zh">构建块的大小（例如代码行数C）。</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Änderungsrate des Quellcodes der Komponenten.</text>
       <text xml:lang="en">Change rate of the source code of components.</text>
+      <text xml:lang="zh">组件源代码的变更率。</text>
     </option>
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">Kohäsion der Architekturkomponenten.</text>
       <text xml:lang="en">Cohesion of the architectural components.</text>
+      <text xml:lang="zh">架构组件的内聚性。</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Sicherheitsstufe einer Komponente.</text>
       <text xml:lang="en">Security level of a component.</text>
+      <text xml:lang="zh">组件的安信息全级别。</text>
     </option>
     <option correct="correct" identifier="E">
       <text xml:lang="de">Anzahl der Personen, die zu einer bestimmten Komponente beigetragen haben.</text>
       <text xml:lang="en">Number of the developers that contributed to a specific component.</text>
+      <text xml:lang="zh">参与特定组件开发的开发人员数量。</text>
     </option>
   </pickOptions>
 
@@ -42,5 +48,7 @@
 • Änderungsrate und Anzahl-der-Entwickler-pro-Komponente können zuverlässig gemessen werden, wenn man die Versionskontrollhistorie berücksichtigt, was mit Systemen wie git, subversion oder ähnlichen in der Entwicklung weit verbreiteten Tools problemlos möglich ist.</text>
     <text xml:lang="en">• Size can easily and reliably be measured when statically analyzing source code (lines-of-code metric is a reliable size metric)
 • change-rate and number-of-developers-per-component can reliably be measured when taking the version control history into account, which is perfectly feasibly with systems like git, subversion or similar tools that are widely used in development.</text>
+    <text xml:lang="zh">• 构建块的大小可以通过对源代码进行静态分析而简单且可靠地测量（代码行数 Lines of Code 是一种可靠的规模度量指标）。
+• 如果结合版本控制历史进行考察，变更率以及每个组件对应的开发人员数量也可以被可靠地测量，而这借助 Git、Apache Subversion 或类似在开发中广泛使用的工具都能够毫无困难地实现。</text>
   </explanation>
 </pickQuestion>

@@ -25,40 +25,51 @@
     <text xml:lang="en">
         Which of the following techniques are best suited to illustrate the workflow or behavior of the system at runtime?
     </text>
+    <text xml:lang="zh">
+        以下哪些技术最适合用来说明系统在运行时的工作流程或行为？
+    </text>
   </stem>
 
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">Flussdiagramme</text>
       <text xml:lang="en">Flowcharts</text>
+      <text xml:lang="zh">流程图</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Aktivitätsdiagramme</text>
       <text xml:lang="en">Activity Diagrams</text>
+      <text xml:lang="zh">活动图</text>
     </option>
     <option distractor="distractor" identifier="C">
       <text xml:lang="de">Darstellung von Screenflows (Abfolge von Benutzerinteraktionen)</text>
       <text xml:lang="en">Depiction of screen flows (sequence of user interactions)</text>
+      <text xml:lang="zh">屏幕流程图（用户交互顺序）</text>
     </option>
     <option correct="correct" identifier="D">
       <text xml:lang="de">Sequenzdiagramm</text>
       <text xml:lang="en">Sequence diagram</text>
+      <text xml:lang="zh">时序图</text>
     </option>
     <option distractor="distractor" identifier="E">
       <text xml:lang="de">Lineares Venn-Diagramm</text>
       <text xml:lang="en">Linear Venn diagram</text>
+      <text xml:lang="zh">线性文氏图（韦恩图）</text>
     </option>
     <option correct="correct" identifier="F">
       <text xml:lang="de">Nummerierte Liste aufeinanderfolgender Schritte</text>
       <text xml:lang="en">Numbered list of sequential steps</text>
+      <text xml:lang="zh">顺序步骤的编号列表</text>
     </option>
     <option distractor="distractor" identifier="G">
       <text xml:lang="de">Tabellarische Schnittstellenbeschreibung</text>
       <text xml:lang="en">Tabular description of interfaces</text>
+      <text xml:lang="zh">接口的表格描述</text>
     </option>
     <option distractor="distractor" identifier="H">
       <text xml:lang="de">Klassendiagramme</text>
       <text xml:lang="en">Class diagrams</text>
+      <text xml:lang="zh">类图</text>
     </option>
   </pickOptions>
 
@@ -68,6 +79,9 @@
     </text>
     <text xml:lang="en">
       Flowcharts, activity diagrams, sequence diagrams, and numbered lists of sequential steps are best suited to illustrate system workflow or behavior at runtime because they clearly depict the flow of control, operations, and interactions between components over time. In contrast, options like screen flows, Venn diagrams, tabular descriptions of interfaces, and class diagrams are not appropriate for this purpose as they focus on user interactions, logical relationships, static structure, or interface details rather than dynamic behavior.
+    </text>
+    <text xml:lang="zh">
+      流程图、活动图、时序图和顺序步骤的编号列表，最适合用来说明流程执行过程或系统在运行时的行为，因为它们清晰地描绘了控制流、处理步骤以及各组件之间随时间展开的交互关系。相比之下，屏幕流程图、文氏图、接口的表格描述和类图等方式，则较少或并不适合这一目的，因为它们关注的分别是用户交互、逻辑关系、静态结构或接口细节，而不是系统的动态行为。
     </text>
   </explanation>
 

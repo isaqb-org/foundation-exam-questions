@@ -16,6 +16,9 @@
     <text xml:lang="en">
       Decide for each of the following statements whether it is true or false.
     </text>
+    <text xml:lang="zh">
+      判断以下陈述哪些正确，哪些错误。
+    </text>
   </stem>
 
   <categoryStatements>
@@ -23,10 +26,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
     
@@ -37,6 +42,9 @@
         </text>
         <text xml:lang="en">
           Each iteration of an agile development approach could have an impact on the fundamental architecture decisions.
+        </text> 
+        <text xml:lang="zh">
+          敏捷开发方法的每次迭代都可能对基本的架构决策产生影响。
         </text>
       </statement>
 
@@ -47,6 +55,9 @@
         <text xml:lang="en">
           The total effort spent on architectural work is much higher in iterative projects compared to waterfall projects.
         </text>
+        <text xml:lang="zh">
+          与瀑布式开发项目相比，迭代式项目在架构工作上的总投入要高得多。
+        </text>
       </statement>
 
       <statement correctCategory="b" identifier="C">
@@ -56,6 +67,9 @@
         <text xml:lang="en">
           Agile projects do not need architecture documents since the development team uses daily standup-meetings to communicate decisions.
         </text>
+        <text xml:lang="zh">
+          敏捷项目不需要架构文档，因为开发团队在每日站会上沟通相关的决策。
+        </text>
       </statement>
 
       <statement correctCategory="b" identifier="D">
@@ -64,6 +78,9 @@
         </text>
         <text xml:lang="en">
           If your systems consist of a set of microservices there is no need for a central architecture document since each service is free to choose its technologies.
+        </text>
+        <text xml:lang="zh">
+          如果您的系统由一组微服务组成，则不需要核心架构文档，因为每个微服务都可以自由选择其技术。
         </text>
       </statement>
     </statements>
@@ -75,6 +92,9 @@
     </text>
     <text xml:lang="en">
       The first statement is true since iterative development is explicitly designed to adapt decisions based on feedback and new insights. The other statements are false: Architecture effort does not depend on the process model, agile projects do need architecture documentation (though possibly in a different form), and microservice architectures also need overarching documentation of the overall architecture.
+    </text>
+    <text xml:lang="zh">
+      第一条陈述是正确的，因为迭代式开发本身就明确旨在根据反馈和新的认知对决策进行调整。其余说法都是错误的：架构工作的投入并不取决于采用何种开发过程模型；敏捷项目同样非常需要架构文档（即使其形式可能有所不同）；而微服务架构也仍然需要对整体架构进行跨服务的总体文档化说明。
     </text>
   </explanation>
 </categoryQuestion>

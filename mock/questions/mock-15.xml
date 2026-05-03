@@ -16,6 +16,9 @@
     <text xml:lang="en">
       What does the rule "explicit, not implicit" mean for architecture work? Choose the best-fitting answers.
     </text>
+    <text xml:lang="zh">
+      “明确的，而非隐含的”规则对于架构工作意味着什么？请选择最合适的答案。
+    </text>
   </stem>
 
   <pickOptions>
@@ -26,6 +29,9 @@
       <text xml:lang="en">
         Architects should avoid recursive structures and replace them by explicit loops.
       </text>
+      <text xml:lang="zh">
+        架构师应该避免递归结构，并用明确的循环来替代它们。
+      </text>
     </option>
 
     <option correct="correct" identifier="B">
@@ -34,6 +40,9 @@
       </text>
       <text xml:lang="en">
         Architects should make the assumptions leading to decisions explicit.
+      </text>
+      <text xml:lang="zh">
+        架构师应该明确导致其决策的假设是什么。
       </text>
     </option>
 
@@ -44,6 +53,9 @@
       <text xml:lang="en">
         Architects should explicitly insist on natural language explanations (i.e. comments) for each building block.
       </text>
+      <text xml:lang="zh">
+        架构师应该明确要求为每个构建块提供自然语言解释（即注释）。
+      </text>
     </option>
 
     <option distractor="distractor" identifier="D">
@@ -52,6 +64,9 @@
       </text>
       <text xml:lang="en">
         Architects should explicitly insist on written or at least verbal justifications for development effort estimates from their team.
+      </text>
+      <text xml:lang="zh">
+        架构师应该明确要求团队对开发工作量估算提供书面或至少口头的理由。
       </text>
     </option>
 
@@ -62,6 +77,9 @@
       <text xml:lang="en">
         Architects should make prerequisites for their decisions explicit.
       </text>
+      <text xml:lang="zh">
+        架构师应该明确阐述其决策的前提条件。
+      </text>
     </option>
   </pickOptions>
 
@@ -71,6 +89,9 @@
     </text>
     <text xml:lang="en">
       The rule "explicit, not implicit" refers to the need to clearly articulate important architectural considerations and decisions. This includes both the assumptions leading to decisions (option B) and the prerequisites for these decisions (option E). The other options either describe technical implementation details (A) or overly specific documentation requirements (C, D) that do not capture the essence of the principle.
+    </text>
+    <text xml:lang="zh">
+      “明确的，而非隐含的”规则指的是需要清楚地表达重要的架构考量和决策。这包括导致决策的假设（选项B）以及这些决策的前提条件（选项E）。其他选项要么描述技术实现细节（选项A），要么描述过于具体的技术文档要求（选项C、D），这些都不符合该原则的精髓。
     </text>
   </explanation>
 

@@ -12,6 +12,7 @@
   <stem>
     <text xml:lang="de">Sie können Aspekte Ihrer Softwarearchitektur mündlich und/oder schriftlich kommunizieren. In welchem Zusammenhang stehen diese Möglichkeiten zueinander? Geben Sie für jede der folgenden Aussagen an, ob sie richtig oder falsch ist.</text>
     <text xml:lang="en">You can communicate aspects of your software architecture verbally and/or in writing. How do these variants correlate? Decide for each of the following statements whether it is true or false.</text>
+    <text xml:lang="zh">您可以口头和/或书面沟通软件架构的不同方面。这些形式之间的相关性如何？请判断以下每一项陈述是正确的还是错误的。</text>
   </stem>
 
   <categoryStatements>
@@ -19,10 +20,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
 
@@ -30,18 +33,22 @@
       <statement correctCategory="a" identifier="A">
         <text xml:lang="de">Mündliche Kommunikation sollte schriftliche Dokumentation ergänzen.</text>
         <text xml:lang="en">Verbal communication should supplement written documentation.</text>
+        <text xml:lang="zh">口头沟通应该补充书面文档。</text>
       </statement>
       <statement correctCategory="b" identifier="B">
         <text xml:lang="de">Feedback zu Architekturentscheidungen sollte zur Sicherstellung der Nachverfolgbarkeit grundsätzlich schriftlich erfolgen.</text>
         <text xml:lang="en">Feedback to architecture decisions should always be done in writing to ensure traceability.</text>
+        <text xml:lang="zh">对架构决策的反馈应始终以书面形式进行，以确保可追溯性。</text>
       </statement>
       <statement correctCategory="b" identifier="C">
         <text xml:lang="de">Schriftliche Dokumentation sollte immer mündlicher Kommunikation vorausgehen.</text>
         <text xml:lang="en">Written documentation should always precede verbal communication.</text>
+        <text xml:lang="zh">书面文档应始终优先于口头沟通。</text>
       </statement>
       <statement correctCategory="b" identifier="D">
         <text xml:lang="de">Architekt:innen sollten sich eine Variante (mündlich oder schriftlich) aussuchen und während der gesamten Entwicklung dabei bleiben.</text>
         <text xml:lang="en">Architects should pick one variant (verbal or written) and stick to this choice during the whole development.</text>
+        <text xml:lang="zh">架构师应选择一种形式（口头或书面），并在整个开发过程中坚持这种选择。</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -49,5 +56,6 @@
   <explanation>
     <text xml:lang="de">Mündliche und schriftliche Kommunikation sollten sich ergänzen, nicht gegenseitig ausschließen. Es gibt keine feste Regel, dass eine Form der anderen vorausgehen muss. Feedback kann und sollte sowohl mündlich als auch schriftlich erfolgen - eine Beschränkung auf ausschließlich schriftliches Feedback würde die Kommunikation unnötig einschränken. Die Form der Kommunikation sollte flexibel an die jeweilige Situation angepasst werden können.</text>
     <text xml:lang="en">Verbal and written communication should complement each other, not exclude each other. There is no fixed rule that one form must precede the other. Feedback can and should be given both verbally and in writing - restricting feedback to written form only would unnecessarily constrain communication. The form of communication should be flexible and adaptable to each situation.</text>
+    <text xml:lang="zh">口头沟通与书面沟通应当是相互补充的，而不是彼此排斥。并不存在某一种沟通形式必须先于另一种形式的固定规则。反馈既可以也应当通过口头方式进行，同样也可以通过书面方式进行，—若将反馈限制为只能采用书面形式，会对沟通造成不必要的束缚。沟通的形式应当能够根据具体情况灵活调整。</text>
   </explanation>
 </categoryQuestion>

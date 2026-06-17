@@ -32,7 +32,7 @@ https://public.isaqb.org/#_examination
 Validate a single XML file:
 [source,bash]
 ----
-xmllint --relaxng exam.ng <filename> ...
+xmllint --relaxng exam.rng <filename> ...
 ----
 
 == Code

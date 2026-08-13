@@ -346,10 +346,11 @@
     (match language
       ("de" (values "\"`" "\"'"))
       ("en" (values "``" "''"))
-      ("es" (values "\\<" "\\>"))
-      ("fr" (values "\\<" "\\>"))
-      ("it" (values "\\<" "\\>"))
-      ("pt" (values "\\<" "\\>"))
+      ;; these require \usepackage[T1]{fontenc}
+      ("es" (values "<<" ">>"))
+      ("fr" (values "<<" ">>"))
+      ("it" (values "<<" ">>"))
+      ("pt" (values "<<" "<>"))
       ("zh" (values "``" "''")) ; ???
       (_
        (error "unhandled language" language))))

@@ -27,6 +27,11 @@ The latest release of the Mock exam can be found here:
 
 https://public.isaqb.org/#_examination
 
+== Info
+
+Info on the exam procedure is available in several languages in
+directory [`exam-info`](exam-info/).
+
 == XML Validation
 
 Validate a single XML file:

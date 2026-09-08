@@ -25,12 +25,12 @@ jobs:
       - name: build mock exam
         run: nix build .#mock-exam
       - name: copy mock exam out of Nix store
-        run: mkdir out && cp -v result/pdf/* out/ && cp -v web/* out/
+        run: mkdir -p out && cp -v result/pdf/* out/ && cp -v web/* out/
 
       - name: build exam info
         run: nix build .#exam-info
       - name: copy exam info out of Nix store
-        run: mkdir out && cp -v result/pdf/* out/
+        run: mkdir -p out && cp -v result/pdf/* out/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

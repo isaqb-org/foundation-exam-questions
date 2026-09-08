@@ -113,6 +113,27 @@
                 cp mock-en.pdf mock-en-solutions.pdf mock-de.pdf mock-de-solutions.pdf $out/pdf
               '';
             };
+          exam-info = pkgs.stdenv.mkDerivation {
+            name = "exam-info";
+            src = ./exam-info;
+            buildInputs = [
+              pkgs.libreoffice
+            ];
+            buildPhase = ''
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-de.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-en.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-es.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-fr.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-it.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-pt.docx
+              soffice --headless --convert-to pdf:impress_pdf_Export --outdir . Examination-Guide-EN.pptx
+            '';
+            installPhase = ''
+              mkdir -p $out/pdf
+              cp *.pdf $out/pdf
+            '';
+          };
+
         };
         apps = {
           xmllint = {

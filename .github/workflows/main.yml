@@ -28,7 +28,7 @@ jobs:
         run: mkdir out && cp -v result/pdf/* out/ && cp -v web/* out/
 
       - name: build exam info
-        run: nix build .#exam info
+        run: nix build .#exam-info
       - name: copy exam info out of Nix store
         run: mkdir out && cp -v result/pdf/* out/
 

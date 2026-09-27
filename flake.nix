@@ -126,7 +126,7 @@
               soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-fr.docx
               soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-it.docx
               soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-pt.docx
-              soffice --headless --convert-to pdf:impress_pdf_Export --outdir . Examination-Guide-EN.pptx
+              soffice --headless --convert-to pdf:impress_pdf_Export --outdir . Examination-Guide-EN.odp
             '';
             installPhase = ''
               mkdir -p $out/pdf

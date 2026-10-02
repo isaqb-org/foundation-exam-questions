@@ -98,7 +98,7 @@
     ("fr"
      (display "Question K: Attribuez une réponse pour chacun des énoncés.") (newline))
     ("it"
-     (display "Domanda K: Por favor, atribua cada resposta a uma categoria.") (newline))
+     (display "Domanda K: Per favore, attribuisca una categoria a ogni risposta.") (newline))
     ("zh"
      (display "K 类型问题: 请您判断下列选项最适合的类别。") (newline)))
   (display "}"))

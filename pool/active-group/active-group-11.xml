@@ -23,11 +23,11 @@
     <categories>
       <category label="a">
         <text xml:lang="de">qualitativ</text>
-        <text xml:lang="en">qualitativ</text>
+        <text xml:lang="en">qualitative</text>
       </category>
       <category label="b">
         <text xml:lang="de">quantitativ</text>
-        <text xml:lang="en">quantitativ</text>
+        <text xml:lang="en">quantitative</text>
       </category>
     </categories>
 

@@ -12,6 +12,7 @@
   <stem>
     <text xml:lang="de">Welche der folgenden Eigenschaftspaare stehen üblicherweise miteinander in Konflikt und welche nicht?</text>
     <text xml:lang="en">Which of the following pairs of qualities are usually in conflict to each other, and which are not?</text>
+    <text xml:lang="zh">以下哪些质量特性通常彼此冲突，哪些不是？</text>
   </stem>
 
   <categoryStatements>
@@ -19,10 +20,12 @@
       <category label="a">
         <text xml:lang="de">Konflikt</text>
         <text xml:lang="en">conflict</text>
+        <text xml:lang="zh">冲突</text>
       </category>
       <category label="b">
         <text xml:lang="de">Kein Konflikt</text>
         <text xml:lang="en">no conflict</text>
+        <text xml:lang="zh">不冲突</text>
       </category>
     </categories>
     
@@ -30,18 +33,22 @@
       <statement correctCategory="b" identifier="A">
         <text xml:lang="de">Verständlichkeit – Lesbarkeit</text>
         <text xml:lang="en">Understandability – Readability</text>
+        <text xml:lang="zh">易理解性 - 可读性</text>
       </statement>
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">Benutzerfreundlichkeit – Sicherheit</text>
         <text xml:lang="en">Usability – Security</text>
+        <text xml:lang="zh">易用性 - 信息安全性</text>
       </statement>
       <statement correctCategory="a" identifier="C">
         <text xml:lang="de">Laufzeitkonfigurierbarkeit – Robustheit</text>
         <text xml:lang="en">Runtime configurability – Robustness</text>
+        <text xml:lang="zh">运行时易配置性 - 健壮性</text>
       </statement>
       <statement correctCategory="b" identifier="D">
         <text xml:lang="de">Sicherheit – Funktionale Korrektheit</text>
         <text xml:lang="en">Security – Functional correctness</text>
+        <text xml:lang="zh">信息安全性 - 功能正确性</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -49,6 +56,7 @@
   <explanation>
     <text xml:lang="de">Verständlichkeit und Lesbarkeit unterstützen sich gegenseitig. Benutzerfreundlichkeit und Sicherheit können in Konflikt stehen, da Sicherheitsmaßnahmen die Benutzerfreundlichkeit einschränken können. Laufzeitkonfigurierbarkeit und Robustheit stehen oft im Konflikt, da mehr Konfigurationsmöglichkeiten die Robustheit beeinträchtigen können. Sicherheit und funktionale Korrektheit stehen nicht grundsätzlich im Konflikt - ein System kann sowohl sicher als auch funktional korrekt sein.</text>
     <text xml:lang="en">Understandability and readability support each other. Usability and security can conflict as security measures may limit usability. Runtime configurability and robustness often conflict as more configuration options can impact robustness. Security and functional correctness are not inherently in conflict - a system can be both secure and functionally correct.</text>
+    <text xml:lang="zh">易理解性和可读性是相互促进的。易用性和信息安全性之间可能存在冲突，因为安全措施可能会限制易用性。运行时易配置性和健壮性也常常存在彼此冲突，因为更多的配置选项可能会可能会削弱系统的稳健性。信息安全性与功能正确性并不存在根本性的冲突，一个系统可以既安全又功能正确。</text>
   </explanation>
 
 </categoryQuestion>

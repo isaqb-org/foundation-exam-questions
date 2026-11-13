@@ -16,6 +16,9 @@
     <text xml:lang="en">
       Which of the following statements regarding project goals and architectural goals is true and which is false.
     </text>
+    <text xml:lang="zh">
+      判断以下关于项目目标和架构目标的陈述,哪些正确，哪些错误。
+    </text>
   </stem>
 
   <categoryStatements>
@@ -23,10 +26,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
     
@@ -38,6 +43,9 @@
         <text xml:lang="en">
           Project Goals can include functional requirements as well as quality requirements.
         </text>
+        <text xml:lang="zh">
+          项目目标可以包括功能需求和质量需求。
+        </text>
       </statement>
 
       <statement correctCategory="a" identifier="B">
@@ -46,6 +54,9 @@
         </text>
         <text xml:lang="en">
           Architectural goals are derived from the quality requirements for the system or product.
+        </text>
+        <text xml:lang="zh">
+          架构目标来源于系统或产品的质量需求。
         </text>
       </statement>
 
@@ -56,6 +67,9 @@
         <text xml:lang="en">
           Business stakeholders should concentrate on business goals and not interfere with architectural goals.
         </text>
+        <text xml:lang="zh">
+          来自业务部门的利益相关者应该专注于业务目标，而不应干预架构目标。
+        </text>
       </statement>
 
       <statement correctCategory="b" identifier="D">
@@ -64,6 +78,9 @@
         </text>
         <text xml:lang="en">
           To avoid conflicts, business goals and architectural goals should be non-overlapping sets.
+        </text>
+        <text xml:lang="zh">
+          为了避免冲突，业务目标和架构目标应该是非重叠的集合。
         </text>
       </statement>
     </statements>
@@ -75,6 +92,12 @@
     </text>
     <text xml:lang="en">
       The first statement is correct because project goals can naturally include both functional and quality aspects. The second statement is accurate as architectural goals are typically derived from the system's quality requirements. The third statement is false because business stakeholders might very well have goals like performance, flexibility or security, which are considered "architecture goals". The last statement is also false, as business and architecture goals can and should often overlap - what's important is not strict separation but mutual understanding and alignment of goals.
+    </text>
+    <text xml:lang="zh">
+      第一条陈述是正确的，因为项目目标既可以包含功能性方面，也可以包含质量性方面。
+      第二条陈述也是正确的，因为架构目标通常是从系统的质量需求中推导出来的。
+      第三条陈述是错误的，因为业务利益相关者完全可能有诸如性能、灵活性或安全性之类的目标，而这些同样可以被视为“架构目标”。
+      最后一条陈述也同样错误，因为业务目标与架构目标往往可以并且也应当存在重叠，关键并不在于对两者进行严格分离，而在于形成共识并使这些目标保持一致。
     </text>
   </explanation>
 </categoryQuestion>

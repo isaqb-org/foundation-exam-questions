@@ -92,7 +92,15 @@
     ("de"
      (display "K-Frage: Bitte ordnen Sie jede Antwort einer Kategorie zu.") (newline))
     ("en"
-     (display "K-Question:  Assign all the answers.") (newline)))
+     (display "K-Question:  Assign all the answers.") (newline))
+    ("es"
+     (display "Pregunta Tipo K: Por favor asigne cada respuesta a una categoría.") (newline))
+    ("fr"
+     (display "Question K: Attribuez une réponse pour chacun des énoncés.") (newline))
+    ("it"
+     (display "Domanda K: Per favore, attribuisca una categoria a ogni risposta.") (newline))
+    ("zh"
+     (display "K 类型问题: 请您判断下列选项最适合的类别。") (newline)))
   (display "}"))
 
 (define (write-pick-header pick-options points language)
@@ -105,6 +113,18 @@
      (display "A-Frage: Bitte kreuzen Sie die richtige Antwort an.") (newline))
     ((cons 1 "en")
      (display "A-Question: Choose one answer.") (newline))
+
+    ((cons 1 "es")
+     (display "Pregunta Tipo A: Seleccionar una respuesta de una lista de posibles respuestas") (newline))
+    ((cons 1 "fr")
+     (display "Question A: Choisissez une réponse.") (newline))
+    ((cons 1 "it")
+     (display "Domanda A: Barri la risposta corretta") (newline))
+    ((cons 1 "pt") 
+     (display "Pergunta A: Escolha uma resposta") (newline))
+    ((cons 1 "zh")
+     (display "A 类型问题: 请您选出一个正确答案。") (newline))
+
     ((cons _ "de")
      (display "P-Frage: Wählen Sie aus den folgenden ")
      (display (number-word/de pick-options-count))
@@ -116,31 +136,60 @@
      (display (number-word/en pick-options-count))
      (display " answers select \\textbf{")
      (display (number-word/en correct-pick-options-count))
-     (display "} that fit best.")))
+     (display "} that fit best."))
+    ((cons _ "es")
+     (display "Pregunta Tipo P: Seleccionar ")
+     (display (number-word/es correct-pick-options-count))
+     (display " de las ")
+     (display (number-word/es pick-options-count))
+     (display " opciones que mejor se ajusten a la pregunta"))
+    ((cons _ "fr")
+     (display "Question P: Parmi les ")
+     (display (number-word/fr pick-options-count))
+     (display " réponses suivantes, choisissez-en ")
+     (display (number-word/fr correct-pick-options-count))
+     (display " qui conviennent le mieux"))
+    ((cons _ "it")
+     (display "Domanda P: Selezionare le ")
+     (display (number-word/it correct-pick-options-count))
+     (display " risposte più appropriate tra le ")
+     (display (number-word/it pick-options-count)))
+    ((cons _ "pt")
+     (display "Pergunta P: Das ")
+     (display (number-word/pt pick-options-count))
+     (display " respostas a seguir, selecione ")
+     (display (number-word/pt correct-pick-options-count))
+     (display " que se encaixam melhor"))
+    ((cons _ "zh")
+     (display "P 类型问题: 请您从下列 ")
+     (display (number-word/zh pick-options-count))
+     (display "个 选项中选出 \\textbf{")
+     (display (number-word/zh correct-pick-options-count))
+     (display "个} 最佳答案。")))
   (display "}"))
   
 (define (write-points points language)
-  (display points) (display " ")
-  (write-points-word points language))
+  (display points) (write-points-word points language))
 
+; includes space if nedded
 (define (write-points-word points language)
   (display
    (match (cons points language)
-     ((cons 1 "de") "Punkt")
-     ((cons 1 "en") "Point")
-     ((cons _ "de") "Punkte")
-     ((cons _ "en") "Points"))))
+     ((cons 1 "de") " Punkt")
+     ((cons 1 "en") " Point")
+     ((cons 1 "es") " punto")
+     ((cons 1 "fr") " point")
+     ((cons 1 "it") " punto")
+     ((cons 1 "pt") " ponto")
+     ((cons 1 "zh") "分")
+     ((cons _ "de") " Punkte")
+     ((cons _ "en") " Points")
+     ((cons _ "es") " puntos")
+     ((cons _ "fr") " points")
+     ((cons _ "it") " punti")
+     ((cons _ "pt") " pontos")
+     ((cons _ "zh") "分"))))
   
-(define (points-word/de points)
-  (case points
-    ((1) "Punkt")
-    (else "Punkte")))
-
-(define (points-word/en points)
-  (case points
-    ((1) "point")
-    (else "points")))
-
 (define (number-word/de n)
   (match n
     (0 "null")
@@ -175,6 +224,86 @@
     (12 "twelve")
     (_ (number->string n))))
 
+(define (number-word/es n)
+  (match n
+    (0 "nula")
+    (1 "uno")
+    (2 "dos")
+    (3 "tres")
+    (4 "cuatro")
+    (5 "cinco")
+    (6 "seis")
+    (7 "siete")
+    (8 "ocho")
+    (9 "nueve")
+    (10 "diez")
+    (11 "once")
+    (12 "doce")
+    (_ (number->string n))))
+
+(define (number-word/fr n)
+  (match n
+    (0 "zéro")
+    (1 "un") ; questionable
+    (2 "deux")
+    (3 "trois")
+    (4 "quatre")
+    (5 "cinq")
+    (6 "six")
+    (7 "sept")
+    (8 "huit")
+    (9 "neuf")
+    (10 "dix")
+    (11 "onze")
+    (12 "douze")
+    (_ (number->string n))))
+
+(define (number-word/it n)
+  (match n
+    (0 "zero")
+    (1 "uno")
+    (2 "due")
+    (3 "tre")
+    (4 "quattro")
+    (5 "cinque")
+    (6 "sei")
+    (7 "sette")
+    (8 "otto")
+    (9 "nove")
+    (10 "dieci")
+    (11 "undici")
+    (12 "dodici")
+    (_ (number->string n))))
+
+(define (number-word/pt n)
+  (match n
+    (0 "zero")
+    (1 "um")
+    (2 "dois")
+    (3 "três")
+    (4 "quatro")
+    (5 "cinco")
+    (6 "seis")
+    (7 "sete")
+    (8 "oito")
+    (9 "nove")
+    (10 "dez")
+    (11 "onze")
+    (12 "doze")
+    (_ (number->string n))))
+
+(define (number-word/zh n)
+  (match n
+    (0 "零")
+    (1 "一")
+    (2 "两")
+    (3 "三")
+    (4 "四")
+    (5 "五")
+    (6 "六")
+    (7 "七")
+    (8 "八")
+    (_ (number->string n))))
 
 (define (count-correct-pick-options pick-options)
   (length
@@ -217,6 +346,12 @@
     (match language
       ("de" (values "\"`" "\"'"))
       ("en" (values "``" "''"))
+      ;; these require \usepackage[T1]{fontenc}
+      ("es" (values "<<" ">>"))
+      ("fr" (values "<<" ">>"))
+      ("it" (values "<<" ">>"))
+      ("pt" (values "<<" "<>"))
+      ("zh" (values "``" "''")) ; ???
       (_
        (error "unhandled language" language))))
   (define open-quote (reverse (string->list open-quote*)))
@@ -229,6 +364,8 @@
           ((#\&) (loop (cdr chars) open-quote? (cons #\& (cons #\\ rev-result))))
           ((#\#) (loop (cdr chars) open-quote? (cons #\# (cons #\\ rev-result))))
           ((#\%) (loop (cdr chars) open-quote? (cons #\% (cons #\\ rev-result))))
+          ((#\%) (loop (cdr chars) open-quote? (cons #\% (cons #\\ rev-result))))
+          ((#\„) (loop (cdr chars) #t (append open-quote rev-result)))
           ((#\") (loop (cdr chars) (not open-quote?)
                        (if open-quote?
                            (append closed-quote rev-result)
@@ -244,6 +381,10 @@
         (string-append (substring digits 0 (- count 2))
                        (match language
                          ("de" ",")
+                         ("es" ",")
+                         ("it" ",")
+                         ("pt" ",")
+                         ("zh" ".")
                          ("en" "."))
                        (substring digits 2 count)))))
 
@@ -279,20 +420,23 @@
      (list (learning-goal-reference (curriculum-version 2025 1) (lg-number 1 1)) (learning-goal-reference (curriculum-version 2023 1) (lg-number 1 1)))
      (localized-text
       '(("de" . "\n        Wie viele Definitionen des Begriffes \"Softwarearchitektur\" gibt es?\n    ")
-        ("en" . "\n        How many definitions of “software architecture” exist?\n    ")))
+        ("en" . "\n        How many definitions of “software architecture” exist?\n    "))
+      '())
      (localized-text
       '(("de"
          .
          "\n      Die Vielfalt der Definitionen von Softwarearchitektur resultiert unter anderem aus unterschiedlichen Perspektiven, Zielgruppen und Entwicklungsmethoden.\n    ")
         ("en"
          .
-         "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    ")))
+         "\n      The variety of definitions of software architecture results, among other things, from different perspectives, target groups and development methods.\n    "))
+      '())
      (list
       (pick-option
        'distractor
        "A"
        (localized-text
-        '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))))
+        '(("de" . "\n        Genau eine für alle Arten von Systemen.\n      ") ("en" . "\n        Exactly one for all kinds of systems.\n      "))
+        '()))
       (pick-option
        'distractor
        "B"
@@ -300,13 +444,15 @@
         '(("de"
            .
            "\n        Eine für jede Art von Softwaresystem (z. B. \"eingebettet\",\"Echtzeit\", \"Entscheidungsunterstützung\", \"Web\", \"Batch\", …).\n      ")
-          ("en" . "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))))
+          ("en" . "\n        One for every kind of software system (e.g. “embedded”, “real-time”, “decision support”, “web”, “batch”, …).\n      "))
+        '()))
       (pick-option
        'correct
        "C"
        (localized-text
         '(("de" . "\n        Ein Dutzend oder mehr unterschiedliche Definitionen.\n      ")
-          ("en" . "\n        A dozen ore more different definitions.\n      ")))))))
+          ("en" . "\n        A dozen ore more different definitions.\n      "))
+        '())))))
 
   (define q2
     (pick-question
@@ -326,44 +472,50 @@
          "\n        Welche DREI der folgenden Aspekte werden durch den Begriff „Softwarearchitektur“ abgedeckt? \n    ")
         ("en"
          .
-         "\n        Which THREE of the following aspects are covered by the term “software architecture”? \n    ")))
+         "\n        Which THREE of the following aspects are covered by the term “software architecture”? \n    "))
+      '())
      (localized-text
       '(("de"
          .
          "\n      Programmierkonventionen und Hardware-Sizing sind in der Regel keine Hauptbestandteile der Softwarearchitektur, da die Architektur sich auf die logische Struktur des Systems konzentriert, während diese Aspekte eher auf der Implementierungsebene und den Ressourcenanforderungen liegen. \n    ")
         ("en"
          .
-         "\n      Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.\n    ")))
+         "\n      Coding conventions and hardware sizing are usually not major components of software architecture, since architecture focuses on the logical structure of the system, while these aspects are more at the implementation level and resource requirements.\n    "))
+      '())
      (list
       (pick-option
        'correct
        "A"
        (localized-text
-        '(("de" . "\n        Komponenten\n      ") ("en" . "\n        Components\n      "))))
+        '(("de" . "\n        Komponenten\n      ") ("en" . "\n        Components\n      ")) '()))
       (pick-option
        'correct
        "B"
        (localized-text
         '(("de" . "\n        Querschnittskonzepte\n      ")
-          ("en" . "\n        Cross-cutting concepts\n      "))))
+          ("en" . "\n        Cross-cutting concepts\n      "))
+        '()))
       (pick-option
        'correct
        "C"
        (localized-text
         '(("de" . "\n        (interne und externe) Schnittstellen\n      ")
-          ("en" . "\n        (internal and external) Interfaces\n      "))))
+          ("en" . "\n        (internal and external) Interfaces\n      "))
+        '()))
       (pick-option
        'distractor
        "D"
        (localized-text
         '(("de" . "\n        Programmierkonventionen (\"coding conventions\")\n      ")
-          ("en" . "\n        Coding conventions\n      "))))
+          ("en" . "\n        Coding conventions\n      "))
+        '()))
       (pick-option
        'distractor
        "E"
        (localized-text
         '(("de" . "\n        Hardware-Sizing\n      ")
-          ("en" . "\n        Hardware sizing\n      ")))))))
+          ("en" . "\n        Hardware sizing\n      "))
+        '())))))
   
     (define q4
     (category-question
@@ -378,36 +530,41 @@
          "\n      Bei Ihrem Projekt arbeiten drei Architekt:innen und sieben\n      Entwickler:innen an der Dokumentation der\n      Softwarearchitektur. Welche Methoden eignen sich zur\n      Gewährleistung einer konsistenten und zweckmäßigen Dokumentation\n      und welche nicht?\n    ")
         ("en"
          .
-         "\n      In your project, three architects and seven developers are working on the\n      documentation of the software architecture. Which methods are\n      appropriate in order to achieve a consistent and adequate\n      documentation, and which are not?\n    ")))
+         "\n      In your project, three architects and seven developers are working on the\n      documentation of the software architecture. Which methods are\n      appropriate in order to achieve a consistent and adequate\n      documentation, and which are not?\n    "))
+      '())
      (localized-text
       '(("de"
          .
          "\n      Um eine konsistente und zweckmäßige Dokumentation sicherzustellen, eignet sich die Koordination durch die leitende Architekt:in sowie die Verwendung identischer Vorlagen. Die automatische Extraktion aller Teile der Dokumentation aus dem Quellcode ist weniger empfehlenswert, da dies möglicherweise nicht alle relevanten Informationen oder Kontexte berücksichtigt und die Qualität der Dokumentation beeinträchtigen kann.\n      Aspekte wie Begründungen oder Alternativen sind nicht im Code enthalten, sondern müssen in die Dokumentation aufgenommen werden, daher können nicht alle Teile der Dokumentation aus dem Quellcode extrahiert werden. \n    ")
         ("en"
          .
-         "\n      To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.\n      Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code. \n    ")))
+         "\n      To ensure consistent and useful documentation, coordination by the lead architect and the use of identical templates are recommended. Automatic extraction of all parts of the documentation from the source code is less recommended, as this may not include all relevant information or contexts and may affect the quality of the documentation.\n      Things like reasoning or alternatives won’t be contained in code, but need to be included in documentation, therefore not all parts of documentation can be extracted from source code. \n    "))
+      '())
      (list
-      (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
-      (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate")))))
+      (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate")) '()))
+      (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate")) '())))
      (list
       (statement
-       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
+       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate")) '()))
        "A"
        (localized-text
         '(("de" . "\n          Die/der leitende Architekt:in koordiniert die Erstellung der Dokumentation.\n        ")
-          ("en" . "\n          The lead architect coordinates the creation of the documentation.\n        "))))
+          ("en" . "\n          The lead architect coordinates the creation of the documentation.\n        "))
+        '()))
       (statement
-       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate"))))
+       (category "a" (localized-text '(("de" . "Geeignet") ("en" . "appropriate")) '()))
        "B"
        (localized-text
         '(("de" . "\n          Für die Dokumentation werden identische Vorlagen verwendet.\n        ")
-          ("en" . "\n          Identical templates are used for the documentation.\n        "))))
+          ("en" . "\n          Identical templates are used for the documentation.\n        "))
+        '()))
       (statement
-       (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate"))))
+       (category "b" (localized-text '(("de" . "Nicht geeignet") ("en" . "not appropriate"))'()))
        "C"
        (localized-text
         '(("de" . "\n          Alle Teile der Dokumentation werden automatisch aus dem Quellcode extrahiert.\n        ")
-          ("en" . "\n          All parts of the documentation are automatically extracted from the source code.\n        ")))))))
+          ("en" . "\n          All parts of the documentation are automatically extracted from the source code.\n        "))
+        '())))))
     
     (write-question+explanation/language q1 "de")
     (write-question+explanation/language q2 "de")

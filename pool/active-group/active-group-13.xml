@@ -40,7 +40,7 @@
           The software should respond to page views immediately (less than 100ms).
         </text>
       </statement>
-      <statement correctCategory="a" identifier="B">
+      <statement correctCategory="b" identifier="B">
         <text xml:lang="de">
           Mehr als 100 Zugriffe in einer Sekunde des gleichen Benutzers oder Rechners müssen nicht
           mehr beantwortet werden.
@@ -60,7 +60,7 @@
           prevented by a short blocking time.
         </text>
       </statement>
-      <statement correctCategory="a" identifier="D">
+      <statement correctCategory="b" identifier="D">
         <text xml:lang="de">
           Ab 100 parallelen Nutzern sollen weitere Anfragen nicht mehr beantwortet werden.
         </text>

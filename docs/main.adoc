@@ -1,0 +1,24 @@
+include::config.adoc[]
+
+= iSAQB Foundation Level Exam Infrastructure
+:revnumber: 0.1
+// toc-title definition MUST follow document title without blank line!
+:toc-title: Table of Contents
+
+// include::about.adoc[]
+
+// horizontal line
+***
+
+
+// numbering from here on
+:numbered:
+
+<<<<
+include::schema.adoc[]
+
+<<<<
+include::nix-flake.adoc[]
+
+<<<<
+include::racket-code.adoc[]

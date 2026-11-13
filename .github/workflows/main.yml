@@ -21,16 +21,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
+
       - name: build mock exam
         run: nix build .#mock-exam
       - name: copy mock exam out of Nix store
-        run: mkdir out && cp -v result/pdf/* out/ && cp -v web/* out/
+        run: mkdir -p out && cp -v result/pdf/* out/ && cp -v web/* out/
+
+      - name: build exam info
+        run: nix build .#exam-info
+      - name: copy exam info out of Nix store
+        run: mkdir -p out && cp -v result/pdf/* out/
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './out/'
+      - name: Upload GitHub regular artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mock-exam
+          path: './out/*.pdf'
 
   mock-deploy:
     environment:
@@ -42,3 +54,26 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  mock-release:
+    runs-on: ubuntu-latest
+    needs: mock-build
+    permissions:
+      contents: write
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mock-exam
+          path: './out'
+      - name: Test
+        run: cat ./out/mock-en.pdf
+      - name: Release
+        uses: ncipollo/release-action@v1
+        if: github.ref_type == 'tag'
+        with:
+          artifacts: |
+            ./out/mock-en.pdf
+            ./out/mock-de.pdf
+            ./out/mock-de-solutions.pdf
+            ./out/mock-en-solutions.pdf

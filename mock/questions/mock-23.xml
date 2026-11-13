@@ -12,30 +12,36 @@
   <stem>
     <text xml:lang="de">Für welche Entwurfsprobleme bietet das Pipes &amp; Filter Pattern Lösungsansätze?</text>
     <text xml:lang="en">Which type of problems provide a good fit for the Pipes &amp; Filter Pattern?</text>
+    <text xml:lang="zh">哪些类型的问题适合使用管道和过滤器模式？</text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Verwaltung von globalem Anwendungszustand</text>
       <text xml:lang="en">Management of global application state</text>
+      <text xml:lang="zh">管理全局应用程序的状态</text>
     </option>
     <option correct="correct" identifier="B">
       <text xml:lang="de">Strukturierung von IT-Systemen die Datenströme verarbeiten</text>
       <text xml:lang="en">IT systems which process data streams</text>
+      <text xml:lang="zh">处理数据流的IT系统</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Entkopplung von Verarbeitungsschritten</text>
       <text xml:lang="en">Decoupling multiple steps of an execution</text>
+      <text xml:lang="zh">解耦执行的多个步骤</text>
     </option>
     <option distractor="distractor" identifier="D">
       <text xml:lang="de">Entkopplung von zeitlichen Abhängigkeiten</text>
       <text xml:lang="en">Temporal decoupling of an application</text>
+      <text xml:lang="zh">应用程序的时间解耦</text>
     </option>
   </pickOptions>
 
   <explanation>
     <text xml:lang="de">Das Pipes &amp; Filter Pattern eignet sich besonders für die Verarbeitung von Datenströmen und die Entkopplung von Verarbeitungsschritten. Die Filter arbeiten unabhängig voneinander und kommunizieren nur über die Pipes, was eine klare Trennung der Verarbeitungsschritte ermöglicht. Das Pattern ist jedoch nicht für die Verwaltung von globalem Zustand ausgelegt, da die Filter zustandslos sein sollten. Auch die zeitliche Entkopplung ist kein primäres Ziel des Patterns, da die Verarbeitung typischerweise sequentiell erfolgt.</text>
     <text xml:lang="en">The Pipes &amp; Filter Pattern is particularly well-suited for processing data streams and decoupling processing steps. The filters work independently and communicate only through pipes, enabling a clear separation of processing steps. However, the pattern is not designed for managing global state, as filters should be stateless. Temporal decoupling is also not a primary goal of the pattern, as processing typically occurs sequentially.</text>
+    <text xml:lang="zh">管道和过滤器模式特别适合用于处理数据流以及解耦各个处理步骤。各个过滤器彼此独立工作，只通过管道进行通信，这使得处理步骤之间能够实现清晰的分离。然而，该模式并不是为管理全局状态而设计的，因为过滤器原则上应该是无状态的。此外，时间上的解耦也并不是该模式的主要目标，因为其处理通常是按顺序发生的。</text>
   </explanation>
 
 </pickQuestion>

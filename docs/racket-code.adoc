@@ -1,0 +1,36 @@
+[[section-racket-code]]
+== Racket Code
+
+=== The `make-exam` tool
+
+The `make-exam` command-line tool can build an exam from a LaTeX
+template and a set of XML questions.  It can be built like this, from
+the `code/foundation-exam` directory:
+
+[source,bash]
+----
+raco exe --launcher make-exam.rkt
+----
+
+The `make-exam` tool is also provided by the `make-exam` package in
+the <<section-nix-flake>>.
+
+It is invoked like so:
+
+[source,bash]
+----
+make-exam --out <out-filename> --template <template> --language en|de <question>.xml ...
+----
+
+For example, the English language Mock exam is built like this (in the `mock` directory):
+
+[source,bash]
+----
+make-exam --template template-en.tex --out mock-en.tex --language en questions/*.xml
+----
+
+There's also an option `+--ids-file+` that specifies a file that
+contains question ids, which will be selected from the set of
+questions.
+
+

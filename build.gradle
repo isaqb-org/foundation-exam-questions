@@ -221,7 +221,8 @@ tasks.named('asciidoctor') {
         'numbered': '',
         'imagesdir': 'images',
         'plantuml-format': 'svg',
-        'diagram-svg-type': 'inline'
+        'diagram-svg-type': 'inline',
+        'plantumlconfig': file('arc42-doc/plantuml.cfg').absolutePath
     ]
 
     asciidoctorj {
@@ -263,7 +264,8 @@ tasks.named('asciidoctorPdf') {
         'numbered': '',
         'imagesdir': 'images',
         'plantuml-format': 'svg',
-        'diagram-svg-type': 'inline'
+        'diagram-svg-type': 'inline',
+        'plantumlconfig': file('arc42-doc/plantuml.cfg').absolutePath
     ]
 
     asciidoctorj {

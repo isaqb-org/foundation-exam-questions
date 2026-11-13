@@ -1,0 +1,162 @@
+import java.util.regex.Pattern
+import javax.inject.Inject
+
+plugins {
+    id 'base'
+    id 'org.asciidoctor.jvm.convert' version '4.0.3'  // Plugin for HTML generation
+    id 'org.asciidoctor.jvm.pdf' version '4.0.3'      // Plugin for PDF generation
+    id 'java-library'  // needed for PlantUML dependency resolution
+
+}
+
+wrapper {
+    gradleVersion = '8.11'
+    distributionType = 'bin'
+    distributionUrl = 'https://services.gradle.org/distributions/gradle-8.11-bin.zip'
+}
+
+// **********************************************
+// * Project constants and shared configuration *
+// **********************************************
+
+ext {
+
+    // Location of RelaxNG schema for questions - this might change in the future
+    schemaFile = file('exam.rng')
+
+    docSrcDir = '.'
+    docOutputPath = 'build'
+    mainDocFile = 'main.adoc'
+    tempDir = "${buildDir}/tmp/asciidoc"
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    jing
+    asciidoctorExtensions
+    saxon
+}
+
+dependencies {
+    jing 'org.relaxng:jing:20220510'
+    asciidoctorExtensions 'org.asciidoctor:asciidoctorj:3.0.0'
+    asciidoctorExtensions 'org.asciidoctor:asciidoctorj-pdf:2.3.19'  
+    asciidoctorExtensions 'org.asciidoctor:asciidoctorj-diagram:2.3.1'
+    asciidoctorExtensions 'net.sourceforge.plantuml:plantuml:1.2024.7'
+    saxon 'net.sf.saxon:Saxon-HE:12.5'
+}
+
+// Task provided by org.asciidoctor.jvm.convert plugin
+// Converts AsciiDoc to HTML output
+tasks.named('asciidoctor') {
+    group = 'documentation'
+    description = 'Converts AsciiDoc documentation to HTL format (output in dist/html)'
+    configurations 'asciidoctorExtensions'
+    baseDirFollowsSourceFile()
+    sourceDir docSrcDir
+    sources {
+        include mainDocFile
+    }
+    outputDir file("${docOutputPath}/html")
+    forkOptions {
+        jvmArgs += [
+            '--add-opens', 'java.base/sun.nio.ch=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.io=ALL-UNNAMED'
+        ]
+    }
+    
+    attributes = [
+        'source-highlighter': 'rouge',
+        'toc': 'left',
+        'toclevels': '2',
+        'sectlinks': '',
+        'sectanchors': '',
+        'numbered': '',
+        'imagesdir': 'images',
+        'plantuml-format': 'svg',
+        'diagram-svg-type': 'inline'
+    ]
+
+    asciidoctorj {
+        requires('asciidoctor-diagram')
+        modules {
+            diagram.use()
+        }
+    }
+}
+
+// Task provided by org.asciidoctor.jvm.pdf plugin
+// Converts AsciiDoc to PDF output
+tasks.named('asciidoctorPdf') {
+    group = 'documentation'
+    description = 'Converts AsciiDoc documentation to PDF format (output in dist/pdf)'
+    configurations 'asciidoctorExtensions'  
+    baseDirFollowsSourceFile()
+    sourceDir docSrcDir
+    sources {
+        include mainDocFile
+    }
+    outputDir file("${docOutputPath}/pdf")
+    // For unknown reasons asciidoctorPdf sometimes guzzles up heap like there's no tomorrow
+    forkOptions {
+        maxHeapSize = "2g"
+        jvmArgs += [
+            '--add-opens', 'java.base/sun.nio.ch=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.io=ALL-UNNAMED',
+            '-XX:+UseG1GC',              // Use G1 garbage collector
+            '-XX:+HeapDumpOnOutOfMemoryError'  // Help diagnose issues
+        ]
+    }
+    
+    attributes = [
+        'pdf-stylesdir': 'themes',
+        'pdf-style': 'basic',
+        'toc': '',
+        'toclevels': '2',
+        'numbered': '',
+        'imagesdir': 'images',
+        'plantuml-format': 'svg',
+        'diagram-svg-type': 'inline'
+    ]
+
+    asciidoctorj {
+        requires('asciidoctor-diagram')
+        modules {
+            diagram.use()
+        }
+    }
+
+}
+
+// Clean tasks
+tasks.register('cleanDoc', Delete) {
+    group = 'documentation'
+    description = 'Cleans the distribution directory for the documentation (dist)'
+    delete docOutputPath
+}
+
+
+// Main documentation build task
+tasks.register('buildDocs') {
+    group = 'documentation'
+    description = 'Generates complete documentation in all formats (HTML and PDF) after cleaning the output directory'
+    dependsOn 'cleanDoc', 'asciidoctor', 'asciidoctorPdf'
+}
+
+// Ensure proper task ordering - clean must complete before generation starts
+tasks.named('asciidoctor') {
+    mustRunAfter 'cleanDoc'
+    inputs.dir(docSrcDir)
+    outputs.dir(file("${docOutputPath}/html"))
+}
+
+tasks.named('asciidoctorPdf') {
+    dependsOn 'asciidoctor'
+    mustRunAfter 'cleanDoc'
+    inputs.dir(docSrcDir)
+    outputs.dir(file("${docOutputPath}/pdf"))
+
+}

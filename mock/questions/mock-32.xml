@@ -12,6 +12,7 @@
   <stem>
     <text xml:lang="de">Was sind Richtlinien für ein gutes Schnittstellen-Design? Kreuzen Sie an, welche der folgenden Aussagen richtig und welche falsch sind.</text>
     <text xml:lang="en">What are guidelines for good interface design? Check which of the following statements are true and which are false.</text>
+    <text xml:lang="zh">什么是良好的接口设计准则？请判断以下说法哪些正确，哪些错误。</text>
   </stem>
 
   <categoryStatements>
@@ -19,10 +20,12 @@
       <category label="a">
         <text xml:lang="de">richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
     
@@ -30,26 +33,31 @@
       <statement correctCategory="a" identifier="A">
         <text xml:lang="de">Die Verwendung der Schnittstellen sollte einfach zu erlernen sein.</text>
         <text xml:lang="en">Use of interfaces should be easy to learn.</text>
+        <text xml:lang="zh">接口的使用应易于学习。</text>
       </statement>
 
       <statement correctCategory="a" identifier="B">
         <text xml:lang="de">Es soll möglich sein, angemessen verständlichen Client-Code für diese Schnittstelle zu schreiben.</text>
         <text xml:lang="en">It should be possible to write client code for the interface, that is reasonably easy to understand.</text>
+        <text xml:lang="zh">应该能够为接口编写出合理易懂的客户端代码。</text>
       </statement>
 
       <statement correctCategory="b" identifier="C">
         <text xml:lang="de">Eine Schnittstelle soll Zugriff auf eine umfassende Menge von Implementierungsdetails ermöglichen.</text>
         <text xml:lang="en">An interface should provide access to a comprehensive set of implementation details.</text>
+        <text xml:lang="zh">一个接口应当能够提供对全面的实现细节的访问。</text>
       </statement>
 
       <statement correctCategory="a" identifier="D">
         <text xml:lang="de">Schnittstellenspezifikationen sollten funktionale und nichtfunktionale Aspekte enthalten.</text>
         <text xml:lang="en">Interface specifications should contain functional and non-functional aspects.</text>
+        <text xml:lang="zh">接口规范应该包含功能性和非功能性方面的内容。</text>
       </statement>
 
       <statement correctCategory="b" identifier="E">
         <text xml:lang="de">Lokale und entfernte ("remote") Aufrufe einer Schnittstelle sollen sich in allen Belangen identisch verhalten.</text>
         <text xml:lang="en">Local and remote calls to an interface should behave identically in all aspects.</text>
+        <text xml:lang="zh">对接口的本地调用和远程调用在各方面都应该表现得完全一样。</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -57,5 +65,6 @@
   <explanation>
     <text xml:lang="de">Die Schnittstellen sollten leicht erlernbar sein und die Erstellung von verständlichem Client-Code ermöglichen. Sie sollten funktionale und nicht-funktionale Aspekte spezifizieren. Jedoch sollten sie nicht unnötig Implementierungsdetails offenlegen. Die Annahme, dass lokale und entfernte Aufrufe sich identisch verhalten können, ist technisch nicht realisierbar - besonders in Bezug auf Latenz und Antwortzeiten. Eine detailliertere Erklärung findet sich in den bekannten "Fallacies of Distributed Computing".</text>
     <text xml:lang="en">Interfaces should be easy to learn and allow for creation of understandable client code. They should specify both functional and non-functional aspects. However, they should not unnecessarily expose implementation details. The assumption that local and remote calls can behave identically is technically not feasible - especially regarding latency and response times. A more detailed explanation can be found in the (rather famous) "Fallacies of Distributed Computing".</text>
+    <text xml:lang="zh">接口应该易于学习，并能够支持编写清晰易懂的客户端代码。它们应该同时指定功能性和非功能性方面的内容。然而，接口不应当不必要地暴露实现细节。认为本地调用和远程调用能够表现得完全相同，这在技术上是无法实现的，尤其是在延迟和响应时间方面。对此，更详细的解释可见著名的《分布式计算谬误》（Fallacies of Distributed Computing）一书。</text>
   </explanation>
 </categoryQuestion>

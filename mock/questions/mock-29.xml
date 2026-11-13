@@ -16,24 +16,31 @@
     <text xml:lang="en">
       Which architectural views have the most practical application for developing software architectures?
     </text>
+    <text xml:lang="zh">
+      哪些架构视图在开发软件架构方面具有最实际的应用？
+    </text>
   </stem>
 
   <pickOptions>
     <option distractor="distractor" identifier="A">
       <text xml:lang="de">Pattern-Sicht.</text>
       <text xml:lang="en">Pattern View.</text>
+      <text xml:lang="zh">模式视图。</text>
     </option>
     <option distractor="distractor" identifier="B">
       <text xml:lang="de">Beobachtersicht (Observer-View).</text>
       <text xml:lang="en">Observer View.</text>
+      <text xml:lang="zh">观察者视图。</text>
     </option>
     <option correct="correct" identifier="C">
       <text xml:lang="de">Bausteinsicht (Komponentensicht).</text>
       <text xml:lang="en">Building-Block View (Component View).</text>
+      <text xml:lang="zh">构建块视图（组件视图）。</text>
     </option>
     <option correct="correct" identifier="D">
       <text xml:lang="de">Verteilungssicht.</text>
       <text xml:lang="en">Deployment View.</text>
+      <text xml:lang="zh">部署视图。</text>
     </option>
   </pickOptions>
 
@@ -43,6 +50,9 @@
     </text>
     <text xml:lang="en">
       The building-block and deployment views are fundamental views in software architecture. The building-block view shows the structural decomposition of the system, while the deployment view represents the technical infrastructure and mapping of software onto this infrastructure. Pattern view and observer view are not standardized or widely used architectural views.
+    </text>
+    <text xml:lang="zh">
+      构建块视图和部署视图是软件架构中的基本视图。构建块视图展示的是系统的结构性分解，而部署视图展示的是技术基础设施以及软件到该基础设施上的映射关系。模式视图和观察者视图并不是标准化的、也不是被广泛采用的架构视图。
     </text>
   </explanation>
 </pickQuestion>

@@ -6,17 +6,17 @@
 
   <refersToLgs>
     <lg curriculumVersion="2025.1" lg="01-04" />
-    
+
   </refersToLgs>
 
   <stem>
     <text xml:lang="de">
       Was zählt zu Ihren Aufgaben bezüglich gestellten Anforderung an die Softwarearchitektur oder
-      die Software? Wählen Sie zwei Antworten aus.
+      die Software?
     </text>
     <text xml:lang="en">
       What is one of your tasks regarding the requirements placed on the software architecture or
-      the software? Choose two answers.
+      the software?
     </text>
   </stem>
 

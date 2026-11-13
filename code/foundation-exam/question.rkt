@@ -41,11 +41,12 @@
   #:transparent #:mutable)
 
 (struct localized-text
-  (langs+texts) ; assoc list
+  (langs+texts  ; assoc list
+   outdated) ; list of langs
   #:transparent #:mutable)
 
 (define lang/c
-  (or/c "en" "de")) ; at the moment
+  (or/c "en" "de" "es" "fr" "it" "pt" "zh")) ; at the moment
 
 (struct pick-option
   (validity ; 'distractor, or 'correct
@@ -67,7 +68,7 @@
     ((id string?)
      (points (integer-in 1 #f))
      (release (or/c exam-release? #f))
-     (history (listof history-item?))
+     (history (or/c (listof history-item?) #f))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
      (explanation (or/c localized-text? #f))))
@@ -76,7 +77,7 @@
     ((id string?)
      (points (integer-in 1 #f))
      (release (or/c exam-release? #f))
-     (history (listof history-item?))
+     (history (or/c (listof history-item?) #f))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
      (explanation (or/c localized-text? #f))
@@ -86,7 +87,7 @@
     ((id string?)
      (points (integer-in 1 #f))
      (release (or/c exam-release? #f))
-     (history (listof history-item?))
+     (history (or/c (listof history-item?) #f))
      (learning-goals (listof learning-goal-reference?))
      (stem localized-text?)
      (explanation (or/c localized-text? #f))
@@ -114,7 +115,8 @@
      (index integer?)))
 
   (struct localized-text
-    ((langs+texts (listof (cons/c lang/c string?)))))
+    ((langs+texts (listof (cons/c lang/c string?)))
+     (outdated (listof lang/c))))
 
   (lang/c contract?)
 

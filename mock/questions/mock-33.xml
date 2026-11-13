@@ -16,6 +16,9 @@
     <text xml:lang="en">
       One definition says: "Software architecture is the sum of all the decisions you have taken during development." Check which of the following statements about architectural/design decisions are true and which are false.
     </text>
+    <text xml:lang="zh">
+      有一种定义是：“软件架构是开发过程中所作出全部决策的总和。”请判断以下关于架构决策/设计决策的陈述哪些正确，哪些错误。
+    </text>
   </stem>
 
   <categoryStatements>
@@ -23,10 +26,12 @@
       <category label="a">
         <text xml:lang="de">Richtig</text>
         <text xml:lang="en">true</text>
+        <text xml:lang="zh">正确</text>
       </category>
       <category label="b">
         <text xml:lang="de">Falsch</text>
         <text xml:lang="en">false</text>
+        <text xml:lang="zh">错误</text>
       </category>
     </categories>
     
@@ -34,18 +39,22 @@
       <statement correctCategory="a" identifier="A">
         <text xml:lang="de">Architektonische Entscheidungen können sich in der Struktur der Bausteine oder Komponenten niederschlagen.</text>
         <text xml:lang="en">Architectural decisions can impact the structure of the building block or components.</text>
+        <text xml:lang="zh">架构决策可能会影响构建块或组件的结构。</text>
       </statement>
       <statement correctCategory="b" identifier="B">
         <text xml:lang="de">Softwarearchitekt:innen sollten alle Entwurfsentscheidungen schriftlich begründen.</text>
         <text xml:lang="en">Software architects shall justify all design decisions in writing.</text>
+        <text xml:lang="zh">软件架构师应该以书面形式说明所有设计决策。</text>
       </statement>
       <statement correctCategory="a" identifier="C">
         <text xml:lang="de">Architektonische Entscheidungen können untereinander Wechselwirkungen haben.</text>
         <text xml:lang="en">Architectural decisions can have interdependencies between each other.</text>
+        <text xml:lang="zh">架构决策之间可能存在相互影响。</text>
       </statement>
       <statement correctCategory="a" identifier="D">
         <text xml:lang="de">Kompromisse zwischen zueinander in Konflikt stehenden Qualitätsanforderungen sollten explizite Entscheidungen sein.</text>
         <text xml:lang="en">Tradeoffs between conflicting quality requirements should be explicit decisions.</text>
+        <text xml:lang="zh">应明确决定在冲突的质量需求之间进行权衡。</text>
       </statement>
     </statements>
   </categoryStatements>
@@ -56,6 +65,9 @@
     </text>
     <text xml:lang="en">
       Not all decisions need to be justified in writing - as the requirement for written documentation depends on the situation, the team, the system and other factors.
+    </text>
+    <text xml:lang="zh">
+      并非所有决策都需要以书面形式说明，对书面文档的要求取决于具体情况、团队、系统和其他因素。
     </text>
   </explanation>
 

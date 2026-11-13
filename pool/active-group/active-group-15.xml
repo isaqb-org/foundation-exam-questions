@@ -36,7 +36,7 @@
   <pickOptions>
     <option correct="correct" identifier="A">
       <text xml:lang="de">
-        Interne Zugriffe sollen ohne Authenfizierung möglich sein.
+        Interne Zugriffe sollen ohne Authentifizierung möglich sein.
       </text>
       <text xml:lang="en">
         Internal access should be possible without authentication.

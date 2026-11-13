@@ -113,6 +113,56 @@
                 cp mock-en.pdf mock-en-solutions.pdf mock-de.pdf mock-de-solutions.pdf $out/pdf
               '';
             };
+          exam-info = pkgs.stdenv.mkDerivation {
+            name = "exam-info";
+            src = ./exam-info;
+            buildInputs = [
+              pkgs.libreoffice
+            ];
+            buildPhase = ''
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-de.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-en.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-es.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-fr.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-it.docx
+              soffice --headless --convert-to pdf:writer_pdf_Export --outdir . examination-rules-pt.docx
+              soffice --headless --convert-to pdf:impress_pdf_Export --outdir . Examination-Guide-EN.odp
+            '';
+            installPhase = ''
+              mkdir -p $out/pdf
+              cp *.pdf $out/pdf
+            '';
+          };
+
+        };
+        apps = {
+          xmllint = {
+            type = "app";
+            program = toString (
+              pkgs.writeShellScript "lint-xml" ''
+                set -e
+
+                FAILED=0
+
+                for file in mock/questions/mock*.xml pool/*/*.xml; do
+                  echo "Validating: $file"
+                  if ${pkgs.libxml2}/bin/xmllint --relaxng exam.rng --noout "$file" 2>&1; then
+                    echo "  ✓ Valid"
+                  else
+                    echo "  ✗ Invalid"
+                    FAILED=1
+                  fi
+                done
+
+                if [ $FAILED -eq 1 ]; then
+                  echo "XML validation failed!"
+                  exit 1
+                fi
+
+                echo "All XML files are valid!"
+              ''
+            );
+          };
         };
       }
     );

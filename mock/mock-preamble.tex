@@ -11,7 +11,7 @@
 \usepackage{environ}
 \usepackage{etoolbox}
 
-\newenvironment{examQuestion}{}{}
+\NewEnviron{examQuestion}{\vbox{\BODY}\vskip1cm}
 
 \ifdefstring{\examQuestionCountCommand}{}%
   {\newcommand{\examQuestionCount}{40}}%
